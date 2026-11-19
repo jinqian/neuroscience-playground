@@ -43,4 +43,11 @@ export const uiEn = {
   close: 'Close',
   lessonNotFound: "This lesson doesn't exist.",
   progress: 'Lesson progress',
+  glossaryTitle: 'Glossary',
+  glossaryIntro: 'Every key term you have met, in all three languages.',
+  glossaryEmpty: 'Terms you meet in lessons show up here.',
+  glossarySearch: 'Search terms',
+  allUnits: 'All units',
+  unitShort: 'Unit {n}',
+  noMatches: 'No terms match that search.',
 } as const
