@@ -6,4 +6,4 @@ nickname:
   en: "Meet the Cells"
 color: "#3DBE5A"
 module: "The Nervous System"
-lessons: [u01-b01, u01-b02, u01-b03, u01-b04, u01-b05, u01-b06]
+lessons: [u01-b01, u01-b02, u01-b03, u01-b04, u01-lab-myelin, u01-b05, u01-b06, u01-case-tingling]

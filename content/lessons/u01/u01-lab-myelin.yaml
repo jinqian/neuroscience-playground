@@ -1,0 +1,45 @@
+id: u01-lab-myelin
+type: lab
+title: { en: "Myelin speed race" }
+sources: ["Myelin", "Demyelinating Diseases"]
+intro:
+  - id: c1
+    body:
+      en: >-
+        You just stepped on a pin. How fast does the message travel between your spinal cord and your foot?
+        That depends on two things: how thick the [[axon]] is, and whether it's wrapped in [[myelin]].
+        Change both, then send an impulse along a 1-metre nerve.
+sim: myelin
+goal: { en: "Get the signal from the spinal cord to the big toe (1 m) in under 20 ms." }
+simplified:
+  en: >-
+    The speeds use rules of thumb (about 6 m/s per µm of diameter with myelin, about 1.1 × √diameter without).
+    Real axons vary, and real [[demyelination]] is patchy rather than an even fraction.
+reflection:
+  - id: q1
+    kind: mc
+    prompt: { en: "Why does a thick myelinated axon win the race?" }
+    options:
+      - { id: a, text: { en: "Wider axons with myelin regenerate the signal only at nodes, and spread current further between them." } }
+      - { id: b, text: { en: "Thick axons have more synapses along the way." } }
+      - { id: c, text: { en: "Myelin makes the signal stronger at the end." } }
+    answer: a
+    explain: { en: "Diameter lowers resistance; myelin lets the signal jump node to node ([[saltatory-conduction]])." }
+  - id: q2
+    kind: tfwhy
+    statement: { en: "Damaging some of the myelin only makes the signal a little slower, never stops it." }
+    isTrue: false
+    reasons:
+      - { id: r1, text: { en: "With enough damage, current leaks away before the next node and conduction fails." } }
+      - { id: r2, text: { en: "Myelin damage speeds the signal up." } }
+    answerReason: r1
+    explain: { en: "Mild damage slows; heavy damage causes a conduction block, which is why symptoms can be weakness or numbness." }
+  - id: q3
+    kind: mc
+    prompt: { en: "After stubbing your toe, a sharp pain comes first, then a dull ache. Why the delay?" }
+    options:
+      - { id: a, text: { en: "The ache travels on thin, unmyelinated fibres, which are much slower." } }
+      - { id: b, text: { en: "The brain waits before deciding it hurts." } }
+      - { id: c, text: { en: "The ache travels a longer route through the arm." } }
+    answer: a
+    explain: { en: "Fast pain rides thin myelinated fibres; slow aching pain rides unmyelinated ones at about 1 m/s." }

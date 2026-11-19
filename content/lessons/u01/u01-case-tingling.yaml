@@ -1,0 +1,55 @@
+id: u01-case-tingling
+type: case
+title: { en: "Tingling feet" }
+sources: ["Myelin", "Demyelinating Diseases", "Peripheral Diseases"]
+story:
+  en: >-
+    Sam, 34, comes in worried. Over the last four days, both feet started tingling, then his legs grew weak.
+    Today he struggles with stairs. The weakness seems to be climbing.
+clues:
+  - id: k1
+    verify: true
+    text: { en: "Ten days ago Sam had a bad stomach bug, which cleared up." }
+  - id: k2
+    text: { en: "It's the same on both sides, starting at the feet. His knee and ankle reflexes are gone." }
+    unlock:
+      id: q1
+      kind: mc
+      prompt: { en: "Symmetric symptoms starting in the longest nerves point first to which system?" }
+      options:
+        - { id: a, text: { en: "The peripheral nervous system" } }
+        - { id: b, text: { en: "The cerebellum" } }
+        - { id: c, text: { en: "The occipital lobe" } }
+      answer: a
+      explain: { en: "Long [[pns|peripheral]] nerves to both feet failing together is a classic peripheral pattern." }
+  - id: k3
+    text: { en: "An MRI of his brain is completely normal." }
+    unlock:
+      id: q2
+      kind: tfwhy
+      statement: { en: "In multiple sclerosis, a brain MRI usually shows damaged patches." }
+      isTrue: true
+      reasons:
+        - { id: r1, text: { en: "MS attacks myelin in the brain and spinal cord, leaving visible lesions." } }
+        - { id: r2, text: { en: "MS only damages the feet." } }
+      answerReason: r1
+      explain: { en: "[[multiple-sclerosis|MS]] is a CNS disease, so a normal brain MRI makes it less likely here." }
+final:
+  prompt: { en: "Whose myelin is under attack?" }
+  kind: choice
+  options:
+    - { id: schwann, text: { en: "Schwann cells' (peripheral nerves)" } }
+    - { id: oligo, text: { en: "Oligodendrocytes' (brain and spinal cord)" } }
+    - { id: astro, text: { en: "Astrocytes'" } }
+    - { id: axon, text: { en: "Nobody's: the axon membrane itself is the target" } }
+  answer: schwann
+  explanations:
+    schwann: { en: "Yes. Peripheral myelin, made by Schwann cells, is attacked: rising, symmetric weakness after an infection, with lost reflexes." }
+    oligo: { en: "Oligodendrocytes make CNS myelin, as in MS. His normal brain MRI and peripheral pattern argue against it." }
+    astro: { en: "Astrocytes support neurons but make no myelin." }
+    axon: { en: "Some variants do damage axons, but the classic picture here is myelin loss in peripheral nerves." }
+solved:
+  en: >-
+    This pattern fits [[guillain-barre-syndrome]]: after an infection, the immune system attacks peripheral
+    myelin. It needs urgent hospital care, because the weakness can reach the breathing muscles. Most people
+    recover as Schwann cells rebuild the myelin.
