@@ -13,7 +13,7 @@ cards:
   - id: c2
     body:
       en: >-
-        Brain tumours rarely grow from neurons, because mature neurons almost never divide. Most come from
+        Tumours that start in the brain rarely grow from neurons, because mature neurons almost never divide. Most come from
         cells that do: glial cells give [[glioma|gliomas]], and the meninges give [[meningioma|meningiomas]],
         which press on the brain from outside. Where a tumour sits decides its symptoms, because each brain
         region has its own job.
@@ -29,7 +29,7 @@ questions:
     explain: { en: "The longest axons, those to the feet, are hit first." }
   - id: q2
     kind: tfwhy
-    statement: { en: "Most brain tumours grow from neurons." }
+    statement: { en: "Most tumours that start in the brain grow from neurons." }
     isTrue: false
     reasons:
       - { id: r1, text: { en: "Mature neurons rarely divide; tumours usually come from glia or the meninges." } }

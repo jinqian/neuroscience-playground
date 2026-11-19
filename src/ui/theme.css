@@ -264,7 +264,7 @@ button { font: inherit; color: inherit; }
 .sim__canvas { width: 100%; height: auto; aspect-ratio: 600 / 220; background: #0e0c17; border: 1px solid var(--bench-line); border-radius: 12px; display: block; }
 .sim__legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: #a49dc2; }
 .sim__legend i { display: inline-block; width: 12px; height: 3px; vertical-align: middle; margin-right: 6px; }
-.sim__console { font-family: var(--mono); font-size: 13px; color: #9be7c4; background: #0e0c17; border: 1px solid var(--bench-line); border-radius: 10px; padding: 10px 12px; white-space: pre-wrap; }
+.sim__readout { font-size: 15px; font-weight: 800; color: #fff; background: rgb(255 255 255 / .08); border-radius: 12px; padding: 10px 14px; white-space: pre-line; }
 .sim__answer { display: flex; flex-direction: column; gap: 8px; font-weight: 800; }
 .sim__answer-row { display: flex; gap: 10px; }
 .sim__answer-row .input { max-width: 140px; }

@@ -9,7 +9,7 @@ cards:
     body:
       en: >-
         The [[spinal-cord]] is divided into levels: [[cervical]] (neck), thoracic (chest), lumbar (lower
-        back) and sacral. After an injury, everything below the damaged level loses its link with the brain.
+        back) and sacral. After an injury, everything below the damaged level can lose its link with the brain.
         A neck injury can affect the arms, the legs and breathing; a lower-back injury mainly affects the legs.
   - id: c2
     verify: true

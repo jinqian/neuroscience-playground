@@ -1,7 +1,6 @@
-import { parseRich, RICH_KEYS } from '../content/richText'
+import { isRichField, parseRich } from '../content/richText'
 import type { Lesson, Question } from '../content/schema'
 
-const RICH = new Set<string>(RICH_KEYS)
 const unique = (xs: string[]) => [...new Set(xs)]
 
 function questionsOf(lesson: Lesson): Question[] {
@@ -22,19 +21,19 @@ export function lessonStructures(lesson: Lesson): string[] {
 /** Glossary terms a learner meets in this lesson (from rich text and term-match questions). */
 export function lessonTerms(lesson: Lesson): string[] {
   const out: string[] = []
-  const walk = (node: unknown, key: string) => {
-    if (Array.isArray(node)) { node.forEach((n) => walk(n, key)); return }
+  const walk = (node: unknown, path: string, key: string, parentKey: string) => {
+    if (Array.isArray(node)) { node.forEach((n, i) => walk(n, `${path}[${i}]`, key, parentKey)); return }
     if (!node || typeof node !== 'object') return
     const obj = node as Record<string, unknown>
-    if (typeof obj.en === 'string' && RICH.has(key)) {
+    if (typeof obj.en === 'string' && isRichField(path, key, parentKey)) {
       for (const l of ['en', 'fr', 'zh']) {
         const text = obj[l]
         if (typeof text === 'string') for (const s of parseRich(text)) if (s.kind === 'term') out.push(s.termId)
       }
     }
-    for (const [k, v] of Object.entries(obj)) if (v && typeof v === 'object') walk(v, k)
+    for (const [k, v] of Object.entries(obj)) if (v && typeof v === 'object') walk(v, path ? `${path}.${k}` : k, k, key)
   }
-  walk(lesson, '')
+  walk(lesson, '', '', '')
   for (const q of questionsOf(lesson)) if (q.kind === 'termmatch') out.push(...q.terms)
   return unique(out)
 }

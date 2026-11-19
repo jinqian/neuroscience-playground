@@ -5,6 +5,7 @@ import { useLang } from '../i18n/LanguageProvider'
 import { t } from '../i18n/t'
 import { Button } from '../ui/Button'
 import { BrainView, NoWebGL } from './BrainView'
+import { StructureList } from './StructureList'
 import { CORTEX } from './visual'
 
 /** Full-screen 3D view focused on a lesson's structures, with "find it" prompts. */
@@ -17,6 +18,7 @@ export function BrainModal({ structures: ids, onClose }: { structures: string[];
   const [result, setResult] = useState<'found' | string | null>(null)
   const name = (id: string) => pick(all.find((s) => s.id === id)?.name ?? { en: id }, lang)
   const target = meshed[i % Math.max(meshed.length, 1)]
+  const answer = (id: string) => { if (result !== 'found') setResult(id === target ? 'found' : id) }
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
@@ -49,8 +51,8 @@ export function BrainModal({ structures: ids, onClose }: { structures: string[];
           hemisphere="both"
           highlight={result === 'found' ? [target] : []}
           focus={meshed}
-          onPick={(id) => { if (result !== 'found') setResult(id === target ? 'found' : id) }}
-          fallback={<NoWebGL />}
+          onPick={answer}
+          fallback={<><NoWebGL /><StructureList selected={result === 'found' ? target : undefined} onPick={answer} /></>}
         />
         {twoD.length > 0 && (
           <p className="muted-strong">{t('twoDOnlyHelp', lang)} {twoD.map(name).join(', ')}</p>

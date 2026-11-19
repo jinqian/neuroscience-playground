@@ -69,6 +69,6 @@
 - { id: noradrenaline, en: noradrenaline (norepinephrine), unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Norepinephrine" } }
 - { id: beta-blocker, en: beta blocker, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Beta_blocker" } }
 - { id: atropine, en: atropine, roots: "From Atropa belladonna, deadly nightshade", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Atropine" } }
-- { id: cervical, en: cervical, roots: "Latin cervix, neck", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Cervical_vertebrae" } }
+- { id: cervical, en: cervical, roots: "Latin cervix, neck", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Spinal_nerve" } }
 - { id: hypothalamus, en: hypothalamus, roots: "Greek hypo, under + thalamus, inner chamber", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Hypothalamus" } }
 - { id: brainstem, en: brainstem, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Brainstem" } }

@@ -4,7 +4,27 @@ export type Segment =
   | { kind: 'term'; termId: string; label?: string }
 
 /** Field names whose text may contain `**bold**` and `[[term-id]]` / `[[term-id|label]]` markup. */
-export const RICH_KEYS = ['body', 'explain', 'story', 'text', 'solved', 'prompt', 'statement'] as const
+export const RICH_KEYS = ['body', 'explain', 'story', 'text', 'solved', 'prompt', 'statement', 'goal', 'simplified'] as const
+
+const RICH = new Set<string>(RICH_KEYS)
+/** Answer choices are shown as plain text, so their `text` never holds markup. */
+const PLAIN_CONTAINER = /(options|steps|reasons)\[\d+\]$/
+
+/**
+ * Whether the LText at `path` (its own key `key`, its parent object's key `parentKey`) is rendered as rich text.
+ * Case final explanations are keyed by option id, so they're recognised by their parent.
+ */
+export function isRichField(path: string, key: string, parentKey: string): boolean {
+  if (parentKey === 'explanations') return true
+  if (!RICH.has(key)) return false
+  const parent = path.slice(0, path.length - key.length - 1)
+  return !PLAIN_CONTAINER.test(parent)
+}
+
+/** Markup that didn't parse: stray [[ or ]] left in plain segments. */
+export function hasBrokenMarkup(text: string): boolean {
+  return parseRich(text).some((s) => s.kind === 'text' && /\[\[|\]\]/.test(s.text))
+}
 
 const TOKEN = /\*\*(.+?)\*\*|\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]/g
 

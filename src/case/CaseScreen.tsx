@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import type { Case } from '../content/schema'
 import { XP } from '../engine/xp'
-import type { LText } from '../i18n/lang'
+import { pick, type LText } from '../i18n/lang'
 import { useLang } from '../i18n/LanguageProvider'
 import { t } from '../i18n/t'
 import { CompleteScreen } from '../lesson/CompleteScreen'
@@ -60,7 +60,7 @@ export function CaseScreen({ lesson }: { lesson: Case }) {
       ) : undefined}>
       <article className="casefile">
         <span className="casefile__tab">{t('caseFile', lang)}</span>
-        <h1 className="casefile__title"><RichText text={lesson.title} /></h1>
+        <h1 className="casefile__title">{pick(lesson.title, lang)}</h1>
         <p className="casefile__story"><RichText text={lesson.story} /></p>
 
         <h2 className="casefile__h">{t('clues', lang)}</h2>

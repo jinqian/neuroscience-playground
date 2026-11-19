@@ -18,7 +18,7 @@ simplified:
 reflection:
   - id: q1
     kind: mc
-    prompt: { en: "You double the stimulus above threshold. What changes in a real neuron?" }
+    prompt: { en: "In a real neuron, an input above threshold gets stronger and keeps going. What changes?" }
     options:
       - { id: a, text: { en: "Spikes come more often; each one is the same height." } }
       - { id: b, text: { en: "Each spike becomes twice as tall." } }

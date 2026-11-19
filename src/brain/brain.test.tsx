@@ -119,3 +119,19 @@ test('2D-only structures are listed as such', () => {
   expect(screen.getByText('2D only')).toBeInTheDocument()
   expect(screen.getAllByText('Spinal cord').length).toBeGreaterThan(0)
 })
+
+test('without WebGL, the Explore pop-up offers the structures as a list to answer from', async () => {
+  const { BrainModal } = await import('./BrainModal')
+  render(
+    <LanguageProvider>
+      <ContentProvider bundle={bundle()}>
+        <BrainModal structures={['cerebellum', 'brainstem']} onClose={() => {}} />
+      </ContentProvider>
+    </LanguageProvider>,
+  )
+  expect(screen.getByText('Find: Cerebellum')).toBeInTheDocument()
+  fireEvent.click(screen.getByRole('button', { name: 'Brainstem' }))
+  expect(screen.getByText("That's the Brainstem. Try again.")).toBeInTheDocument()
+  fireEvent.click(screen.getByRole('button', { name: 'Cerebellum' }))
+  expect(screen.getByText('✓ Cerebellum')).toBeInTheDocument()
+})

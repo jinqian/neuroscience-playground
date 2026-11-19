@@ -1,5 +1,5 @@
 import type { Lang } from '../i18n/lang'
-import { parseRich, RICH_KEYS, wordCount } from './richText'
+import { hasBrokenMarkup, isRichField, parseRich, wordCount } from './richText'
 import type { Card, CaseFinal, ContentBundle, ContentError, Lesson, Question } from './schema'
 
 export type ValidateOptions = {
@@ -11,7 +11,6 @@ export type ValidateOptions = {
 }
 
 const MAX_CARD_WORDS = 80
-const RICH = new Set<string>(RICH_KEYS)
 
 export function validateContent(bundle: ContentBundle, opts: ValidateOptions): ContentError[] {
   const errors: ContentError[] = []
@@ -24,9 +23,9 @@ export function validateContent(bundle: ContentBundle, opts: ValidateOptions): C
   const structuresFile = bundle.sourceFile.structures ?? 'content/structures.yaml'
 
   // ---- generic walk: every LText has every enabled language; rich text only names known terms ----
-  function walk(file: string, node: unknown, path: string, key: string) {
+  function walk(file: string, node: unknown, path: string, key: string, parentKey = '') {
     if (Array.isArray(node)) {
-      node.forEach((child, i) => walk(file, child, `${path}[${i}]`, key))
+      node.forEach((child, i) => walk(file, child, `${path}[${i}]`, key, parentKey))
       return
     }
     if (!node || typeof node !== 'object') return
@@ -34,18 +33,22 @@ export function validateContent(bundle: ContentBundle, opts: ValidateOptions): C
     if (typeof obj.en === 'string') {
       const missing = opts.enabled.filter((l) => typeof obj[l] !== 'string' || obj[l] === '')
       if (missing.length) err(file, path, `missing ${missing.map((l) => `"${l}"`).join(', ')}`)
-      if (RICH.has(key)) {
-        for (const l of ['en', 'fr', 'zh'] as const) {
-          const text = obj[l]
-          if (typeof text !== 'string') continue
-          for (const seg of parseRich(text)) {
-            if (seg.kind === 'term' && !termIds.has(seg.termId)) err(file, `${path}.${l}`, `unknown term "${seg.termId}"`)
-          }
+      const rich = isRichField(path, key, parentKey)
+      for (const l of ['en', 'fr', 'zh'] as const) {
+        const text = obj[l]
+        if (typeof text !== 'string' || key === 'wiki') continue
+        if (!rich) {
+          if (/\[\[|\]\]|\*\*/.test(text)) err(file, `${path}.${l}`, 'markup is shown as plain text here; remove [[…]] and **…**')
+          continue
+        }
+        if (hasBrokenMarkup(text)) err(file, `${path}.${l}`, 'malformed term markup: use [[term-id]] or [[term-id|text]] with lowercase letters, digits and dashes')
+        for (const seg of parseRich(text)) {
+          if (seg.kind === 'term' && !termIds.has(seg.termId)) err(file, `${path}.${l}`, `unknown term "${seg.termId}"`)
         }
       }
     }
     for (const [k, v] of Object.entries(obj)) {
-      if (v && typeof v === 'object') walk(file, v, path ? `${path}.${k}` : k, k)
+      if (v && typeof v === 'object') walk(file, v, path ? `${path}.${k}` : k, k, key)
     }
   }
 

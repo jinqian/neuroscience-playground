@@ -30,7 +30,7 @@ questions:
     explain: { en: "Threshold, sodium in, peak, potassium out, undershoot, back to rest." }
   - id: q2
     kind: mc
-    prompt: { en: "A stimulus is twice as strong as needed. What happens?" }
+    prompt: { en: "A steady input becomes twice as strong as needed. What happens?" }
     options:
       - { id: a, text: { en: "Spikes come more often, but each is the same size." } }
       - { id: b, text: { en: "The spike is twice as tall." } }

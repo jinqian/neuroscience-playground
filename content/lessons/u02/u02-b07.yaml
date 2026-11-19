@@ -41,7 +41,7 @@ questions:
       - { id: r1, text: { en: "It blocks the parasympathetic signal that narrows them." } }
       - { id: r2, text: { en: "It switches on the sympathetic chain directly." } }
     answerReason: r1
-    explain: { en: "Remove the 'narrow' signal and the 'widen' signal wins. Eye doctors use this to examine the retina." }
+    explain: { en: "Remove the 'narrow' signal and the 'widen' signal wins. Eye drops that block this signal widen the pupils for eye exams." }
   - id: q4
     kind: gap
     prompt: { en: "After a large meal, the ___ branch is in charge." }

@@ -17,7 +17,7 @@ function draw(canvas: HTMLCanvasElement, stimulus: number) {
   const y = (v: number) => h - 14 - ((v - V_MIN) / (V_MAX - V_MIN)) * (h - 28)
 
   ctx.clearRect(0, 0, w, h)
-  ctx.font = '12px ui-monospace, Menlo, monospace'
+  ctx.font = '700 12px Nunito, system-ui, sans-serif'
   for (const [v, color, dash] of [[REST, '#5a5288', []], [THRESHOLD, '#ffd479', [5, 5]], [0, '#2e2850', [2, 4]]] as const) {
     ctx.strokeStyle = color
     ctx.setLineDash([...dash])
@@ -63,7 +63,7 @@ export function ThresholdSim({ onGoalMet, goalMet }: SimProps) {
         <span><i style={{ background: '#ffd479' }} />{t('thresholdLine', lang)} −55 mV</span>
         <span><i style={{ background: '#5a5288' }} />{t('restLine', lang)} −70 mV</span>
       </div>
-      <p className="sim__console" aria-live="polite">
+      <p className="sim__readout" aria-live="polite">
         {t(fired ? 'fires' : 'fizzles', lang, { s: stimulus, v: REST + stimulus })}
       </p>
       <div className="sim__answer">
