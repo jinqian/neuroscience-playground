@@ -198,6 +198,7 @@ Surface regions that aren't separate meshes (Broca's, Wernicke's, motor strip) m
 - **Streak:** counts local calendar days with at least one completed lesson.
 - **Unit badge:** earned when the unit's Case is solved.
 - No hearts, no penalties, no timers.
+- **Mid-lesson saving** *(added 2026-11-19 at the learner's request)*: leaving an unfinished Bite, Lab or Case and coming back resumes at the same card or question. Checked answers, the review queue, a Lab's goal and a Case's unlocked clues are kept, and XP is never counted twice. The saved place is cleared when the lesson is finished, and ignored if the lesson's content has changed since.
 
 ## Content
 

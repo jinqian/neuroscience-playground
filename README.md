@@ -16,7 +16,7 @@ npm run typecheck
 npm run build      # static site in dist/, works offline (serve dist/ with any static server, e.g. npx vite preview)
 ```
 
-Progress (XP, streak, completed lessons, review queue, discovered brain parts, met terms) is saved in your browser's localStorage under `neuro-playground:v1`.
+Progress (XP, streak, completed lessons, review queue, discovered brain parts, met terms, and your place inside unfinished lessons) is saved in your browser's localStorage under `neuro-playground:v1`. Each browser and each address (local vs. the live site) keeps its own progress.
 
 ## Languages
 
