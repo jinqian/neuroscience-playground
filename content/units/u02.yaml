@@ -6,4 +6,4 @@ nickname:
   en: "Talking Neurons"
 color: "#7B5CF0"
 module: "Neural Communication + Embodied Emotion"
-lessons: [u02-b01, u02-b02, u02-b03, u02-b04, u02-b05, u02-b06, u02-b07, u02-b08]
+lessons: [u02-b01, u02-b02, u02-lab-threshold, u02-b03, u02-b04, u02-b05, u02-b06, u02-b07, u02-b08, u02-case-canned-food]

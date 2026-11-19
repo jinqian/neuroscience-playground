@@ -1,0 +1,36 @@
+id: u02-lab-threshold
+type: lab
+title: { en: "Find the threshold" }
+sources: ["Action Potential"]
+intro:
+  - id: c1
+    body:
+      en: >-
+        Time to poke a neuron. It rests at −70 mV. You'll give it one quick push of a few millivolts and watch
+        what happens. Small pushes fade away. Somewhere there's a [[threshold]] where the neuron suddenly fires
+        a full [[action-potential]]. Your job: find the smallest push that makes it fire.
+sim: threshold
+goal: { en: "Find the smallest stimulus that makes the neuron fire." }
+simplified:
+  en: >-
+    This is not a Hodgkin–Huxley model: the spike is a fixed shape drawn whenever threshold is reached.
+    Real thresholds vary between neurons, and real inputs add up over time and across the dendrites.
+reflection:
+  - id: q1
+    kind: mc
+    prompt: { en: "You double the stimulus above threshold. What changes in a real neuron?" }
+    options:
+      - { id: a, text: { en: "Spikes come more often; each one is the same height." } }
+      - { id: b, text: { en: "Each spike becomes twice as tall." } }
+      - { id: c, text: { en: "Nothing at all." } }
+    answer: a
+    explain: { en: "[[all-or-none|All-or-none]]: intensity is coded by spike rate, not spike size." }
+  - id: q2
+    kind: tfwhy
+    statement: { en: "The refractory period stops a spike from travelling backwards up the axon." }
+    isTrue: true
+    reasons:
+      - { id: r1, text: { en: "The patch it just left can't fire again yet, so the spike only moves forward." } }
+      - { id: r2, text: { en: "Axons have one-way valves." } }
+    answerReason: r1
+    explain: { en: "The [[refractory-period]] gives the signal its direction." }
