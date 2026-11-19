@@ -1,0 +1,65 @@
+id: u02-b05
+type: bite
+title: { en: "Ending the signal; two kinds of receptor" }
+sources: ["Signal Termination", "Receptors", "Metabotropic Receptors", "Wrap-Up: Neurocommunication"]
+cards:
+  - id: c1
+    body:
+      en: >-
+        A message must also stop, or the next one can't be heard. Transmitter leaves the [[synaptic-cleft]]
+        in three ways: it drifts away (diffusion), an enzyme breaks it down (like [[acetylcholinesterase]] for
+        acetylcholine), or the terminal pulls it back in through [[reuptake]] transporters. Antidepressants
+        called [[ssri|SSRIs]] slow serotonin reuptake, so it lingers longer.
+  - id: c2
+    illustration: receptors
+    body:
+      en: >-
+        Receptors come in two kinds. An [[ionotropic-receptor]] is itself an ion channel: the transmitter
+        opens it and ions flow within a millisecond. A [[metabotropic-receptor]] works through a G-protein
+        and a chain of messengers inside the cell. It's slower, but its effects last longer and can reach
+        many targets.
+    dev:
+      analogy: { en: "Ionotropic is a synchronous call; metabotropic is an async job that kicks off a whole pipeline." }
+      breaks: { en: "The pipeline amplifies: one receptor can switch on many molecules, so a small signal can have a big, lasting effect." }
+questions:
+  - id: q1
+    kind: match
+    prompt: { en: "Match each way of ending a signal." }
+    pairs:
+      - { id: p1, left: { en: "Diffusion" }, right: { en: "Transmitter drifts out of the cleft" } }
+      - { id: p2, left: { en: "Enzyme breakdown" }, right: { en: "Acetylcholinesterase splits ACh" } }
+      - { id: p3, left: { en: "Reuptake" }, right: { en: "The terminal recycles the transmitter" } }
+    explain: { en: "Drift away, get destroyed, or get recycled." }
+  - id: q2
+    kind: mc
+    prompt: { en: "How do SSRI antidepressants work?" }
+    options:
+      - { id: a, text: { en: "They slow serotonin reuptake, so it stays longer in the cleft." } }
+      - { id: b, text: { en: "They make terminals produce more vesicles." } }
+      - { id: c, text: { en: "They block serotonin receptors." } }
+    answer: a
+    explain: { en: "Selective Serotonin Reuptake Inhibitor: the name says it." }
+  - id: q3
+    kind: tap2d
+    prompt: { en: "Tap the [[reuptake]] transporter." }
+    figure: synapse
+    answer: reuptake-transporter
+    explain: { en: "It sits in the terminal's membrane and pulls transmitter back inside." }
+  - id: q4
+    kind: tfwhy
+    statement: { en: "Metabotropic receptors act faster than ionotropic ones." }
+    isTrue: false
+    reasons:
+      - { id: r1, text: { en: "They work through a chain of messengers, which takes longer than opening a channel." } }
+      - { id: r2, text: { en: "Metabotropic receptors have no effect at all." } }
+    answerReason: r1
+    explain: { en: "Ionotropic: milliseconds. Metabotropic: tens of milliseconds to minutes, but longer-lasting." }
+  - id: q5
+    kind: gap
+    prompt: { en: "A receptor that is itself an ion channel is called ___." }
+    options:
+      - { id: a, text: { en: "ionotropic" } }
+      - { id: b, text: { en: "metabotropic" } }
+      - { id: c, text: { en: "presynaptic" } }
+    answer: a
+    explain: { en: "Iono- (ion) + -tropic (acting on)." }

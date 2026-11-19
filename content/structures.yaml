@@ -44,7 +44,7 @@
     en: "Brainstem"
   note:
     en: "Connects the brain to the spinal cord: midbrain, pons and medulla. It runs breathing, heart rate and many reflexes, and carries the cranial nerves."
-  units: []
+  units: [u02]
   meshNodes: []
   twoDOnly: true
 - id: spinal-cord
@@ -52,7 +52,7 @@
     en: "Spinal cord"
   note:
     en: "The CNS cable running down inside the spine. It carries signals between brain and body, and runs reflexes on its own."
-  units: [u01]
+  units: [u01, u02]
   meshNodes: []
   twoDOnly: true
 - id: hypothalamus
@@ -60,6 +60,6 @@
     en: "Hypothalamus"
   note:
     en: "A small region under the thalamus that keeps the body in balance: temperature, hunger, thirst, hormones (via the pituitary) and the autonomic nervous system."
-  units: []
+  units: [u02]
   meshNodes: []
   twoDOnly: true

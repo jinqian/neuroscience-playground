@@ -56,3 +56,19 @@
 - { id: botulinum-toxin, en: botulinum toxin, roots: "Latin botulus, sausage (early cases came from bad sausages)", unit: u02 }
 - { id: tetanus-toxin, en: tetanus toxin, roots: "Greek tetanos, taut", unit: u02 }
 - { id: neuromuscular-junction, en: neuromuscular junction, abbr: NMJ, unit: u02 }
+- { id: acetylcholinesterase, en: acetylcholinesterase, abbr: AChE, unit: u02 }
+- { id: reuptake, en: reuptake, unit: u02 }
+- { id: ssri, en: selective serotonin reuptake inhibitor, abbr: SSRI, unit: u02 }
+- { id: ionotropic-receptor, en: ionotropic receptor, unit: u02 }
+- { id: metabotropic-receptor, en: metabotropic receptor, unit: u02 }
+- { id: autonomic-nervous-system, en: autonomic nervous system, abbr: ANS, roots: "Greek autos, self + nomos, law", unit: u02 }
+- { id: sympathetic-nervous-system, en: sympathetic nervous system, unit: u02 }
+- { id: parasympathetic-nervous-system, en: parasympathetic nervous system, unit: u02 }
+- { id: vagus-nerve, en: vagus nerve, abbr: "cranial nerve X", roots: "Latin vagus, wandering", unit: u02 }
+- { id: enteric-nervous-system, en: enteric nervous system, abbr: ENS, roots: "Greek enteron, intestine", unit: u02 }
+- { id: noradrenaline, en: noradrenaline (norepinephrine), unit: u02 }
+- { id: beta-blocker, en: beta blocker, unit: u02 }
+- { id: atropine, en: atropine, roots: "From Atropa belladonna, deadly nightshade", unit: u02 }
+- { id: cervical, en: cervical, roots: "Latin cervix, neck", unit: u02 }
+- { id: hypothalamus, en: hypothalamus, roots: "Greek hypo, under + thalamus, inner chamber", unit: u02 }
+- { id: brainstem, en: brainstem, unit: u02 }

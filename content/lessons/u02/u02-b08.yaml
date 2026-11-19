@@ -1,0 +1,60 @@
+id: u02-b08
+type: bite
+title: { en: "Spinal cord injury" }
+sources: ["Spinal Cord Injury", "Wrap-Up: Embodied Emotion"]
+cards:
+  - id: c1
+    illustration: spinal-levels
+    explore3d: [spinal-cord, brainstem, hypothalamus]
+    body:
+      en: >-
+        The [[spinal-cord]] is divided into levels: [[cervical]] (neck), thoracic (chest), lumbar (lower
+        back) and sacral. After an injury, everything below the damaged level loses its link with the brain.
+        A neck injury can affect the arms, the legs and breathing; a lower-back injury mainly affects the legs.
+  - id: c2
+    verify: true
+    body:
+      en: >-
+        Autonomic control is cut too. The [[hypothalamus]] and [[brainstem]] coordinate the autonomic system,
+        but their commands travel down the cord. An injury above roughly the sixth thoracic level can
+        disconnect much of the sympathetic outflow, so blood pressure and body temperature become hard to
+        control.
+questions:
+  - id: q1
+    kind: tap2d
+    prompt: { en: "Tap the level where an injury can also affect breathing and the arms." }
+    figure: spinal-levels
+    answer: cervical
+    explain: { en: "The [[cervical]] cord sends nerves to the arms and to the diaphragm, the main breathing muscle." }
+  - id: q2
+    kind: tap3d
+    prompt: { en: "Find the structure that carries the brain's commands down to the body." }
+    structure: spinal-cord
+    explain: { en: "The [[spinal-cord]] carries both movement and autonomic commands." }
+  - id: q3
+    kind: order
+    prompt: { en: "Order the spinal levels from top to bottom." }
+    steps:
+      - { id: s1, text: { en: "Cervical" } }
+      - { id: s2, text: { en: "Thoracic" } }
+      - { id: s3, text: { en: "Lumbar" } }
+      - { id: s4, text: { en: "Sacral" } }
+    explain: { en: "Neck, chest, lower back, base." }
+  - id: q4
+    kind: mc
+    prompt: { en: "Why can a high spinal injury disturb blood pressure?" }
+    options:
+      - { id: a, text: { en: "Commands from the brainstem and hypothalamus can't reach sympathetic neurons below the injury." } }
+      - { id: b, text: { en: "The heart sits inside the spinal cord." } }
+      - { id: c, text: { en: "Blood stops flowing to the spine." } }
+    answer: a
+    explain: { en: "The sympathetic neurons still exist, but they've lost their supervisor." }
+  - id: q5
+    kind: tfwhy
+    statement: { en: "After a spinal cord injury, body parts served above the injury usually still work." }
+    isTrue: true
+    reasons:
+      - { id: r1, text: { en: "Nerves leaving the cord above the injury stay connected to the brain." } }
+      - { id: r2, text: { en: "The brain shuts down every nerve after any injury." } }
+    answerReason: r1
+    explain: { en: "That's why the injury's level matters so much." }

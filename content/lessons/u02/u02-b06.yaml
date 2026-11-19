@@ -1,0 +1,60 @@
+id: u02-b06
+type: bite
+title: { en: "The gut's brain and the two autonomic branches" }
+sources: ["Introduction to Embodied Emotion", "Enteric Nervous System", "Parasympathetics & Sympathetics"]
+cards:
+  - id: c1
+    illustration: autonomic
+    body:
+      en: >-
+        Emotions live in the body too. The [[autonomic-nervous-system]] runs your organs without conscious
+        control. Its [[sympathetic-nervous-system|sympathetic]] branch prepares you for "fight or flight":
+        faster heart, wider pupils, slower digestion. It leaves the spinal cord at the thoracic and lumbar
+        levels.
+  - id: c2
+    verify: true
+    body:
+      en: >-
+        The [[parasympathetic-nervous-system|parasympathetic]] branch handles "rest and digest": slower
+        heart, narrower pupils, busy gut. It leaves from the brainstem, mostly through the [[vagus-nerve]],
+        and from the sacral spinal cord. The gut also has its own network, the [[enteric-nervous-system]]:
+        hundreds of millions of neurons that can run digestion by themselves.
+questions:
+  - id: q1
+    kind: tap2d
+    prompt: { en: "Tap where the [[vagus-nerve]] leaves the CNS." }
+    figure: autonomic
+    answer: brainstem-vagus
+    explain: { en: "The vagus is a cranial nerve: it leaves from the brainstem and wanders down to the heart and gut." }
+  - id: q2
+    kind: match
+    prompt: { en: "Match each branch to its job." }
+    pairs:
+      - { id: p1, left: { en: "Sympathetic" }, right: { en: "Fight or flight" } }
+      - { id: p2, left: { en: "Parasympathetic" }, right: { en: "Rest and digest" } }
+      - { id: p3, left: { en: "Enteric" }, right: { en: "The gut's own network" } }
+    explain: { en: "Two opposing branches plus a local controller in the gut." }
+  - id: q3
+    kind: mc
+    prompt: { en: "During a scare, what does the sympathetic branch do to your pupils?" }
+    options:
+      - { id: a, text: { en: "Widens them" } }
+      - { id: b, text: { en: "Narrows them" } }
+      - { id: c, text: { en: "Nothing" } }
+    answer: a
+    explain: { en: "Wider pupils let in more light: useful when danger is near." }
+  - id: q4
+    kind: tap2d
+    prompt: { en: "Tap where the sympathetic outflow leaves the spinal cord." }
+    figure: autonomic
+    answer: thoracolumbar-chain
+    explain: { en: "Sympathetic neurons leave from the thoracic and lumbar cord, then form a chain beside the spine." }
+  - id: q5
+    kind: tfwhy
+    statement: { en: "The gut needs the brain to run every step of digestion." }
+    isTrue: false
+    reasons:
+      - { id: r1, text: { en: "The enteric nervous system can run digestion on its own; the brain only adjusts it." } }
+      - { id: r2, text: { en: "The gut has no neurons." } }
+    answerReason: r1
+    explain: { en: "That's why the [[enteric-nervous-system]] is nicknamed the 'second brain'." }

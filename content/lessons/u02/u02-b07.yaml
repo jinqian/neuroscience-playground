@@ -1,0 +1,65 @@
+id: u02-b07
+type: bite
+title: { en: "Balance, and the drugs that tip it" }
+sources: ["Parasympathetic/Sympathetic Balance", "Autonomic Pharmacology: Adjusting the PS/S System"]
+cards:
+  - id: c1
+    body:
+      en: >-
+        Most organs get input from both branches, and the balance shifts all day. Before a talk: dry mouth,
+        racing heart (sympathetic). After a big meal: a sleepy, digesting body (parasympathetic). At the
+        organs, sympathetic nerves mostly use [[noradrenaline]]; parasympathetic nerves use [[acetylcholine]].
+    dev:
+      analogy: { en: "Two opposing controllers, like a heater and an air conditioner sharing one thermostat." }
+      breaks: { en: "Not every organ gets both, and the branches sometimes cooperate rather than oppose." }
+  - id: c2
+    body:
+      en: >-
+        Drugs can tip the balance. [[beta-blocker|Beta blockers]] block noradrenaline's beta receptors on
+        the heart, calming a racing pulse; some musicians use them for stage fright. [[atropine|Atropine]]
+        blocks acetylcholine's muscarinic receptors: the heart speeds up, the mouth dries and the pupils widen.
+questions:
+  - id: q1
+    kind: mc
+    prompt: { en: "What does a beta blocker mainly do to the heart?" }
+    options:
+      - { id: a, text: { en: "Slows it" } }
+      - { id: b, text: { en: "Speeds it up" } }
+      - { id: c, text: { en: "Stops it" } }
+    answer: a
+    explain: { en: "It blocks the sympathetic 'speed up' signal at the heart." }
+  - id: q2
+    kind: match
+    prompt: { en: "Match each item." }
+    pairs:
+      - { id: p1, left: { en: "Sympathetic nerves at organs" }, right: { en: "Noradrenaline" } }
+      - { id: p2, left: { en: "Parasympathetic nerves at organs" }, right: { en: "Acetylcholine" } }
+      - { id: p3, left: { en: "Atropine" }, right: { en: "Blocks muscarinic ACh receptors" } }
+    explain: { en: "Know the transmitter, and you can predict what a drug will do." }
+  - id: q3
+    kind: tfwhy
+    statement: { en: "Atropine makes the pupils wider." }
+    isTrue: true
+    reasons:
+      - { id: r1, text: { en: "It blocks the parasympathetic signal that narrows them." } }
+      - { id: r2, text: { en: "It switches on the sympathetic chain directly." } }
+    answerReason: r1
+    explain: { en: "Remove the 'narrow' signal and the 'widen' signal wins. Eye doctors use this to examine the retina." }
+  - id: q4
+    kind: gap
+    prompt: { en: "After a large meal, the ___ branch is in charge." }
+    options:
+      - { id: a, text: { en: "parasympathetic" } }
+      - { id: b, text: { en: "sympathetic" } }
+      - { id: c, text: { en: "motor" } }
+    answer: a
+    explain: { en: "Rest and digest." }
+  - id: q5
+    kind: mc
+    prompt: { en: "Before a big presentation your mouth goes dry. Which branch is winning?" }
+    options:
+      - { id: a, text: { en: "Sympathetic" } }
+      - { id: b, text: { en: "Parasympathetic" } }
+      - { id: c, text: { en: "Enteric" } }
+    answer: a
+    explain: { en: "Saliva is a parasympathetic job, so stress turns it down." }
