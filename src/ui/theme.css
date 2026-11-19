@@ -284,3 +284,23 @@ button { font: inherit; color: inherit; }
 .race__track--myelin { background: repeating-linear-gradient(90deg, #f4d6a0 0 26px, #2e2850 26px 30px); opacity: calc(1 - var(--damage, 0) * .8); }
 .race__dot { position: absolute; top: 50%; left: 0; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 50%; background: #ff5fa8; box-shadow: 0 0 12px #ff5fa8; }
 .sim__hint { font-size: 13px; color: #a49dc2; }
+
+/* ---------- case file (paper card inside the bright frame) ---------- */
+.casefile { position: relative; background: var(--paper); color: var(--paper-ink); border: 2px solid var(--paper-line); border-radius: 6px 18px 18px 18px; padding: 28px 20px 22px; margin-top: 18px; display: flex; flex-direction: column; gap: 14px; box-shadow: 0 5px 0 var(--paper-line); }
+.casefile__tab { position: absolute; top: -18px; left: -2px; background: var(--folder); color: #5b4512; font-weight: 900; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; padding: 3px 14px; border-radius: 10px 10px 0 0; }
+.casefile__title { font-size: 26px; text-transform: uppercase; letter-spacing: .03em; }
+.casefile__story { font-size: 18px; font-weight: 700; }
+.casefile__h { font-size: 14px; text-transform: uppercase; letter-spacing: .12em; color: #7b6a4e; margin-top: 6px; }
+.clues { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.clue { display: flex; gap: 12px; align-items: flex-start; font-weight: 700; }
+.clue__n { flex: none; width: 26px; height: 26px; border-radius: 6px; background: var(--paper-ink); color: var(--paper); display: grid; place-items: center; font-weight: 900; font-size: 13px; margin-top: 2px; }
+.clue--locked .clue__n { background: #bdb3a0; }
+.clue__body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.clue__locked { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; color: #8c806a; }
+.unlock { display: flex; flex-direction: column; gap: 12px; background: var(--surface); border: 2px dashed var(--paper-line); border-radius: 14px; padding: 14px; }
+.unlock .q__prompt { font-size: 19px; }
+.unlock > .btn { align-self: flex-start; }
+.unlock__wrong { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; color: var(--red-ink); }
+.call { display: flex; flex-direction: column; gap: 12px; border-top: 2px dashed var(--paper-line); padding-top: 14px; }
+.call__prompt { font-size: 20px; font-weight: 900; }
+.call__wrong { display: flex; gap: 10px; align-items: flex-start; background: var(--red-soft); border-radius: 12px; padding: 10px 12px; font-weight: 700; }

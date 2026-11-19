@@ -72,4 +72,13 @@ export const uiEn = {
   travelTime: '{ms} ms at {v} m/s',
   conductionBlock: 'Conduction block: the signal never arrives.',
   tooSlow: 'Too slow. The goal is under {goal} ms.',
+  caseFile: 'Case file',
+  clues: 'Clues',
+  lockedClue: 'Locked clue: answer a question to reveal it.',
+  unlockClue: 'Unlock clue {n}',
+  tryAgain: 'Try again',
+  makeTheCall: 'Make the call',
+  allCluesFirst: 'Unlock every clue to make the call.',
+  caseSolved: 'Case solved! +{n} XP',
+  finish: 'Finish',
 } as const

@@ -5,6 +5,7 @@ import type { Bite, Lesson } from '../content/schema'
 import { bitePlan } from '../engine/lessonRun'
 import { useLang } from '../i18n/LanguageProvider'
 import { t } from '../i18n/t'
+import { CaseScreen } from '../case/CaseScreen'
 import { LabScreen } from '../lab/LabScreen'
 import { useProgress } from '../progress/store'
 import { Dendri } from '../ui/Dendri'
@@ -31,7 +32,7 @@ function BitePlayer({ lesson }: { lesson: Bite }) {
 function Player({ lesson }: { lesson: Lesson }) {
   if (lesson.type === 'bite') return <BitePlayer lesson={lesson} />
   if (lesson.type === 'lab') return <LabScreen lesson={lesson} />
-  return null
+  return <CaseScreen lesson={lesson} />
 }
 
 export function LessonScreen() {
