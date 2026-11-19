@@ -5,6 +5,7 @@ import { t } from '../i18n/t'
 import { Dendri } from './Dendri'
 import { Header } from './Header'
 import { ExplorerScreen } from '../brain/ExplorerScreen'
+import { CreditsScreen } from '../credits/CreditsScreen'
 import { GlossaryScreen } from '../glossary/GlossaryScreen'
 import { LessonScreen } from '../lesson/LessonScreen'
 import { PathScreen } from './PathScreen'
@@ -20,11 +21,22 @@ function Placeholder() {
   )
 }
 
+function Footer() {
+  const { lang } = useLang()
+  return (
+    <footer className="footer">
+      <Link to="/credits">{t('credits', lang)}</Link>
+      <span>3D brain: BodyParts3D © DBCLS, CC BY-SA 2.1 JP</span>
+    </footer>
+  )
+}
+
 function Shell({ children }: { children: ReactNode }) {
   return (
     <div className="app">
       <Header />
       <main className="main">{children}</main>
+      <Footer />
     </div>
   )
 }
@@ -36,6 +48,7 @@ export function AppRoutes() {
         <Route path="/" element={<Shell><PathScreen /></Shell>} />
         <Route path="/glossary" element={<Shell><GlossaryScreen /></Shell>} />
         <Route path="/brain" element={<Shell><ExplorerScreen /></Shell>} />
+        <Route path="/credits" element={<Shell><CreditsScreen /></Shell>} />
         <Route path="/lesson/:lessonId" element={<LessonScreen />} />
         <Route path="*" element={<Shell><Placeholder /></Shell>} />
       </Routes>

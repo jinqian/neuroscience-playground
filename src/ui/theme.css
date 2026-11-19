@@ -350,3 +350,14 @@ button { font: inherit; color: inherit; }
 .modal__head { display: flex; align-items: center; justify-content: space-between; }
 .picker { display: flex; flex-direction: column; gap: 8px; }
 .picker__picked { font-weight: 900; color: #0b6ea0; }
+
+/* ---------- footer + credits ---------- */
+.footer { border-top: 2px solid var(--line); padding: 14px max(16px, env(safe-area-inset-right, 0px)) calc(14px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; gap: 8px 18px; justify-content: center; font-size: 13px; font-weight: 700; color: var(--ink-soft); }
+.footer a { color: var(--purple-deep); font-weight: 900; }
+.credits { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; font-weight: 700; }
+.credits h1 { font-size: 30px; }
+.credits section { display: flex; flex-direction: column; gap: 6px; }
+.credits h2 { font-size: 18px; color: var(--purple-deep); }
+.credits a { color: var(--blue); }
+.credits__attribution { border-left: 4px solid var(--purple); padding: 6px 12px; background: var(--purple-soft); border-radius: 0 10px 10px 0; }
+.credits__cite { font-size: 14px; color: var(--ink-soft); }
