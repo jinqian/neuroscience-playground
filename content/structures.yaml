@@ -1,0 +1,65 @@
+# 3D brain structures. meshNodes name nodes in public/models/brain.glb.
+- id: frontal-lobe
+  name:
+    en: "Frontal lobe"
+  note:
+    en: "Notes coming with the lessons."
+  units: []
+  meshNodes: []
+  twoDOnly: true
+- id: parietal-lobe
+  name:
+    en: "Parietal lobe"
+  note:
+    en: "Notes coming with the lessons."
+  units: []
+  meshNodes: []
+  twoDOnly: true
+- id: temporal-lobe
+  name:
+    en: "Temporal lobe"
+  note:
+    en: "Notes coming with the lessons."
+  units: []
+  meshNodes: []
+  twoDOnly: true
+- id: occipital-lobe
+  name:
+    en: "Occipital lobe"
+  note:
+    en: "Notes coming with the lessons."
+  units: []
+  meshNodes: []
+  twoDOnly: true
+- id: cerebellum
+  name:
+    en: "Cerebellum"
+  note:
+    en: "Notes coming with the lessons."
+  units: []
+  meshNodes: []
+  twoDOnly: true
+- id: brainstem
+  name:
+    en: "Brainstem"
+  note:
+    en: "Notes coming with the lessons."
+  units: []
+  meshNodes: []
+  twoDOnly: true
+- id: spinal-cord
+  name:
+    en: "Spinal cord"
+  note:
+    en: "Notes coming with the lessons."
+  units: []
+  meshNodes: []
+  twoDOnly: true
+- id: hypothalamus
+  name:
+    en: "Hypothalamus"
+  note:
+    en: "Notes coming with the lessons."
+  units: []
+  meshNodes: []
+  twoDOnly: true
