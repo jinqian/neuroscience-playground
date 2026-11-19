@@ -2,6 +2,8 @@
 
 A personal, Duolingo-style app for learning neuroscience, following the 10 modules of an introductory online neurobiology course. Each unit mixes short **Bites** (illustrated cards + quick questions), hands-on **Labs** (simulations) and a **Case** (a patient mystery), plus a real-anatomy **3D brain** and a trilingual-ready **Glossary**.
 
+**Live app:** https://jinqian.github.io/neuroscience-playground/ (deployed from `main` by `.github/workflows/pages.yml`)
+
 Design: `docs/superpowers/specs/2026-11-19-neuro-playground-design.md` · Mockups: `docs/design/directions-mockup.html`
 
 ## Run it
