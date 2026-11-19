@@ -32,7 +32,7 @@ export const uiEn = {
   why: 'Why?',
   moveUp: 'Move {item} up',
   moveDown: 'Move {item} down',
-  orderHint: 'Put these in order, top to bottom.',
+  orderHint: 'Drag the items (or use the arrows) to put them in order, top to bottom.',
   matchHint: 'Tap an item on the left, then its partner on the right.',
   tapHint: 'Tap the right spot on the picture.',
   findStructure: 'Pick the structure.',
