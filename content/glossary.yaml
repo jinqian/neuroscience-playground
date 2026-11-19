@@ -37,3 +37,22 @@
 - { id: peripheral-neuropathy, en: peripheral neuropathy, roots: "Greek pathos, suffering", unit: u01 }
 - { id: glioma, en: glioma, unit: u01 }
 - { id: meningioma, en: meningioma, unit: u01 }
+- { id: ion, en: ion, roots: "Greek ion, going (ions move in an electric field)", unit: u02 }
+- { id: membrane, en: cell membrane, unit: u02 }
+- { id: sodium-potassium-pump, en: sodium-potassium pump, abbr: "Na⁺/K⁺-ATPase", unit: u02 }
+- { id: resting-potential, en: resting potential, unit: u02 }
+- { id: millivolt, en: millivolt, abbr: mV, unit: u02 }
+- { id: threshold, en: threshold, unit: u02 }
+- { id: action-potential, en: action potential, abbr: AP, unit: u02 }
+- { id: refractory-period, en: refractory period, roots: "Latin refractarius, stubborn", unit: u02 }
+- { id: all-or-none, en: all-or-none, unit: u02 }
+- { id: neurotransmitter, en: neurotransmitter, unit: u02 }
+- { id: vesicle, en: vesicle, roots: "Latin vesicula, little bladder", unit: u02 }
+- { id: acetylcholine, en: acetylcholine, abbr: ACh, unit: u02 }
+- { id: neuropeptide, en: neuropeptide, unit: u02 }
+- { id: synaptic-cleft, en: synaptic cleft, unit: u02 }
+- { id: receptor, en: receptor, unit: u02 }
+- { id: snare-proteins, en: SNARE proteins, unit: u02 }
+- { id: botulinum-toxin, en: botulinum toxin, roots: "Latin botulus, sausage (early cases came from bad sausages)", unit: u02 }
+- { id: tetanus-toxin, en: tetanus toxin, roots: "Greek tetanos, taut", unit: u02 }
+- { id: neuromuscular-junction, en: neuromuscular junction, abbr: NMJ, unit: u02 }

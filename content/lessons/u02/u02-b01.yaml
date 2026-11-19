@@ -1,0 +1,67 @@
+id: u02-b01
+type: bite
+title: { en: "A battery made of salt" }
+sources: ["Electrical Language", "Electricity Review"]
+cards:
+  - id: c1
+    illustration: membrane
+    body:
+      en: >-
+        A neuron is a bag of salty water sitting in salty water. The salts are [[ion|ions]]: charged particles
+        such as sodium (Na⁺), potassium (K⁺) and chloride (Cl⁻). The cell's [[membrane]] keeps them apart.
+        Inside there's more K⁺; outside there's more Na⁺ and Cl⁻. Separated charge is stored energy, just
+        like in a battery.
+  - id: c2
+    body:
+      en: >-
+        The [[sodium-potassium-pump]] spends energy to push 3 Na⁺ out for every 2 K⁺ it brings in, and some
+        K⁺ leaks back out through open channels. The result is the [[resting-potential]]: the inside sits at
+        about −70 [[millivolt|mV]] compared with the outside.
+    dev:
+      analogy: { en: "Voltage is like water pressure behind a dam: ions are waiting to rush through the moment a gate opens." }
+      breaks: { en: "Ions aren't one fluid. Each kind has its own gates and its own direction it wants to go." }
+questions:
+  - id: q1
+    kind: gap
+    prompt: { en: "At rest, the inside of a neuron sits at about ___ compared with the outside." }
+    options:
+      - { id: a, text: { en: "−70 mV" } }
+      - { id: b, text: { en: "+40 mV" } }
+      - { id: c, text: { en: "0 mV" } }
+    answer: a
+    explain: { en: "That's the [[resting-potential]]: a charged battery waiting to be used." }
+  - id: q2
+    kind: mc
+    prompt: { en: "Which ion is more concentrated inside a resting neuron?" }
+    options:
+      - { id: a, text: { en: "Potassium (K⁺)" } }
+      - { id: b, text: { en: "Sodium (Na⁺)" } }
+      - { id: c, text: { en: "Chloride (Cl⁻)" } }
+    answer: a
+    explain: { en: "Inside is rich in K⁺; outside is rich in Na⁺ and Cl⁻." }
+  - id: q3
+    kind: tfwhy
+    statement: { en: "The sodium-potassium pump needs energy to work." }
+    isTrue: true
+    reasons:
+      - { id: r1, text: { en: "It moves ions against their concentration gradients, which costs ATP." } }
+      - { id: r2, text: { en: "Ions are too heavy to move on their own." } }
+    answerReason: r1
+    explain: { en: "Pushing ions uphill takes ATP. The brain spends a large share of its energy on these pumps." }
+  - id: q4
+    kind: match
+    prompt: { en: "Match each item to where it fits." }
+    pairs:
+      - { id: p1, left: { en: "Na⁺" }, right: { en: "Mostly outside the cell" } }
+      - { id: p2, left: { en: "K⁺" }, right: { en: "Mostly inside the cell" } }
+      - { id: p3, left: { en: "Na⁺/K⁺ pump" }, right: { en: "3 out, 2 in" } }
+    explain: { en: "Remember: sodium outside, potassium inside, kept that way by the pump." }
+  - id: q5
+    kind: mc
+    prompt: { en: "Why is the inside of a resting neuron negative?" }
+    options:
+      - { id: a, text: { en: "Positive K⁺ leaks out, and the pump exports more positive charge than it imports." } }
+      - { id: b, text: { en: "The inside is full of electrons from food." } }
+      - { id: c, text: { en: "Sodium rushes in all the time." } }
+    answer: a
+    explain: { en: "Positive charge leaving makes the inside negative relative to the outside." }

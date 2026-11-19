@@ -1,0 +1,65 @@
+id: u02-b04
+type: bite
+title: { en: "Botox and the clostridial toxins" }
+sources: ["Clostridial Toxins: Botox"]
+cards:
+  - id: c1
+    body:
+      en: >-
+        Vesicles fuse thanks to [[snare-proteins|SNARE proteins]], which zip the vesicle onto the terminal's
+        membrane. [[botulinum-toxin|Botulinum toxin]], made by the bacterium Clostridium botulinum, cuts these
+        proteins. At the [[neuromuscular-junction]], acetylcholine can't be released, so the muscle never gets
+        the order to contract: it goes limp.
+  - id: c2
+    body:
+      en: >-
+        Its cousin, [[tetanus-toxin|tetanus toxin]], cuts the same kind of machinery but travels into the
+        spinal cord, where it silences inhibitory neurons. Without those brakes, muscles lock in spasm. Tiny,
+        local doses of botulinum toxin ("Botox") are used to relax wrinkle muscles, eyelid spasms and some
+        migraines.
+questions:
+  - id: q1
+    kind: mc
+    prompt: { en: "What does botulinum toxin block?" }
+    options:
+      - { id: a, text: { en: "The release of acetylcholine from the nerve terminal" } }
+      - { id: b, text: { en: "The acetylcholine receptors on the muscle" } }
+      - { id: c, text: { en: "The action potential in the axon" } }
+    answer: a
+    explain: { en: "It cuts [[snare-proteins|SNARE proteins]], so vesicles can't fuse and nothing is released." }
+  - id: q2
+    kind: tfwhy
+    statement: { en: "Botulinum and tetanus toxins cause the same symptoms." }
+    isTrue: false
+    reasons:
+      - { id: r1, text: { en: "Botulinum blocks release at muscles (limp); tetanus blocks inhibitory neurons in the cord (spasm)." } }
+      - { id: r2, text: { en: "They are the same toxin with two names." } }
+    answerReason: r1
+    explain: { en: "Same molecular trick, different targets, opposite effects." }
+  - id: q3
+    kind: gap
+    prompt: { en: "Vesicles dock and fuse using ___ proteins." }
+    options:
+      - { id: a, text: { en: "SNARE" } }
+      - { id: b, text: { en: "myelin" } }
+      - { id: c, text: { en: "receptor" } }
+    answer: a
+    explain: { en: "[[snare-proteins|SNAREs]] zip vesicle and membrane together." }
+  - id: q4
+    kind: match
+    prompt: { en: "Match each toxin use or effect." }
+    pairs:
+      - { id: p1, left: { en: "Botulinum toxin" }, right: { en: "Floppy (flaccid) paralysis" } }
+      - { id: p2, left: { en: "Tetanus toxin" }, right: { en: "Rigid muscle spasms" } }
+      - { id: p3, left: { en: "Cosmetic Botox" }, right: { en: "A tiny local dose relaxes one muscle" } }
+    explain: { en: "The dose and the place decide whether a toxin is a poison or a medicine." }
+  - id: q5
+    kind: mc
+    prompt: { en: "Why does a Botox injection for wrinkles affect only the treated muscle?" }
+    options:
+      - { id: a, text: { en: "A tiny dose is injected into that muscle and acts on its nerve terminals." } }
+      - { id: b, text: { en: "The toxin only works on the face." } }
+      - { id: c, text: { en: "The brain switches the other muscles back on." } }
+    answer: a
+    explain: { en: "Local dose, local effect. The block wears off over a few months as terminals sprout new connections." }
+    verify: true

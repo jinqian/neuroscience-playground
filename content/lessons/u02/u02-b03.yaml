@@ -1,0 +1,62 @@
+id: u02-b03
+type: bite
+title: { en: "Packing and sending messages" }
+sources: ["Neurotransmitter Synthesis", "Neurotransmitter Release"]
+cards:
+  - id: c1
+    illustration: synapse
+    body:
+      en: >-
+        At the axon terminal, the electrical signal becomes chemical. [[neurotransmitter|Neurotransmitters]]
+        are stored in tiny bubbles called [[vesicle|vesicles]]. Small-molecule transmitters, such as
+        [[acetylcholine]] and glutamate, are made right in the terminal. Larger [[neuropeptide|neuropeptides]]
+        are built in the soma and shipped down the axon.
+  - id: c2
+    body:
+      en: >-
+        When a spike reaches the terminal, voltage-gated calcium channels open and Ca²⁺ flows in. Calcium
+        triggers vesicles to fuse with the membrane and spill their contents into the [[synaptic-cleft]].
+        The transmitter drifts across the gap and binds to [[receptor|receptors]] on the next cell.
+    dev:
+      analogy: { en: "Like a message queue: the spike is the publish event, vesicles are buffered messages, receptors are subscribers." }
+      breaks: { en: "Messages aren't addressed: transmitter spreads and binds any matching receptor nearby." }
+questions:
+  - id: q1
+    kind: tap2d
+    prompt: { en: "Tap a [[vesicle]] full of neurotransmitter." }
+    figure: synapse
+    answer: vesicle
+    explain: { en: "Vesicles are the small round packets inside the terminal." }
+  - id: q2
+    kind: order
+    prompt: { en: "Put the steps of chemical transmission in order." }
+    steps:
+      - { id: s1, text: { en: "A spike arrives at the terminal" } }
+      - { id: s2, text: { en: "Ca²⁺ channels open and calcium flows in" } }
+      - { id: s3, text: { en: "Vesicles fuse with the membrane" } }
+      - { id: s4, text: { en: "Transmitter crosses the cleft" } }
+      - { id: s5, text: { en: "Transmitter binds receptors" } }
+    explain: { en: "Electrical → calcium → fusion → diffusion → binding." }
+  - id: q3
+    kind: mc
+    prompt: { en: "Which ion triggers vesicles to release their contents?" }
+    options:
+      - { id: a, text: { en: "Calcium (Ca²⁺)" } }
+      - { id: b, text: { en: "Potassium (K⁺)" } }
+      - { id: c, text: { en: "Chloride (Cl⁻)" } }
+    answer: a
+    explain: { en: "Calcium entering the terminal is the release signal." }
+  - id: q4
+    kind: tap2d
+    prompt: { en: "Tap the [[synaptic-cleft]], the gap between the two cells." }
+    figure: synapse
+    answer: cleft
+    explain: { en: "The cleft is only about 20 nanometres wide." }
+  - id: q5
+    kind: match
+    prompt: { en: "Match each term to its description." }
+    pairs:
+      - { id: p1, left: { en: "Acetylcholine" }, right: { en: "Small transmitter made in the terminal" } }
+      - { id: p2, left: { en: "Neuropeptide" }, right: { en: "Built in the soma, shipped down the axon" } }
+      - { id: p3, left: { en: "Vesicle" }, right: { en: "Bubble that stores transmitter" } }
+    explain: { en: "Small molecules are made locally; peptides come from the cell body's protein factory." }

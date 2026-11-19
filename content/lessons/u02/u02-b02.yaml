@@ -1,0 +1,69 @@
+id: u02-b02
+type: bite
+title: { en: "The action potential" }
+sources: ["Action Potential"]
+cards:
+  - id: c1
+    illustration: action-potential
+    body:
+      en: >-
+        When inputs push the voltage up to the [[threshold]] (about −55 mV), voltage-gated sodium channels
+        snap open. Na⁺ rushes in and the inside swings to about +40 mV. This brief spike, lasting about a
+        millisecond, is the [[action-potential]].
+    dev:
+      analogy: { en: "Like a debounced event: nothing happens below a threshold, then one full-size event fires." }
+      breaks: { en: "Inputs add up over time and space, and after each spike there's a refractory period when firing is harder." }
+  - id: c2
+    body:
+      en: >-
+        Then the sodium channels close and potassium channels open. K⁺ flows out and the voltage falls,
+        briefly dipping below rest. For a moment the neuron can't fire again: the [[refractory-period]].
+        Each spike triggers the next patch of membrane, so the signal travels along the axon without fading.
+        And it's [[all-or-none]]: a stronger input gives more spikes, not bigger ones.
+questions:
+  - id: q1
+    kind: order
+    prompt: { en: "Put the steps of an action potential in order." }
+    steps:
+      - { id: s1, text: { en: "Inputs push the voltage to threshold" } }
+      - { id: s2, text: { en: "Na⁺ channels open and Na⁺ rushes in" } }
+      - { id: s3, text: { en: "Voltage peaks near +40 mV" } }
+      - { id: s4, text: { en: "K⁺ channels open and K⁺ flows out" } }
+      - { id: s5, text: { en: "Voltage dips below rest, then recovers" } }
+    explain: { en: "Threshold, sodium in, peak, potassium out, undershoot, back to rest." }
+  - id: q2
+    kind: mc
+    prompt: { en: "A stimulus is twice as strong as needed. What happens?" }
+    options:
+      - { id: a, text: { en: "Spikes come more often, but each is the same size." } }
+      - { id: b, text: { en: "The spike is twice as tall." } }
+      - { id: c, text: { en: "The spike travels backwards." } }
+    answer: a
+    explain: { en: "Spikes are [[all-or-none]]. Strength is coded by how often the neuron fires." }
+  - id: q3
+    kind: gap
+    prompt: { en: "The voltage at which a neuron fires is called the ___." }
+    options:
+      - { id: a, text: { en: "threshold" } }
+      - { id: b, text: { en: "peak" } }
+      - { id: c, text: { en: "resting potential" } }
+    answer: a
+    explain: { en: "Around −55 mV for a typical neuron." }
+  - id: q4
+    kind: tfwhy
+    statement: { en: "Right after a spike, a neuron can fire again immediately." }
+    isTrue: false
+    reasons:
+      - { id: r1, text: { en: "During the refractory period, the sodium channels need time to reset." } }
+      - { id: r2, text: { en: "Neurons can only fire once per minute." } }
+    answerReason: r1
+    explain: { en: "The [[refractory-period]] also keeps the spike moving forward, not backward." }
+  - id: q5
+    kind: mc
+    prompt: { en: "Why doesn't the action potential fade as it travels down the axon?" }
+    options:
+      - { id: a, text: { en: "Each patch of membrane regenerates a full-size spike." } }
+      - { id: b, text: { en: "The terminal amplifies it at the end." } }
+      - { id: c, text: { en: "The axon is a perfect wire with no losses." } }
+    answer: a
+    explain: { en: "It's re-created at every step, like a row of dominoes." }

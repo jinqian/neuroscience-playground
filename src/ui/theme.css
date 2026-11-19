@@ -311,3 +311,5 @@ button { font: inherit; color: inherit; }
 .region:hover, .region:focus-visible { filter: drop-shadow(0 0 5px var(--blue)); }
 .region--picked { filter: drop-shadow(0 0 7px var(--blue)) drop-shadow(0 0 2px var(--blue)); }
 .figure--locked .region { cursor: default; }
+.ion { font-family: var(--font); font-weight: 900; font-size: 11px; fill: var(--ink); }
+.ion--light { fill: #fff; font-size: 12px; }
