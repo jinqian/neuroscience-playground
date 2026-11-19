@@ -1,0 +1,65 @@
+id: u01-b04
+type: bite
+title: { en: "Myelin and when it fails" }
+sources: ["Myelin", "Demyelinating Diseases"]
+cards:
+  - id: c1
+    illustration: myelin
+    body:
+      en: >-
+        [[myelin|Myelin]] wraps an axon in insulating segments, with small bare gaps called
+        [[node-of-ranvier|nodes of Ranvier]]. The electrical signal is regenerated only at the nodes, so it
+        seems to jump from gap to gap. This [[saltatory-conduction]] is much faster than a signal crawling
+        along a bare axon, and it uses less energy.
+    dev:
+      analogy: { en: "Like a long cable with repeaters: the signal is boosted at each node instead of being pushed along every millimetre." }
+      breaks: { en: "Between nodes, current still flows passively inside the axon. Nothing is literally skipped, and the repeaters are clusters of ion channels." }
+  - id: c2
+    body:
+      en: >-
+        When myelin is damaged ([[demyelination]]), signals slow down or fail. In [[multiple-sclerosis]],
+        the immune system attacks the myelin made by oligodendrocytes in the brain and spinal cord. In
+        [[guillain-barre-syndrome]], it attacks the peripheral myelin made by Schwann cells, often after an
+        infection, causing weakness that climbs up from the feet.
+questions:
+  - id: q1
+    kind: tap2d
+    prompt: { en: "Tap a [[node-of-ranvier|node of Ranvier]], a bare gap in the myelin." }
+    figure: neuron
+    answer: node-of-ranvier
+    explain: { en: "The nodes are the short bare stretches between myelin segments, where the signal is regenerated." }
+  - id: q2
+    kind: mc
+    prompt: { en: "Why does myelin make signals faster?" }
+    options:
+      - { id: a, text: { en: "The signal is regenerated only at the nodes, so it jumps between them." } }
+      - { id: b, text: { en: "Myelin carries the signal itself, like a copper wire." } }
+      - { id: c, text: { en: "Myelin pumps extra sodium into the axon." } }
+    answer: a
+    explain: { en: "Insulation stops current leaking out, so it reaches the next node quickly: that's [[saltatory-conduction]]." }
+  - id: q3
+    kind: match
+    prompt: { en: "Match each term to what it means." }
+    pairs:
+      - { id: p1, left: { en: "Multiple sclerosis" }, right: { en: "Immune attack on myelin in the brain and spinal cord" } }
+      - { id: p2, left: { en: "Guillain-Barré syndrome" }, right: { en: "Immune attack on myelin in peripheral nerves" } }
+      - { id: p3, left: { en: "Node of Ranvier" }, right: { en: "Bare gap where the signal is regenerated" } }
+    explain: { en: "MS is a CNS disease; Guillain-Barré is a PNS disease. Both strip myelin." }
+  - id: q4
+    kind: tfwhy
+    statement: { en: "Damaged myelin can make a signal slow down or stop." }
+    isTrue: true
+    reasons:
+      - { id: r1, text: { en: "Without insulation, current leaks out and may not reach the next node." } }
+      - { id: r2, text: { en: "Myelin creates the signal, so without it nothing starts." } }
+    answerReason: r1
+    explain: { en: "The axon still fires, but the signal can fade before the next node: slowing, or a full conduction block." }
+  - id: q5
+    kind: gap
+    prompt: { en: "Signals jumping from node to node is called ___ conduction." }
+    options:
+      - { id: a, text: { en: "saltatory" } }
+      - { id: b, text: { en: "continuous" } }
+      - { id: c, text: { en: "synaptic" } }
+    answer: a
+    explain: { en: "From Latin saltare, 'to jump'." }

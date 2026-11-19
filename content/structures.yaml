@@ -3,15 +3,15 @@
   name:
     en: "Frontal lobe"
   note:
-    en: "Notes coming with the lessons."
-  units: []
+    en: "The front of each hemisphere. It plans, decides and controls movement; its rear strip is the primary motor cortex, and on the left it holds Broca's area for speech."
+  units: [u01]
   meshNodes: []
   twoDOnly: true
 - id: parietal-lobe
   name:
     en: "Parietal lobe"
   note:
-    en: "Notes coming with the lessons."
+    en: "Behind the frontal lobe. It handles touch and body sense (its front strip is the primary somatosensory cortex) and works out where things are in space."
   units: []
   meshNodes: []
   twoDOnly: true
@@ -19,7 +19,7 @@
   name:
     en: "Temporal lobe"
   note:
-    en: "Notes coming with the lessons."
+    en: "Along the side, by the ears. It handles hearing, holds Wernicke's area for understanding language on the left, and helps form memories."
   units: []
   meshNodes: []
   twoDOnly: true
@@ -27,7 +27,7 @@
   name:
     en: "Occipital lobe"
   note:
-    en: "Notes coming with the lessons."
+    en: "At the back of the brain. It is where vision is first processed in the cortex."
   units: []
   meshNodes: []
   twoDOnly: true
@@ -35,15 +35,15 @@
   name:
     en: "Cerebellum"
   note:
-    en: "Notes coming with the lessons."
-  units: []
+    en: "Tucked under the back of the brain. It fine-tunes movement, balance and timing, and learns from errors."
+  units: [u01]
   meshNodes: []
   twoDOnly: true
 - id: brainstem
   name:
     en: "Brainstem"
   note:
-    en: "Notes coming with the lessons."
+    en: "Connects the brain to the spinal cord: midbrain, pons and medulla. It runs breathing, heart rate and many reflexes, and carries the cranial nerves."
   units: []
   meshNodes: []
   twoDOnly: true
@@ -51,15 +51,15 @@
   name:
     en: "Spinal cord"
   note:
-    en: "Notes coming with the lessons."
-  units: []
+    en: "The CNS cable running down inside the spine. It carries signals between brain and body, and runs reflexes on its own."
+  units: [u01]
   meshNodes: []
   twoDOnly: true
 - id: hypothalamus
   name:
     en: "Hypothalamus"
   note:
-    en: "Notes coming with the lessons."
+    en: "A small region under the thalamus that keeps the body in balance: temperature, hunger, thirst, hormones (via the pituitary) and the autonomic nervous system."
   units: []
   meshNodes: []
   twoDOnly: true

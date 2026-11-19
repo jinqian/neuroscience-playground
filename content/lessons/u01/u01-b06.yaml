@@ -1,0 +1,67 @@
+id: u01-b06
+type: bite
+title: { en: "When things go wrong" }
+sources: ["Peripheral Diseases", "Brain Tumors"]
+cards:
+  - id: c1
+    illustration: nerve
+    body:
+      en: >-
+        [[peripheral-neuropathy|Peripheral neuropathy]] means damage to peripheral nerves. In diabetes, the
+        longest axons, the ones reaching the feet, usually suffer first. That's why symptoms often begin as
+        tingling or numbness in the toes and then spread upward in a "stocking" pattern.
+  - id: c2
+    body:
+      en: >-
+        Brain tumours rarely grow from neurons, because mature neurons almost never divide. Most come from
+        cells that do: glial cells give [[glioma|gliomas]], and the meninges give [[meningioma|meningiomas]],
+        which press on the brain from outside. Where a tumour sits decides its symptoms, because each brain
+        region has its own job.
+    dev:
+      analogy: { en: "Bugs appear in the code that keeps changing: cells that keep dividing are the ones that can turn into tumours." }
+      breaks: { en: "A tumour's danger depends mostly on where it presses, not only on what kind it is." }
+questions:
+  - id: q1
+    kind: mc
+    prompt: { en: "In diabetic neuropathy, where do symptoms usually start?" }
+    options:
+      - { id: a, text: { en: "In the toes and feet" } }
+      - { id: b, text: { en: "In the shoulders" } }
+      - { id: c, text: { en: "In the face" } }
+    answer: a
+    explain: { en: "The longest axons, those to the feet, are hit first." }
+  - id: q2
+    kind: tfwhy
+    statement: { en: "Most brain tumours grow from neurons." }
+    isTrue: false
+    reasons:
+      - { id: r1, text: { en: "Mature neurons rarely divide; tumours usually come from glia or the meninges." } }
+      - { id: r2, text: { en: "Neurons divide faster than any other brain cell." } }
+    answerReason: r1
+    explain: { en: "Tumours need dividing cells. [[glioma|Gliomas]] and [[meningioma|meningiomas]] are far more common." }
+  - id: q3
+    kind: match
+    prompt: { en: "Match each condition to its source." }
+    pairs:
+      - { id: p1, left: { en: "Glioma" }, right: { en: "Grows from glial cells" } }
+      - { id: p2, left: { en: "Meningioma" }, right: { en: "Grows from the meninges" } }
+      - { id: p3, left: { en: "Peripheral neuropathy" }, right: { en: "Damage to nerves outside the CNS" } }
+    explain: { en: "Name endings help: -oma means a growth; 'meningi-' points to the meninges." }
+  - id: q4
+    kind: mc
+    prompt: { en: "Why do a brain tumour's symptoms depend on where it is?" }
+    options:
+      - { id: a, text: { en: "Each brain region has its own job, so pressure there disrupts that job." } }
+      - { id: b, text: { en: "All tumours cause the same symptoms wherever they are." } }
+      - { id: c, text: { en: "Symptoms depend only on the tumour's size." } }
+    answer: a
+    explain: { en: "A tumour near the motor strip weakens a limb; one near the visual areas affects sight." }
+  - id: q5
+    kind: gap
+    prompt: { en: "A tumour growing from the meninges is called a ___." }
+    options:
+      - { id: a, text: { en: "meningioma" } }
+      - { id: b, text: { en: "glioma" } }
+      - { id: c, text: { en: "neuroma" } }
+    answer: a
+    explain: { en: "[[meningioma|Meningiomas]] grow from the meninges and press on the brain from outside." }

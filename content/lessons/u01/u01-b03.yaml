@@ -1,0 +1,69 @@
+id: u01-b03
+type: bite
+title: { en: "Glia, the support crew" }
+sources: ["Glial Cells"]
+cards:
+  - id: c1
+    illustration: glia
+    body:
+      en: >-
+        Neurons aren't alone. [[glia|Glial cells]] are about as numerous as neurons in the brain, and they
+        keep neurons working. [[astrocyte|Astrocytes]] feed neurons, mop up chemicals around synapses and help
+        form the [[blood-brain-barrier]]. [[microglia|Microglia]] are the brain's own immune cells: they clear
+        debris and attack invaders.
+  - id: c2
+    body:
+      en: >-
+        Two kinds of glia make [[myelin]], the fatty insulation around axons. In the brain and spinal cord,
+        each [[oligodendrocyte]] wraps segments of several axons. In the rest of the body, each
+        [[schwann-cell|Schwann cell]] wraps one segment of a single axon. This difference matters when a
+        disease attacks myelin.
+    dev:
+      analogy: { en: "Glia are the ops team: neurons run the app, glia handle power, cleanup, security and cabling." }
+      breaks: { en: "Glia are more than support. Astrocytes also take part in signalling at synapses, so the line between app and infrastructure is blurry." }
+questions:
+  - id: q1
+    kind: match
+    prompt: { en: "Match each glial cell to its job." }
+    pairs:
+      - { id: p1, left: { en: "Astrocyte" }, right: { en: "Feeds neurons, helps form the blood-brain barrier" } }
+      - { id: p2, left: { en: "Microglia" }, right: { en: "Immune defence and cleanup" } }
+      - { id: p3, left: { en: "Oligodendrocyte" }, right: { en: "Myelin in the brain and spinal cord" } }
+      - { id: p4, left: { en: "Schwann cell" }, right: { en: "Myelin in nerves outside the CNS" } }
+    explain: { en: "Support, defence, and two myelin makers: one for the CNS, one for the PNS." }
+  - id: q2
+    kind: mc
+    prompt: { en: "Which cell is the brain's immune defender?" }
+    options:
+      - { id: a, text: { en: "Microglia" } }
+      - { id: b, text: { en: "Astrocyte" } }
+      - { id: c, text: { en: "Schwann cell" } }
+    answer: a
+    explain: { en: "[[microglia|Microglia]] patrol the brain, swallow debris and fight infection." }
+  - id: q3
+    kind: tfwhy
+    statement: { en: "One oligodendrocyte can myelinate parts of several axons." }
+    isTrue: true
+    reasons:
+      - { id: r1, text: { en: "It sends out several arms, each wrapping a different axon." } }
+      - { id: r2, text: { en: "It travels from axon to axon during the day." } }
+    answerReason: r1
+    explain: { en: "An [[oligodendrocyte]] reaches out with many processes; a Schwann cell wraps just one axon segment." }
+  - id: q4
+    kind: gap
+    prompt: { en: "In the nerves of your arm, myelin is made by ___." }
+    options:
+      - { id: a, text: { en: "Schwann cells" } }
+      - { id: b, text: { en: "oligodendrocytes" } }
+      - { id: c, text: { en: "microglia" } }
+    answer: a
+    explain: { en: "Arm nerves are peripheral, so their myelin comes from [[schwann-cell|Schwann cells]]." }
+  - id: q5
+    kind: mc
+    prompt: { en: "Which glial cell helps form the [[blood-brain-barrier]]?" }
+    options:
+      - { id: a, text: { en: "Astrocyte" } }
+      - { id: b, text: { en: "Microglia" } }
+      - { id: c, text: { en: "Oligodendrocyte" } }
+    answer: a
+    explain: { en: "[[astrocyte|Astrocyte]] end-feet wrap the brain's blood vessels and help keep the barrier tight." }

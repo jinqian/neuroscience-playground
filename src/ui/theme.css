@@ -165,7 +165,7 @@ button { font: inherit; color: inherit; }
 
 .card { display: flex; flex-direction: column; gap: 16px; }
 .card__art { border-radius: 20px; background: var(--surface-soft); border: 2px solid var(--line); padding: 16px; display: grid; place-items: center; }
-.card__art svg { width: 100%; max-width: 520px; height: auto; display: block; }
+.card__art svg { width: 100%; max-width: 520px; height: auto; max-height: 260px; display: block; }
 .card__body { font-size: 20px; font-weight: 700; line-height: 1.55; }
 .card__explore { align-self: flex-start; }
 .dev { border: 2px solid var(--purple); background: var(--purple-soft); border-radius: var(--radius); padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; font-size: 16px; font-weight: 700; }
@@ -211,7 +211,7 @@ button { font: inherit; color: inherit; }
 .pairs__dot { width: 12px; height: 12px; border-radius: 50%; flex: none; }
 
 .figure { border: 2px solid var(--line); border-radius: 20px; padding: 12px; background: var(--surface-soft); }
-.figure svg { width: 100%; height: auto; display: block; }
+.figure svg { width: 100%; height: auto; max-height: 360px; display: block; margin: 0 auto; }
 .figure [role='button'] { cursor: pointer; }
 .figure--locked [role='button'] { cursor: default; }
 
@@ -304,3 +304,10 @@ button { font: inherit; color: inherit; }
 .call { display: flex; flex-direction: column; gap: 12px; border-top: 2px dashed var(--paper-line); padding-top: 14px; }
 .call__prompt { font-size: 20px; font-weight: 900; }
 .call__wrong { display: flex; gap: 10px; align-items: flex-start; background: var(--red-soft); border-radius: 12px; padding: 10px 12px; font-weight: 700; }
+
+/* ---------- illustrations ---------- */
+.art-label { font-family: var(--font); font-weight: 800; font-size: 14px; fill: var(--ink-soft); }
+.region { cursor: pointer; outline: none; transition: filter .12s; }
+.region:hover, .region:focus-visible { filter: drop-shadow(0 0 5px var(--blue)); }
+.region--picked { filter: drop-shadow(0 0 7px var(--blue)) drop-shadow(0 0 2px var(--blue)); }
+.figure--locked .region { cursor: default; }

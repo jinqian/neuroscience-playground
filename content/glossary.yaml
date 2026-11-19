@@ -1,2 +1,39 @@
-# Key terms. Lesson text links to them with [[term-id]].
-[]
+# Key terms. Lesson text links to them with [[term-id]] or [[term-id|shown text]].
+# EN only for now; fr and zh are added after the English version is signed off.
+- { id: neuron, en: neuron, roots: "Greek neuron, sinew or nerve", unit: u01 }
+- { id: dendrite, en: dendrite, roots: "Greek dendron, tree", unit: u01 }
+- { id: soma, en: soma, roots: "Greek sōma, body", unit: u01 }
+- { id: axon, en: axon, roots: "Greek axōn, axis", unit: u01 }
+- { id: axon-hillock, en: axon hillock, unit: u01 }
+- { id: axon-terminal, en: axon terminal, unit: u01 }
+- { id: synapse, en: synapse, roots: "Greek syn- together + haptein to fasten", unit: u01 }
+- { id: multipolar-neuron, en: multipolar neuron, unit: u01 }
+- { id: bipolar-neuron, en: bipolar neuron, unit: u01 }
+- { id: unipolar-neuron, en: pseudounipolar neuron, unit: u01 }
+- { id: motor-neuron, en: motor neuron, unit: u01 }
+- { id: purkinje-cell, en: Purkinje cell, roots: "Named after Jan Evangelista Purkyně", unit: u01 }
+- { id: dorsal-root-ganglion, en: dorsal root ganglion, abbr: DRG, roots: "Greek ganglion, knot", unit: u01 }
+- { id: glia, en: glia (glial cells), roots: "Greek glia, glue", unit: u01 }
+- { id: astrocyte, en: astrocyte, roots: "Greek astron, star + kytos, cell", unit: u01 }
+- { id: microglia, en: microglia, unit: u01 }
+- { id: oligodendrocyte, en: oligodendrocyte, roots: "Greek oligos, few + dendron, tree + kytos, cell", unit: u01 }
+- { id: schwann-cell, en: Schwann cell, roots: "Named after Theodor Schwann", unit: u01 }
+- { id: blood-brain-barrier, en: blood-brain barrier, abbr: BBB, unit: u01 }
+- { id: myelin, en: myelin, roots: "Greek myelos, marrow", unit: u01 }
+- { id: node-of-ranvier, en: node of Ranvier, roots: "Named after Louis-Antoine Ranvier", unit: u01 }
+- { id: saltatory-conduction, en: saltatory conduction, roots: "Latin saltare, to jump", unit: u01 }
+- { id: demyelination, en: demyelination, unit: u01 }
+- { id: multiple-sclerosis, en: multiple sclerosis, abbr: MS, roots: "Greek sklērōsis, hardening (of scar patches)", unit: u01 }
+- { id: guillain-barre-syndrome, en: Guillain-Barré syndrome, abbr: GBS, unit: u01 }
+- { id: cns, en: central nervous system, abbr: CNS, unit: u01 }
+- { id: pns, en: peripheral nervous system, abbr: PNS, unit: u01 }
+- { id: spinal-cord, en: spinal cord, unit: u01 }
+- { id: nerve, en: nerve, unit: u01 }
+- { id: meninges, en: meninges, roots: "Greek mēninx, membrane", unit: u01 }
+- { id: dura-mater, en: dura mater, roots: "Latin, tough mother", unit: u01 }
+- { id: arachnoid-mater, en: arachnoid mater, roots: "Greek arachnē, spider (web-like)", unit: u01 }
+- { id: pia-mater, en: pia mater, roots: "Latin, tender mother", unit: u01 }
+- { id: csf, en: cerebrospinal fluid, abbr: CSF, unit: u01 }
+- { id: peripheral-neuropathy, en: peripheral neuropathy, roots: "Greek pathos, suffering", unit: u01 }
+- { id: glioma, en: glioma, unit: u01 }
+- { id: meningioma, en: meningioma, unit: u01 }

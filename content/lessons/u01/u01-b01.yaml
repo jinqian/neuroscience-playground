@@ -1,0 +1,74 @@
+id: u01-b01
+type: bite
+title: { en: "Meet the neuron" }
+sources: ["Meet the Stars: Neurons", "Parts of the Neuron"]
+cards:
+  - id: c1
+    illustration: neuron
+    body:
+      en: >-
+        Your brain has about 86 billion [[neuron|neurons]]. Each is a cell built to pass messages.
+        Signals come in through branching [[dendrite|dendrites]], are added up in the [[soma]] (the cell body),
+        and leave along a single long [[axon]]. At the [[axon-terminal|axon terminals]], the message is handed
+        to the next cell across a tiny gap called a [[synapse]].
+    dev:
+      analogy: { en: "A neuron is like a function with many inputs and one output: dendrites are the parameters, the axon carries the return value." }
+      breaks: { en: "Real neurons are analog and leaky. Inputs fade with time and distance, and the output is a train of spikes, not one value." }
+  - id: c2
+    body:
+      en: >-
+        Information normally flows one way: dendrites → soma → axon → terminals. Where the axon leaves
+        the soma sits the [[axon-hillock]], the neuron's trigger zone. If the inputs reaching it add up to
+        enough, the neuron fires a signal down the axon. If they don't, nothing leaves.
+questions:
+  - id: q1
+    kind: mc
+    prompt: { en: "Which part of a neuron receives most incoming signals?" }
+    options:
+      - { id: a, text: { en: "Dendrites" } }
+      - { id: b, text: { en: "Axon" } }
+      - { id: c, text: { en: "Axon terminals" } }
+      - { id: d, text: { en: "Myelin" } }
+    answer: a
+    explain: { en: "Dendrites are the neuron's inbox: their branches collect signals from other cells." }
+  - id: q2
+    kind: tap2d
+    prompt: { en: "Tap the [[soma]], the cell body." }
+    figure: neuron
+    answer: soma
+    explain: { en: "The soma is the round body holding the nucleus. It keeps the cell alive and adds up incoming signals." }
+  - id: q3
+    kind: order
+    prompt: { en: "Put the path of a signal through one neuron in order." }
+    steps:
+      - { id: s1, text: { en: "Dendrites" } }
+      - { id: s2, text: { en: "Soma" } }
+      - { id: s3, text: { en: "Axon hillock" } }
+      - { id: s4, text: { en: "Axon" } }
+      - { id: s5, text: { en: "Axon terminals" } }
+    explain: { en: "In through the dendrites, summed in the soma, triggered at the hillock, along the axon, out at the terminals." }
+  - id: q4
+    kind: gap
+    prompt: { en: "The gap where one neuron passes its message to the next cell is called a ___." }
+    options:
+      - { id: a, text: { en: "synapse" } }
+      - { id: b, text: { en: "soma" } }
+      - { id: c, text: { en: "dendrite" } }
+    answer: a
+    explain: { en: "A [[synapse]] is the junction between a neuron and its target, with a tiny gap in between." }
+  - id: q5
+    kind: tfwhy
+    statement: { en: "A neuron fires a signal every time any input arrives." }
+    isTrue: false
+    reasons:
+      - { id: r1, text: { en: "Inputs must add up to enough at the axon hillock before it fires." } }
+      - { id: r2, text: { en: "Neurons only fire while you are awake." } }
+      - { id: r3, text: { en: "Only dendrites can fire signals." } }
+    answerReason: r1
+    explain: { en: "Single inputs are usually too small. The neuron fires only when their sum reaches the trigger level at the [[axon-hillock]]." }
+  - id: q6
+    kind: tap2d
+    prompt: { en: "Tap the trigger zone where the axon leaves the cell body." }
+    figure: neuron
+    answer: axon-hillock
+    explain: { en: "That's the [[axon-hillock]]: the cone where the axon begins and the decision to fire is made." }

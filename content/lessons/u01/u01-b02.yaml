@@ -1,0 +1,65 @@
+id: u01-b02
+type: bite
+title: { en: "No two neurons alike" }
+sources: ["Neuronal Uniqueness: Stars of the Sky"]
+cards:
+  - id: c1
+    illustration: neuron-types
+    body:
+      en: >-
+        Neurons come in very different shapes, and the shape fits the job. A [[multipolar-neuron]] has many
+        dendrites and one axon: most brain neurons and [[motor-neuron|motor neurons]] look like this.
+        A [[bipolar-neuron]] has one dendrite and one axon, as in the retina. A [[unipolar-neuron]] has one
+        stalk that splits in two, like the touch neurons whose cell bodies sit beside the spinal cord.
+  - id: c2
+    body:
+      en: >-
+        Size varies hugely too. A [[purkinje-cell]] in the cerebellum spreads a flat fan of dendrites that
+        hears from up to around 200,000 other cells. A [[motor-neuron]] in your lower spinal cord sends its
+        axon about a metre to a muscle in your foot. A neuron's shape tells you how many cells it listens to
+        and how far it sends its message.
+questions:
+  - id: q1
+    kind: match
+    prompt: { en: "Match each neuron shape to where you'd find it." }
+    pairs:
+      - { id: p1, left: { en: "Multipolar" }, right: { en: "Motor neuron in the spinal cord" } }
+      - { id: p2, left: { en: "Bipolar" }, right: { en: "The retina" } }
+      - { id: p3, left: { en: "Pseudounipolar" }, right: { en: "Touch sensing from the skin" } }
+    explain: { en: "Many inputs → multipolar; a simple relay → bipolar; a sensory cable with its body off to the side → pseudounipolar." }
+  - id: q2
+    kind: mc
+    prompt: { en: "Which neuron listens to the largest number of other cells?" }
+    options:
+      - { id: a, text: { en: "A Purkinje cell in the cerebellum" } }
+      - { id: b, text: { en: "A bipolar cell in the retina" } }
+      - { id: c, text: { en: "A touch sensory neuron" } }
+    answer: a
+    explain: { en: "A [[purkinje-cell]]'s huge fan of dendrites receives synapses from up to around 200,000 cells." }
+  - id: q3
+    kind: gap
+    prompt: { en: "The axon of a motor neuron to your foot can be about one ___ long." }
+    options:
+      - { id: a, text: { en: "metre" } }
+      - { id: b, text: { en: "millimetre" } }
+      - { id: c, text: { en: "centimetre" } }
+    answer: a
+    explain: { en: "From the lower spinal cord to the foot is roughly a metre, all in one cell." }
+  - id: q4
+    kind: tfwhy
+    statement: { en: "A neuron's shape is linked to its job." }
+    isTrue: true
+    reasons:
+      - { id: r1, text: { en: "Many dendrites mean many inputs; a long axon means a distant target." } }
+      - { id: r2, text: { en: "Shape is random and changes every day." } }
+    answerReason: r1
+    explain: { en: "Form follows function: what a neuron listens to and where it reports shapes how it grows." }
+  - id: q5
+    kind: mc
+    prompt: { en: "Where does the cell body of a touch sensory ([[unipolar-neuron|pseudounipolar]]) neuron sit?" }
+    options:
+      - { id: a, text: { en: "In a cluster just outside the spinal cord" } }
+      - { id: b, text: { en: "In the fingertip" } }
+      - { id: c, text: { en: "Inside the cerebellum" } }
+    answer: a
+    explain: { en: "It sits in a [[dorsal-root-ganglion]] beside the spinal cord, off to the side of its long two-way stalk." }

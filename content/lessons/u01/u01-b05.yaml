@@ -1,0 +1,70 @@
+id: u01-b05
+type: bite
+title: { en: "Two systems: CNS and PNS" }
+sources: ["Meninges", "The Brain and the Spinal Cord"]
+cards:
+  - id: c1
+    illustration: cns-pns
+    explore3d: [spinal-cord, cerebellum, frontal-lobe]
+    body:
+      en: >-
+        Your nervous system has two parts. The [[cns|central nervous system (CNS)]] is the brain and the
+        [[spinal-cord|spinal cord]]: it integrates information and decides. The [[pns|peripheral nervous
+        system (PNS)]] is every [[nerve]] linking the CNS to skin, muscles and organs. It carries
+        information in and commands out.
+    dev:
+      analogy: { en: "The CNS is the server; the PNS is the network cabling plus the sensors and actuators at the edges." }
+      breaks: { en: "The spinal cord isn't just a cable: it runs reflexes and rhythms by itself, like logic running at the edge." }
+  - id: c2
+    illustration: meninges
+    body:
+      en: >-
+        The brain and spinal cord are soft, so they're wrapped in three protective layers, the
+        [[meninges]]. From the outside in: the tough [[dura-mater]], the web-like [[arachnoid-mater]], and
+        the thin [[pia-mater]] that hugs the brain's surface. Between the arachnoid and the pia flows
+        [[csf|cerebrospinal fluid]], which cushions the brain like a water bath.
+questions:
+  - id: q1
+    kind: tap2d
+    prompt: { en: "Tap a part of the peripheral nervous system." }
+    figure: cns-pns
+    answer: peripheral-nerve
+    explain: { en: "The nerves running out to the limbs are peripheral. The brain and spinal cord are central." }
+  - id: q2
+    kind: order
+    prompt: { en: "Order the layers from the skull inward." }
+    steps:
+      - { id: s1, text: { en: "Dura mater" } }
+      - { id: s2, text: { en: "Arachnoid mater" } }
+      - { id: s3, text: { en: "Pia mater" } }
+      - { id: s4, text: { en: "Brain surface" } }
+    explain: { en: "Dura (tough), arachnoid (web-like), pia (thin, on the brain): remember 'DAP'." }
+  - id: q3
+    kind: tap2d
+    prompt: { en: "Tap the layer that clings to the brain's surface." }
+    figure: meninges
+    answer: pia
+    explain: { en: "The [[pia-mater]] follows every fold of the brain." }
+  - id: q4
+    kind: mc
+    prompt: { en: "Is the spinal cord part of the CNS or the PNS?" }
+    options:
+      - { id: a, text: { en: "CNS" } }
+      - { id: b, text: { en: "PNS" } }
+      - { id: c, text: { en: "Neither" } }
+    answer: a
+    explain: { en: "The [[cns|CNS]] is the brain plus the [[spinal-cord|spinal cord]]. The nerves leaving it are the PNS." }
+  - id: q5
+    kind: tap3d
+    prompt: { en: "Find the spinal cord." }
+    structure: spinal-cord
+    explain: { en: "It continues down from the brainstem, inside the spine." }
+  - id: q6
+    kind: gap
+    prompt: { en: "Cerebrospinal fluid flows just beneath the ___ mater." }
+    options:
+      - { id: a, text: { en: "arachnoid" } }
+      - { id: b, text: { en: "dura" } }
+      - { id: c, text: { en: "pia" } }
+    answer: a
+    explain: { en: "[[csf|CSF]] fills the space between the arachnoid and the pia (the subarachnoid space)." }
