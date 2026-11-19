@@ -2,7 +2,7 @@ import type { Case } from '../content/schema'
 import { FIGURES } from '../illustrations/registry'
 import { pick } from '../i18n/lang'
 import { useLang } from '../i18n/LanguageProvider'
-import { StructureChoice } from '../lesson/questions/StructureChoice'
+import { StructurePicker } from '../brain/StructurePicker'
 import { OptionButton } from '../ui/Button'
 
 type Props = { lesson: Case; picked?: string; correct?: boolean; disabled: boolean; onPick(id: string): void }
@@ -30,5 +30,5 @@ export function FinalCall({ lesson, picked, correct, disabled, onPick }: Props) 
       </div>
     )
   }
-  return <StructureChoice answer={f.answer} seed={lesson.id} candidates={f.candidates} picked={picked} disabled={disabled} onPick={onPick} />
+  return <StructurePicker answer={f.answer} seed={lesson.id} candidates={f.candidates} picked={picked} disabled={disabled} onPick={onPick} />
 }

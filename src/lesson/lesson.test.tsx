@@ -1,6 +1,6 @@
 import { act, fireEvent, render, screen, within } from '@testing-library/react'
 import { MemoryRouter, Route, Routes } from 'react-router-dom'
-import { beforeAll, beforeEach, describe, expect, test } from 'vitest'
+import { beforeAll, beforeEach, describe, expect, test, vi } from 'vitest'
 import { ContentProvider } from '../content/ContentProvider'
 import type { Bite, ContentBundle } from '../content/schema'
 import { FIGURES } from '../illustrations/registry'
@@ -139,10 +139,11 @@ test('switching language mid-question keeps the selection and the place (Review 
 })
 
 test('a term opens a popover with all three languages, missing ones coming soon', () => {
+  const errors = vi.spyOn(console, 'error').mockImplementation(() => {})
   renderLesson()
   click('soma')
   const pop = screen.getByRole('dialog')
-  expect(within(pop).getByText('soma', { selector: 'dd' })).toBeInTheDocument()
+  expect(within(pop).getByText('soma', { selector: '.term-pop__value' })).toBeInTheDocument()
   expect(within(pop).getAllByText('Coming soon')).toHaveLength(2)
   expect(within(pop).getByText(/Greek sōma, body/)).toBeInTheDocument()
   const wiki = within(pop).getByRole('link', { name: /Wikipedia/ })
@@ -150,6 +151,9 @@ test('a term opens a popover with all three languages, missing ones coming soon'
   expect(wiki).toHaveAttribute('target', '_blank')
   fireEvent.keyDown(document, { key: 'Escape' })
   expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+  // the popover sits inside a paragraph, so it must only use inline elements
+  expect(errors.mock.calls.filter((c) => String(c[0]).includes('cannot be a descendant'))).toEqual([])
+  errors.mockRestore()
 })
 
 test('seeded shuffle is stable per question id', () => {

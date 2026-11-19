@@ -6,4 +6,4 @@ export const ALL_LANGUAGES: Lang[] = ['en', 'fr', 'zh']
 export const ENABLED_LANGUAGES: Lang[] = ['en']
 
 /** Turned on once the 3D brain viewer exists (Task 13). */
-export const BRAIN_ENABLED = false
+export const BRAIN_ENABLED = true

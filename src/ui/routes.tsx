@@ -4,6 +4,7 @@ import { useLang } from '../i18n/LanguageProvider'
 import { t } from '../i18n/t'
 import { Dendri } from './Dendri'
 import { Header } from './Header'
+import { ExplorerScreen } from '../brain/ExplorerScreen'
 import { GlossaryScreen } from '../glossary/GlossaryScreen'
 import { LessonScreen } from '../lesson/LessonScreen'
 import { PathScreen } from './PathScreen'
@@ -34,7 +35,7 @@ export function AppRoutes() {
       <Routes>
         <Route path="/" element={<Shell><PathScreen /></Shell>} />
         <Route path="/glossary" element={<Shell><GlossaryScreen /></Shell>} />
-        <Route path="/brain" element={<Shell><Placeholder /></Shell>} />
+        <Route path="/brain" element={<Shell><ExplorerScreen /></Shell>} />
         <Route path="/lesson/:lessonId" element={<LessonScreen />} />
         <Route path="*" element={<Shell><Placeholder /></Shell>} />
       </Routes>

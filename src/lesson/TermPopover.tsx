@@ -9,7 +9,7 @@ import { t } from '../i18n/t'
 export function TermPopover({ termId, onClose }: { termId: string; onClose(): void }) {
   const { lang } = useLang()
   const term = useContent().glossary.find((g) => g.id === termId)
-  const ref = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose() }
@@ -24,20 +24,21 @@ export function TermPopover({ termId, onClose }: { termId: string; onClose(): vo
 
   if (!term) return null
   return (
-    <div ref={ref} className="term-pop" role="dialog" aria-label={term.en}>
-      <dl className="term-pop__langs">
+    // Only inline elements: the popover opens inside running text (a <p>).
+    <span ref={ref} className="term-pop" role="dialog" aria-label={term.en}>
+      <span className="term-pop__langs">
         {ALL_LANGUAGES.map((l) => (
-          <div key={l} className="term-pop__row">
-            <dt>{LANG_LABEL[l]}</dt>
-            {term[l] ? <dd>{term[l]}</dd> : <dd className="term-pop__soon">{t('comingSoon', lang)}</dd>}
-          </div>
+          <span key={l} className="term-pop__row">
+            <span className="term-pop__lang">{LANG_LABEL[l]}</span>
+            {term[l] ? <span className="term-pop__value">{term[l]}</span> : <span className="term-pop__value term-pop__soon">{t('comingSoon', lang)}</span>}
+          </span>
         ))}
-      </dl>
-      {term.abbr && <p className="term-pop__extra"><b>{t('abbreviation', lang)}:</b> {term.abbr}</p>}
-      {term.roots && <p className="term-pop__extra"><b>{t('roots', lang)}:</b> {term.roots}</p>}
+      </span>
+      {term.abbr && <span className="term-pop__extra"><b>{t('abbreviation', lang)}:</b> {term.abbr}</span>}
+      {term.roots && <span className="term-pop__extra"><b>{t('roots', lang)}:</b> {term.roots}</span>}
       <a className="term-pop__wiki" href={term.wiki[lang] ?? term.wiki.en} target="_blank" rel="noopener noreferrer">
         {t('readOnWikipedia', lang)} ↗
       </a>
-    </div>
+    </span>
   )
 }
