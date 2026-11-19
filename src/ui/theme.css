@@ -251,3 +251,28 @@ button { font: inherit; color: inherit; }
 .muted { color: var(--locked-ink); }
 .abbr { color: var(--ink-soft); }
 .empty { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 40px 16px; color: var(--ink-soft); font-weight: 800; text-align: center; }
+
+/* ---------- lab bench (dark sim panel inside the bright frame) ---------- */
+.bench { background: var(--bench); color: var(--bench-ink); border-radius: 20px; padding: 18px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 6px 0 #0d0b1a; }
+.bench__eyebrow { font-size: 12px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; color: #ff5fa8; }
+.bench__goal h2 { font-size: 22px; color: #fff; }
+.bench__goal .term { color: #c7b9ff; border-color: #c7b9ff; }
+.bench__note { font-size: 14px; color: #a49dc2; border-top: 1px solid var(--bench-line); padding-top: 12px; }
+.bench__note b { color: var(--bench-ink); }
+.bench__cheer { align-self: flex-end; }
+.sim { display: flex; flex-direction: column; gap: 12px; }
+.sim__label { display: flex; justify-content: space-between; font-weight: 800; }
+.sim__label b { color: #ff5fa8; font-variant-numeric: tabular-nums; }
+.sim input[type='range'] { width: 100%; accent-color: #ff5fa8; }
+.sim__canvas { width: 100%; height: auto; aspect-ratio: 600 / 220; background: #0e0c17; border: 1px solid var(--bench-line); border-radius: 12px; display: block; }
+.sim__legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: #a49dc2; }
+.sim__legend i { display: inline-block; width: 12px; height: 3px; vertical-align: middle; margin-right: 6px; }
+.sim__console { font-family: var(--mono); font-size: 13px; color: #9be7c4; background: #0e0c17; border: 1px solid var(--bench-line); border-radius: 10px; padding: 10px 12px; white-space: pre-wrap; }
+.sim__answer { display: flex; flex-direction: column; gap: 8px; font-weight: 800; }
+.sim__answer-row { display: flex; gap: 10px; }
+.sim__answer-row .input { max-width: 140px; }
+.input--dark { background: #0e0c17; border-color: var(--bench-line); color: #fff; }
+.sim__wrong { color: #ffb3c4; font-size: 14px; }
+.peek { border: 1px solid var(--bench-line); border-radius: 12px; }
+.peek summary { cursor: pointer; padding: 10px 12px; font-weight: 900; color: #c7b9ff; }
+.peek__code { margin: 0; padding: 12px; max-height: 360px; overflow: auto; font-family: var(--mono); font-size: 12.5px; line-height: 1.55; color: #ddd8f0; border-top: 1px solid var(--bench-line); }
