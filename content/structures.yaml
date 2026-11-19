@@ -5,48 +5,42 @@
   note:
     en: "The front of each hemisphere. It plans, decides and controls movement; its rear strip is the primary motor cortex, and on the left it holds Broca's area for speech."
   units: [u01]
-  meshNodes: []
-  twoDOnly: true
+  meshNodes: [frontal-lobe_L, frontal-lobe_R]
 - id: parietal-lobe
   name:
     en: "Parietal lobe"
   note:
     en: "Behind the frontal lobe. It handles touch and body sense (its front strip is the primary somatosensory cortex) and works out where things are in space."
   units: []
-  meshNodes: []
-  twoDOnly: true
+  meshNodes: [parietal-lobe_L, parietal-lobe_R]
 - id: temporal-lobe
   name:
     en: "Temporal lobe"
   note:
     en: "Along the side, by the ears. It handles hearing, holds Wernicke's area for understanding language on the left, and helps form memories."
   units: []
-  meshNodes: []
-  twoDOnly: true
+  meshNodes: [temporal-lobe_L, temporal-lobe_R]
 - id: occipital-lobe
   name:
     en: "Occipital lobe"
   note:
     en: "At the back of the brain. It is where vision is first processed in the cortex."
   units: []
-  meshNodes: []
-  twoDOnly: true
+  meshNodes: [occipital-lobe_L, occipital-lobe_R]
 - id: cerebellum
   name:
     en: "Cerebellum"
   note:
     en: "Tucked under the back of the brain. It fine-tunes movement, balance and timing, and learns from errors."
   units: [u01]
-  meshNodes: []
-  twoDOnly: true
+  meshNodes: [cerebellum]
 - id: brainstem
   name:
     en: "Brainstem"
   note:
     en: "Connects the brain to the spinal cord: midbrain, pons and medulla. It runs breathing, heart rate and many reflexes, and carries the cranial nerves."
   units: [u02]
-  meshNodes: []
-  twoDOnly: true
+  meshNodes: [brainstem]
 - id: spinal-cord
   name:
     en: "Spinal cord"
@@ -61,5 +55,4 @@
   note:
     en: "A small region under the thalamus that keeps the body in balance: temperature, hunger, thirst, hormones (via the pituitary) and the autonomic nervous system."
   units: [u02]
-  meshNodes: []
-  twoDOnly: true
+  meshNodes: [hypothalamus]

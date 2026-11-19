@@ -1,0 +1,17 @@
+# Which BodyParts3D 3.0 meshes (99% reduced OBJ, CC BY-SA 2.1 JP) build each node of public/models/brain.glb.
+# Files live in scripts/models/raw/obj/BodyParts3D_3.0_obj_99/ (git-ignored; see scripts/models/README.md).
+# split: keep only triangles on this side of the midline (for meshes that cover both hemispheres).
+dataset: BodyParts3D_3.0_obj_99
+simplify: { ratio: 0.6, error: 0.001 }
+nodes:
+  frontal-lobe_L: { files: [FMA72654, FMA72656, FMA72662, BP51], split: left }
+  frontal-lobe_R: { files: [FMA72653, FMA72655, FMA72661, BP51], split: right }
+  parietal-lobe_L: { files: [BP49, FMA72666, FMA72668, FMA72670] }
+  parietal-lobe_R: { files: [BP50, FMA72665, FMA72667, FMA72669] }
+  temporal-lobe_L: { files: [FMA72686, FMA72688, FMA72690, FMA72706, FMA72801, FMA72805] }
+  temporal-lobe_R: { files: [FMA72685, FMA72687, FMA72689, FMA72705, FMA72800, FMA72804] }
+  occipital-lobe_L: { files: [FMA72976] }
+  occipital-lobe_R: { files: [FMA72975] }
+  cerebellum: { files: [FMA67944] }
+  brainstem: { files: [FMA61993nsn, FMA62394, FMA73422, FMA73423, FMA73434, FMA73435, FMA67943, FMA62004] }
+  hypothalamus: { files: [FMA62008nsn, FMA62327] }
