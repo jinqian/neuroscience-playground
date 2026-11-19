@@ -4,7 +4,7 @@ export type Segment =
   | { kind: 'term'; termId: string; label?: string }
 
 /** Field names whose text may contain `**bold**` and `[[term-id]]` / `[[term-id|label]]` markup. */
-export const RICH_KEYS = ['body', 'analogy', 'breaks', 'explain', 'story', 'text', 'solved', 'prompt', 'statement'] as const
+export const RICH_KEYS = ['body', 'explain', 'story', 'text', 'solved', 'prompt', 'statement'] as const
 
 const TOKEN = /\*\*(.+?)\*\*|\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]/g
 

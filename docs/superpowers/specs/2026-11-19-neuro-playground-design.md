@@ -16,7 +16,8 @@ Visual reference: the direction mockups at https://claude.ai/artifact/FEpSjjbaHa
 ## Goals
 
 - Short, focused sessions (3–8 minutes) the learner wants to come back to daily.
-- Explanations that serve both a curious person and a developer. Systems analogies are used where they help, and each one states where it breaks down.
+- Explanations written for a curious person, focused purely on neuroscience. *(Changed 2026-11-19 at the learner's request: no developer or code metaphors anywhere — no analogy boxes, no code views, no code-style text in sims.)*
+- Every new term links to its Wikipedia article (per language once FR/ZH exist).
 - Understanding of mechanisms through hands-on simulations, not only memorized facts.
 - Spatial understanding of anatomy through a rotatable, anatomically real 3D brain.
 - Readiness for each graded course quiz once the matching unit is done.
@@ -129,7 +130,6 @@ Chinese means **Simplified Chinese** (zh-Hans) *(builder's call)*.
 
 **Bite (most lessons, ~3–5 min).**
 Covers 1–3 explainer cards plus 4–8 questions. An explainer card has a flat-style SVG illustration and ≤80 words. Optional extras per card:
-- an "As a developer…" analogy box, with a "Where the analogy breaks" line
 - an "Explore in 3D" button (see 3D brain)
 
 Question types:
@@ -145,7 +145,7 @@ A wrong answer shows a short explanation, and the question comes back at the end
 
 **Lab (1–2 per unit, ~5–8 min).**
 A live simulation with a stated goal and a success condition, e.g. "Find the smallest stimulus that makes the neuron fire". It has a short intro card, the sim, and 2–3 reflection questions. Every sim shows a "Simplified model" note saying what it leaves out.
-*(builder's call)* Each Lab has a collapsible "Peek at the model" panel showing the sim's TypeScript model source, loaded with a Vite `?raw` import. This serves the developer angle, so model modules must be short and readable. Labs and Cases take their interaction patterns from Directions C and D. Visually they stay in the Direction A frame: the Lab sim panel may use a dark "bench" surface, and Cases get a light paper-card treatment. Both are done with theme tokens, not separate apps.
+Labs and Cases take their interaction patterns from Directions C and D. Visually they stay in the Direction A frame: the Lab sim panel may use a dark "bench" surface, and Cases get a light paper-card treatment. Both are done with theme tokens, not separate apps.
 
 **Case (unit finale, ~8 min).**
 An original patient scenario. Clues start locked, and each one unlocks by answering a question on the concept behind it. Then the learner makes a final call (e.g. click the lesion region on the 2D or 3D brain, pick the nerve, pick the drug effect). Every wrong option gets its own explanation. Solved cases go into a Casebook.
@@ -226,7 +226,7 @@ The exact lesson file format is the builder's call. It must be easy to hand-edit
 
 The format must hold three languages per item, either as per-language fields in one file or as parallel files per language (e.g. `b01.en.md`, `b01.fr.md`, `b01.zh.md`), with shared IDs either way.
 
-Key terms live in `content/glossary.json` (`id`, `en`, `fr`, `zh`, optional roots and abbreviation, the unit that introduces it). Lesson text references terms by ID so they can be marked and linked.
+Key terms live in `content/glossary.yaml` (`id`, `en`, `fr`, `zh`, optional roots and abbreviation, the unit that introduces it, and a required `wiki` link per language: `{ en, fr?, zh? }` pointing at that language's Wikipedia article). The term popover and the Glossary show a "Read on Wikipedia" link. Lesson text references terms by ID so they can be marked and linked.
 
 ## Technical approach
 

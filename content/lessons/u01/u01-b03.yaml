@@ -18,9 +18,6 @@ cards:
         each [[oligodendrocyte]] wraps segments of several axons. In the rest of the body, each
         [[schwann-cell|Schwann cell]] wraps one segment of a single axon. This difference matters when a
         disease attacks myelin.
-    dev:
-      analogy: { en: "Glia are the ops team: neurons run the app, glia handle power, cleanup, security and cabling." }
-      breaks: { en: "Glia are more than support. Astrocytes also take part in signalling at synapses, so the line between app and infrastructure is blurry." }
 questions:
   - id: q1
     kind: match

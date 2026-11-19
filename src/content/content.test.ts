@@ -54,8 +54,8 @@ function fixture(): Record<string, Obj | Obj[]> {
       solved: { en: 'Solved: [[soma]] safe.' },
     },
     'content/glossary.yaml': [
-      { id: 'soma', en: 'soma', roots: 'Greek soma, body', unit: 'u01' },
-      { id: 'action-potential', en: 'action potential', unit: 'u01' },
+      { id: 'soma', en: 'soma', roots: 'Greek soma, body', unit: 'u01', wiki: { en: 'https://en.wikipedia.org/wiki/Soma_(biology)' } },
+      { id: 'action-potential', en: 'action potential', unit: 'u01', wiki: { en: 'https://en.wikipedia.org/wiki/Action_potential' } },
     ],
     'content/structures.yaml': [
       { id: 'spinal-cord', name: { en: 'Spinal cord' }, note: { en: 'The cable to the body.' }, units: ['u01'], meshNodes: [], twoDOnly: true },
@@ -86,7 +86,7 @@ function run(mutate: (f: Record<string, any>) => void = () => {}, enabled: Lang[
 function addFr(node: any): void {
   if (Array.isArray(node)) node.forEach(addFr)
   else if (node && typeof node === 'object') {
-    if (typeof node.en === 'string') node.fr = 'fr:' + node.en
+    if (typeof node.en === 'string') node.fr = node.en.startsWith('https://en.wikipedia.org/') ? node.en.replace('https://en.', 'https://fr.') : 'fr:' + node.en
     Object.values(node).forEach(addFr)
   }
 }
@@ -172,6 +172,25 @@ describe('parse errors', () => {
     expect(errors).toHaveLength(1)
     expect(errors[0].file).toBe(B)
     expect(errors[0].message).toMatch(/line \d+/)
+  })
+  test('a term without a Wikipedia link is an error', () => {
+    const f = fixture()
+    delete (f['content/glossary.yaml'] as Obj[])[0].wiki
+    const { errors } = parseContent(toFiles(f))
+    expect(errors).toEqual([expect.objectContaining({ file: 'content/glossary.yaml', path: '[0].wiki' })])
+  })
+  test('a Wikipedia link must be a wikipedia.org URL', () => {
+    const f = fixture()
+    ;(f['content/glossary.yaml'] as Obj[])[0].wiki = { en: 'https://example.com/soma' }
+    const { errors } = parseContent(toFiles(f))
+    expect(errors).toEqual([expect.objectContaining({ path: '[0].wiki.en' })])
+  })
+  test('developer analogy boxes are no longer allowed on cards', () => {
+    const f = fixture()
+    ;(f[B] as Obj).cards[0].dev = { analogy: { en: 'x' }, breaks: { en: 'y' } }
+    const { errors } = parseContent(toFiles(f))
+    expect(errors).toHaveLength(1)
+    expect(errors[0].file).toBe(B)
   })
   test('schema mismatch reports the field path', () => {
     const f = fixture()

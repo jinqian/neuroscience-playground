@@ -11,9 +11,6 @@ cards:
         [[node-of-ranvier|nodes of Ranvier]]. The electrical signal is regenerated only at the nodes, so it
         seems to jump from gap to gap. This [[saltatory-conduction]] is much faster than a signal crawling
         along a bare axon, and it uses less energy.
-    dev:
-      analogy: { en: "Like a long cable with repeaters: the signal is boosted at each node instead of being pushed along every millimetre." }
-      breaks: { en: "Between nodes, current still flows passively inside the axon. Nothing is literally skipped, and the repeaters are clusters of ion channels." }
   - id: c2
     body:
       en: >-

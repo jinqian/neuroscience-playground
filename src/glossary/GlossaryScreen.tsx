@@ -67,6 +67,10 @@ export function GlossaryScreen() {
                           term[l] ?? <span className="muted">—</span>
                         )}
                         {i === 0 && term.abbr && <span className="abbr"> ({term.abbr})</span>}
+                        {(term[l] || i === 0) && (term.wiki[l] || i === 0) && (
+                          <a className="wiki-link" href={term.wiki[l] ?? term.wiki.en} target="_blank" rel="noopener noreferrer"
+                            aria-label={`Wikipedia: ${term[l] ?? term.en}`} title={t('readOnWikipedia', lang)}>W</a>
+                        )}
                       </td>
                     ))}
                   </tr>

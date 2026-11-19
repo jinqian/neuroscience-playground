@@ -17,9 +17,6 @@ cards:
         When a spike reaches the terminal, voltage-gated calcium channels open and Ca²⁺ flows in. Calcium
         triggers vesicles to fuse with the membrane and spill their contents into the [[synaptic-cleft]].
         The transmitter drifts across the gap and binds to [[receptor|receptors]] on the next cell.
-    dev:
-      analogy: { en: "Like a message queue: the spike is the publish event, vesicles are buffered messages, receptors are subscribers." }
-      breaks: { en: "Messages aren't addressed: transmitter spreads and binds any matching receptor nearby." }
 questions:
   - id: q1
     kind: tap2d

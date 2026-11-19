@@ -7,7 +7,6 @@ import { LanguageProvider } from '../i18n/LanguageProvider'
 import { LessonScreen } from '../lesson/LessonScreen'
 import { progressStore } from '../progress/store'
 import { fixtureBundle, mcq } from '../test/fixtures'
-import { PeekModel } from './PeekModel'
 import { SIMS } from './registry'
 
 const t = (en: string) => ({ en })
@@ -20,7 +19,6 @@ const lab: Lab = {
 
 beforeAll(() => {
   SIMS.fake = {
-    modelSource: 'export function simulate() {}',
     Component: ({ onGoalMet }) => <button type="button" onClick={onGoalMet}>Reach goal</button>,
   }
 })
@@ -50,6 +48,7 @@ test('lab: intro, goal gates Continue and pays 20 XP once, reflection, completio
 
   expect(screen.getByText('Press the goal button.')).toBeInTheDocument()
   expect(screen.getByText('This is a toy.')).toBeInTheDocument()
+  expect(screen.queryByText('Peek at the model')).not.toBeInTheDocument()
   expect(screen.getByRole('button', { name: 'Continue' })).toBeDisabled()
   click('Reach goal')
   click('Reach goal')
@@ -63,10 +62,4 @@ test('lab: intro, goal gates Continue and pays 20 XP once, reflection, completio
   expect(screen.getByText('+40 XP')).toBeInTheDocument()
   expect(progressStore.getState().xp).toBe(40)
   expect(progressStore.getState().completed[lab.id]).toBeDefined()
-})
-
-test('peek at the model shows the source', () => {
-  render(<LanguageProvider><PeekModel source={'export function simulate(x: number) {}'} /></LanguageProvider>)
-  fireEvent.click(screen.getByText('Peek at the model'))
-  expect(screen.getByText(/export function simulate/)).toBeVisible()
 })

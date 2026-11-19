@@ -17,9 +17,6 @@ cards:
         The [[sodium-potassium-pump]] spends energy to push 3 Na⁺ out for every 2 K⁺ it brings in, and some
         K⁺ leaks back out through open channels. The result is the [[resting-potential]]: the inside sits at
         about −70 [[millivolt|mV]] compared with the outside.
-    dev:
-      analogy: { en: "Voltage is like water pressure behind a dam: ions are waiting to rush through the moment a gate opens." }
-      breaks: { en: "Ions aren't one fluid. Each kind has its own gates and its own direction it wants to go." }
 questions:
   - id: q1
     kind: gap

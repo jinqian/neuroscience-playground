@@ -11,7 +11,6 @@ export const CardSchema = z.strictObject({
   id,
   body: LTextSchema,
   illustration: z.string().optional(),
-  dev: z.strictObject({ analogy: LTextSchema, breaks: LTextSchema }).optional(),
   explore3d: z.array(z.string()).optional(),
   verify: z.boolean().optional(),
 })
@@ -73,9 +72,16 @@ export const UnitSchema = z.strictObject({
   color: z.string(), module: z.string(), lessons: z.array(id),
 })
 
+const wikiUrl = (lang: string) =>
+  z.string().regex(new RegExp(`^https://${lang}\\.wikipedia\\.org/wiki/.+`), `must be a ${lang}.wikipedia.org article URL`)
+
+/** The term's Wikipedia article in each language. */
+export const WikiSchema = z.strictObject({ en: wikiUrl('en'), fr: wikiUrl('fr').optional(), zh: wikiUrl('zh').optional() })
+
 export const TermSchema = z.strictObject({
   id, en: z.string().min(1), fr: z.string().optional(), zh: z.string().optional(),
   roots: z.string().optional(), abbr: z.string().optional(), unit: id,
+  wiki: WikiSchema,
 })
 
 export const StructureSchema = z.strictObject({

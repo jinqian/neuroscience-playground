@@ -10,9 +10,6 @@ cards:
         When inputs push the voltage up to the [[threshold]] (about −55 mV), voltage-gated sodium channels
         snap open. Na⁺ rushes in and the inside swings to about +40 mV. This brief spike, lasting about a
         millisecond, is the [[action-potential]].
-    dev:
-      analogy: { en: "Like a debounced event: nothing happens below a threshold, then one full-size event fires." }
-      breaks: { en: "Inputs add up over time and space, and after each spike there's a refractory period when firing is harder." }
   - id: c2
     body:
       en: >-

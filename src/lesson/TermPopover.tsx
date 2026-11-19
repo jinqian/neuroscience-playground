@@ -35,6 +35,9 @@ export function TermPopover({ termId, onClose }: { termId: string; onClose(): vo
       </dl>
       {term.abbr && <p className="term-pop__extra"><b>{t('abbreviation', lang)}:</b> {term.abbr}</p>}
       {term.roots && <p className="term-pop__extra"><b>{t('roots', lang)}:</b> {term.roots}</p>}
+      <a className="term-pop__wiki" href={term.wiki[lang] ?? term.wiki.en} target="_blank" rel="noopener noreferrer">
+        {t('readOnWikipedia', lang)} ↗
+      </a>
     </div>
   )
 }

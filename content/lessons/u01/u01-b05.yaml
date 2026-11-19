@@ -12,9 +12,6 @@ cards:
         [[spinal-cord|spinal cord]]: it integrates information and decides. The [[pns|peripheral nervous
         system (PNS)]] is every [[nerve]] linking the CNS to skin, muscles and organs. It carries
         information in and commands out.
-    dev:
-      analogy: { en: "The CNS is the server; the PNS is the network cabling plus the sensors and actuators at the edges." }
-      breaks: { en: "The spinal cord isn't just a cable: it runs reflexes and rhythms by itself, like logic running at the edge." }
   - id: c2
     illustration: meninges
     body:

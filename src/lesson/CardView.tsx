@@ -17,13 +17,6 @@ export function CardView({ card }: { card: Card }) {
       {Illustration && <div className="card__art"><Illustration /></div>}
       {card.verify && <VerifyBadge />}
       <p className="card__body"><RichText text={card.body} /></p>
-      {card.dev && (
-        <aside className="dev">
-          <p className="dev__title">{t('devAnalogy', lang)}</p>
-          <p><RichText text={card.dev.analogy} /></p>
-          <p className="dev__breaks"><b>{t('analogyBreaks', lang)}:</b> <RichText text={card.dev.breaks} /></p>
-        </aside>
-      )}
       {BRAIN_ENABLED && card.explore3d?.length ? (
         <button type="button" className="btn btn--secondary card__explore" onClick={() => setExploring(true)}>
           {t('exploreIn3d', lang)}

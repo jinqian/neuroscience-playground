@@ -11,9 +11,6 @@ cards:
         Signals come in through branching [[dendrite|dendrites]], are added up in the [[soma]] (the cell body),
         and leave along a single long [[axon]]. At the [[axon-terminal|axon terminals]], the message is handed
         to the next cell across a tiny gap called a [[synapse]].
-    dev:
-      analogy: { en: "A neuron is like a function with many inputs and one output: dendrites are the parameters, the axon carries the return value." }
-      breaks: { en: "Real neurons are analog and leaky. Inputs fade with time and distance, and the output is a train of spikes, not one value." }
   - id: c2
     body:
       en: >-

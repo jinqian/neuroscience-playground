@@ -17,9 +17,6 @@ cards:
         cells that do: glial cells give [[glioma|gliomas]], and the meninges give [[meningioma|meningiomas]],
         which press on the brain from outside. Where a tumour sits decides its symptoms, because each brain
         region has its own job.
-    dev:
-      analogy: { en: "Bugs appear in the code that keeps changing: cells that keep dividing are the ones that can turn into tumours." }
-      breaks: { en: "A tumour's danger depends mostly on where it presses, not only on what kind it is." }
 questions:
   - id: q1
     kind: mc

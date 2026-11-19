@@ -9,9 +9,6 @@ cards:
         Most organs get input from both branches, and the balance shifts all day. Before a talk: dry mouth,
         racing heart (sympathetic). After a big meal: a sleepy, digesting body (parasympathetic). At the
         organs, sympathetic nerves mostly use [[noradrenaline]]; parasympathetic nerves use [[acetylcholine]].
-    dev:
-      analogy: { en: "Two opposing controllers, like a heater and an air conditioner sharing one thermostat." }
-      breaks: { en: "Not every organ gets both, and the branches sometimes cooperate rather than oppose." }
   - id: c2
     body:
       en: >-

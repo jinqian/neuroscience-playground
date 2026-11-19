@@ -65,7 +65,7 @@ export function MyelinSim({ onGoalMet, goalMet: reached }: SimProps) {
       <button type="button" className="btn btn--primary" onClick={send}>{t('sendImpulse', lang)}</button>
       <p className="sim__console" aria-live="polite">
         {run === null
-          ? '> ready'
+          ? '…'
           : run.ms === null
             ? t('conductionBlock', lang)
             : `${t('travelTime', lang, { ms: run.ms.toFixed(1), v: (1000 / run.ms).toFixed(1) })}${!reached && run.ms >= GOAL_MS ? `\n${t('tooSlow', lang, { goal: GOAL_MS })}` : ''}`}

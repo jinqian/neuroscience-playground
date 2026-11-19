@@ -1,74 +1,74 @@
 # Key terms. Lesson text links to them with [[term-id]] or [[term-id|shown text]].
 # EN only for now; fr and zh are added after the English version is signed off.
-- { id: neuron, en: neuron, roots: "Greek neuron, sinew or nerve", unit: u01 }
-- { id: dendrite, en: dendrite, roots: "Greek dendron, tree", unit: u01 }
-- { id: soma, en: soma, roots: "Greek sōma, body", unit: u01 }
-- { id: axon, en: axon, roots: "Greek axōn, axis", unit: u01 }
-- { id: axon-hillock, en: axon hillock, unit: u01 }
-- { id: axon-terminal, en: axon terminal, unit: u01 }
-- { id: synapse, en: synapse, roots: "Greek syn- together + haptein to fasten", unit: u01 }
-- { id: multipolar-neuron, en: multipolar neuron, unit: u01 }
-- { id: bipolar-neuron, en: bipolar neuron, unit: u01 }
-- { id: unipolar-neuron, en: pseudounipolar neuron, unit: u01 }
-- { id: motor-neuron, en: motor neuron, unit: u01 }
-- { id: purkinje-cell, en: Purkinje cell, roots: "Named after Jan Evangelista Purkyně", unit: u01 }
-- { id: dorsal-root-ganglion, en: dorsal root ganglion, abbr: DRG, roots: "Greek ganglion, knot", unit: u01 }
-- { id: glia, en: glia (glial cells), roots: "Greek glia, glue", unit: u01 }
-- { id: astrocyte, en: astrocyte, roots: "Greek astron, star + kytos, cell", unit: u01 }
-- { id: microglia, en: microglia, unit: u01 }
-- { id: oligodendrocyte, en: oligodendrocyte, roots: "Greek oligos, few + dendron, tree + kytos, cell", unit: u01 }
-- { id: schwann-cell, en: Schwann cell, roots: "Named after Theodor Schwann", unit: u01 }
-- { id: blood-brain-barrier, en: blood-brain barrier, abbr: BBB, unit: u01 }
-- { id: myelin, en: myelin, roots: "Greek myelos, marrow", unit: u01 }
-- { id: node-of-ranvier, en: node of Ranvier, roots: "Named after Louis-Antoine Ranvier", unit: u01 }
-- { id: saltatory-conduction, en: saltatory conduction, roots: "Latin saltare, to jump", unit: u01 }
-- { id: demyelination, en: demyelination, unit: u01 }
-- { id: multiple-sclerosis, en: multiple sclerosis, abbr: MS, roots: "Greek sklērōsis, hardening (of scar patches)", unit: u01 }
-- { id: guillain-barre-syndrome, en: Guillain-Barré syndrome, abbr: GBS, unit: u01 }
-- { id: cns, en: central nervous system, abbr: CNS, unit: u01 }
-- { id: pns, en: peripheral nervous system, abbr: PNS, unit: u01 }
-- { id: spinal-cord, en: spinal cord, unit: u01 }
-- { id: nerve, en: nerve, unit: u01 }
-- { id: meninges, en: meninges, roots: "Greek mēninx, membrane", unit: u01 }
-- { id: dura-mater, en: dura mater, roots: "Latin, tough mother", unit: u01 }
-- { id: arachnoid-mater, en: arachnoid mater, roots: "Greek arachnē, spider (web-like)", unit: u01 }
-- { id: pia-mater, en: pia mater, roots: "Latin, tender mother", unit: u01 }
-- { id: csf, en: cerebrospinal fluid, abbr: CSF, unit: u01 }
-- { id: peripheral-neuropathy, en: peripheral neuropathy, roots: "Greek pathos, suffering", unit: u01 }
-- { id: glioma, en: glioma, unit: u01 }
-- { id: meningioma, en: meningioma, unit: u01 }
-- { id: ion, en: ion, roots: "Greek ion, going (ions move in an electric field)", unit: u02 }
-- { id: membrane, en: cell membrane, unit: u02 }
-- { id: sodium-potassium-pump, en: sodium-potassium pump, abbr: "Na⁺/K⁺-ATPase", unit: u02 }
-- { id: resting-potential, en: resting potential, unit: u02 }
-- { id: millivolt, en: millivolt, abbr: mV, unit: u02 }
-- { id: threshold, en: threshold, unit: u02 }
-- { id: action-potential, en: action potential, abbr: AP, unit: u02 }
-- { id: refractory-period, en: refractory period, roots: "Latin refractarius, stubborn", unit: u02 }
-- { id: all-or-none, en: all-or-none, unit: u02 }
-- { id: neurotransmitter, en: neurotransmitter, unit: u02 }
-- { id: vesicle, en: vesicle, roots: "Latin vesicula, little bladder", unit: u02 }
-- { id: acetylcholine, en: acetylcholine, abbr: ACh, unit: u02 }
-- { id: neuropeptide, en: neuropeptide, unit: u02 }
-- { id: synaptic-cleft, en: synaptic cleft, unit: u02 }
-- { id: receptor, en: receptor, unit: u02 }
-- { id: snare-proteins, en: SNARE proteins, unit: u02 }
-- { id: botulinum-toxin, en: botulinum toxin, roots: "Latin botulus, sausage (early cases came from bad sausages)", unit: u02 }
-- { id: tetanus-toxin, en: tetanus toxin, roots: "Greek tetanos, taut", unit: u02 }
-- { id: neuromuscular-junction, en: neuromuscular junction, abbr: NMJ, unit: u02 }
-- { id: acetylcholinesterase, en: acetylcholinesterase, abbr: AChE, unit: u02 }
-- { id: reuptake, en: reuptake, unit: u02 }
-- { id: ssri, en: selective serotonin reuptake inhibitor, abbr: SSRI, unit: u02 }
-- { id: ionotropic-receptor, en: ionotropic receptor, unit: u02 }
-- { id: metabotropic-receptor, en: metabotropic receptor, unit: u02 }
-- { id: autonomic-nervous-system, en: autonomic nervous system, abbr: ANS, roots: "Greek autos, self + nomos, law", unit: u02 }
-- { id: sympathetic-nervous-system, en: sympathetic nervous system, unit: u02 }
-- { id: parasympathetic-nervous-system, en: parasympathetic nervous system, unit: u02 }
-- { id: vagus-nerve, en: vagus nerve, abbr: "cranial nerve X", roots: "Latin vagus, wandering", unit: u02 }
-- { id: enteric-nervous-system, en: enteric nervous system, abbr: ENS, roots: "Greek enteron, intestine", unit: u02 }
-- { id: noradrenaline, en: noradrenaline (norepinephrine), unit: u02 }
-- { id: beta-blocker, en: beta blocker, unit: u02 }
-- { id: atropine, en: atropine, roots: "From Atropa belladonna, deadly nightshade", unit: u02 }
-- { id: cervical, en: cervical, roots: "Latin cervix, neck", unit: u02 }
-- { id: hypothalamus, en: hypothalamus, roots: "Greek hypo, under + thalamus, inner chamber", unit: u02 }
-- { id: brainstem, en: brainstem, unit: u02 }
+- { id: neuron, en: neuron, roots: "Greek neuron, sinew or nerve", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Neuron" } }
+- { id: dendrite, en: dendrite, roots: "Greek dendron, tree", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Dendrite" } }
+- { id: soma, en: soma, roots: "Greek sōma, body", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Soma_(biology)" } }
+- { id: axon, en: axon, roots: "Greek axōn, axis", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Axon" } }
+- { id: axon-hillock, en: axon hillock, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Axon_hillock" } }
+- { id: axon-terminal, en: axon terminal, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Axon_terminal" } }
+- { id: synapse, en: synapse, roots: "Greek syn- together + haptein to fasten", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Synapse" } }
+- { id: multipolar-neuron, en: multipolar neuron, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Multipolar_neuron" } }
+- { id: bipolar-neuron, en: bipolar neuron, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Bipolar_neuron" } }
+- { id: unipolar-neuron, en: pseudounipolar neuron, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Pseudounipolar_neuron" } }
+- { id: motor-neuron, en: motor neuron, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Motor_neuron" } }
+- { id: purkinje-cell, en: Purkinje cell, roots: "Named after Jan Evangelista Purkyně", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Purkinje_cell" } }
+- { id: dorsal-root-ganglion, en: dorsal root ganglion, abbr: DRG, roots: "Greek ganglion, knot", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Dorsal_root_ganglion" } }
+- { id: glia, en: glia (glial cells), roots: "Greek glia, glue", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Glia" } }
+- { id: astrocyte, en: astrocyte, roots: "Greek astron, star + kytos, cell", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Astrocyte" } }
+- { id: microglia, en: microglia, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Microglia" } }
+- { id: oligodendrocyte, en: oligodendrocyte, roots: "Greek oligos, few + dendron, tree + kytos, cell", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Oligodendrocyte" } }
+- { id: schwann-cell, en: Schwann cell, roots: "Named after Theodor Schwann", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Schwann_cell" } }
+- { id: blood-brain-barrier, en: blood-brain barrier, abbr: BBB, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Blood%E2%80%93brain_barrier" } }
+- { id: myelin, en: myelin, roots: "Greek myelos, marrow", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Myelin" } }
+- { id: node-of-ranvier, en: node of Ranvier, roots: "Named after Louis-Antoine Ranvier", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Node_of_Ranvier" } }
+- { id: saltatory-conduction, en: saltatory conduction, roots: "Latin saltare, to jump", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Saltatory_conduction" } }
+- { id: demyelination, en: demyelination, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Demyelinating_disease" } }
+- { id: multiple-sclerosis, en: multiple sclerosis, abbr: MS, roots: "Greek sklērōsis, hardening (of scar patches)", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Multiple_sclerosis" } }
+- { id: guillain-barre-syndrome, en: Guillain-Barré syndrome, abbr: GBS, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Guillain%E2%80%93Barr%C3%A9_syndrome" } }
+- { id: cns, en: central nervous system, abbr: CNS, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Central_nervous_system" } }
+- { id: pns, en: peripheral nervous system, abbr: PNS, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Peripheral_nervous_system" } }
+- { id: spinal-cord, en: spinal cord, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Spinal_cord" } }
+- { id: nerve, en: nerve, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Nerve" } }
+- { id: meninges, en: meninges, roots: "Greek mēninx, membrane", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Meninges" } }
+- { id: dura-mater, en: dura mater, roots: "Latin, tough mother", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Dura_mater" } }
+- { id: arachnoid-mater, en: arachnoid mater, roots: "Greek arachnē, spider (web-like)", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Arachnoid_mater" } }
+- { id: pia-mater, en: pia mater, roots: "Latin, tender mother", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Pia_mater" } }
+- { id: csf, en: cerebrospinal fluid, abbr: CSF, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Cerebrospinal_fluid" } }
+- { id: peripheral-neuropathy, en: peripheral neuropathy, roots: "Greek pathos, suffering", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Peripheral_neuropathy" } }
+- { id: glioma, en: glioma, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Glioma" } }
+- { id: meningioma, en: meningioma, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Meningioma" } }
+- { id: ion, en: ion, roots: "Greek ion, going (ions move in an electric field)", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Ion" } }
+- { id: membrane, en: cell membrane, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Cell_membrane" } }
+- { id: sodium-potassium-pump, en: sodium-potassium pump, abbr: "Na⁺/K⁺-ATPase", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Sodium%E2%80%93potassium_pump" } }
+- { id: resting-potential, en: resting potential, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Resting_potential" } }
+- { id: millivolt, en: millivolt, abbr: mV, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Volt" } }
+- { id: threshold, en: threshold, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Threshold_potential" } }
+- { id: action-potential, en: action potential, abbr: AP, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Action_potential" } }
+- { id: refractory-period, en: refractory period, roots: "Latin refractarius, stubborn", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Refractory_period_(physiology)" } }
+- { id: all-or-none, en: all-or-none, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/All-or-none_law" } }
+- { id: neurotransmitter, en: neurotransmitter, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Neurotransmitter" } }
+- { id: vesicle, en: vesicle, roots: "Latin vesicula, little bladder", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Synaptic_vesicle" } }
+- { id: acetylcholine, en: acetylcholine, abbr: ACh, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Acetylcholine" } }
+- { id: neuropeptide, en: neuropeptide, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Neuropeptide" } }
+- { id: synaptic-cleft, en: synaptic cleft, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Chemical_synapse" } }
+- { id: receptor, en: receptor, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Neurotransmitter_receptor" } }
+- { id: snare-proteins, en: SNARE proteins, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/SNARE_protein" } }
+- { id: botulinum-toxin, en: botulinum toxin, roots: "Latin botulus, sausage (early cases came from bad sausages)", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Botulinum_toxin" } }
+- { id: tetanus-toxin, en: tetanus toxin, roots: "Greek tetanos, taut", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Tetanus_toxin" } }
+- { id: neuromuscular-junction, en: neuromuscular junction, abbr: NMJ, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Neuromuscular_junction" } }
+- { id: acetylcholinesterase, en: acetylcholinesterase, abbr: AChE, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Acetylcholinesterase" } }
+- { id: reuptake, en: reuptake, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Reuptake" } }
+- { id: ssri, en: selective serotonin reuptake inhibitor, abbr: SSRI, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Selective_serotonin_reuptake_inhibitor" } }
+- { id: ionotropic-receptor, en: ionotropic receptor, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Ligand-gated_ion_channel" } }
+- { id: metabotropic-receptor, en: metabotropic receptor, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Metabotropic_receptor" } }
+- { id: autonomic-nervous-system, en: autonomic nervous system, abbr: ANS, roots: "Greek autos, self + nomos, law", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Autonomic_nervous_system" } }
+- { id: sympathetic-nervous-system, en: sympathetic nervous system, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Sympathetic_nervous_system" } }
+- { id: parasympathetic-nervous-system, en: parasympathetic nervous system, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Parasympathetic_nervous_system" } }
+- { id: vagus-nerve, en: vagus nerve, abbr: "cranial nerve X", roots: "Latin vagus, wandering", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Vagus_nerve" } }
+- { id: enteric-nervous-system, en: enteric nervous system, abbr: ENS, roots: "Greek enteron, intestine", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Enteric_nervous_system" } }
+- { id: noradrenaline, en: noradrenaline (norepinephrine), unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Norepinephrine" } }
+- { id: beta-blocker, en: beta blocker, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Beta_blocker" } }
+- { id: atropine, en: atropine, roots: "From Atropa belladonna, deadly nightshade", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Atropine" } }
+- { id: cervical, en: cervical, roots: "Latin cervix, neck", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Cervical_vertebrae" } }
+- { id: hypothalamus, en: hypothalamus, roots: "Greek hypo, under + thalamus, inner chamber", unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Hypothalamus" } }
+- { id: brainstem, en: brainstem, unit: u02, wiki: { en: "https://en.wikipedia.org/wiki/Brainstem" } }

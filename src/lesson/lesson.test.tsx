@@ -16,7 +16,7 @@ const t = (en: string, fr?: string) => (fr ? { en, fr } : { en })
 const bite: Bite = {
   id: 'u01-b09', type: 'bite', title: t('All kinds'), sources: [],
   cards: [
-    { id: 'c1', body: t('The [[soma]] is the cell body.'), dev: { analogy: t('Like a function.'), breaks: t('It leaks.') } },
+    { id: 'c1', body: t('The [[soma]] is the cell body.') },
     { id: 'c2', body: t('Second card.'), verify: true },
   ],
   questions: [
@@ -96,7 +96,7 @@ function progressValue() {
 describe('bite play-through', () => {
   test('wrong answers re-queue, every kind can be solved, and the lesson completes', () => {
     renderLesson()
-    expect(screen.getByText('Like a function.')).toBeInTheDocument()
+    expect(screen.queryByText(/As a developer/)).not.toBeInTheDocument()
     cont()
     expect(screen.getByText('Check against the course')).toBeInTheDocument()
     cont()
@@ -145,6 +145,9 @@ test('a term opens a popover with all three languages, missing ones coming soon'
   expect(within(pop).getByText('soma', { selector: 'dd' })).toBeInTheDocument()
   expect(within(pop).getAllByText('Coming soon')).toHaveLength(2)
   expect(within(pop).getByText(/Greek sōma, body/)).toBeInTheDocument()
+  const wiki = within(pop).getByRole('link', { name: /Wikipedia/ })
+  expect(wiki).toHaveAttribute('href', 'https://en.wikipedia.org/wiki/Soma_(biology)')
+  expect(wiki).toHaveAttribute('target', '_blank')
   fireEvent.keyDown(document, { key: 'Escape' })
   expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
 })

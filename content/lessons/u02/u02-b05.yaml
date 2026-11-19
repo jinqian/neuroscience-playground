@@ -18,9 +18,6 @@ cards:
         opens it and ions flow within a millisecond. A [[metabotropic-receptor]] works through a G-protein
         and a chain of messengers inside the cell. It's slower, but its effects last longer and can reach
         many targets.
-    dev:
-      analogy: { en: "Ionotropic is a synchronous call; metabotropic is an async job that kicks off a whole pipeline." }
-      breaks: { en: "The pipeline amplifies: one receptor can switch on many molecules, so a small signal can have a big, lasting effect." }
 questions:
   - id: q1
     kind: match

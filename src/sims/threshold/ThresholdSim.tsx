@@ -64,8 +64,7 @@ export function ThresholdSim({ onGoalMet, goalMet }: SimProps) {
         <span><i style={{ background: '#5a5288' }} />{t('restLine', lang)} −70 mV</span>
       </div>
       <p className="sim__console" aria-live="polite">
-        {'> '}neuron.receive({stimulus}){'\n  '}
-        {t(fired ? 'fires' : 'fizzles', lang, { v: REST + stimulus })}
+        {t(fired ? 'fires' : 'fizzles', lang, { s: stimulus, v: REST + stimulus })}
       </p>
       <div className="sim__answer">
         <label htmlFor="threshold-guess">{t('myAnswer', lang)}</label>

@@ -10,10 +10,10 @@ import { filterTerms, firstLessonForTerm } from './glossaryIndex'
 import { GlossaryScreen } from './GlossaryScreen'
 
 const terms: Term[] = [
-  { id: 'action-potential', en: 'action potential', fr: "potentiel d'action", unit: 'u02' },
-  { id: 'distance', en: 'distance', fr: 'éloignement', unit: 'u04' },
-  { id: 'vor', en: 'vestibulo-ocular reflex', abbr: 'VOR', unit: 'u06' },
-  { id: 'soma', en: 'soma', unit: 'u01' },
+  { id: 'action-potential', en: 'action potential', fr: "potentiel d'action", unit: 'u02', wiki: { en: 'https://en.wikipedia.org/wiki/Action_potential' } },
+  { id: 'distance', en: 'distance', fr: 'éloignement', unit: 'u04', wiki: { en: 'https://en.wikipedia.org/wiki/Distance' } },
+  { id: 'vor', en: 'vestibulo-ocular reflex', abbr: 'VOR', unit: 'u06', wiki: { en: 'https://en.wikipedia.org/wiki/Vestibulo%E2%80%93ocular_reflex' } },
+  { id: 'soma', en: 'soma', unit: 'u01', wiki: { en: 'https://en.wikipedia.org/wiki/Soma_(biology)' } },
 ]
 
 describe('filterTerms', () => {
@@ -59,4 +59,5 @@ test('met terms show in a three-language table linking to their lesson', () => {
   expect(link).toHaveAttribute('href', '/lesson/u01-b01')
   expect(screen.getByRole('columnheader', { name: '中文' })).toBeInTheDocument()
   expect(screen.getAllByText('—')).toHaveLength(2)
+  expect(screen.getByRole('link', { name: 'Wikipedia: soma' })).toHaveAttribute('href', 'https://en.wikipedia.org/wiki/Soma_(biology)')
 })

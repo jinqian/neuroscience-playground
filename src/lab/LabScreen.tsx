@@ -11,7 +11,6 @@ import { RunPlayer } from '../lesson/RunPlayer'
 import { useProgress } from '../progress/store'
 import { Button } from '../ui/Button'
 import { Dendri } from '../ui/Dendri'
-import { PeekModel } from './PeekModel'
 import { SIMS } from './registry'
 
 type Phase = 'intro' | 'sim' | 'reflect' | 'done'
@@ -65,7 +64,6 @@ export function LabScreen({ lesson }: { lesson: Lab }) {
           <aside className="bench__note">
             <b>{t('simplifiedModel', lang)}:</b> <RichText text={lesson.simplified} />
           </aside>
-          {sim && <PeekModel source={sim.modelSource} />}
         </div>
       </LessonFrame>
     )
