@@ -5,7 +5,7 @@ import { advance, answer, startRun, type RunState, type Step } from '../engine/l
 import { XP } from '../engine/xp'
 import { useLang } from '../i18n/LanguageProvider'
 import { t } from '../i18n/t'
-import { useProgress } from '../progress/store'
+import { progressStore, useProgress } from '../progress/store'
 import { Button } from '../ui/Button'
 import { Dendri } from '../ui/Dendri'
 import { CardView } from './CardView'
@@ -14,15 +14,37 @@ import { LessonFrame } from './LessonFrame'
 import { QuestionView } from './questions/QuestionView'
 import { isComplete } from './questions/types'
 
-type Props = { steps: Step[]; cards: Card[]; questions: Question[]; onDone(run: RunState): void; variant?: 'bench' | 'paper' }
+type Props = {
+  steps: Step[]; cards: Card[]; questions: Question[]; onDone(run: RunState): void; variant?: 'bench' | 'paper'
+  /** Where to remember the learner's place, so leaving mid-lesson resumes here. */
+  saveKey?: string
+}
+
+type Result = 'idle' | 'correct' | 'wrong'
+type Snapshot = { run: RunState; drafts: Record<string, Response | undefined>; result: Result }
+
+/** A saved place, if it still matches this lesson's cards and questions. */
+function restore(saveKey: string | undefined, cards: Card[], questions: Question[]): Snapshot | null {
+  if (!saveKey) return null
+  const s = progressStore.getState().lessonState[saveKey] as Snapshot | undefined
+  if (!s?.run?.steps || s.run.done || s.run.index >= s.run.steps.length) return null
+  const fits = s.run.steps.every((st) => (st.kind === 'card' ? cards : questions).some((x) => x.id === st.id))
+  return fits ? s : null
+}
 
 /** Plays cards and questions in order; wrong answers come back at the end. */
-export function RunPlayer({ steps, cards, questions, onDone, variant }: Props) {
+export function RunPlayer({ steps, cards, questions, onDone, variant, saveKey }: Props) {
   const { lang } = useLang()
   const addXp = useProgress((s) => s.addXp)
-  const [run, setRun] = useState<RunState>(() => startRun(steps))
-  const [drafts, setDrafts] = useState<Record<string, Response | undefined>>({})
-  const [result, setResult] = useState<'idle' | 'correct' | 'wrong'>('idle')
+  const saveLessonState = useProgress((s) => s.saveLessonState)
+  const [saved] = useState(() => restore(saveKey, cards, questions))
+  const [run, setRun] = useState<RunState>(() => saved?.run ?? startRun(steps))
+  const [drafts, setDrafts] = useState<Record<string, Response | undefined>>(() => saved?.drafts ?? {})
+  const [result, setResult] = useState<Result>(() => saved?.result ?? 'idle')
+
+  useEffect(() => {
+    if (saveKey && !run.done) saveLessonState(saveKey, { run, drafts, result } satisfies Snapshot)
+  }, [saveKey, run, drafts, result, saveLessonState])
 
   useEffect(() => {
     if (run.done) onDone(run)

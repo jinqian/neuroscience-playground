@@ -18,6 +18,7 @@ function BitePlayer({ lesson }: { lesson: Bite }) {
   if (earned !== null) return <CompleteScreen xp={earned} />
   return (
     <RunPlayer
+      saveKey={lesson.id}
       steps={bitePlan(lesson)}
       cards={lesson.cards}
       questions={lesson.questions}

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { Lab } from '../content/schema'
 import { labReflectionPlan } from '../engine/lessonRun'
 import { XP } from '../engine/xp'
@@ -8,25 +8,38 @@ import { CompleteScreen } from '../lesson/CompleteScreen'
 import { LessonFrame } from '../lesson/LessonFrame'
 import { RichText } from '../lesson/RichText'
 import { RunPlayer } from '../lesson/RunPlayer'
-import { useProgress } from '../progress/store'
+import { progressStore, useProgress } from '../progress/store'
 import { Button } from '../ui/Button'
 import { Dendri } from '../ui/Dendri'
 import { SIMS } from './registry'
 
 type Phase = 'intro' | 'sim' | 'reflect' | 'done'
+type LabSnapshot = { phase: Phase; goalMet: boolean; earned: number }
+
+function restoreLab(id: string): LabSnapshot | null {
+  const s = progressStore.getState().lessonState[`${id}:lab`] as LabSnapshot | undefined
+  return s && ['intro', 'sim', 'reflect'].includes(s.phase) ? s : null
+}
 
 export function LabScreen({ lesson }: { lesson: Lab }) {
   const { lang } = useLang()
   const addXp = useProgress((s) => s.addXp)
   const completeLesson = useProgress((s) => s.completeLesson)
-  const [phase, setPhase] = useState<Phase>('intro')
-  const [goalMet, setGoalMet] = useState(false)
-  const [earned, setEarned] = useState(0)
+  const saveLessonState = useProgress((s) => s.saveLessonState)
+  const [saved] = useState(() => restoreLab(lesson.id))
+  const [phase, setPhase] = useState<Phase>(saved?.phase ?? 'intro')
+  const [goalMet, setGoalMet] = useState(saved?.goalMet ?? false)
+  const [earned, setEarned] = useState(saved?.earned ?? 0)
+
+  useEffect(() => {
+    if (phase !== 'done') saveLessonState(`${lesson.id}:lab`, { phase, goalMet, earned } satisfies LabSnapshot)
+  }, [lesson.id, phase, goalMet, earned, saveLessonState])
   const sim = SIMS[lesson.sim]
 
   if (phase === 'intro') {
     return (
       <RunPlayer
+        saveKey={`${lesson.id}:intro`}
         steps={lesson.intro.map((c) => ({ kind: 'card' as const, id: c.id }))}
         cards={lesson.intro}
         questions={[]}
@@ -72,6 +85,7 @@ export function LabScreen({ lesson }: { lesson: Lab }) {
   if (phase === 'reflect') {
     return (
       <RunPlayer
+        saveKey={`${lesson.id}:reflect`}
         steps={labReflectionPlan(lesson)}
         cards={[]}
         questions={lesson.reflection}

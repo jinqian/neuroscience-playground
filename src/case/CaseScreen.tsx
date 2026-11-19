@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { Case } from '../content/schema'
 import { XP } from '../engine/xp'
 import { pick, type LText } from '../i18n/lang'
@@ -8,20 +8,37 @@ import { CompleteScreen } from '../lesson/CompleteScreen'
 import { LessonFrame } from '../lesson/LessonFrame'
 import { RichText } from '../lesson/RichText'
 import { VerifyBadge } from '../lesson/VerifyBadge'
-import { useProgress } from '../progress/store'
+import { progressStore, useProgress } from '../progress/store'
 import { Button } from '../ui/Button'
 import { Dendri } from '../ui/Dendri'
-import { canMakeFinalCall, finalCall, startCase, unlockClue } from './caseRun'
+import { canMakeFinalCall, finalCall, startCase, unlockClue, type CaseState } from './caseRun'
 import { ClueUnlock } from './ClueUnlock'
 import { FinalCall } from './FinalCall'
+
+type CaseSnapshot = Omit<CaseState, 'unlocked'> & { unlocked: string[]; verdict: { picked: string; correct: boolean; explanation: LText } | null }
+
+/** A saved place, if its clues still exist in this case. */
+function restoreCase(c: Case): CaseSnapshot | null {
+  const s = progressStore.getState().lessonState[`${c.id}:case`] as CaseSnapshot | undefined
+  if (!s?.unlocked || s.solved) return null
+  return s.unlocked.every((id) => c.clues.some((k) => k.id === id)) ? s : null
+}
 
 export function CaseScreen({ lesson }: { lesson: Case }) {
   const { lang } = useLang()
   const addXp = useProgress((s) => s.addXp)
   const completeLesson = useProgress((s) => s.completeLesson)
-  const [state, setState] = useState(() => startCase(lesson))
+  const saveLessonState = useProgress((s) => s.saveLessonState)
+  const [saved] = useState(() => restoreCase(lesson))
+  const [state, setState] = useState<CaseState>(() => (saved ? { ...startCase(lesson), ...saved, unlocked: new Set(saved.unlocked) } : startCase(lesson)))
   const [opened, setOpened] = useState<string | null>(null)
-  const [verdict, setVerdict] = useState<{ picked: string; correct: boolean; explanation: LText } | null>(null)
+  const [verdict, setVerdict] = useState<{ picked: string; correct: boolean; explanation: LText } | null>(saved?.verdict ?? null)
+
+  useEffect(() => {
+    if (state.solved) return
+    const { unlocked, ...rest } = state
+    saveLessonState(`${lesson.id}:case`, { ...rest, unlocked: [...unlocked], verdict } satisfies CaseSnapshot)
+  }, [lesson.id, state, verdict, saveLessonState])
   const [finished, setFinished] = useState(false)
 
   if (finished) return <CompleteScreen xp={state.xp} />

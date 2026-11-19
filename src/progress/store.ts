@@ -15,6 +15,8 @@ export type ProgressActions = {
   recordStructureQuiz(structureId: string, correct: boolean, now: Date): void
   /** Tells the store which units exist, so a solved Case can award its unit badge. */
   setUnits(units: Unit[]): void
+  /** Remembers the learner's place inside an unfinished lesson. */
+  saveLessonState(key: string, state: unknown): void
   reset(): void
 }
 
@@ -30,6 +32,7 @@ export function createProgressStore(storage: ProgressStorage | null, initialUnit
     addXp: (n) => set({ xp: get().xp + n }),
     setUnits: (u) => { units = u },
     reset: () => set(defaultProgress()),
+    saveLessonState: (key, state) => set({ lessonState: { ...get().lessonState, [key]: state } }),
     completeLesson: (lesson, missed, now) => {
       const s = get()
       const today = localDay(now)
@@ -43,6 +46,7 @@ export function createProgressStore(storage: ProgressStorage | null, initialUnit
         metTerms: union(s.metTerms, lessonTerms(lesson)),
         review,
         badges: lesson.type === 'case' && unit ? union(s.badges, [unit.id]) : s.badges,
+        lessonState: Object.fromEntries(Object.entries(s.lessonState).filter(([k]) => k !== lesson.id && !k.startsWith(`${lesson.id}:`))),
       })
     },
     recordStructureQuiz: (structureId, correct, now) => {
@@ -52,8 +56,8 @@ export function createProgressStore(storage: ProgressStorage | null, initialUnit
     },
   }))
   store.subscribe((state) => {
-    const { version, lang, xp, streak, completed, review, discovered, metTerms, badges } = state
-    saveProgress(storage, { version, lang, xp, streak, completed, review, discovered, metTerms, badges })
+    const { version, lang, xp, streak, completed, review, discovered, metTerms, badges, lessonState } = state
+    saveProgress(storage, { version, lang, xp, streak, completed, review, discovered, metTerms, badges, lessonState })
   })
   return store
 }

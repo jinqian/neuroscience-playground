@@ -16,6 +16,8 @@ export type Progress = {
   discovered: string[]
   metTerms: string[]
   badges: string[]
+  /** Where the learner is inside unfinished lessons, keyed by lesson id (or `<lesson id>:<part>`). */
+  lessonState: Record<string, unknown>
 }
 
 const ProgressSchema = z.object({
@@ -28,6 +30,7 @@ const ProgressSchema = z.object({
   discovered: z.array(z.string()),
   metTerms: z.array(z.string()),
   badges: z.array(z.string()),
+  lessonState: z.record(z.string(), z.unknown()).default({}),
 })
 
 export type ProgressStorage = Pick<Storage, 'getItem' | 'setItem'>
@@ -35,7 +38,7 @@ export type ProgressStorage = Pick<Storage, 'getItem' | 'setItem'>
 export function defaultProgress(): Progress {
   return {
     version: 1, lang: 'en', xp: 0, streak: { current: 0, lastDay: null },
-    completed: {}, review: {}, discovered: [], metTerms: [], badges: [],
+    completed: {}, review: {}, discovered: [], metTerms: [], badges: [], lessonState: {},
   }
 }
 
