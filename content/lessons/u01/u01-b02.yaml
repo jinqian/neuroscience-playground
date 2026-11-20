@@ -1,6 +1,6 @@
 id: u01-b02
 type: bite
-title: { en: "No two neurons alike" }
+title: { en: "No two neurons alike", fr: "Pas deux neurones pareils", zh: "没有两个相同的神经元" }
 sources: ["Neuronal Uniqueness: Stars of the Sky"]
 cards:
   - id: c1
@@ -11,6 +11,8 @@ cards:
         dendrites and one axon: most brain neurons and [[motor-neuron|motor neurons]] look like this.
         A [[bipolar-neuron]] has one dendrite and one axon, as in the retina. A [[unipolar-neuron]] has one
         stalk that splits in two, like the touch neurons whose cell bodies sit beside the spinal cord.
+      fr: "Les neurones ont des formes très différentes, et la forme correspond au rôle. Un [[multipolar-neuron]] a de nombreuses dendrites et un seul axone : la plupart des neurones du cerveau et les [[motor-neuron|motoneurones]] ressemblent à cela. Un [[bipolar-neuron]] a une dendrite et un axone, comme dans la rétine. Un [[unipolar-neuron]] a une seule tige qui se divise en deux, comme les neurones du toucher dont le corps cellulaire se trouve à côté de la moelle épinière."
+      zh: "神经元的形状差别很大，而形状与功能相适应。[[multipolar-neuron|多极神经元]]有许多树突和一条轴突：大脑中的大多数神经元和[[motor-neuron|运动神经元]]都是这样。[[bipolar-neuron|双极神经元]]有一个树突和一条轴突，比如视网膜中的神经元。[[unipolar-neuron|假单极神经元]]只有一根分成两支的“茎”，比如细胞体位于脊髓旁边的触觉神经元。"
   - id: c2
     body:
       en: >-
@@ -18,48 +20,50 @@ cards:
         hears from up to around 200,000 other cells. A [[motor-neuron]] in your lower spinal cord sends its
         axon about a metre to a muscle in your foot. A neuron's shape tells you how many cells it listens to
         and how far it sends its message.
+      fr: "La taille varie aussi énormément. Une [[purkinje-cell]] du cervelet déploie un éventail plat de dendrites qui reçoit des messages d'environ 200 000 autres cellules. Un [[motor-neuron]] du bas de la moelle épinière envoie son axone à environ un mètre, jusqu'à un muscle du pied. La forme d'un neurone indique combien de cellules il écoute et jusqu'où il envoie son message."
+      zh: "大小也差别巨大。小脑中的[[purkinje-cell|浦肯野细胞]]展开一把扁平的树突“扇子”，可接收多达约20万个其他细胞的信息。脊髓下段的[[motor-neuron|运动神经元]]把轴突延伸约一米，直达脚部的肌肉。神经元的形状告诉你它“倾听”多少个细胞，以及把信息送到多远。"
 questions:
   - id: q1
     kind: match
-    prompt: { en: "Match each neuron shape to where you'd find it." }
+    prompt: { en: "Match each neuron shape to where you'd find it.", fr: "Associez chaque forme de neurone à l'endroit où on la trouve.", zh: "把每种神经元形状与它所在的位置配对。" }
     pairs:
-      - { id: p1, left: { en: "Multipolar" }, right: { en: "Motor neuron in the spinal cord" } }
-      - { id: p2, left: { en: "Bipolar" }, right: { en: "The retina" } }
-      - { id: p3, left: { en: "Pseudounipolar" }, right: { en: "Touch sensing from the skin" } }
-    explain: { en: "Many inputs → multipolar; a simple relay → bipolar; a sensory cable with its body off to the side → pseudounipolar." }
+      - { id: p1, left: { en: "Multipolar", fr: "Multipolaire", zh: "多极" }, right: { en: "Motor neuron in the spinal cord", fr: "Motoneurone de la moelle épinière", zh: "脊髓中的运动神经元" } }
+      - { id: p2, left: { en: "Bipolar", fr: "Bipolaire", zh: "双极" }, right: { en: "The retina", fr: "La rétine", zh: "视网膜" } }
+      - { id: p3, left: { en: "Pseudounipolar", fr: "Pseudo-unipolaire", zh: "假单极" }, right: { en: "Touch sensing from the skin", fr: "Toucher de la peau", zh: "皮肤的触觉" } }
+    explain: { en: "Many inputs → multipolar; a simple relay → bipolar; a sensory cable with its body off to the side → pseudounipolar.", fr: "Beaucoup d'entrées → multipolaire ; un simple relais → bipolaire ; un câble sensoriel avec son corps sur le côté → pseudo-unipolaire.", zh: "输入很多 → 多极；简单的中继 → 双极；细胞体偏在一旁的感觉“电缆” → 假单极。" }
   - id: q2
     kind: mc
-    prompt: { en: "Which neuron listens to the largest number of other cells?" }
+    prompt: { en: "Which neuron listens to the largest number of other cells?", fr: "Quel neurone écoute le plus grand nombre d'autres cellules ?", zh: "哪种神经元“倾听”的其他细胞最多？" }
     options:
-      - { id: a, text: { en: "A Purkinje cell in the cerebellum" } }
-      - { id: b, text: { en: "A bipolar cell in the retina" } }
-      - { id: c, text: { en: "A touch sensory neuron" } }
+      - { id: a, text: { en: "A Purkinje cell in the cerebellum", fr: "Une cellule de Purkinje du cervelet", zh: "小脑中的浦肯野细胞" } }
+      - { id: b, text: { en: "A bipolar cell in the retina", fr: "Une cellule bipolaire de la rétine", zh: "视网膜中的双极细胞" } }
+      - { id: c, text: { en: "A touch sensory neuron", fr: "Un neurone sensoriel du toucher", zh: "触觉感觉神经元" } }
     answer: a
-    explain: { en: "A [[purkinje-cell]]'s huge fan of dendrites receives synapses from up to around 200,000 cells." }
+    explain: { en: "A [[purkinje-cell]]'s huge fan of dendrites receives synapses from up to around 200,000 cells.", fr: "L'immense éventail de dendrites d'une [[purkinje-cell]] reçoit des synapses d'environ 200 000 cellules.", zh: "[[purkinje-cell|浦肯野细胞]]巨大的树突扇可接收多达约20万个细胞的突触。" }
   - id: q3
     kind: gap
-    prompt: { en: "The axon of a motor neuron to your foot can be about one ___ long." }
+    prompt: { en: "The axon of a motor neuron to your foot can be about one ___ long.", fr: "L'axone d'un motoneurone qui va au pied peut mesurer environ un ___.", zh: "通往脚部的运动神经元的轴突可以长约一___。" }
     options:
-      - { id: a, text: { en: "metre" } }
-      - { id: b, text: { en: "millimetre" } }
-      - { id: c, text: { en: "centimetre" } }
+      - { id: a, text: { en: "metre", fr: "mètre", zh: "米" } }
+      - { id: b, text: { en: "millimetre", fr: "millimètre", zh: "毫米" } }
+      - { id: c, text: { en: "centimetre", fr: "centimètre", zh: "厘米" } }
     answer: a
-    explain: { en: "From the lower spinal cord to the foot is roughly a metre, all in one cell." }
+    explain: { en: "From the lower spinal cord to the foot is roughly a metre, all in one cell.", fr: "Du bas de la moelle épinière au pied, il y a environ un mètre, le tout dans une seule cellule.", zh: "从脊髓下段到脚大约一米，全部在一个细胞之内。" }
   - id: q4
     kind: tfwhy
-    statement: { en: "A neuron's shape is linked to its job." }
+    statement: { en: "A neuron's shape is linked to its job.", fr: "La forme d'un neurone est liée à son rôle.", zh: "神经元的形状与它的功能有关。" }
     isTrue: true
     reasons:
-      - { id: r1, text: { en: "Many dendrites mean many inputs; a long axon means a distant target." } }
-      - { id: r2, text: { en: "Shape is random and changes every day." } }
+      - { id: r1, text: { en: "Many dendrites mean many inputs; a long axon means a distant target.", fr: "Beaucoup de dendrites signifient beaucoup d'entrées ; un long axone signifie une cible lointaine.", zh: "树突多意味着输入多；轴突长意味着目标远。" } }
+      - { id: r2, text: { en: "Shape is random and changes every day.", fr: "La forme est aléatoire et change tous les jours.", zh: "形状是随机的，每天都在变。" } }
     answerReason: r1
-    explain: { en: "Form follows function: what a neuron listens to and where it reports shapes how it grows." }
+    explain: { en: "Form follows function: what a neuron listens to and where it reports shapes how it grows.", fr: "La forme suit la fonction : ce qu'un neurone écoute et l'endroit où il transmet façonnent sa croissance.", zh: "形态服从功能：神经元“听”什么、向哪里“汇报”，决定了它如何生长。" }
   - id: q5
     kind: mc
-    prompt: { en: "Where does the cell body of a touch sensory ([[unipolar-neuron|pseudounipolar]]) neuron sit?" }
+    prompt: { en: "Where does the cell body of a touch sensory ([[unipolar-neuron|pseudounipolar]]) neuron sit?", fr: "Où se trouve le corps cellulaire d'un neurone sensoriel du toucher ([[unipolar-neuron|pseudo-unipolaire]]) ?", zh: "触觉感觉（[[unipolar-neuron|假单极]]）神经元的细胞体在哪里？" }
     options:
-      - { id: a, text: { en: "In a cluster just outside the spinal cord" } }
-      - { id: b, text: { en: "In the fingertip" } }
-      - { id: c, text: { en: "Inside the cerebellum" } }
+      - { id: a, text: { en: "In a cluster just outside the spinal cord", fr: "Dans un amas juste à l'extérieur de la moelle épinière", zh: "在紧贴脊髓外侧的一团细胞中" } }
+      - { id: b, text: { en: "In the fingertip", fr: "Dans le bout du doigt", zh: "在指尖" } }
+      - { id: c, text: { en: "Inside the cerebellum", fr: "Dans le cervelet", zh: "在小脑里" } }
     answer: a
-    explain: { en: "It sits in a [[dorsal-root-ganglion]] beside the spinal cord, off to the side of its long two-way stalk." }
+    explain: { en: "It sits in a [[dorsal-root-ganglion]] beside the spinal cord, off to the side of its long two-way stalk.", fr: "Il se trouve dans un [[dorsal-root-ganglion]] à côté de la moelle épinière, sur le côté de sa longue tige à double sens.", zh: "它位于脊髓旁的[[dorsal-root-ganglion|背根神经节]]中，偏在它那根双向长“茎”的一侧。" }

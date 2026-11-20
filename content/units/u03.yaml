@@ -2,8 +2,12 @@ id: u03
 number: 3
 title:
   en: "Neuroanatomy"
+  fr: "Neuroanatomie"
+  zh: "神经解剖学"
 nickname:
   en: "Brain Map"
+  fr: "Carte du cerveau"
+  zh: "大脑地图"
 color: "#FF8A3D"
 module: "Neuroanatomy"
 lessons: []

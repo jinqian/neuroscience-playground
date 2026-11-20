@@ -1,34 +1,34 @@
 # The parts of the 3D neuron (Neuron screen), from the inputs to the outputs.
-# `term` is the glossary entry each part links to. EN only for now.
+# `term` is the glossary entry each part links to.
 - id: dendrites
-  name: { en: Dendrites }
-  note: { en: "Branching inputs. Dendrites catch signals from other neurons, mostly at synapses on their surface, and pass them toward the cell body. One neuron can receive thousands of inputs this way." }
+  name: { en: Dendrites, fr: "Dendrites", zh: "树突" }
+  note: { en: "Branching inputs. Dendrites catch signals from other neurons, mostly at synapses on their surface, and pass them toward the cell body. One neuron can receive thousands of inputs this way.", fr: "Les entrées ramifiées. Les dendrites captent les signaux venus d'autres neurones, surtout aux synapses à leur surface, et les transmettent vers le corps cellulaire. Un seul neurone peut ainsi recevoir des milliers d'entrées.", zh: "分支状的输入端。树突接收来自其他神经元的信号（大多在其表面的突触处），并把信号传向细胞体。一个神经元可以借此接收成千上万个输入。" }
   term: dendrite
 - id: soma
-  name: { en: Soma (cell body) }
-  note: { en: "The cell body. It adds up the incoming signals and keeps the cell alive: it holds the nucleus and makes the proteins the neuron needs." }
+  name: { en: Soma (cell body), fr: "Soma (corps cellulaire)", zh: "胞体（细胞体）" }
+  note: { en: "The cell body. It adds up the incoming signals and keeps the cell alive: it holds the nucleus and makes the proteins the neuron needs.", fr: "Le corps cellulaire. Il additionne les signaux reçus et maintient la cellule en vie : il contient le noyau et fabrique les protéines dont le neurone a besoin.", zh: "细胞的主体。它把传入的信号加在一起，并维持细胞的生命：它含有细胞核，制造神经元所需的蛋白质。" }
   term: soma
 - id: nucleus
-  name: { en: Nucleus }
-  note: { en: "Holds the cell's DNA. It controls which proteins the neuron makes, such as its ion channels, receptors and the enzymes that build neurotransmitters." }
+  name: { en: Nucleus, fr: "Noyau", zh: "细胞核" }
+  note: { en: "Holds the cell's DNA. It controls which proteins the neuron makes, such as its ion channels, receptors and the enzymes that build neurotransmitters.", fr: "Contient l'ADN de la cellule. Il contrôle quelles protéines le neurone fabrique, comme ses canaux ioniques, ses récepteurs et les enzymes qui produisent les neurotransmetteurs.", zh: "储存细胞的DNA。它决定神经元制造哪些蛋白质，比如离子通道、受体，以及合成神经递质的酶。" }
   term: cell-nucleus
 - id: axon-hillock
-  name: { en: Axon hillock }
-  note: { en: "Where the axon leaves the cell body. It is packed with sodium channels, so this is where an action potential starts if the summed input reaches threshold." }
+  name: { en: Axon hillock, fr: "Cône d'émergence de l'axone", zh: "轴丘" }
+  note: { en: "Where the axon leaves the cell body. It is packed with sodium channels, so this is where an action potential starts if the summed input reaches threshold.", fr: "L'endroit où l'axone quitte le corps cellulaire. Il est riche en canaux sodium : c'est là que naît un potentiel d'action si la somme des entrées atteint le seuil.", zh: "轴突离开细胞体的地方。这里密布钠通道，所以当输入的总和达到阈值时，动作电位就从这里产生。" }
   term: axon-hillock
 - id: axon
-  name: { en: Axon }
-  note: { en: "The output cable. It carries the action potential away from the cell body, sometimes over a metre, as in the motor neurons that reach your toes." }
+  name: { en: Axon, fr: "Axone", zh: "轴突" }
+  note: { en: "The output cable. It carries the action potential away from the cell body, sometimes over a metre, as in the motor neurons that reach your toes.", fr: "Le câble de sortie. Il conduit le potentiel d'action loin du corps cellulaire, parfois sur plus d'un mètre, comme les neurones moteurs qui atteignent vos orteils.", zh: "输出的“电缆”。它把动作电位从细胞体传出去，有时长达一米以上，比如通到脚趾的运动神经元。" }
   term: axon
 - id: myelin
-  name: { en: Myelin sheath }
-  note: { en: "A fatty wrapping made by glial cells: oligodendrocytes in the brain and spinal cord, Schwann cells in nerves. It insulates the axon so the signal travels much faster." }
+  name: { en: Myelin sheath, fr: "Gaine de myéline", zh: "髓鞘" }
+  note: { en: "A fatty wrapping made by glial cells: oligodendrocytes in the brain and spinal cord, Schwann cells in nerves. It insulates the axon so the signal travels much faster.", fr: "Une enveloppe graisseuse fabriquée par des cellules gliales : les oligodendrocytes dans le cerveau et la moelle épinière, les cellules de Schwann dans les nerfs. Elle isole l'axone pour que le signal aille beaucoup plus vite.", zh: "由胶质细胞制造的脂肪包裹层：在脑和脊髓中由少突胶质细胞形成，在神经中由施万细胞形成。它使轴突绝缘，让信号传得快得多。" }
   term: myelin
 - id: node-of-ranvier
-  name: { en: Node of Ranvier }
-  note: { en: "A short bare gap between myelin segments, crowded with sodium channels. The action potential is renewed at each node, so it seems to jump from node to node." }
+  name: { en: Node of Ranvier, fr: "Nœud de Ranvier", zh: "郎飞结" }
+  note: { en: "A short bare gap between myelin segments, crowded with sodium channels. The action potential is renewed at each node, so it seems to jump from node to node.", fr: "Un court espace nu entre deux segments de myéline, riche en canaux sodium. Le potentiel d'action est régénéré à chaque nœud : il semble sauter de nœud en nœud.", zh: "髓鞘节段之间一小段裸露的间隙，密布钠通道。动作电位在每个结处重新产生，看起来就像从一个结跳到下一个结。" }
   term: node-of-ranvier
 - id: axon-terminal
-  name: { en: Axon terminals }
-  note: { en: "The axon's endings. When the signal arrives, they release neurotransmitter into the synapse, passing the message on to the next cell." }
+  name: { en: Axon terminals, fr: "Terminaisons axonales", zh: "轴突末梢" }
+  note: { en: "The axon's endings. When the signal arrives, they release neurotransmitter into the synapse, passing the message on to the next cell.", fr: "Les extrémités de l'axone. Quand le signal arrive, elles libèrent un neurotransmetteur dans la synapse et transmettent le message à la cellule suivante.", zh: "轴突的末端。信号到达时，它们向突触释放神经递质，把信息传给下一个细胞。" }
   term: axon-terminal

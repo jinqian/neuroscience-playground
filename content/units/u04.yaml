@@ -2,8 +2,12 @@ id: u04
 number: 4
 title:
   en: "Perception and Vision"
+  fr: "Perception et vision"
+  zh: "知觉与视觉"
 nickname:
   en: "Seeing"
+  fr: "Voir"
+  zh: "看见"
 color: "#1CB0F6"
 module: "Perception and Vision"
 lessons: []

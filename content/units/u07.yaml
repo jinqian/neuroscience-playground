@@ -2,8 +2,12 @@ id: u07
 number: 7
 title:
   en: "Voluntary Movements"
+  fr: "Mouvements volontaires"
+  zh: "随意运动"
 nickname:
   en: "Moving"
+  fr: "Bouger"
+  zh: "运动"
 color: "#E5A400"
 module: "Voluntary Movements"
 lessons: []

@@ -1,6 +1,6 @@
 id: u01-b03
 type: bite
-title: { en: "Glia, the support crew" }
+title: { en: "Glia, the support crew", fr: "La glie, l'équipe de soutien", zh: "胶质细胞：后勤团队" }
 sources: ["Glial Cells"]
 cards:
   - id: c1
@@ -11,6 +11,8 @@ cards:
         keep neurons working. [[astrocyte|Astrocytes]] feed neurons, mop up chemicals around synapses and help
         form the [[blood-brain-barrier]]. [[microglia|Microglia]] are the brain's own immune cells: they clear
         debris and attack invaders.
+      fr: "Les neurones ne sont pas seuls. Les [[glia|cellules gliales]] sont à peu près aussi nombreuses que les neurones dans le cerveau, et elles les font fonctionner. Les [[astrocyte|astrocytes]] nourrissent les neurones, épongent les substances chimiques autour des synapses et aident à former la [[blood-brain-barrier]]. Les [[microglia|cellules microgliales]] sont les cellules immunitaires du cerveau : elles éliminent les débris et attaquent les intrus."
+      zh: "神经元并不孤单。大脑中[[glia|胶质细胞]]的数量与神经元差不多，它们让神经元正常工作。[[astrocyte|星形胶质细胞]]为神经元提供养分，清理突触周围的化学物质，并帮助形成[[blood-brain-barrier|血脑屏障]]。[[microglia|小胶质细胞]]是大脑自己的免疫细胞：它们清除碎片、攻击入侵者。"
   - id: c2
     body:
       en: >-
@@ -18,49 +20,51 @@ cards:
         each [[oligodendrocyte]] wraps segments of several axons. In the rest of the body, each
         [[schwann-cell|Schwann cell]] wraps one segment of a single axon. This difference matters when a
         disease attacks myelin.
+      fr: "Deux types de glie fabriquent la [[myelin]], l'isolant graisseux autour des axones. Dans le cerveau et la moelle épinière, chaque [[oligodendrocyte]] enveloppe des segments de plusieurs axones. Dans le reste du corps, chaque [[schwann-cell|cellule de Schwann]] enveloppe un seul segment d'un seul axone. Cette différence compte quand une maladie attaque la myéline."
+      zh: "有两种胶质细胞制造[[myelin|髓鞘]]，也就是包裹轴突的脂肪绝缘层。在脑和脊髓中，每个[[oligodendrocyte|少突胶质细胞]]包裹好几条轴突的节段。在身体其他部位，每个[[schwann-cell|施万细胞]]只包裹一条轴突的一个节段。当疾病攻击髓鞘时，这个区别就很重要。"
 questions:
   - id: q1
     kind: match
-    prompt: { en: "Match each glial cell to its job." }
+    prompt: { en: "Match each glial cell to its job.", fr: "Associez chaque cellule gliale à son rôle.", zh: "把每种胶质细胞与它的工作配对。" }
     pairs:
-      - { id: p1, left: { en: "Astrocyte" }, right: { en: "Feeds neurons, helps form the blood-brain barrier" } }
-      - { id: p2, left: { en: "Microglia" }, right: { en: "Immune defence and cleanup" } }
-      - { id: p3, left: { en: "Oligodendrocyte" }, right: { en: "Myelin in the brain and spinal cord" } }
-      - { id: p4, left: { en: "Schwann cell" }, right: { en: "Myelin in nerves outside the CNS" } }
-    explain: { en: "Support, defence, and two myelin makers: one for the CNS, one for the PNS." }
+      - { id: p1, left: { en: "Astrocyte", fr: "Astrocyte", zh: "星形胶质细胞" }, right: { en: "Feeds neurons, helps form the blood-brain barrier", fr: "Nourrit les neurones, aide à former la barrière hémato-encéphalique", zh: "为神经元提供养分，帮助形成血脑屏障" } }
+      - { id: p2, left: { en: "Microglia", fr: "Microglie", zh: "小胶质细胞" }, right: { en: "Immune defence and cleanup", fr: "Défense immunitaire et nettoyage", zh: "免疫防御和清理" } }
+      - { id: p3, left: { en: "Oligodendrocyte", fr: "Oligodendrocyte", zh: "少突胶质细胞" }, right: { en: "Myelin in the brain and spinal cord", fr: "Myéline du cerveau et de la moelle épinière", zh: "脑和脊髓中的髓鞘" } }
+      - { id: p4, left: { en: "Schwann cell", fr: "Cellule de Schwann", zh: "施万细胞" }, right: { en: "Myelin in nerves outside the CNS", fr: "Myéline des nerfs hors du SNC", zh: "中枢神经系统以外神经的髓鞘" } }
+    explain: { en: "Support, defence, and two myelin makers: one for the CNS, one for the PNS.", fr: "Soutien, défense, et deux fabricants de myéline : un pour le SNC, un pour le SNP.", zh: "支持、防御，以及两种髓鞘制造者：一种负责中枢神经系统，一种负责周围神经系统。" }
   - id: q2
     kind: mc
-    prompt: { en: "Which cell is the brain's immune defender?" }
+    prompt: { en: "Which cell is the brain's immune defender?", fr: "Quelle cellule est le défenseur immunitaire du cerveau ?", zh: "哪种细胞是大脑的免疫卫士？" }
     options:
-      - { id: a, text: { en: "Microglia" } }
-      - { id: b, text: { en: "Astrocyte" } }
-      - { id: c, text: { en: "Schwann cell" } }
+      - { id: a, text: { en: "Microglia", fr: "Microglie", zh: "小胶质细胞" } }
+      - { id: b, text: { en: "Astrocyte", fr: "Astrocyte", zh: "星形胶质细胞" } }
+      - { id: c, text: { en: "Schwann cell", fr: "Cellule de Schwann", zh: "施万细胞" } }
     answer: a
-    explain: { en: "[[microglia|Microglia]] patrol the brain, swallow debris and fight infection." }
+    explain: { en: "[[microglia|Microglia]] patrol the brain, swallow debris and fight infection.", fr: "Les [[microglia|cellules microgliales]] patrouillent dans le cerveau, avalent les débris et combattent les infections.", zh: "[[microglia|小胶质细胞]]在大脑中巡逻，吞噬碎片并对抗感染。" }
   - id: q3
     kind: tfwhy
-    statement: { en: "One oligodendrocyte can myelinate parts of several axons." }
+    statement: { en: "One oligodendrocyte can myelinate parts of several axons.", fr: "Un oligodendrocyte peut myéliniser des parties de plusieurs axones.", zh: "一个少突胶质细胞可以为好几条轴突的部分节段形成髓鞘。" }
     isTrue: true
     reasons:
-      - { id: r1, text: { en: "It sends out several arms, each wrapping a different axon." } }
-      - { id: r2, text: { en: "It travels from axon to axon during the day." } }
+      - { id: r1, text: { en: "It sends out several arms, each wrapping a different axon.", fr: "Il envoie plusieurs bras, chacun enveloppant un axone différent.", zh: "它伸出好几条“手臂”，每条包裹一条不同的轴突。" } }
+      - { id: r2, text: { en: "It travels from axon to axon during the day.", fr: "Il se déplace d'axone en axone au cours de la journée.", zh: "它在白天从一条轴突移动到另一条轴突。" } }
     answerReason: r1
-    explain: { en: "An [[oligodendrocyte]] reaches out with many processes; a Schwann cell wraps just one axon segment." }
+    explain: { en: "An [[oligodendrocyte]] reaches out with many processes; a Schwann cell wraps just one axon segment.", fr: "Un [[oligodendrocyte]] étend de nombreux prolongements ; une cellule de Schwann n'enveloppe qu'un seul segment d'axone.", zh: "[[oligodendrocyte|少突胶质细胞]]伸出许多突起；施万细胞只包裹一条轴突的一个节段。" }
   - id: q4
     kind: gap
-    prompt: { en: "In the nerves of your arm, myelin is made by ___." }
+    prompt: { en: "In the nerves of your arm, myelin is made by ___.", fr: "Dans les nerfs de votre bras, la myéline est fabriquée par ___.", zh: "你手臂神经中的髓鞘是由___制造的。" }
     options:
-      - { id: a, text: { en: "Schwann cells" } }
-      - { id: b, text: { en: "oligodendrocytes" } }
-      - { id: c, text: { en: "microglia" } }
+      - { id: a, text: { en: "Schwann cells", fr: "les cellules de Schwann", zh: "施万细胞" } }
+      - { id: b, text: { en: "oligodendrocytes", fr: "les oligodendrocytes", zh: "少突胶质细胞" } }
+      - { id: c, text: { en: "microglia", fr: "la microglie", zh: "小胶质细胞" } }
     answer: a
-    explain: { en: "Arm nerves are peripheral, so their myelin comes from [[schwann-cell|Schwann cells]]." }
+    explain: { en: "Arm nerves are peripheral, so their myelin comes from [[schwann-cell|Schwann cells]].", fr: "Les nerfs du bras sont périphériques : leur myéline vient des [[schwann-cell|cellules de Schwann]].", zh: "手臂的神经属于周围神经，所以它们的髓鞘来自[[schwann-cell|施万细胞]]。" }
   - id: q5
     kind: mc
-    prompt: { en: "Which glial cell helps form the [[blood-brain-barrier]]?" }
+    prompt: { en: "Which glial cell helps form the [[blood-brain-barrier]]?", fr: "Quelle cellule gliale aide à former la [[blood-brain-barrier]] ?", zh: "哪种胶质细胞帮助形成[[blood-brain-barrier|血脑屏障]]？" }
     options:
-      - { id: a, text: { en: "Astrocyte" } }
-      - { id: b, text: { en: "Microglia" } }
-      - { id: c, text: { en: "Oligodendrocyte" } }
+      - { id: a, text: { en: "Astrocyte", fr: "Astrocyte", zh: "星形胶质细胞" } }
+      - { id: b, text: { en: "Microglia", fr: "Microglie", zh: "小胶质细胞" } }
+      - { id: c, text: { en: "Oligodendrocyte", fr: "Oligodendrocyte", zh: "少突胶质细胞" } }
     answer: a
-    explain: { en: "[[astrocyte|Astrocyte]] end-feet wrap the brain's blood vessels and help keep the barrier tight." }
+    explain: { en: "[[astrocyte|Astrocyte]] end-feet wrap the brain's blood vessels and help keep the barrier tight.", fr: "Les pieds des [[astrocyte|astrocytes]] enveloppent les vaisseaux sanguins du cerveau et aident à garder la barrière étanche.", zh: "[[astrocyte|星形胶质细胞]]的“终足”包裹着大脑的血管，帮助屏障保持严密。" }

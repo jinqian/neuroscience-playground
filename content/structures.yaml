@@ -2,57 +2,89 @@
 - id: frontal-lobe
   name:
     en: "Frontal lobe"
+    fr: "Lobe frontal"
+    zh: "额叶"
   note:
     en: "The front of each hemisphere. It plans, decides and controls movement; its rear strip is the primary motor cortex, and on the left it holds Broca's area for speech."
+    fr: "L'avant de chaque hémisphère. Il planifie, décide et commande les mouvements ; sa bande arrière est le cortex moteur primaire et, à gauche, il abrite l'aire de Broca pour la parole."
+    zh: "每个大脑半球的前部。它负责计划、决策和控制运动；它后方的条带是初级运动皮层，左侧还有负责说话的布罗卡区。"
   units: [u01]
   meshNodes: [frontal-lobe_L, frontal-lobe_R]
 - id: parietal-lobe
   name:
     en: "Parietal lobe"
+    fr: "Lobe pariétal"
+    zh: "顶叶"
   note:
     en: "Behind the frontal lobe. It handles touch and body sense (its front strip is the primary somatosensory cortex) and works out where things are in space."
+    fr: "Derrière le lobe frontal. Il traite le toucher et les sensations du corps (sa bande avant est le cortex somatosensoriel primaire) et situe les objets dans l'espace."
+    zh: "位于额叶后方。它处理触觉和身体感觉（它前方的条带是初级躯体感觉皮层），并判断物体在空间中的位置。"
   units: []
   meshNodes: [parietal-lobe_L, parietal-lobe_R]
 - id: temporal-lobe
   name:
     en: "Temporal lobe"
+    fr: "Lobe temporal"
+    zh: "颞叶"
   note:
     en: "Along the side, by the ears. It handles hearing, holds Wernicke's area for understanding language on the left, and helps form memories."
+    fr: "Sur le côté, au niveau des oreilles. Il traite l'audition, abrite à gauche l'aire de Wernicke pour comprendre le langage et aide à former les souvenirs."
+    zh: "位于两侧、靠近耳朵。它处理听觉，左侧有负责理解语言的韦尼克区，并参与形成记忆。"
   units: []
   meshNodes: [temporal-lobe_L, temporal-lobe_R]
 - id: occipital-lobe
   name:
     en: "Occipital lobe"
+    fr: "Lobe occipital"
+    zh: "枕叶"
   note:
     en: "At the back of the brain. It is where vision is first processed in the cortex."
+    fr: "À l'arrière du cerveau. C'est là que la vision est d'abord traitée dans le cortex."
+    zh: "位于大脑后部。视觉信息首先在这里的皮层中被处理。"
   units: []
   meshNodes: [occipital-lobe_L, occipital-lobe_R]
 - id: cerebellum
   name:
     en: "Cerebellum"
+    fr: "Cervelet"
+    zh: "小脑"
   note:
     en: "Tucked under the back of the brain. It fine-tunes movement, balance and timing, and learns from errors."
+    fr: "Logé sous l'arrière du cerveau. Il affine les mouvements, l'équilibre et le timing, et apprend de ses erreurs."
+    zh: "藏在大脑后部的下方。它微调运动、平衡和时机，并从错误中学习。"
   units: [u01]
   meshNodes: [cerebellum]
 - id: brainstem
   name:
     en: "Brainstem"
+    fr: "Tronc cérébral"
+    zh: "脑干"
   note:
     en: "Connects the brain to the spinal cord: midbrain, pons and medulla. It runs breathing, heart rate and many reflexes, and carries the cranial nerves."
+    fr: "Relie le cerveau à la moelle épinière : mésencéphale, pont et bulbe rachidien. Il gère la respiration, le rythme cardiaque et de nombreux réflexes, et porte les nerfs crâniens."
+    zh: "连接大脑与脊髓，由中脑、脑桥和延髓组成。它掌管呼吸、心率和许多反射，脑神经也从这里发出。"
   units: [u02]
   meshNodes: [brainstem]
 - id: spinal-cord
   name:
     en: "Spinal cord"
+    fr: "Moelle épinière"
+    zh: "脊髓"
   note:
     en: "The CNS cable running down inside the spine. It carries signals between brain and body, and runs reflexes on its own."
+    fr: "Le câble du SNC qui descend dans la colonne vertébrale. Il transporte les signaux entre le cerveau et le corps, et gère seul certains réflexes."
+    zh: "沿脊柱内部向下延伸的中枢神经系统“电缆”。它在大脑和身体之间传递信号，还能独立完成反射。"
   units: [u01, u02]
   meshNodes: []
   twoDOnly: true
 - id: hypothalamus
   name:
     en: "Hypothalamus"
+    fr: "Hypothalamus"
+    zh: "下丘脑"
   note:
     en: "A small region under the thalamus that keeps the body in balance: temperature, hunger, thirst, hormones (via the pituitary) and the autonomic nervous system."
+    fr: "Une petite région sous le thalamus qui maintient l'équilibre du corps : température, faim, soif, hormones (via l'hypophyse) et système nerveux autonome."
+    zh: "丘脑下方的一个小区域，负责维持身体的平衡：体温、饥饿、口渴、激素（通过垂体）以及自主神经系统。"
   units: [u02]
   meshNodes: [hypothalamus]

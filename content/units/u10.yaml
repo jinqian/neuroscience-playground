@@ -2,8 +2,12 @@ id: u10
 number: 10
 title:
   en: "Abstract Function"
+  fr: "Fonctions abstraites"
+  zh: "抽象功能"
 nickname:
   en: "Thinking"
+  fr: "Penser"
+  zh: "思考"
 color: "#F25C2A"
 module: "Abstract Function"
 lessons: []

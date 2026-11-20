@@ -2,8 +2,12 @@ id: u09
 number: 9
 title:
   en: "Homeostasis"
+  fr: "Homéostasie"
+  zh: "稳态"
 nickname:
   en: "Inner Balance"
+  fr: "Équilibre intérieur"
+  zh: "内在平衡"
 color: "#2F80ED"
 module: "Homeostasis"
 lessons: []

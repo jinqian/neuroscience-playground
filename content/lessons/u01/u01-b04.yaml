@@ -1,6 +1,6 @@
 id: u01-b04
 type: bite
-title: { en: "Myelin and when it fails" }
+title: { en: "Myelin and when it fails", fr: "La myéline, et quand elle flanche", zh: "髓鞘及其失灵" }
 sources: ["Myelin", "Demyelinating Diseases"]
 cards:
   - id: c1
@@ -11,6 +11,8 @@ cards:
         [[node-of-ranvier|nodes of Ranvier]]. The electrical signal is regenerated only at the nodes, so it
         seems to jump from gap to gap. This [[saltatory-conduction]] is much faster than a signal crawling
         along a bare axon, and it uses less energy.
+      fr: "La [[myelin|myéline]] enveloppe un axone de segments isolants, séparés par de petits espaces nus appelés [[node-of-ranvier|nœuds de Ranvier]]. Le signal électrique n'est régénéré qu'aux nœuds : il semble donc sauter d'un espace à l'autre. Cette [[saltatory-conduction]] est bien plus rapide qu'un signal qui rampe le long d'un axone nu, et elle consomme moins d'énergie."
+      zh: "[[myelin|髓鞘]]把轴突包成一段段绝缘的节段，节段之间是叫做[[node-of-ranvier|郎飞结]]的小裸露间隙。电信号只在郎飞结处重新产生，所以看起来像是从一个间隙跳到下一个间隙。这种[[saltatory-conduction|跳跃式传导]]比信号沿裸露轴突“爬行”快得多，也更省能量。"
   - id: c2
     body:
       en: >-
@@ -18,45 +20,47 @@ cards:
         the immune system attacks the myelin made by oligodendrocytes in the brain and spinal cord. In
         [[guillain-barre-syndrome]], it attacks the peripheral myelin made by Schwann cells, often after an
         infection, causing weakness that climbs up from the feet.
+      fr: "Quand la myéline est endommagée ([[demyelination]]), les signaux ralentissent ou échouent. Dans la [[multiple-sclerosis]], le système immunitaire attaque la myéline fabriquée par les oligodendrocytes du cerveau et de la moelle épinière. Dans le [[guillain-barre-syndrome]], il attaque la myéline périphérique fabriquée par les cellules de Schwann, souvent après une infection, ce qui provoque une faiblesse qui remonte depuis les pieds."
+      zh: "当髓鞘受损（[[demyelination|脱髓鞘]]）时，信号会变慢或中断。在[[multiple-sclerosis|多发性硬化]]中，免疫系统攻击脑和脊髓中由少突胶质细胞制造的髓鞘。在[[guillain-barre-syndrome|吉兰-巴雷综合征]]中，免疫系统攻击由施万细胞制造的周围髓鞘，常发生在感染之后，导致从脚开始向上蔓延的无力。"
 questions:
   - id: q1
     kind: tap2d
-    prompt: { en: "Tap a [[node-of-ranvier|node of Ranvier]], a bare gap in the myelin." }
+    prompt: { en: "Tap a [[node-of-ranvier|node of Ranvier]], a bare gap in the myelin.", fr: "Touchez un [[node-of-ranvier|nœud de Ranvier]], un espace nu dans la myéline.", zh: "点击一个[[node-of-ranvier|郎飞结]]，也就是髓鞘上的裸露间隙。" }
     figure: neuron
     answer: node-of-ranvier
-    explain: { en: "The nodes are the short bare stretches between myelin segments, where the signal is regenerated." }
+    explain: { en: "The nodes are the short bare stretches between myelin segments, where the signal is regenerated.", fr: "Les nœuds sont les courts tronçons nus entre les segments de myéline, là où le signal est régénéré.", zh: "郎飞结是髓鞘节段之间短短的裸露部分，信号在这里重新产生。" }
   - id: q2
     kind: mc
-    prompt: { en: "Why does myelin make signals faster?" }
+    prompt: { en: "Why does myelin make signals faster?", fr: "Pourquoi la myéline rend-elle les signaux plus rapides ?", zh: "为什么髓鞘能让信号更快？" }
     options:
-      - { id: a, text: { en: "The signal is regenerated only at the nodes, so it jumps between them." } }
-      - { id: b, text: { en: "Myelin carries the signal itself, like a copper wire." } }
-      - { id: c, text: { en: "Myelin pumps extra sodium into the axon." } }
+      - { id: a, text: { en: "The signal is regenerated only at the nodes, so it jumps between them.", fr: "Le signal n'est régénéré qu'aux nœuds, il saute donc de l'un à l'autre.", zh: "信号只在郎飞结处重新产生，所以它在结与结之间跳跃。" } }
+      - { id: b, text: { en: "Myelin carries the signal itself, like a copper wire.", fr: "La myéline conduit elle-même le signal, comme un fil de cuivre.", zh: "髓鞘本身像铜线一样传导信号。" } }
+      - { id: c, text: { en: "Myelin pumps extra sodium into the axon.", fr: "La myéline pompe du sodium supplémentaire dans l'axone.", zh: "髓鞘把额外的钠泵入轴突。" } }
     answer: a
-    explain: { en: "Insulation stops current leaking out, so it reaches the next node quickly: that's [[saltatory-conduction]]." }
+    explain: { en: "Insulation stops current leaking out, so it reaches the next node quickly: that's [[saltatory-conduction]].", fr: "L'isolant empêche le courant de fuir, qui atteint donc vite le nœud suivant : c'est la [[saltatory-conduction]].", zh: "绝缘层阻止电流外漏，使它很快到达下一个结：这就是[[saltatory-conduction|跳跃式传导]]。" }
   - id: q3
     kind: match
-    prompt: { en: "Match each term to what it means." }
+    prompt: { en: "Match each term to what it means.", fr: "Associez chaque terme à sa signification.", zh: "把每个术语与它的含义配对。" }
     pairs:
-      - { id: p1, left: { en: "Multiple sclerosis" }, right: { en: "Immune attack on myelin in the brain and spinal cord" } }
-      - { id: p2, left: { en: "Guillain-Barré syndrome" }, right: { en: "Immune attack on myelin in peripheral nerves" } }
-      - { id: p3, left: { en: "Node of Ranvier" }, right: { en: "Bare gap where the signal is regenerated" } }
-    explain: { en: "MS is a CNS disease; Guillain-Barré is a PNS disease. Both strip myelin." }
+      - { id: p1, left: { en: "Multiple sclerosis", fr: "Sclérose en plaques", zh: "多发性硬化" }, right: { en: "Immune attack on myelin in the brain and spinal cord", fr: "Attaque immunitaire de la myéline du cerveau et de la moelle épinière", zh: "免疫系统攻击脑和脊髓的髓鞘" } }
+      - { id: p2, left: { en: "Guillain-Barré syndrome", fr: "Syndrome de Guillain-Barré", zh: "吉兰-巴雷综合征" }, right: { en: "Immune attack on myelin in peripheral nerves", fr: "Attaque immunitaire de la myéline des nerfs périphériques", zh: "免疫系统攻击周围神经的髓鞘" } }
+      - { id: p3, left: { en: "Node of Ranvier", fr: "Nœud de Ranvier", zh: "郎飞结" }, right: { en: "Bare gap where the signal is regenerated", fr: "Espace nu où le signal est régénéré", zh: "信号重新产生的裸露间隙" } }
+    explain: { en: "MS is a CNS disease; Guillain-Barré is a PNS disease. Both strip myelin.", fr: "La SEP est une maladie du SNC ; le Guillain-Barré est une maladie du SNP. Les deux détruisent la myéline.", zh: "多发性硬化是中枢神经系统疾病；吉兰-巴雷综合征是周围神经系统疾病。两者都会剥除髓鞘。" }
   - id: q4
     kind: tfwhy
-    statement: { en: "Damaged myelin can make a signal slow down or stop." }
+    statement: { en: "Damaged myelin can make a signal slow down or stop.", fr: "Une myéline endommagée peut ralentir ou arrêter un signal.", zh: "受损的髓鞘会让信号变慢或停止。" }
     isTrue: true
     reasons:
-      - { id: r1, text: { en: "Without insulation, current leaks out and may not reach the next node." } }
-      - { id: r2, text: { en: "Myelin creates the signal, so without it nothing starts." } }
+      - { id: r1, text: { en: "Without insulation, current leaks out and may not reach the next node.", fr: "Sans isolant, le courant fuit et peut ne pas atteindre le nœud suivant.", zh: "没有绝缘层，电流会外漏，可能到不了下一个结。" } }
+      - { id: r2, text: { en: "Myelin creates the signal, so without it nothing starts.", fr: "La myéline crée le signal : sans elle, rien ne démarre.", zh: "髓鞘产生信号，所以没有它就什么也不会开始。" } }
     answerReason: r1
-    explain: { en: "The axon still fires, but the signal can fade before the next node: slowing, or a full conduction block." }
+    explain: { en: "The axon still fires, but the signal can fade before the next node: slowing, or a full conduction block.", fr: "L'axone déclenche toujours, mais le signal peut s'éteindre avant le nœud suivant : ralentissement, ou blocage complet de la conduction.", zh: "轴突仍然会放电，但信号可能在到达下一个结之前就衰减了：结果是变慢，或完全的传导阻滞。" }
   - id: q5
     kind: gap
-    prompt: { en: "Signals jumping from node to node is called ___ conduction." }
+    prompt: { en: "Signals jumping from node to node is called ___ conduction.", fr: "Un signal qui saute de nœud en nœud, c'est la conduction ___.", zh: "信号从一个结跳到下一个结，叫做___传导。" }
     options:
-      - { id: a, text: { en: "saltatory" } }
-      - { id: b, text: { en: "continuous" } }
-      - { id: c, text: { en: "synaptic" } }
+      - { id: a, text: { en: "saltatory", fr: "saltatoire", zh: "跳跃式" } }
+      - { id: b, text: { en: "continuous", fr: "continue", zh: "连续式" } }
+      - { id: c, text: { en: "synaptic", fr: "synaptique", zh: "突触式" } }
     answer: a
-    explain: { en: "From Latin saltare, 'to jump'." }
+    explain: { en: "From Latin saltare, 'to jump'.", fr: "Du latin saltare, « sauter ».", zh: "源自拉丁语 saltare，意为“跳跃”。" }

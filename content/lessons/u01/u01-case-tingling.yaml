@@ -1,55 +1,60 @@
 id: u01-case-tingling
 type: case
-title: { en: "Tingling feet" }
+title: { en: "Tingling feet", fr: "Des fourmis dans les pieds", zh: "脚底发麻" }
 sources: ["Myelin", "Demyelinating Diseases", "Peripheral Diseases"]
 story:
   en: >-
     Sam, 34, comes in worried. Over the last four days, both feet started tingling, then his legs grew weak.
     Today he struggles with stairs. The weakness seems to be climbing.
+  fr: "Sam, 34 ans, arrive inquiet. Ces quatre derniers jours, ses deux pieds ont commencé à fourmiller, puis ses jambes se sont affaiblies. Aujourd'hui, il a du mal à monter les escaliers. La faiblesse semble remonter."
+  zh: "34岁的萨姆忧心忡忡地来就诊。过去四天里，他的双脚开始发麻，接着双腿变得无力。今天他连上楼梯都很吃力。无力感似乎在往上蔓延。"
 clues:
   - id: k1
     verify: true
-    text: { en: "Ten days ago Sam had a bad stomach bug, which cleared up." }
+    text: { en: "Ten days ago Sam had a bad stomach bug, which cleared up.", fr: "Il y a dix jours, Sam a eu une forte gastro-entérite, qui est passée.", zh: "十天前，萨姆得过一次严重的肠胃炎，已经好了。" }
   - id: k2
-    text: { en: "It's the same on both sides, starting at the feet. His knee and ankle reflexes are gone." }
+    text: { en: "It's the same on both sides, starting at the feet. His knee and ankle reflexes are gone.", fr: "C'est pareil des deux côtés, en partant des pieds. Ses réflexes du genou et de la cheville ont disparu.", zh: "两侧症状一样，都从脚开始。他的膝反射和踝反射都消失了。" }
     unlock:
       id: q1
       kind: mc
-      prompt: { en: "Symmetric symptoms starting in the longest nerves point first to which system?" }
+      prompt: { en: "Symmetric symptoms starting in the longest nerves point first to which system?", fr: "Des symptômes symétriques qui commencent dans les nerfs les plus longs orientent d'abord vers quel système ?", zh: "从最长的神经开始、两侧对称的症状，首先指向哪个系统？" }
       options:
-        - { id: a, text: { en: "The peripheral nervous system" } }
-        - { id: b, text: { en: "The cerebellum" } }
-        - { id: c, text: { en: "The occipital lobe" } }
+        - { id: a, text: { en: "The peripheral nervous system", fr: "Le système nerveux périphérique", zh: "周围神经系统" } }
+        - { id: b, text: { en: "The cerebellum", fr: "Le cervelet", zh: "小脑" } }
+        - { id: c, text: { en: "The occipital lobe", fr: "Le lobe occipital", zh: "枕叶" } }
       answer: a
-      explain: { en: "Long [[pns|peripheral]] nerves to both feet failing together is a classic peripheral pattern." }
+      explain: { en: "Long [[pns|peripheral]] nerves to both feet failing together is a classic peripheral pattern.", fr: "De longs nerfs [[pns|périphériques]] vers les deux pieds qui défaillent ensemble : c'est un tableau périphérique classique.", zh: "通往双脚的长[[pns|周围]]神经同时出问题，是典型的周围神经模式。" }
   - id: k3
-    text: { en: "An MRI of his brain is completely normal." }
+    text: { en: "An MRI of his brain is completely normal.", fr: "Une IRM de son cerveau est parfaitement normale.", zh: "他的脑部核磁共振完全正常。" }
     unlock:
       id: q2
       kind: tfwhy
-      statement: { en: "In multiple sclerosis, a brain MRI usually shows damaged patches." }
+      statement: { en: "In multiple sclerosis, a brain MRI usually shows damaged patches.", fr: "Dans la sclérose en plaques, une IRM du cerveau montre en général des plaques lésées.", zh: "在多发性硬化中，脑部核磁共振通常能看到受损斑块。" }
       isTrue: true
       reasons:
-        - { id: r1, text: { en: "MS attacks myelin in the brain and spinal cord, leaving visible lesions." } }
-        - { id: r2, text: { en: "MS only damages the feet." } }
+        - { id: r1, text: { en: "MS attacks myelin in the brain and spinal cord, leaving visible lesions.", fr: "La SEP attaque la myéline du cerveau et de la moelle épinière, laissant des lésions visibles.", zh: "多发性硬化攻击脑和脊髓的髓鞘，留下可见的病灶。" } }
+        - { id: r2, text: { en: "MS only damages the feet.", fr: "La SEP n'abîme que les pieds.", zh: "多发性硬化只损害脚。" } }
       answerReason: r1
-      explain: { en: "[[multiple-sclerosis|MS]] is a CNS disease, so a normal brain MRI makes it less likely here." }
+      explain: { en: "[[multiple-sclerosis|MS]] is a CNS disease, so a normal brain MRI makes it less likely here.", fr: "La [[multiple-sclerosis|SEP]] est une maladie du SNC : une IRM cérébrale normale la rend moins probable ici.", zh: "[[multiple-sclerosis|多发性硬化]]是中枢神经系统疾病，所以脑部核磁共振正常让它在这里的可能性降低。" }
 final:
-  prompt: { en: "Whose myelin is under attack?" }
+  prompt: { en: "Whose myelin is under attack?", fr: "La myéline de qui est attaquée ?", zh: "谁制造的髓鞘正在受到攻击？" }
   kind: choice
   options:
-    - { id: schwann, text: { en: "Schwann cells' (peripheral nerves)" } }
-    - { id: oligo, text: { en: "Oligodendrocytes' (brain and spinal cord)" } }
-    - { id: astro, text: { en: "Astrocytes'" } }
-    - { id: axon, text: { en: "Nobody's: the axon membrane itself is the target" } }
+    - { id: schwann, text: { en: "Schwann cells' (peripheral nerves)", fr: "Celle des cellules de Schwann (nerfs périphériques)", zh: "施万细胞的（周围神经）" } }
+    - { id: oligo, text: { en: "Oligodendrocytes' (brain and spinal cord)", fr: "Celle des oligodendrocytes (cerveau et moelle épinière)", zh: "少突胶质细胞的（脑和脊髓）" } }
+    - { id: astro, text: { en: "Astrocytes'", fr: "Celle des astrocytes", zh: "星形胶质细胞的" } }
+    - { id: axon, text: { en: "Nobody's: the axon membrane itself is the target", fr: "Celle de personne : c'est la membrane de l'axone elle-même qui est visée", zh: "都不是：攻击目标是轴突膜本身" } }
   answer: schwann
   explanations:
-    schwann: { en: "Yes. Peripheral myelin, made by Schwann cells, is attacked: rising, symmetric weakness after an infection, with lost reflexes." }
-    oligo: { en: "Oligodendrocytes make CNS myelin, as in MS. His normal brain MRI and peripheral pattern argue against it." }
-    astro: { en: "Astrocytes support neurons but make no myelin." }
-    axon: { en: "Some variants do damage axons, but the classic picture here is myelin loss in peripheral nerves." }
+    schwann: { en: "Yes. Peripheral myelin, made by Schwann cells, is attacked: rising, symmetric weakness after an infection, with lost reflexes.", fr: "Oui. La myéline périphérique, fabriquée par les cellules de Schwann, est attaquée : faiblesse symétrique et ascendante après une infection, avec perte des réflexes.", zh: "对。由施万细胞制造的周围髓鞘受到攻击：感染后出现对称、向上蔓延的无力，并伴有反射消失。" }
+    oligo: { en: "Oligodendrocytes make CNS myelin, as in MS. His normal brain MRI and peripheral pattern argue against it.", fr: "Les oligodendrocytes fabriquent la myéline du SNC, comme dans la SEP. Son IRM cérébrale normale et le tableau périphérique plaident contre.", zh: "少突胶质细胞制造中枢神经系统的髓鞘，与多发性硬化有关。他正常的脑部核磁共振和周围神经模式都不支持这一点。" }
+    astro: { en: "Astrocytes support neurons but make no myelin.", fr: "Les astrocytes soutiennent les neurones mais ne fabriquent pas de myéline.", zh: "星形胶质细胞支持神经元，但不制造髓鞘。" }
+    axon: { en: "Some variants do damage axons, but the classic picture here is myelin loss in peripheral nerves.", fr: "Certaines variantes abîment bien les axones, mais le tableau classique ici est une perte de myéline dans les nerfs périphériques.", zh: "有些变异型确实会损伤轴突，但这里的典型表现是周围神经的髓鞘丢失。" }
 solved:
   en: >-
     This pattern fits [[guillain-barre-syndrome]]: after an infection, the immune system attacks peripheral
     myelin. It needs urgent hospital care, because the weakness can reach the breathing muscles. Most people
     recover as Schwann cells rebuild the myelin.
+
+  fr: "Ce tableau correspond au [[guillain-barre-syndrome]] : après une infection, le système immunitaire attaque la myéline périphérique. Il faut une prise en charge hospitalière urgente, car la faiblesse peut atteindre les muscles respiratoires. La plupart des gens guérissent à mesure que les cellules de Schwann reconstruisent la myéline."
+  zh: "这一模式符合[[guillain-barre-syndrome|吉兰-巴雷综合征]]：感染后，免疫系统攻击周围髓鞘。需要紧急住院治疗，因为无力可能波及呼吸肌。随着施万细胞重建髓鞘，大多数人都能康复。"

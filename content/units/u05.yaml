@@ -2,8 +2,12 @@ id: u05
 number: 5
 title:
   en: "Hearing"
+  fr: "Audition"
+  zh: "听觉"
 nickname:
   en: "Hearing"
+  fr: "Audition"
+  zh: "听觉"
 color: "#FF4B6E"
 module: "Hearing"
 lessons: []

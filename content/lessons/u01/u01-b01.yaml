@@ -1,6 +1,6 @@
 id: u01-b01
 type: bite
-title: { en: "Meet the neuron" }
+title: { en: "Meet the neuron", fr: "À la rencontre du neurone", zh: "认识神经元" }
 sources: ["Meet the Stars: Neurons", "Parts of the Neuron"]
 cards:
   - id: c1
@@ -11,61 +11,65 @@ cards:
         Signals come in through branching [[dendrite|dendrites]], are added up in the [[soma]] (the cell body),
         and leave along a single long [[axon]]. At the [[axon-terminal|axon terminals]], the message is handed
         to the next cell across a tiny gap called a [[synapse]].
+      fr: "Votre cerveau compte environ 86 milliards de [[neuron|neurones]]. Chacun est une cellule conçue pour transmettre des messages. Les signaux entrent par des [[dendrite|dendrites]] ramifiées, sont additionnés dans le [[soma]] (le corps cellulaire), puis repartent le long d'un unique et long [[axon|axone]]. Aux [[axon-terminal|terminaisons axonales]], le message est transmis à la cellule suivante à travers un minuscule espace appelé [[synapse]]."
+      zh: "你的大脑大约有860亿个[[neuron|神经元]]。每个神经元都是专门用来传递信息的细胞。信号从分支状的[[dendrite|树突]]进入，在[[soma|胞体]]（细胞体）中被加总，再沿着一条长长的[[axon|轴突]]离开。在[[axon-terminal|轴突末梢]]，信息穿过一个叫做[[synapse|突触]]的微小间隙，传给下一个细胞。"
   - id: c2
     body:
       en: >-
         Information normally flows one way: dendrites → soma → axon → terminals. Where the axon leaves
         the soma sits the [[axon-hillock]], the neuron's trigger zone. If the inputs reaching it add up to
         enough, the neuron fires a signal down the axon. If they don't, nothing leaves.
+      fr: "L'information circule normalement dans un seul sens : dendrites → soma → axone → terminaisons. Là où l'axone quitte le soma se trouve le [[axon-hillock]], la zone de déclenchement du neurone. Si les entrées qui l'atteignent s'additionnent suffisamment, le neurone envoie un signal le long de l'axone. Sinon, rien ne part."
+      zh: "信息通常单向流动：树突 → 胞体 → 轴突 → 末梢。在轴突离开胞体的地方是[[axon-hillock|轴丘]]，也就是神经元的“触发区”。如果到达这里的输入加起来足够多，神经元就沿轴突发出信号；如果不够，就什么也不会发出。"
 questions:
   - id: q1
     kind: mc
-    prompt: { en: "Which part of a neuron receives most incoming signals?" }
+    prompt: { en: "Which part of a neuron receives most incoming signals?", fr: "Quelle partie d'un neurone reçoit la plupart des signaux entrants ?", zh: "神经元的哪个部分接收大多数传入信号？" }
     options:
-      - { id: a, text: { en: "Dendrites" } }
-      - { id: b, text: { en: "Axon" } }
-      - { id: c, text: { en: "Axon terminals" } }
-      - { id: d, text: { en: "Myelin" } }
+      - { id: a, text: { en: "Dendrites", fr: "Dendrites", zh: "树突" } }
+      - { id: b, text: { en: "Axon", fr: "Axone", zh: "轴突" } }
+      - { id: c, text: { en: "Axon terminals", fr: "Terminaisons axonales", zh: "轴突末梢" } }
+      - { id: d, text: { en: "Myelin", fr: "Myéline", zh: "髓鞘" } }
     answer: a
-    explain: { en: "Dendrites are the neuron's inbox: their branches collect signals from other cells." }
+    explain: { en: "Dendrites are the neuron's inbox: their branches collect signals from other cells.", fr: "Les dendrites sont la boîte de réception du neurone : leurs branches recueillent les signaux des autres cellules.", zh: "树突是神经元的“收件箱”：它们的分支收集来自其他细胞的信号。" }
   - id: q2
     kind: tap2d
-    prompt: { en: "Tap the [[soma]], the cell body." }
+    prompt: { en: "Tap the [[soma]], the cell body.", fr: "Touchez le [[soma]], le corps cellulaire.", zh: "点击[[soma|胞体]]，也就是细胞体。" }
     figure: neuron
     answer: soma
-    explain: { en: "The soma is the round body holding the nucleus. It keeps the cell alive and adds up incoming signals." }
+    explain: { en: "The soma is the round body holding the nucleus. It keeps the cell alive and adds up incoming signals.", fr: "Le soma est le corps arrondi qui contient le noyau. Il maintient la cellule en vie et additionne les signaux entrants.", zh: "胞体是含有细胞核的圆形主体。它维持细胞的生命，并把传入的信号加总起来。" }
   - id: q3
     kind: order
-    prompt: { en: "Put the path of a signal through one neuron in order." }
+    prompt: { en: "Put the path of a signal through one neuron in order.", fr: "Remettez dans l'ordre le trajet d'un signal à travers un neurone.", zh: "把信号在一个神经元中经过的路径按顺序排列。" }
     steps:
-      - { id: s1, text: { en: "Dendrites" } }
-      - { id: s2, text: { en: "Soma" } }
-      - { id: s3, text: { en: "Axon hillock" } }
-      - { id: s4, text: { en: "Axon" } }
-      - { id: s5, text: { en: "Axon terminals" } }
-    explain: { en: "In through the dendrites, summed in the soma, triggered at the hillock, along the axon, out at the terminals." }
+      - { id: s1, text: { en: "Dendrites", fr: "Dendrites", zh: "树突" } }
+      - { id: s2, text: { en: "Soma", fr: "Soma", zh: "胞体" } }
+      - { id: s3, text: { en: "Axon hillock", fr: "Cône d'émergence de l'axone", zh: "轴丘" } }
+      - { id: s4, text: { en: "Axon", fr: "Axone", zh: "轴突" } }
+      - { id: s5, text: { en: "Axon terminals", fr: "Terminaisons axonales", zh: "轴突末梢" } }
+    explain: { en: "In through the dendrites, summed in the soma, triggered at the hillock, along the axon, out at the terminals.", fr: "Il entre par les dendrites, est additionné dans le soma, déclenché au cône d'émergence, parcourt l'axone et sort aux terminaisons.", zh: "从树突进入，在胞体中加总，在轴丘被触发，沿轴突传导，从末梢输出。" }
   - id: q4
     kind: gap
-    prompt: { en: "The gap where one neuron passes its message to the next cell is called a ___." }
+    prompt: { en: "The gap where one neuron passes its message to the next cell is called a ___.", fr: "L'espace où un neurone transmet son message à la cellule suivante s'appelle une ___.", zh: "一个神经元把信息传给下一个细胞的间隙叫做___。" }
     options:
-      - { id: a, text: { en: "synapse" } }
-      - { id: b, text: { en: "soma" } }
-      - { id: c, text: { en: "dendrite" } }
+      - { id: a, text: { en: "synapse", fr: "synapse", zh: "突触" } }
+      - { id: b, text: { en: "soma", fr: "soma", zh: "胞体" } }
+      - { id: c, text: { en: "dendrite", fr: "dendrite", zh: "树突" } }
     answer: a
-    explain: { en: "A [[synapse]] is the junction between a neuron and its target, with a tiny gap in between." }
+    explain: { en: "A [[synapse]] is the junction between a neuron and its target, with a tiny gap in between.", fr: "Une [[synapse]] est la jonction entre un neurone et sa cible, avec un minuscule espace entre les deux.", zh: "[[synapse|突触]]是神经元与其目标细胞之间的连接处，两者之间有一个微小的间隙。" }
   - id: q5
     kind: tfwhy
-    statement: { en: "A neuron fires a signal every time any input arrives." }
+    statement: { en: "A neuron fires a signal every time any input arrives.", fr: "Un neurone envoie un signal chaque fois qu'une entrée arrive.", zh: "只要有任何输入到达，神经元就会发出信号。" }
     isTrue: false
     reasons:
-      - { id: r1, text: { en: "Inputs must add up to enough at the axon hillock before it fires." } }
-      - { id: r2, text: { en: "Neurons only fire while you are awake." } }
-      - { id: r3, text: { en: "Only dendrites can fire signals." } }
+      - { id: r1, text: { en: "Inputs must add up to enough at the axon hillock before it fires.", fr: "Les entrées doivent s'additionner suffisamment au cône d'émergence avant qu'il ne déclenche.", zh: "输入必须在轴丘处累积到足够多，神经元才会放电。" } }
+      - { id: r2, text: { en: "Neurons only fire while you are awake.", fr: "Les neurones ne déclenchent que lorsque vous êtes éveillé.", zh: "神经元只在你清醒时放电。" } }
+      - { id: r3, text: { en: "Only dendrites can fire signals.", fr: "Seules les dendrites peuvent envoyer des signaux.", zh: "只有树突能发出信号。" } }
     answerReason: r1
-    explain: { en: "Single inputs are usually too small. The neuron fires only when their sum reaches the trigger level at the [[axon-hillock]]." }
+    explain: { en: "Single inputs are usually too small. The neuron fires only when their sum reaches the trigger level at the [[axon-hillock]].", fr: "Une entrée seule est en général trop faible. Le neurone ne déclenche que lorsque leur somme atteint le niveau de déclenchement au [[axon-hillock]].", zh: "单个输入通常太弱。只有当输入的总和在[[axon-hillock|轴丘]]达到触发水平时，神经元才会放电。" }
   - id: q6
     kind: tap2d
-    prompt: { en: "Tap the trigger zone where the axon leaves the cell body." }
+    prompt: { en: "Tap the trigger zone where the axon leaves the cell body.", fr: "Touchez la zone de déclenchement, là où l'axone quitte le corps cellulaire.", zh: "点击轴突离开细胞体的触发区。" }
     figure: neuron
     answer: axon-hillock
-    explain: { en: "That's the [[axon-hillock]]: the cone where the axon begins and the decision to fire is made." }
+    explain: { en: "That's the [[axon-hillock]]: the cone where the axon begins and the decision to fire is made.", fr: "C'est le [[axon-hillock]] : le cône où commence l'axone et où se prend la décision de déclencher.", zh: "这就是[[axon-hillock|轴丘]]：轴突开始的锥形区域，也是决定是否放电的地方。" }

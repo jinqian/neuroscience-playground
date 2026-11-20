@@ -1,6 +1,6 @@
 id: u01-b05
 type: bite
-title: { en: "Two systems: CNS and PNS" }
+title: { en: "Two systems: CNS and PNS", fr: "Deux systèmes : SNC et SNP", zh: "两个系统：中枢与周围" }
 sources: ["Meninges", "The Brain and the Spinal Cord"]
 cards:
   - id: c1
@@ -12,6 +12,8 @@ cards:
         [[spinal-cord|spinal cord]]: it integrates information and decides. The [[pns|peripheral nervous
         system (PNS)]] is every [[nerve]] linking the CNS to skin, muscles and organs. It carries
         information in and commands out.
+      fr: "Votre système nerveux a deux parties. Le [[cns|système nerveux central (SNC)]] comprend le cerveau et la [[spinal-cord|moelle épinière]] : il intègre l'information et décide. Le [[pns|système nerveux périphérique (SNP)]] regroupe chaque [[nerve|nerf]] qui relie le SNC à la peau, aux muscles et aux organes. Il apporte l'information et envoie les commandes."
+      zh: "你的神经系统分为两部分。[[cns|中枢神经系统（CNS）]]由脑和[[spinal-cord|脊髓]]组成：它整合信息并做出决定。[[pns|周围神经系统（PNS）]]包括所有把中枢神经系统与皮肤、肌肉和器官连接起来的[[nerve|神经]]。它把信息传进来，把指令送出去。"
   - id: c2
     illustration: meninges
     body:
@@ -20,48 +22,50 @@ cards:
         [[meninges]]. From the outside in: the tough [[dura-mater]], the web-like [[arachnoid-mater]], and
         the thin [[pia-mater]] that hugs the brain's surface. Between the arachnoid and the pia flows
         [[csf|cerebrospinal fluid]], which cushions the brain like a water bath.
+      fr: "Le cerveau et la moelle épinière sont mous, ils sont donc enveloppés de trois couches protectrices, les [[meninges]]. De l'extérieur vers l'intérieur : la solide [[dura-mater]], l'[[arachnoid-mater]] en forme de toile, et la fine [[pia-mater]] qui épouse la surface du cerveau. Entre l'arachnoïde et la pie-mère circule le [[csf|liquide cérébrospinal]], qui amortit le cerveau comme un bain d'eau."
+      zh: "脑和脊髓很柔软，所以被三层保护膜包裹，这就是[[meninges|脑膜]]。从外到内依次是：坚韧的[[dura-mater|硬脑膜]]、蛛网状的[[arachnoid-mater|蛛网膜]]，以及紧贴大脑表面的薄薄的[[pia-mater|软脑膜]]。蛛网膜与软脑膜之间流动着[[csf|脑脊液]]，它像水浴一样为大脑缓冲。"
 questions:
   - id: q1
     kind: tap2d
-    prompt: { en: "Tap a part of the peripheral nervous system." }
+    prompt: { en: "Tap a part of the peripheral nervous system.", fr: "Touchez une partie du système nerveux périphérique.", zh: "点击周围神经系统的一部分。" }
     figure: cns-pns
     answer: peripheral-nerve
-    explain: { en: "The nerves running out to the limbs are peripheral. The brain and spinal cord are central." }
+    explain: { en: "The nerves running out to the limbs are peripheral. The brain and spinal cord are central.", fr: "Les nerfs qui partent vers les membres sont périphériques. Le cerveau et la moelle épinière sont centraux.", zh: "通向四肢的神经属于周围神经系统。脑和脊髓属于中枢神经系统。" }
   - id: q2
     kind: order
-    prompt: { en: "Order the layers from the skull inward." }
+    prompt: { en: "Order the layers from the skull inward.", fr: "Rangez les couches du crâne vers l'intérieur.", zh: "从颅骨向内排列这几层。" }
     steps:
-      - { id: s1, text: { en: "Dura mater" } }
-      - { id: s2, text: { en: "Arachnoid mater" } }
-      - { id: s3, text: { en: "Pia mater" } }
-      - { id: s4, text: { en: "Brain surface" } }
-    explain: { en: "Dura (tough), arachnoid (web-like), pia (thin, on the brain): remember 'DAP'." }
+      - { id: s1, text: { en: "Dura mater", fr: "Dure-mère", zh: "硬脑膜" } }
+      - { id: s2, text: { en: "Arachnoid mater", fr: "Arachnoïde", zh: "蛛网膜" } }
+      - { id: s3, text: { en: "Pia mater", fr: "Pie-mère", zh: "软脑膜" } }
+      - { id: s4, text: { en: "Brain surface", fr: "Surface du cerveau", zh: "大脑表面" } }
+    explain: { en: "Dura (tough), arachnoid (web-like), pia (thin, on the brain): remember 'DAP'.", fr: "Dure-mère (solide), arachnoïde (en toile), pie-mère (fine, sur le cerveau) : retenez « DAP ».", zh: "硬脑膜（坚韧）、蛛网膜（网状）、软脑膜（薄，贴着大脑）：记住“硬、蛛、软”。" }
   - id: q3
     kind: tap2d
-    prompt: { en: "Tap the layer that clings to the brain's surface." }
+    prompt: { en: "Tap the layer that clings to the brain's surface.", fr: "Touchez la couche qui adhère à la surface du cerveau.", zh: "点击紧贴大脑表面的那一层。" }
     figure: meninges
     answer: pia
-    explain: { en: "The [[pia-mater]] follows every fold of the brain." }
+    explain: { en: "The [[pia-mater]] follows every fold of the brain.", fr: "La [[pia-mater]] suit chaque repli du cerveau.", zh: "[[pia-mater|软脑膜]]顺着大脑的每一道褶皱。" }
   - id: q4
     kind: mc
-    prompt: { en: "Is the spinal cord part of the CNS or the PNS?" }
+    prompt: { en: "Is the spinal cord part of the CNS or the PNS?", fr: "La moelle épinière fait-elle partie du SNC ou du SNP ?", zh: "脊髓属于中枢神经系统还是周围神经系统？" }
     options:
-      - { id: a, text: { en: "CNS" } }
-      - { id: b, text: { en: "PNS" } }
-      - { id: c, text: { en: "Neither" } }
+      - { id: a, text: { en: "CNS", fr: "SNC", zh: "中枢神经系统" } }
+      - { id: b, text: { en: "PNS", fr: "SNP", zh: "周围神经系统" } }
+      - { id: c, text: { en: "Neither", fr: "Aucun des deux", zh: "都不是" } }
     answer: a
-    explain: { en: "The [[cns|CNS]] is the brain plus the [[spinal-cord|spinal cord]]. The nerves leaving it are the PNS." }
+    explain: { en: "The [[cns|CNS]] is the brain plus the [[spinal-cord|spinal cord]]. The nerves leaving it are the PNS.", fr: "Le [[cns|SNC]] correspond au cerveau plus la [[spinal-cord|moelle épinière]]. Les nerfs qui en partent forment le SNP.", zh: "[[cns|中枢神经系统]]就是脑加上[[spinal-cord|脊髓]]。从中发出的神经属于周围神经系统。" }
   - id: q5
     kind: tap3d
-    prompt: { en: "Find the spinal cord." }
+    prompt: { en: "Find the spinal cord.", fr: "Trouvez la moelle épinière.", zh: "找到脊髓。" }
     structure: spinal-cord
-    explain: { en: "It continues down from the brainstem, inside the spine." }
+    explain: { en: "It continues down from the brainstem, inside the spine.", fr: "Elle prolonge le tronc cérébral vers le bas, à l'intérieur de la colonne vertébrale.", zh: "它从脑干向下延续，位于脊柱内部。" }
   - id: q6
     kind: gap
-    prompt: { en: "Cerebrospinal fluid flows just beneath the ___ mater." }
+    prompt: { en: "Cerebrospinal fluid flows just beneath the ___ mater.", fr: "Le liquide cérébrospinal circule juste sous l'___.", zh: "脑脊液就在___膜的下方流动。" }
     options:
-      - { id: a, text: { en: "arachnoid" } }
-      - { id: b, text: { en: "dura" } }
-      - { id: c, text: { en: "pia" } }
+      - { id: a, text: { en: "arachnoid", fr: "arachnoïde", zh: "蛛网" } }
+      - { id: b, text: { en: "dura", fr: "dure-mère", zh: "硬脑" } }
+      - { id: c, text: { en: "pia", fr: "pie-mère", zh: "软脑" } }
     answer: a
-    explain: { en: "[[csf|CSF]] fills the space between the arachnoid and the pia (the subarachnoid space)." }
+    explain: { en: "[[csf|CSF]] fills the space between the arachnoid and the pia (the subarachnoid space).", fr: "Le [[csf|LCS]] remplit l'espace entre l'arachnoïde et la pie-mère (l'espace sous-arachnoïdien).", zh: "[[csf|脑脊液]]充满蛛网膜和软脑膜之间的空间（蛛网膜下腔）。" }

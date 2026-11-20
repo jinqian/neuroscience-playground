@@ -2,8 +2,12 @@ id: u02
 number: 2
 title:
   en: "Neural Communication + Embodied Emotion"
+  fr: "Communication neuronale et émotions incarnées"
+  zh: "神经通讯与具身情绪"
 nickname:
   en: "Talking Neurons"
+  fr: "Les neurones se parlent"
+  zh: "神经元的对话"
 color: "#7B5CF0"
 module: "Neural Communication + Embodied Emotion"
 lessons: [u02-b01, u02-b02, u02-lab-threshold, u02-b03, u02-b04, u02-b05, u02-b06, u02-b07, u02-b08, u02-case-canned-food]

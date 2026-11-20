@@ -1,6 +1,6 @@
 id: u01-b06
 type: bite
-title: { en: "When things go wrong" }
+title: { en: "When things go wrong", fr: "Quand ça se dérègle", zh: "当事情出错时" }
 sources: ["Peripheral Diseases", "Brain Tumors"]
 cards:
   - id: c1
@@ -10,6 +10,8 @@ cards:
         [[peripheral-neuropathy|Peripheral neuropathy]] means damage to peripheral nerves. In diabetes, the
         longest axons, the ones reaching the feet, usually suffer first. That's why symptoms often begin as
         tingling or numbness in the toes and then spread upward in a "stocking" pattern.
+      fr: "La [[peripheral-neuropathy|neuropathie périphérique]] désigne une atteinte des nerfs périphériques. Dans le diabète, les axones les plus longs, ceux qui vont aux pieds, souffrent généralement en premier. C'est pourquoi les symptômes commencent souvent par des fourmillements ou un engourdissement des orteils, puis remontent « en chaussette »."
+      zh: "[[peripheral-neuropathy|周围神经病变]]是指周围神经受损。在糖尿病中，最长的轴突（通往脚的那些）通常最先受害。这就是为什么症状常常从脚趾的刺痛或麻木开始，然后像“袜子”一样向上蔓延。"
   - id: c2
     body:
       en: >-
@@ -17,48 +19,50 @@ cards:
         cells that do: glial cells give [[glioma|gliomas]], and the meninges give [[meningioma|meningiomas]],
         which press on the brain from outside. Where a tumour sits decides its symptoms, because each brain
         region has its own job.
+      fr: "Les tumeurs qui naissent dans le cerveau proviennent rarement des neurones, car les neurones matures ne se divisent presque jamais. La plupart viennent de cellules qui se divisent : les cellules gliales donnent des [[glioma|gliomes]], et les méninges des [[meningioma|méningiomes]], qui compriment le cerveau de l'extérieur. L'emplacement d'une tumeur détermine ses symptômes, car chaque région du cerveau a son propre rôle."
+      zh: "起源于大脑的肿瘤很少来自神经元，因为成熟的神经元几乎从不分裂。大多数肿瘤来自会分裂的细胞：胶质细胞会形成[[glioma|胶质瘤]]，脑膜会形成[[meningioma|脑膜瘤]]，后者从外部压迫大脑。肿瘤的位置决定了它的症状，因为大脑的每个区域都有自己的工作。"
 questions:
   - id: q1
     kind: mc
-    prompt: { en: "In diabetic neuropathy, where do symptoms usually start?" }
+    prompt: { en: "In diabetic neuropathy, where do symptoms usually start?", fr: "Dans la neuropathie diabétique, où les symptômes commencent-ils généralement ?", zh: "在糖尿病神经病变中，症状通常从哪里开始？" }
     options:
-      - { id: a, text: { en: "In the toes and feet" } }
-      - { id: b, text: { en: "In the shoulders" } }
-      - { id: c, text: { en: "In the face" } }
+      - { id: a, text: { en: "In the toes and feet", fr: "Dans les orteils et les pieds", zh: "脚趾和脚" } }
+      - { id: b, text: { en: "In the shoulders", fr: "Dans les épaules", zh: "肩膀" } }
+      - { id: c, text: { en: "In the face", fr: "Dans le visage", zh: "脸部" } }
     answer: a
-    explain: { en: "The longest axons, those to the feet, are hit first." }
+    explain: { en: "The longest axons, those to the feet, are hit first.", fr: "Les axones les plus longs, ceux des pieds, sont touchés en premier.", zh: "最长的轴突，也就是通往脚的那些，最先受影响。" }
   - id: q2
     kind: tfwhy
-    statement: { en: "Most tumours that start in the brain grow from neurons." }
+    statement: { en: "Most tumours that start in the brain grow from neurons.", fr: "La plupart des tumeurs qui naissent dans le cerveau proviennent des neurones.", zh: "大多数起源于大脑的肿瘤来自神经元。" }
     isTrue: false
     reasons:
-      - { id: r1, text: { en: "Mature neurons rarely divide; tumours usually come from glia or the meninges." } }
-      - { id: r2, text: { en: "Neurons divide faster than any other brain cell." } }
+      - { id: r1, text: { en: "Mature neurons rarely divide; tumours usually come from glia or the meninges.", fr: "Les neurones matures se divisent rarement ; les tumeurs viennent en général de la glie ou des méninges.", zh: "成熟的神经元很少分裂；肿瘤通常来自胶质细胞或脑膜。" } }
+      - { id: r2, text: { en: "Neurons divide faster than any other brain cell.", fr: "Les neurones se divisent plus vite que toutes les autres cellules du cerveau.", zh: "神经元比大脑中任何其他细胞分裂得都快。" } }
     answerReason: r1
-    explain: { en: "Tumours need dividing cells. [[glioma|Gliomas]] and [[meningioma|meningiomas]] are far more common." }
+    explain: { en: "Tumours need dividing cells. [[glioma|Gliomas]] and [[meningioma|meningiomas]] are far more common.", fr: "Une tumeur a besoin de cellules qui se divisent. Les [[glioma|gliomes]] et les [[meningioma|méningiomes]] sont bien plus fréquents.", zh: "肿瘤需要会分裂的细胞。[[glioma|胶质瘤]]和[[meningioma|脑膜瘤]]要常见得多。" }
   - id: q3
     kind: match
-    prompt: { en: "Match each condition to its source." }
+    prompt: { en: "Match each condition to its source.", fr: "Associez chaque maladie à son origine.", zh: "把每种疾病与它的来源配对。" }
     pairs:
-      - { id: p1, left: { en: "Glioma" }, right: { en: "Grows from glial cells" } }
-      - { id: p2, left: { en: "Meningioma" }, right: { en: "Grows from the meninges" } }
-      - { id: p3, left: { en: "Peripheral neuropathy" }, right: { en: "Damage to nerves outside the CNS" } }
-    explain: { en: "Name endings help: -oma means a growth; 'meningi-' points to the meninges." }
+      - { id: p1, left: { en: "Glioma", fr: "Gliome", zh: "胶质瘤" }, right: { en: "Grows from glial cells", fr: "Se développe à partir des cellules gliales", zh: "由胶质细胞长成" } }
+      - { id: p2, left: { en: "Meningioma", fr: "Méningiome", zh: "脑膜瘤" }, right: { en: "Grows from the meninges", fr: "Se développe à partir des méninges", zh: "由脑膜长成" } }
+      - { id: p3, left: { en: "Peripheral neuropathy", fr: "Neuropathie périphérique", zh: "周围神经病变" }, right: { en: "Damage to nerves outside the CNS", fr: "Atteinte des nerfs hors du SNC", zh: "中枢神经系统以外的神经受损" } }
+    explain: { en: "Name endings help: -oma means a growth; 'meningi-' points to the meninges.", fr: "Les terminaisons des noms aident : -ome désigne une masse ; « méningi- » renvoie aux méninges.", zh: "看名字就有提示：“瘤”表示肿块；“脑膜”指的就是脑膜。" }
   - id: q4
     kind: mc
-    prompt: { en: "Why do a brain tumour's symptoms depend on where it is?" }
+    prompt: { en: "Why do a brain tumour's symptoms depend on where it is?", fr: "Pourquoi les symptômes d'une tumeur cérébrale dépendent-ils de sa position ?", zh: "为什么脑肿瘤的症状取决于它的位置？" }
     options:
-      - { id: a, text: { en: "Each brain region has its own job, so pressure there disrupts that job." } }
-      - { id: b, text: { en: "All tumours cause the same symptoms wherever they are." } }
-      - { id: c, text: { en: "Symptoms depend only on the tumour's size." } }
+      - { id: a, text: { en: "Each brain region has its own job, so pressure there disrupts that job.", fr: "Chaque région du cerveau a son rôle : une pression à cet endroit perturbe ce rôle.", zh: "大脑每个区域都有自己的工作，那里受到压迫就会扰乱这项工作。" } }
+      - { id: b, text: { en: "All tumours cause the same symptoms wherever they are.", fr: "Toutes les tumeurs causent les mêmes symptômes, où qu'elles soient.", zh: "所有肿瘤无论在哪里都引起相同的症状。" } }
+      - { id: c, text: { en: "Symptoms depend only on the tumour's size.", fr: "Les symptômes ne dépendent que de la taille de la tumeur.", zh: "症状只取决于肿瘤的大小。" } }
     answer: a
-    explain: { en: "A tumour near the motor strip weakens a limb; one near the visual areas affects sight." }
+    explain: { en: "A tumour near the motor strip weakens a limb; one near the visual areas affects sight.", fr: "Une tumeur près de la bande motrice affaiblit un membre ; une tumeur près des aires visuelles affecte la vue.", zh: "靠近运动带的肿瘤会使肢体无力；靠近视觉区的肿瘤会影响视力。" }
   - id: q5
     kind: gap
-    prompt: { en: "A tumour growing from the meninges is called a ___." }
+    prompt: { en: "A tumour growing from the meninges is called a ___.", fr: "Une tumeur qui se développe à partir des méninges s'appelle un ___.", zh: "由脑膜长成的肿瘤叫做___。" }
     options:
-      - { id: a, text: { en: "meningioma" } }
-      - { id: b, text: { en: "glioma" } }
-      - { id: c, text: { en: "neuroma" } }
+      - { id: a, text: { en: "meningioma", fr: "méningiome", zh: "脑膜瘤" } }
+      - { id: b, text: { en: "glioma", fr: "gliome", zh: "胶质瘤" } }
+      - { id: c, text: { en: "neuroma", fr: "neurinome", zh: "神经瘤" } }
     answer: a
-    explain: { en: "[[meningioma|Meningiomas]] grow from the meninges and press on the brain from outside." }
+    explain: { en: "[[meningioma|Meningiomas]] grow from the meninges and press on the brain from outside.", fr: "Les [[meningioma|méningiomes]] se développent à partir des méninges et compriment le cerveau de l'extérieur.", zh: "[[meningioma|脑膜瘤]]由脑膜长成，从外部压迫大脑。" }

@@ -2,8 +2,12 @@ id: u06
 number: 6
 title:
   en: "Vestibular Sense & Gaze"
+  fr: "Sens vestibulaire et regard"
+  zh: "前庭觉与凝视"
 nickname:
   en: "Balance & Gaze"
+  fr: "Équilibre et regard"
+  zh: "平衡与凝视"
 color: "#14B8A6"
 module: "Vestibular Sense & Gaze"
 lessons: []

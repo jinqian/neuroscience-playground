@@ -2,8 +2,12 @@ id: u08
 number: 8
 title:
   en: "Motor Modulation"
+  fr: "Modulation motrice"
+  zh: "运动调节"
 nickname:
   en: "Smooth Moves"
+  fr: "Des gestes fluides"
+  zh: "流畅的动作"
 color: "#C04CD9"
 module: "Motor Modulation"
 lessons: []

@@ -1,6 +1,6 @@
 id: u01-lab-myelin
 type: lab
-title: { en: "Myelin speed race" }
+title: { en: "Myelin speed race", fr: "Course de vitesse de la myéline", zh: "髓鞘速度赛" }
 sources: ["Myelin", "Demyelinating Diseases"]
 intro:
   - id: c1
@@ -9,37 +9,41 @@ intro:
         You just stepped on a pin. How fast does the message travel between your spinal cord and your foot?
         That depends on two things: how thick the [[axon]] is, and whether it's wrapped in [[myelin]].
         Change both, then send an impulse along a 1-metre nerve.
+      fr: "Vous venez de marcher sur une épingle. À quelle vitesse le message voyage-t-il entre votre moelle épinière et votre pied ? Cela dépend de deux choses : l'épaisseur de l'[[axon|axone]], et s'il est entouré de [[myelin|myéline]]. Modifiez les deux, puis envoyez un influx le long d'un nerf d'un mètre."
+      zh: "你刚踩到一根图钉。信息在脊髓和脚之间传得有多快？这取决于两件事：[[axon|轴突]]有多粗，以及它是否包着[[myelin|髓鞘]]。调整这两项，然后沿一条1米长的神经发出一个冲动。"
 sim: myelin
-goal: { en: "Get the signal from the spinal cord to the big toe (1 m) in under 20 ms." }
+goal: { en: "Get the signal from the spinal cord to the big toe (1 m) in under 20 ms.", fr: "Faites arriver le signal de la moelle épinière au gros orteil (1 m) en moins de 20 ms.", zh: "让信号在20毫秒内从脊髓到达大脚趾（1米）。" }
 simplified:
   en: >-
     The speeds use rules of thumb (about 6 m/s per µm of diameter with myelin, about 1.1 × √diameter without).
     Real axons vary, and real [[demyelination]] is patchy rather than an even fraction.
+  fr: "Les vitesses suivent des règles approximatives (environ 6 m/s par µm de diamètre avec myéline, environ 1,1 × √diamètre sans). Les vrais axones varient, et une vraie [[demyelination]] est irrégulière plutôt qu'une fraction uniforme."
+  zh: "速度采用经验公式（有髓鞘时每微米直径约6米/秒，无髓鞘时约1.1 × √直径）。真实的轴突各不相同，真实的[[demyelination|脱髓鞘]]也是斑块状的，而不是均匀的比例。"
 reflection:
   - id: q1
     kind: mc
-    prompt: { en: "Why does a thick myelinated axon win the race?" }
+    prompt: { en: "Why does a thick myelinated axon win the race?", fr: "Pourquoi un axone épais et myélinisé gagne-t-il la course ?", zh: "为什么粗的有髓轴突能赢得比赛？" }
     options:
-      - { id: a, text: { en: "Wider axons with myelin regenerate the signal only at nodes, and spread current further between them." } }
-      - { id: b, text: { en: "Thick axons have more synapses along the way." } }
-      - { id: c, text: { en: "Myelin makes the signal stronger at the end." } }
+      - { id: a, text: { en: "Wider axons with myelin regenerate the signal only at nodes, and spread current further between them.", fr: "Les axones larges et myélinisés ne régénèrent le signal qu'aux nœuds, et propagent le courant plus loin entre eux.", zh: "粗的有髓轴突只在郎飞结处重新产生信号，电流在结与结之间也能传得更远。" } }
+      - { id: b, text: { en: "Thick axons have more synapses along the way.", fr: "Les axones épais ont plus de synapses en chemin.", zh: "粗轴突沿途有更多突触。" } }
+      - { id: c, text: { en: "Myelin makes the signal stronger at the end.", fr: "La myéline rend le signal plus fort à l'arrivée.", zh: "髓鞘让信号在终点更强。" } }
     answer: a
-    explain: { en: "Diameter lowers resistance; myelin lets the signal jump node to node ([[saltatory-conduction]])." }
+    explain: { en: "Diameter lowers resistance; myelin lets the signal jump node to node ([[saltatory-conduction]]).", fr: "Le diamètre réduit la résistance ; la myéline permet au signal de sauter de nœud en nœud ([[saltatory-conduction]]).", zh: "直径越大电阻越小；髓鞘让信号从一个结跳到下一个结（[[saltatory-conduction|跳跃式传导]]）。" }
   - id: q2
     kind: tfwhy
-    statement: { en: "Damaging some of the myelin only makes the signal a little slower, never stops it." }
+    statement: { en: "Damaging some of the myelin only makes the signal a little slower, never stops it.", fr: "Endommager une partie de la myéline ralentit à peine le signal, sans jamais l'arrêter.", zh: "损坏部分髓鞘只会让信号稍微变慢，永远不会让它停下。" }
     isTrue: false
     reasons:
-      - { id: r1, text: { en: "With enough damage, current leaks away before the next node and conduction fails." } }
-      - { id: r2, text: { en: "Myelin damage speeds the signal up." } }
+      - { id: r1, text: { en: "With enough damage, current leaks away before the next node and conduction fails.", fr: "Avec assez de dégâts, le courant fuit avant le nœud suivant et la conduction échoue.", zh: "损伤足够严重时，电流会在到达下一个结之前漏光，传导就失败了。" } }
+      - { id: r2, text: { en: "Myelin damage speeds the signal up.", fr: "Les lésions de la myéline accélèrent le signal.", zh: "髓鞘损伤会让信号变快。" } }
     answerReason: r1
-    explain: { en: "Mild damage slows; heavy damage causes a conduction block, which is why symptoms can be weakness or numbness." }
+    explain: { en: "Mild damage slows; heavy damage causes a conduction block, which is why symptoms can be weakness or numbness.", fr: "Des dégâts légers ralentissent ; des dégâts importants provoquent un bloc de conduction, d'où des symptômes de faiblesse ou d'engourdissement.", zh: "轻度损伤使信号变慢；重度损伤导致传导阻滞，所以症状可能是无力或麻木。" }
   - id: q3
     kind: mc
-    prompt: { en: "After stubbing your toe, a sharp pain comes first, then a dull ache. Why the delay?" }
+    prompt: { en: "After stubbing your toe, a sharp pain comes first, then a dull ache. Why the delay?", fr: "Après vous être cogné l'orteil, une douleur vive arrive d'abord, puis une douleur sourde. Pourquoi ce délai ?", zh: "踢到脚趾后，先是一阵锐痛，然后才是钝痛。为什么会有这个延迟？" }
     options:
-      - { id: a, text: { en: "The ache travels on thin, unmyelinated fibres, which are much slower." } }
-      - { id: b, text: { en: "The brain waits before deciding it hurts." } }
-      - { id: c, text: { en: "The ache travels a longer route through the arm." } }
+      - { id: a, text: { en: "The ache travels on thin, unmyelinated fibres, which are much slower.", fr: "La douleur sourde voyage sur des fibres fines non myélinisées, beaucoup plus lentes.", zh: "钝痛沿着细的无髓纤维传导，速度慢得多。" } }
+      - { id: b, text: { en: "The brain waits before deciding it hurts.", fr: "Le cerveau attend avant de décider que ça fait mal.", zh: "大脑要等一会儿才判定“疼”。" } }
+      - { id: c, text: { en: "The ache travels a longer route through the arm.", fr: "La douleur sourde fait un détour par le bras.", zh: "钝痛经过手臂绕了更远的路。" } }
     answer: a
-    explain: { en: "Fast pain rides thin myelinated fibres; slow aching pain rides unmyelinated ones at about 1 m/s." }
+    explain: { en: "Fast pain rides thin myelinated fibres; slow aching pain rides unmyelinated ones at about 1 m/s.", fr: "La douleur rapide emprunte des fibres fines myélinisées ; la douleur lente et sourde emprunte des fibres non myélinisées, à environ 1 m/s.", zh: "快痛走细的有髓纤维；慢的钝痛走无髓纤维，速度约为1米/秒。" }
