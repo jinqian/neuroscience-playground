@@ -1,11 +1,11 @@
-import { INK, Label, Region, type ArtProps } from './Region'
+import { ArtSvg, INK, Label, Region, type ArtProps } from './Region'
 
 export const CNS_PNS_REGIONS = ['brain', 'spinal-cord', 'peripheral-nerve']
 
 /** A body outline: brain and spinal cord (CNS) in purple, nerves (PNS) in orange. */
 export function CnsPnsArt(art: ArtProps) {
   return (
-    <svg viewBox="0 0 320 330" role="img" aria-label="Central and peripheral nervous system">
+    <ArtSvg viewBox="0 0 320 330" label="Central and peripheral nervous system">
       <path d="M160 18c26 0 40 18 40 40s-14 40-40 40-40-18-40-40 14-40 40-40zM110 108h100l34 110-20 6-24-80v180h-28l-12-112-12 112h-28v-180l-24 80-20-6z"
         fill="#f6f8f7" stroke="#c9cdd4" strokeWidth="3" strokeLinejoin="round" />
       <Region id="peripheral-nerve" label="Peripheral nerves" art={art}>
@@ -34,6 +34,6 @@ export function CnsPnsArt(art: ArtProps) {
           <Label x={30} y={318} anchor="start">PNS = orange</Label>
         </g>
       )}
-    </svg>
+    </ArtSvg>
   )
 }

@@ -1,11 +1,11 @@
-import { INK, Label, Region, type ArtProps } from './Region'
+import { ArtSvg, INK, Label, Region, type ArtProps } from './Region'
 
 export const MENINGES_REGIONS = ['skull', 'dura', 'arachnoid', 'pia']
 
 /** A cross-section from skull down to the brain surface. */
 export function MeningesArt(art: ArtProps) {
   return (
-    <svg viewBox="0 0 520 260" role="img" aria-label="The meninges in cross-section">
+    <ArtSvg viewBox="0 0 520 260" label="The meninges in cross-section">
       <Region id="skull" label="Skull" art={art}>
         <rect x="20" y="16" width="480" height="40" rx="8" fill="#efe6d2" stroke={INK} strokeWidth="3" />
       </Region>
@@ -34,6 +34,6 @@ export function MeningesArt(art: ArtProps) {
           <Label x={260} y={218}>brain</Label>
         </g>
       )}
-    </svg>
+    </ArtSvg>
   )
 }

@@ -1,9 +1,9 @@
-import { INK, Label } from './Region'
+import { ArtSvg, INK, Label } from './Region'
 
 /** Four glial cells: astrocyte on a blood vessel, oligodendrocyte, Schwann cell, microglia. */
 export function GliaArt() {
   return (
-    <svg viewBox="0 0 520 250" role="img" aria-label="Glial cells">
+    <ArtSvg viewBox="0 0 520 250" label="Glial cells">
       {/* astrocyte touching a vessel */}
       <rect x="20" y="20" width="22" height="160" rx="11" fill="#ffb3c4" stroke={INK} strokeWidth="3" />
       <g stroke="#14b8a6" strokeWidth="5" strokeLinecap="round">
@@ -31,6 +31,6 @@ export function GliaArt() {
       <g stroke="#ff8a3d" strokeWidth="3" strokeLinecap="round"><path d="M430 170 412 156 M430 170 450 154 M430 170 446 190 M430 170 412 188" /></g>
       <circle cx="430" cy="170" r="10" fill="#ffd0b0" stroke={INK} strokeWidth="2.5" />
       <Label x={430} y={226}>microglia</Label>
-    </svg>
+    </ArtSvg>
   )
 }

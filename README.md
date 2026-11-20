@@ -20,7 +20,14 @@ Progress (XP, streak, completed lessons, review queue, discovered brain parts, m
 
 ## Languages
 
-English only for now. French and Simplified Chinese are wired in (switcher, glossary columns, popovers) but stay "coming soon" until the English version is signed off. To enable a language later: add its text to every `content/` file, add `src/i18n/ui.<lang>.ts`, and add it to `ENABLED_LANGUAGES` in `src/config.ts`. The content check then fails until nothing is missing.
+English, French and Simplified Chinese, switchable anywhere. Every text exists in all three:
+
+- lesson content, unit titles, brain and neuron parts in `content/` (`{ en, fr, zh }`),
+- glossary terms (`en`, `fr`, `zh`) with a Wikipedia link per language where that article exists (otherwise the English one is used),
+- interface strings in `src/i18n/ui.en.ts`, `ui.fr.ts`, `ui.zh.ts` (the typecheck fails if a key is missing),
+- text drawn in the illustrations in `src/illustrations/artText.ts` (a test fails if a label has no translation).
+
+The content check fails until every enabled language is present.
 
 ## Editing content
 
@@ -34,7 +41,7 @@ content/
   structures.yaml       3D brain parts (name, note, mesh nodes)
 ```
 
-- **Text** is a map per language: `{ en: "…" }` (later `fr`, `zh`).
+- **Text** is a map per language: `{ en: "…", fr: "…", zh: "…" }`.
 - **Markup** in lesson text: `**bold**`, `[[term-id]]` (shows the glossary term) or `[[term-id|shown text]]`. Terms become tappable and open a popover with all three languages, roots and a Wikipedia link.
 - **Every glossary term needs `wiki: { en: "https://en.wikipedia.org/wiki/…" }`.**
 - **IDs:** lessons `u01-b01`, `u01-lab-myelin`, `u01-case-tingling`; cards `c1…`, questions `q1…`, clues `k1…` (unique within a lesson).

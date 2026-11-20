@@ -34,3 +34,10 @@ test('switcher offers all three languages and switches between them', () => {
   expect(zh).toHaveAttribute('aria-pressed', 'true')
   expect(en).toHaveAttribute('aria-pressed', 'false')
 })
+
+test('UI strings exist in French and Chinese', async () => {
+  const { t } = await import('./t')
+  expect(t('glossary', 'fr')).toBe('Glossaire')
+  expect(t('glossary', 'zh')).toBe('术语表')
+  expect(t('correctTitle', 'fr', { n: 10 })).toBe('Bravo ! +10 XP')
+})

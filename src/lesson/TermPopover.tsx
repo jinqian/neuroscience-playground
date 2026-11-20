@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useLayoutEffect, useRef } from 'react'
 import { useContent } from '../content/ContentProvider'
 import { ALL_LANGUAGES } from '../config'
 import { LANG_LABEL } from '../i18n/lang'
@@ -21,6 +21,17 @@ export function TermPopover({ termId, onClose }: { termId: string; onClose(): vo
       document.removeEventListener('mousedown', onDown)
     }
   }, [onClose])
+
+  // Keep the popover on screen: if it would run off the right edge, slide it left (never past the left edge).
+  useLayoutEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const MARGIN = 8
+    el.style.left = '' // measure from the natural spot, even if this runs twice
+    const r = el.getBoundingClientRect()
+    const shift = Math.min(Math.ceil(r.right - (window.innerWidth - MARGIN)), Math.floor(r.left - MARGIN))
+    if (shift > 0) el.style.left = `-${shift}px`
+  }, [])
 
   if (!term) return null
   return (

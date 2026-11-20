@@ -1,4 +1,4 @@
-/** English UI strings. Every key here must later exist in ui.fr.ts and ui.zh.ts. */
+/** English UI strings. ui.fr.ts and ui.zh.ts must have every key (the typecheck enforces it). */
 export const uiEn = {
   appName: 'Neuro Playground',
   comingSoon: 'Coming soon',
@@ -81,6 +81,8 @@ export const uiEn = {
   thresholdLine: 'threshold',
   fires: 'Push of +{s} mV takes the membrane to {v} mV. That reaches −55 mV, so it fires a spike to +40 mV.',
   fizzles: 'Push of +{s} mV takes the membrane to {v} mV. That is below −55 mV, so it fades back to rest.',
+  voltageChart: 'Membrane voltage over 30 milliseconds',
+  unitBadge: 'Unit badge earned',
   axonDiameter: 'Axon diameter',
   myelin: 'Myelin',
   myelinOn: 'Myelinated',

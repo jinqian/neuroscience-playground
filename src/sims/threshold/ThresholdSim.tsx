@@ -57,7 +57,7 @@ export function ThresholdSim({ onGoalMet, goalMet }: SimProps) {
         <b>+{stimulus} mV</b>
       </label>
       <input id="stimulus" type="range" min={1} max={30} value={stimulus} onChange={(e) => setStimulus(Number(e.target.value))} />
-      <canvas ref={canvas} className="sim__canvas" width={600} height={220} aria-label="Membrane voltage over 30 milliseconds" />
+      <canvas ref={canvas} className="sim__canvas" width={600} height={220} aria-label={t('voltageChart', lang)} />
       <div className="sim__legend">
         <span><i style={{ background: '#ff5fa8' }} />Vm</span>
         <span><i style={{ background: '#ffd479' }} />{t('thresholdLine', lang)} −55 mV</span>

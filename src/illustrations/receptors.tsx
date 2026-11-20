@@ -1,9 +1,9 @@
-import { INK, Label } from './Region'
+import { ArtSvg, INK, Label } from './Region'
 
 /** Ionotropic (a channel) vs metabotropic (G-protein cascade). */
 export function ReceptorsArt() {
   return (
-    <svg viewBox="0 0 520 230" role="img" aria-label="Ionotropic and metabotropic receptors">
+    <ArtSvg viewBox="0 0 520 230" label="Ionotropic and metabotropic receptors">
       <rect x="0" y="80" width="520" height="30" fill="#ffd0e0" stroke={INK} strokeWidth="2" />
       {/* ionotropic channel */}
       <rect x="92" y="70" width="18" height="50" rx="6" fill="#ff4b6e" stroke={INK} strokeWidth="2.5" />
@@ -21,6 +21,6 @@ export function ReceptorsArt() {
       <g fill="#ffd98a" stroke={INK} strokeWidth="1.5"><circle cx="442" cy="150" r="6" /><circle cx="482" cy="162" r="6" /><circle cx="470" cy="190" r="6" /><circle cx="496" cy="186" r="6" /></g>
       <Label x={400} y={220}>metabotropic: a slower cascade</Label>
       <Label x={260} y={74}>membrane</Label>
-    </svg>
+    </ArtSvg>
   )
 }

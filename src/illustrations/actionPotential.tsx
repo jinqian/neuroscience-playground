@@ -1,4 +1,4 @@
-import { INK, Label } from './Region'
+import { ArtSvg, INK, Label } from './Region'
 
 /** The shape of one spike, with its phases labelled. */
 export function ActionPotentialArt() {
@@ -8,7 +8,7 @@ export function ActionPotentialArt() {
   const pts: Array<[number, number]> = [[0, -70], [2, -70], [2.6, -55], [3.4, 40], [4.6, -80], [5.5, -76], [7, -72], [10, -70]]
   const d = pts.map(([t, v], i) => `${i ? 'L' : 'M'}${x(t)} ${y(v)}`).join(' ')
   return (
-    <svg viewBox="0 0 520 250" role="img" aria-label="Voltage during an action potential">
+    <ArtSvg viewBox="0 0 520 250" label="Voltage during an action potential">
       <path d={`M50 ${y(-70)} H500`} stroke="#c9cdd4" strokeWidth="2" />
       <path d={`M50 ${y(-55)} H500`} stroke="#ffc93c" strokeWidth="2" strokeDasharray="6 6" />
       <path d={`M50 ${y(0)} H500`} stroke="#e3e6eb" strokeWidth="1.5" />
@@ -25,6 +25,6 @@ export function ActionPotentialArt() {
       <Label x={x(8.6)} y={y(-55) - 6}>threshold</Label>
       <Label x={x(8.6)} y={y(-70) + 18}>rest</Label>
       <Label x={275} y={246}>time (about 1 ms per spike) →</Label>
-    </svg>
+    </ArtSvg>
   )
 }

@@ -39,7 +39,7 @@ export function PathScreen() {
                 <div className="unit__module">{pick(unit.title, lang)}</div>
               </div>
               {badges.includes(unit.id) && (
-                <svg className="unit__badge" viewBox="0 0 36 36" aria-label="Unit badge earned">
+                <svg className="unit__badge" viewBox="0 0 36 36" aria-label={t('unitBadge', lang)}>
                   <circle cx="18" cy="18" r="16" fill="#ffc93c" stroke="#fff" strokeWidth="3" />
                   <path d="M18 9l2.6 5.6 6 .7-4.5 4.1 1.2 6L18 22.4l-5.3 3 1.2-6-4.5-4.1 6-.7z" fill="#fff" />
                 </svg>

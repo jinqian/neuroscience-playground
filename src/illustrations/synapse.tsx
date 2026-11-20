@@ -1,11 +1,11 @@
-import { INK, Label, Region, type ArtProps } from './Region'
+import { ArtSvg, INK, Label, Region, type ArtProps } from './Region'
 
 export const SYNAPSE_REGIONS = ['presynaptic-terminal', 'vesicle', 'cleft', 'receptor', 'postsynaptic', 'reuptake-transporter']
 
 /** A chemical synapse: terminal on top, cleft, receiving cell below. */
 export function SynapseArt(art: ArtProps) {
   return (
-    <svg viewBox="0 0 520 300" role="img" aria-label="A chemical synapse">
+    <ArtSvg viewBox="0 0 520 300" label="A chemical synapse">
       <Region id="presynaptic-terminal" label="Presynaptic terminal" art={art}>
         <path d="M200 0 V40 C120 50 90 110 110 150 H410 C430 110 400 50 320 40 V0 Z" fill="#ffe1c7" stroke={INK} strokeWidth="3" />
       </Region>
@@ -42,6 +42,6 @@ export function SynapseArt(art: ArtProps) {
           <Label x={260} y={270}>receiving cell</Label>
         </g>
       )}
-    </svg>
+    </ArtSvg>
   )
 }

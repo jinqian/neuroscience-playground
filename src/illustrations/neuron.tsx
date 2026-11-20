@@ -1,4 +1,4 @@
-import { INK, Label, Region, type ArtProps } from './Region'
+import { ArtSvg, INK, Label, Region, type ArtProps } from './Region'
 
 export const NEURON_REGIONS = ['dendrites', 'soma', 'axon-hillock', 'axon', 'myelin', 'node-of-ranvier', 'terminal']
 
@@ -6,7 +6,7 @@ export const NEURON_REGIONS = ['dendrites', 'soma', 'axon-hillock', 'axon', 'mye
 export function NeuronArt(art: ArtProps) {
   const L = art.labels
   return (
-    <svg viewBox="0 0 520 230" role="img" aria-label="A neuron">
+    <ArtSvg viewBox="0 0 520 230" label="A neuron">
       <Region id="dendrites" label="Dendrites" art={art}>
         <g stroke="#7b5cf0" strokeWidth="7" strokeLinecap="round" fill="none">
           <path d="M84 104 40 62 M40 62 22 40 M40 62 14 70 M84 116 30 120 M30 120 10 106 M30 120 12 138 M90 130 52 176 M52 176 34 196 M52 176 60 204 M100 86 86 40 M86 40 70 22 M86 40 104 20" />
@@ -56,6 +56,6 @@ export function NeuronArt(art: ArtProps) {
           <Label x={480} y={190}>terminals</Label>
         </g>
       )}
-    </svg>
+    </ArtSvg>
   )
 }

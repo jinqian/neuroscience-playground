@@ -1,4 +1,4 @@
-import { INK, Label, Region, type ArtProps } from './Region'
+import { ArtSvg, INK, Label, Region, type ArtProps } from './Region'
 
 export const SPINAL_LEVEL_REGIONS = ['cervical', 'thoracic', 'lumbar', 'sacral']
 
@@ -13,7 +13,7 @@ const LEVELS = [
 export function SpinalLevelsArt(art: ArtProps) {
   let y = 20
   return (
-    <svg viewBox="0 0 520 380" role="img" aria-label="Levels of the spinal cord">
+    <ArtSvg viewBox="0 0 520 380" label="Levels of the spinal cord">
       {LEVELS.map((lv) => {
         const top = y
         const h = lv.count * 11
@@ -30,6 +30,6 @@ export function SpinalLevelsArt(art: ArtProps) {
         )
       })}
       <ellipse cx="185" cy="12" rx="40" ry="10" fill="#c9b8ff" stroke={INK} strokeWidth="2" />
-    </svg>
+    </ArtSvg>
   )
 }

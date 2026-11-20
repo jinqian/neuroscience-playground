@@ -1,4 +1,4 @@
-import { INK, Label, Region, type ArtProps } from './Region'
+import { ArtSvg, INK, Label, Region, type ArtProps } from './Region'
 
 export const AUTONOMIC_REGIONS = ['brainstem-vagus', 'thoracolumbar-chain', 'sacral-outflow', 'heart', 'gut', 'pupil']
 
@@ -8,7 +8,7 @@ const PARA = '#14b8a6'
 /** Where each autonomic branch leaves the CNS, and three organs they both reach. */
 export function AutonomicArt(art: ArtProps) {
   return (
-    <svg viewBox="0 0 520 330" role="img" aria-label="Sympathetic and parasympathetic outflow">
+    <ArtSvg viewBox="0 0 520 330" label="Sympathetic and parasympathetic outflow">
       <ellipse cx="120" cy="40" rx="62" ry="32" fill="#c9b8ff" stroke={INK} strokeWidth="3" />
       <rect x="111" y="70" width="18" height="250" rx="9" fill="#e9e3ff" stroke={INK} strokeWidth="2.5" />
       <Region id="brainstem-vagus" label="Brainstem and vagus nerve" art={art}>
@@ -51,6 +51,6 @@ export function AutonomicArt(art: ArtProps) {
           <Label x={24} y={228} anchor="start">pathetic</Label>
         </g>
       )}
-    </svg>
+    </ArtSvg>
   )
 }

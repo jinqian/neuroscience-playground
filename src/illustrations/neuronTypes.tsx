@@ -1,10 +1,10 @@
-import { INK, Label } from './Region'
+import { ArtSvg, INK, Label } from './Region'
 
 /** Three neuron shapes side by side. */
 export function NeuronTypesArt() {
   const soma = (cx: number, cy: number) => <ellipse cx={cx} cy={cy} rx="16" ry="14" fill="#c9b8ff" stroke={INK} strokeWidth="3" />
   return (
-    <svg viewBox="0 0 520 240" role="img" aria-label="Multipolar, bipolar and pseudounipolar neurons">
+    <ArtSvg viewBox="0 0 520 240" label="Multipolar, bipolar and pseudounipolar neurons">
       <g stroke="#7b5cf0" strokeWidth="5" strokeLinecap="round" fill="none">
         <path d="M80 70 52 40 M80 70 96 34 M80 70 120 52 M80 70 40 78 M80 70 46 104" />
       </g>
@@ -29,6 +29,6 @@ export function NeuronTypesArt() {
       <Label x={430} y={160}>pseudounipolar</Label>
       <Label x={490} y={100} anchor="end">from skin</Label>
       <Label x={370} y={146} anchor="start">to spinal cord</Label>
-    </svg>
+    </ArtSvg>
   )
 }
