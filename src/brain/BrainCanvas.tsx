@@ -6,6 +6,7 @@ import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib'
 import type { Structure, Unit } from '../content/schema'
 import { pick, type Lang } from '../i18n/lang'
 import { bakeGeometry } from './geometry'
+import { toonGradient } from './toon'
 import { CORTEX, hoverColor, nodeToStructure, visualState, zoneColor, type Hemisphere } from './visual'
 
 export const MODEL_URL = `${import.meta.env.BASE_URL}models/brain.glb`
@@ -33,14 +34,6 @@ class LoadBoundary extends Component<{ onError?(): void; children: ReactNode }, 
   static getDerivedStateFromError() { return { failed: true } }
   componentDidCatch() { this.props.onError?.() }
   render() { return this.state.failed ? null : this.props.children }
-}
-
-function toonGradient() {
-  const tex = new THREE.DataTexture(new Uint8Array([110, 180, 255]), 3, 1, THREE.RedFormat)
-  tex.minFilter = THREE.NearestFilter
-  tex.magFilter = THREE.NearestFilter
-  tex.needsUpdate = true
-  return tex
 }
 
 type Part = { node: string; structure: string; geometry: THREE.BufferGeometry; box: THREE.Box3 }

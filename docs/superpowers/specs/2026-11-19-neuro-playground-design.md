@@ -157,6 +157,7 @@ An original patient scenario. Clues start locked, and each one unlocks by answer
 Two entry points:
 1. **Explore step inside lessons.** It opens the brain focused on the lesson's structures (highlighted, camera framed on them). There are optional "find it" prompts: the app names a structure and the learner rotates and taps it.
 2. **Brain Explorer screen**, always reachable from the header. The whole brain is one uniform grey; only the zone in focus (selected, or highlighted by a lesson) lights up, in that zone's own dedicated colour (hover shows a lighter tint of it) *(changed 2026-11-20 at the learner's request)*. Zones the learner has met are labelled; unmet ones are unlabelled ("not discovered yet"). Tapping a met structure shows its name, a one-paragraph note, which unit taught it, and a "quiz me on this" action.
+   - **Neuron screen** *(added 2026-11-20)*: a rotatable, code-built typical neuron with a signal animation, with and without myelin. See `2026-11-20-3d-neuron-design.md`.
 
 Controls:
 - orbit, zoom, reset view

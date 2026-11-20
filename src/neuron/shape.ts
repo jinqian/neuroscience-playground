@@ -1,4 +1,5 @@
 import type { NeuronPartId } from './parts'
+import type { SignalOptions } from './signal'
 
 /** A point in model space. */
 export type Vec3 = [number, number, number]
@@ -109,3 +110,17 @@ function buildNeuron() {
 
 /** The typical neuron, described as simple shapes. Distances along the axon start at its first point. */
 export const NEURON = buildNeuron()
+
+/** The signal's route lengths and node positions on this neuron. */
+export function signalOptions(myelinated: boolean): SignalOptions {
+  return {
+    myelinated,
+    lengths: {
+      dendrite: polylineLength(NEURON.route.dendrite),
+      soma: polylineLength(NEURON.route.soma),
+      axon: polylineLength(NEURON.axon),
+      terminal: Math.max(...NEURON.terminals.map(polylineLength)),
+    },
+    nodes: NEURON.nodes,
+  }
+}

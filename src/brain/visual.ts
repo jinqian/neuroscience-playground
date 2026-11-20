@@ -52,7 +52,7 @@ export function zoneColor(structureId: string, state: Exclude<VisualState, 'hidd
 }
 
 /** Mixes a hex colour toward white by `amount` (0–1). */
-function lighten(hex: string, amount: number): string {
+export function lighten(hex: string, amount: number): string {
   const c = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16))
   return '#' + c.map((v) => Math.round(v + (255 - v) * amount).toString(16).padStart(2, '0')).join('')
 }

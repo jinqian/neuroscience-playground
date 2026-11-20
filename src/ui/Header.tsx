@@ -6,7 +6,7 @@ import { localDay } from '../progress/dates'
 import { useProgress } from '../progress/store'
 import { displayStreak } from '../progress/streak'
 import { Dendri } from './Dendri'
-import { BoltIcon, BrainIcon, FlameIcon } from './icons'
+import { BoltIcon, BrainIcon, FlameIcon, NeuronIcon } from './icons'
 
 export function Header() {
   const { lang } = useLang()
@@ -29,6 +29,7 @@ export function Header() {
         </span>
         <NavLink to="/glossary" className="nav-link">{t('glossary', lang)}</NavLink>
         <NavLink to="/brain" className="nav-link"><BrainIcon /> {t('brain', lang)}</NavLink>
+        <NavLink to="/neuron" className="nav-link"><NeuronIcon /> {t('neuron', lang)}</NavLink>
         <LanguageSwitcher />
       </div>
     </header>

@@ -8,6 +8,7 @@ import { ExplorerScreen } from '../brain/ExplorerScreen'
 import { CreditsScreen } from '../credits/CreditsScreen'
 import { GlossaryScreen } from '../glossary/GlossaryScreen'
 import { LessonScreen } from '../lesson/LessonScreen'
+import { NeuronScreen } from '../neuron/NeuronScreen'
 import { PathScreen } from './PathScreen'
 
 function Placeholder() {
@@ -48,6 +49,7 @@ export function AppRoutes() {
         <Route path="/" element={<Shell><PathScreen /></Shell>} />
         <Route path="/glossary" element={<Shell><GlossaryScreen /></Shell>} />
         <Route path="/brain" element={<Shell><ExplorerScreen /></Shell>} />
+        <Route path="/neuron" element={<Shell><NeuronScreen /></Shell>} />
         <Route path="/credits" element={<Shell><CreditsScreen /></Shell>} />
         <Route path="/lesson/:lessonId" element={<LessonScreen />} />
         <Route path="*" element={<Shell><Placeholder /></Shell>} />

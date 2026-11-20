@@ -40,6 +40,15 @@ export function CheckIcon() {
   )
 }
 
+export function NeuronIcon() {
+  return (
+    <svg width="20" height="18" viewBox="0 0 20 18" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
+      <circle cx="6" cy="9" r="2.6" fill="currentColor" stroke="none" />
+      <path d="M8.5 9h9M17.5 9l1.5-2M17.5 9l1.5 2M4 7.2 1.5 4.5M4 10.8 1.5 13.5M6 6.4V2.5" />
+    </svg>
+  )
+}
+
 export function BrainIcon() {
   return (
     <svg width="20" height="18" viewBox="0 0 20 18" aria-hidden="true">

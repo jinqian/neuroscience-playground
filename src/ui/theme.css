@@ -364,3 +364,9 @@ button { font: inherit; color: inherit; }
 .credits a { color: var(--blue); }
 .credits__attribution { border-left: 4px solid var(--purple); padding: 6px 12px; background: var(--purple-soft); border-radius: 0 10px 10px 0; }
 .credits__cite { font-size: 14px; color: var(--ink-soft); }
+
+/* Neuron screen */
+.neuron-stage { aspect-ratio: 16 / 10; }
+.signal-status { min-height: 1.4em; font-size: 15px; font-weight: 800; color: var(--purple-deep); }
+.panel__wiki { font-size: 14px; font-weight: 800; color: var(--purple-deep); }
+@media (max-width: 520px) { .neuron-stage .brain-label { font-size: 9px; padding: 1px 5px; } }

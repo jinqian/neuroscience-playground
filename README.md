@@ -46,6 +46,10 @@ Run `npm test` after editing: the content check lists every problem as `file —
 
 Illustrations and tappable figures are React SVG components registered in `src/illustrations/registry.tsx`; simulations are in `src/sims/` and registered in `src/lab/registry.ts`.
 
+## The 3D neuron
+
+The **Neuron** screen shows a typical neuron built in code (`src/neuron/`): tap a part to read about it, then send a signal and compare how it travels with and without myelin. Each part's text lives in `content/neuron.yaml`; the content check makes sure it matches the parts the 3D neuron draws.
+
 ## The 3D brain
 
 `public/models/brain.glb` is built from BodyParts3D (CC BY-SA 2.1 JP). To rebuild it, see `scripts/models/README.md`; sources, attribution and known gaps (no spinal cord mesh yet) are in `docs/models/MODELS.md`.
