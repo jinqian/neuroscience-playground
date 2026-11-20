@@ -1,6 +1,6 @@
 id: u02-b01
 type: bite
-title: { en: "A battery made of salt" }
+title: { en: "A battery made of salt", fr: "Une pile faite de sel", zh: "盐做的电池" }
 sources: ["Electrical Language", "Electricity Review"]
 cards:
   - id: c1
@@ -11,54 +11,58 @@ cards:
         such as sodium (Na⁺), potassium (K⁺) and chloride (Cl⁻). The cell's [[membrane]] keeps them apart.
         Inside there's more K⁺; outside there's more Na⁺ and Cl⁻. Separated charge is stored energy, just
         like in a battery.
+      fr: "Un neurone est un sac d'eau salée plongé dans de l'eau salée. Ces sels sont des [[ion|ions]] : des particules chargées comme le sodium (Na⁺), le potassium (K⁺) et le chlorure (Cl⁻). La [[membrane]] de la cellule les maintient séparés. À l'intérieur, il y a plus de K⁺ ; à l'extérieur, plus de Na⁺ et de Cl⁻. Des charges séparées, c'est de l'énergie stockée, comme dans une pile."
+      zh: "神经元就像泡在咸水里的一袋咸水。这些盐是[[ion|离子]]：带电的粒子，比如钠（Na⁺）、钾（K⁺）和氯（Cl⁻）。细胞的[[membrane|细胞膜]]把它们隔开。膜内K⁺更多；膜外Na⁺和Cl⁻更多。分开的电荷就是储存的能量，就像电池一样。"
   - id: c2
     body:
       en: >-
         The [[sodium-potassium-pump]] spends energy to push 3 Na⁺ out for every 2 K⁺ it brings in, and some
         K⁺ leaks back out through open channels. The result is the [[resting-potential]]: the inside sits at
         about −70 [[millivolt|mV]] compared with the outside.
+      fr: "La [[sodium-potassium-pump]] dépense de l'énergie pour expulser 3 Na⁺ pour chaque 2 K⁺ qu'elle fait entrer, et un peu de K⁺ ressort par des canaux ouverts. Résultat : le [[resting-potential]], l'intérieur se trouve à environ −70 [[millivolt|mV]] par rapport à l'extérieur."
+      zh: "[[sodium-potassium-pump|钠钾泵]]消耗能量，每泵入2个K⁺就泵出3个Na⁺，同时有一些K⁺通过开放的通道漏出去。结果就是[[resting-potential|静息电位]]：膜内比膜外低约70[[millivolt|毫伏]]，即约−70 mV。"
 questions:
   - id: q1
     kind: gap
-    prompt: { en: "At rest, the inside of a neuron sits at about ___ compared with the outside." }
+    prompt: { en: "At rest, the inside of a neuron sits at about ___ compared with the outside.", fr: "Au repos, l'intérieur d'un neurone se trouve à environ ___ par rapport à l'extérieur.", zh: "静息时，神经元膜内相对于膜外约为___。" }
     options:
-      - { id: a, text: { en: "−70 mV" } }
-      - { id: b, text: { en: "+40 mV" } }
-      - { id: c, text: { en: "0 mV" } }
+      - { id: a, text: { en: "−70 mV", fr: "−70 mV", zh: "−70 mV" } }
+      - { id: b, text: { en: "+40 mV", fr: "+40 mV", zh: "+40 mV" } }
+      - { id: c, text: { en: "0 mV", fr: "0 mV", zh: "0 mV" } }
     answer: a
-    explain: { en: "That's the [[resting-potential]]: a charged battery waiting to be used." }
+    explain: { en: "That's the [[resting-potential]]: a charged battery waiting to be used.", fr: "C'est le [[resting-potential]] : une pile chargée, prête à servir.", zh: "这就是[[resting-potential|静息电位]]：一块充好电、等待使用的电池。" }
   - id: q2
     kind: mc
-    prompt: { en: "Which ion is more concentrated inside a resting neuron?" }
+    prompt: { en: "Which ion is more concentrated inside a resting neuron?", fr: "Quel ion est plus concentré à l'intérieur d'un neurone au repos ?", zh: "静息神经元的膜内哪种离子浓度更高？" }
     options:
-      - { id: a, text: { en: "Potassium (K⁺)" } }
-      - { id: b, text: { en: "Sodium (Na⁺)" } }
-      - { id: c, text: { en: "Chloride (Cl⁻)" } }
+      - { id: a, text: { en: "Potassium (K⁺)", fr: "Le potassium (K⁺)", zh: "钾（K⁺）" } }
+      - { id: b, text: { en: "Sodium (Na⁺)", fr: "Le sodium (Na⁺)", zh: "钠（Na⁺）" } }
+      - { id: c, text: { en: "Chloride (Cl⁻)", fr: "Le chlorure (Cl⁻)", zh: "氯（Cl⁻）" } }
     answer: a
-    explain: { en: "Inside is rich in K⁺; outside is rich in Na⁺ and Cl⁻." }
+    explain: { en: "Inside is rich in K⁺; outside is rich in Na⁺ and Cl⁻.", fr: "L'intérieur est riche en K⁺ ; l'extérieur en Na⁺ et Cl⁻.", zh: "膜内富含K⁺；膜外富含Na⁺和Cl⁻。" }
   - id: q3
     kind: tfwhy
-    statement: { en: "The sodium-potassium pump needs energy to work." }
+    statement: { en: "The sodium-potassium pump needs energy to work.", fr: "La pompe sodium-potassium a besoin d'énergie pour fonctionner.", zh: "钠钾泵需要能量才能工作。" }
     isTrue: true
     reasons:
-      - { id: r1, text: { en: "It moves ions against their concentration gradients, which costs ATP." } }
-      - { id: r2, text: { en: "Ions are too heavy to move on their own." } }
+      - { id: r1, text: { en: "It moves ions against their concentration gradients, which costs ATP.", fr: "Elle déplace les ions contre leur gradient de concentration, ce qui coûte de l'ATP.", zh: "它逆着浓度梯度移动离子，这需要消耗ATP。" } }
+      - { id: r2, text: { en: "Ions are too heavy to move on their own.", fr: "Les ions sont trop lourds pour bouger seuls.", zh: "离子太重，自己动不了。" } }
     answerReason: r1
-    explain: { en: "Pushing ions uphill takes ATP. The brain spends a large share of its energy on these pumps." }
+    explain: { en: "Pushing ions uphill takes ATP. The brain spends a large share of its energy on these pumps.", fr: "Pousser des ions « vers le haut » coûte de l'ATP. Le cerveau consacre une grande part de son énergie à ces pompes.", zh: "把离子“往上坡”推需要ATP。大脑把很大一部分能量花在这些泵上。" }
   - id: q4
     kind: match
-    prompt: { en: "Match each item to where it fits." }
+    prompt: { en: "Match each item to where it fits.", fr: "Associez chaque élément à sa place.", zh: "把每一项与它对应的位置配对。" }
     pairs:
-      - { id: p1, left: { en: "Na⁺" }, right: { en: "Mostly outside the cell" } }
-      - { id: p2, left: { en: "K⁺" }, right: { en: "Mostly inside the cell" } }
-      - { id: p3, left: { en: "Na⁺/K⁺ pump" }, right: { en: "3 out, 2 in" } }
-    explain: { en: "Remember: sodium outside, potassium inside, kept that way by the pump." }
+      - { id: p1, left: { en: "Na⁺", fr: "Na⁺", zh: "Na⁺" }, right: { en: "Mostly outside the cell", fr: "Surtout à l'extérieur de la cellule", zh: "主要在细胞外" } }
+      - { id: p2, left: { en: "K⁺", fr: "K⁺", zh: "K⁺" }, right: { en: "Mostly inside the cell", fr: "Surtout à l'intérieur de la cellule", zh: "主要在细胞内" } }
+      - { id: p3, left: { en: "Na⁺/K⁺ pump", fr: "Pompe Na⁺/K⁺", zh: "Na⁺/K⁺泵" }, right: { en: "3 out, 2 in", fr: "3 dehors, 2 dedans", zh: "3个出，2个进" } }
+    explain: { en: "Remember: sodium outside, potassium inside, kept that way by the pump.", fr: "Retenez : sodium dehors, potassium dedans, maintenus ainsi par la pompe.", zh: "记住：钠在外，钾在内，由泵来维持。" }
   - id: q5
     kind: mc
-    prompt: { en: "Why is the inside of a resting neuron negative?" }
+    prompt: { en: "Why is the inside of a resting neuron negative?", fr: "Pourquoi l'intérieur d'un neurone au repos est-il négatif ?", zh: "为什么静息神经元的膜内是负的？" }
     options:
-      - { id: a, text: { en: "Positive K⁺ leaks out, and the pump exports more positive charge than it imports." } }
-      - { id: b, text: { en: "The inside is full of electrons from food." } }
-      - { id: c, text: { en: "Sodium rushes in all the time." } }
+      - { id: a, text: { en: "Positive K⁺ leaks out, and the pump exports more positive charge than it imports.", fr: "Du K⁺ positif fuit vers l'extérieur, et la pompe exporte plus de charges positives qu'elle n'en importe.", zh: "带正电的K⁺漏出去，而且泵送出的正电荷比送进来的多。" } }
+      - { id: b, text: { en: "The inside is full of electrons from food.", fr: "L'intérieur est plein d'électrons venus de la nourriture.", zh: "膜内充满了来自食物的电子。" } }
+      - { id: c, text: { en: "Sodium rushes in all the time.", fr: "Le sodium entre en permanence.", zh: "钠一直在往里冲。" } }
     answer: a
-    explain: { en: "Positive charge leaving makes the inside negative relative to the outside." }
+    explain: { en: "Positive charge leaving makes the inside negative relative to the outside.", fr: "Des charges positives qui sortent rendent l'intérieur négatif par rapport à l'extérieur.", zh: "正电荷离开，使膜内相对于膜外变成负的。" }

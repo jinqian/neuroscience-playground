@@ -1,6 +1,6 @@
 id: u02-b07
 type: bite
-title: { en: "Balance, and the drugs that tip it" }
+title: { en: "Balance, and the drugs that tip it", fr: "L'équilibre, et les médicaments qui le font pencher", zh: "平衡，以及打破平衡的药物" }
 sources: ["Parasympathetic/Sympathetic Balance", "Autonomic Pharmacology: Adjusting the PS/S System"]
 cards:
   - id: c1
@@ -9,54 +9,58 @@ cards:
         Most organs get input from both branches, and the balance shifts all day. Before a talk: dry mouth,
         racing heart (sympathetic). After a big meal: a sleepy, digesting body (parasympathetic). At the
         organs, sympathetic nerves mostly use [[noradrenaline]]; parasympathetic nerves use [[acetylcholine]].
+      fr: "La plupart des organes reçoivent des signaux des deux branches, et l'équilibre change toute la journée. Avant un exposé : bouche sèche, cœur qui s'emballe (sympathique). Après un gros repas : un corps somnolent qui digère (parasympathique). Au niveau des organes, les nerfs sympathiques utilisent surtout la [[noradrenaline]] ; les nerfs parasympathiques utilisent l'[[acetylcholine]]."
+      zh: "大多数器官同时接收两个分支的输入，而这种平衡全天都在变化。演讲前：口干、心跳加速（交感）。饱餐之后：昏昏欲睡、正在消化的身体（副交感）。在器官处，交感神经主要使用[[noradrenaline|去甲肾上腺素]]；副交感神经使用[[acetylcholine|乙酰胆碱]]。"
   - id: c2
     body:
       en: >-
         Drugs can tip the balance. [[beta-blocker|Beta blockers]] block noradrenaline's beta receptors on
         the heart, calming a racing pulse; some musicians use them for stage fright. [[atropine|Atropine]]
         blocks acetylcholine's muscarinic receptors: the heart speeds up, the mouth dries and the pupils widen.
+      fr: "Des médicaments peuvent faire pencher la balance. Les [[beta-blocker|bêta-bloquants]] bloquent les récepteurs bêta de la noradrénaline sur le cœur et calment un pouls qui s'emballe ; certains musiciens les utilisent contre le trac. L'[[atropine]] bloque les récepteurs muscariniques de l'acétylcholine : le cœur accélère, la bouche s'assèche et les pupilles se dilatent."
+      zh: "药物可以打破这种平衡。[[beta-blocker|β受体阻滞剂]]阻断心脏上去甲肾上腺素的β受体，让过快的脉搏平静下来；一些音乐家用它来对付怯场。[[atropine|阿托品]]阻断乙酰胆碱的毒蕈碱受体：心跳加快、口干、瞳孔放大。"
 questions:
   - id: q1
     kind: mc
-    prompt: { en: "What does a beta blocker mainly do to the heart?" }
+    prompt: { en: "What does a beta blocker mainly do to the heart?", fr: "Que fait principalement un bêta-bloquant au cœur ?", zh: "β受体阻滞剂主要对心脏有什么作用？" }
     options:
-      - { id: a, text: { en: "Slows it" } }
-      - { id: b, text: { en: "Speeds it up" } }
-      - { id: c, text: { en: "Stops it" } }
+      - { id: a, text: { en: "Slows it", fr: "Il le ralentit", zh: "让它变慢" } }
+      - { id: b, text: { en: "Speeds it up", fr: "Il l'accélère", zh: "让它变快" } }
+      - { id: c, text: { en: "Stops it", fr: "Il l'arrête", zh: "让它停止" } }
     answer: a
-    explain: { en: "It blocks the sympathetic 'speed up' signal at the heart." }
+    explain: { en: "It blocks the sympathetic 'speed up' signal at the heart.", fr: "Il bloque le signal sympathique « accélère » au niveau du cœur.", zh: "它在心脏处阻断交感神经的“加速”信号。" }
   - id: q2
     kind: match
-    prompt: { en: "Match each item." }
+    prompt: { en: "Match each item.", fr: "Associez chaque élément.", zh: "把每一项配对。" }
     pairs:
-      - { id: p1, left: { en: "Sympathetic nerves at organs" }, right: { en: "Noradrenaline" } }
-      - { id: p2, left: { en: "Parasympathetic nerves at organs" }, right: { en: "Acetylcholine" } }
-      - { id: p3, left: { en: "Atropine" }, right: { en: "Blocks muscarinic ACh receptors" } }
-    explain: { en: "Know the transmitter, and you can predict what a drug will do." }
+      - { id: p1, left: { en: "Sympathetic nerves at organs", fr: "Nerfs sympathiques au niveau des organes", zh: "器官处的交感神经" }, right: { en: "Noradrenaline", fr: "Noradrénaline", zh: "去甲肾上腺素" } }
+      - { id: p2, left: { en: "Parasympathetic nerves at organs", fr: "Nerfs parasympathiques au niveau des organes", zh: "器官处的副交感神经" }, right: { en: "Acetylcholine", fr: "Acétylcholine", zh: "乙酰胆碱" } }
+      - { id: p3, left: { en: "Atropine", fr: "Atropine", zh: "阿托品" }, right: { en: "Blocks muscarinic ACh receptors", fr: "Bloque les récepteurs muscariniques de l'ACh", zh: "阻断毒蕈碱型ACh受体" } }
+    explain: { en: "Know the transmitter, and you can predict what a drug will do.", fr: "Connaissez le transmetteur, et vous pourrez prédire l'effet d'un médicament.", zh: "知道了递质，就能预测药物的作用。" }
   - id: q3
     kind: tfwhy
-    statement: { en: "Atropine makes the pupils wider." }
+    statement: { en: "Atropine makes the pupils wider.", fr: "L'atropine dilate les pupilles.", zh: "阿托品会让瞳孔放大。" }
     isTrue: true
     reasons:
-      - { id: r1, text: { en: "It blocks the parasympathetic signal that narrows them." } }
-      - { id: r2, text: { en: "It switches on the sympathetic chain directly." } }
+      - { id: r1, text: { en: "It blocks the parasympathetic signal that narrows them.", fr: "Elle bloque le signal parasympathique qui les rétrécit.", zh: "它阻断了让瞳孔缩小的副交感信号。" } }
+      - { id: r2, text: { en: "It switches on the sympathetic chain directly.", fr: "Elle active directement la chaîne sympathique.", zh: "它直接激活交感神经链。" } }
     answerReason: r1
-    explain: { en: "Remove the 'narrow' signal and the 'widen' signal wins. Eye drops that block this signal widen the pupils for eye exams." }
+    explain: { en: "Remove the 'narrow' signal and the 'widen' signal wins. Eye drops that block this signal widen the pupils for eye exams.", fr: "Supprimez le signal « rétrécir » et le signal « dilater » l'emporte. Les gouttes qui bloquent ce signal dilatent les pupilles pour les examens de l'œil.", zh: "去掉“缩小”的信号，“放大”的信号就占了上风。阻断这个信号的眼药水在眼科检查时用来放大瞳孔。" }
   - id: q4
     kind: gap
-    prompt: { en: "After a large meal, the ___ branch is in charge." }
+    prompt: { en: "After a large meal, the ___ branch is in charge.", fr: "Après un gros repas, c'est la branche ___ qui commande.", zh: "饱餐之后，由___分支主导。" }
     options:
-      - { id: a, text: { en: "parasympathetic" } }
-      - { id: b, text: { en: "sympathetic" } }
-      - { id: c, text: { en: "motor" } }
+      - { id: a, text: { en: "parasympathetic", fr: "parasympathique", zh: "副交感" } }
+      - { id: b, text: { en: "sympathetic", fr: "sympathique", zh: "交感" } }
+      - { id: c, text: { en: "motor", fr: "motrice", zh: "运动" } }
     answer: a
-    explain: { en: "Rest and digest." }
+    explain: { en: "Rest and digest.", fr: "Repos et digestion.", zh: "休息和消化。" }
   - id: q5
     kind: mc
-    prompt: { en: "Before a big presentation your mouth goes dry. Which branch is winning?" }
+    prompt: { en: "Before a big presentation your mouth goes dry. Which branch is winning?", fr: "Avant un grand exposé, votre bouche s'assèche. Quelle branche l'emporte ?", zh: "重要演讲之前你口干舌燥。哪个分支占了上风？" }
     options:
-      - { id: a, text: { en: "Sympathetic" } }
-      - { id: b, text: { en: "Parasympathetic" } }
-      - { id: c, text: { en: "Enteric" } }
+      - { id: a, text: { en: "Sympathetic", fr: "Sympathique", zh: "交感" } }
+      - { id: b, text: { en: "Parasympathetic", fr: "Parasympathique", zh: "副交感" } }
+      - { id: c, text: { en: "Enteric", fr: "Entérique", zh: "肠神经" } }
     answer: a
-    explain: { en: "Saliva is a parasympathetic job, so stress turns it down." }
+    explain: { en: "Saliva is a parasympathetic job, so stress turns it down.", fr: "La salive est une tâche parasympathique : le stress la réduit.", zh: "分泌唾液是副交感的工作，所以压力会减少唾液。" }

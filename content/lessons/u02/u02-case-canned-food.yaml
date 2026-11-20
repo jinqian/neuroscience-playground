@@ -1,54 +1,59 @@
 id: u02-case-canned-food
 type: case
-title: { en: "The home-canned beans" }
+title: { en: "The home-canned beans", fr: "Les haricots en conserve maison", zh: "自制罐头四季豆" }
 sources: ["Clostridial Toxins: Botox", "Neurotransmitter Release", "Parasympathetics & Sympathetics"]
 story:
   en: >-
     Maria, 45, ate home-canned green beans at a family lunch. The next day her eyelids drooped and she saw
     double. Now her arms feel weak, and the weakness is moving downward. She's fully alert and can feel
     everything normally.
+  fr: "Maria, 45 ans, a mangé des haricots verts en conserve maison lors d'un déjeuner de famille. Le lendemain, ses paupières tombaient et elle voyait double. Maintenant, ses bras sont faibles, et la faiblesse descend. Elle est parfaitement consciente et sent tout normalement."
+  zh: "45岁的玛丽亚在一次家庭午餐中吃了自制的罐头四季豆。第二天，她的眼睑下垂，看东西重影。现在她的手臂感到无力，而且无力感正在向下蔓延。她神志完全清醒，感觉一切正常。"
 clues:
   - id: k1
     verify: true
-    text: { en: "Symptoms began about a day after the meal, starting with the eyes and face, then spreading down." }
+    text: { en: "Symptoms began about a day after the meal, starting with the eyes and face, then spreading down.", fr: "Les symptômes ont commencé environ un jour après le repas, d'abord aux yeux et au visage, puis ils sont descendus.", zh: "症状在饭后大约一天出现，先从眼睛和脸部开始，然后向下蔓延。" }
   - id: k2
-    text: { en: "Her pupils are wide and slow to react, and her mouth is very dry." }
+    text: { en: "Her pupils are wide and slow to react, and her mouth is very dry.", fr: "Ses pupilles sont dilatées et réagissent lentement, et sa bouche est très sèche.", zh: "她的瞳孔放大、反应迟缓，口腔非常干燥。" }
     unlock:
       id: q1
       kind: mc
-      prompt: { en: "Narrow pupils and saliva are driven by which branch, using which transmitter?" }
+      prompt: { en: "Narrow pupils and saliva are driven by which branch, using which transmitter?", fr: "Les pupilles étroites et la salive dépendent de quelle branche, avec quel transmetteur ?", zh: "瞳孔缩小和分泌唾液由哪个分支、使用哪种递质控制？" }
       options:
-        - { id: a, text: { en: "Parasympathetic, using acetylcholine" } }
-        - { id: b, text: { en: "Sympathetic, using noradrenaline" } }
-        - { id: c, text: { en: "Enteric, using dopamine" } }
+        - { id: a, text: { en: "Parasympathetic, using acetylcholine", fr: "Parasympathique, avec l'acétylcholine", zh: "副交感，使用乙酰胆碱" } }
+        - { id: b, text: { en: "Sympathetic, using noradrenaline", fr: "Sympathique, avec la noradrénaline", zh: "交感，使用去甲肾上腺素" } }
+        - { id: c, text: { en: "Enteric, using dopamine", fr: "Entérique, avec la dopamine", zh: "肠神经，使用多巴胺" } }
       answer: a
-      explain: { en: "If acetylcholine release fails, parasympathetic jobs fail too: wide pupils, dry mouth." }
+      explain: { en: "If acetylcholine release fails, parasympathetic jobs fail too: wide pupils, dry mouth.", fr: "Si la libération d'acétylcholine échoue, les tâches parasympathiques échouent aussi : pupilles dilatées, bouche sèche.", zh: "如果乙酰胆碱释放失败，副交感的工作也会失败：瞳孔放大、口干。" }
   - id: k3
-    text: { en: "When a doctor stimulates her muscle directly with a small electric current, it contracts normally." }
+    text: { en: "When a doctor stimulates her muscle directly with a small electric current, it contracts normally.", fr: "Quand un médecin stimule directement son muscle avec un petit courant électrique, il se contracte normalement.", zh: "医生用微弱电流直接刺激她的肌肉时，肌肉能正常收缩。" }
     unlock:
       id: q2
       kind: tfwhy
-      statement: { en: "If a muscle contracts when stimulated directly, the muscle itself is probably fine." }
+      statement: { en: "If a muscle contracts when stimulated directly, the muscle itself is probably fine.", fr: "Si un muscle se contracte quand on le stimule directement, le muscle lui-même va probablement bien.", zh: "如果肌肉在直接刺激下能收缩，那么肌肉本身很可能没问题。" }
       isTrue: true
       reasons:
-        - { id: r1, text: { en: "The problem must lie upstream, in the message reaching the muscle." } }
-        - { id: r2, text: { en: "Muscles only contract when the brain is asleep." } }
+        - { id: r1, text: { en: "The problem must lie upstream, in the message reaching the muscle.", fr: "Le problème doit se situer en amont, dans le message qui atteint le muscle.", zh: "问题一定在上游，出在到达肌肉的信息上。" } }
+        - { id: r2, text: { en: "Muscles only contract when the brain is asleep.", fr: "Les muscles ne se contractent que quand le cerveau dort.", zh: "肌肉只在大脑睡着时收缩。" } }
       answerReason: r1
-      explain: { en: "The muscle works. It just isn't receiving the order to contract." }
+      explain: { en: "The muscle works. It just isn't receiving the order to contract.", fr: "Le muscle fonctionne. Il ne reçoit simplement pas l'ordre de se contracter.", zh: "肌肉是好的，只是没有收到收缩的命令。" }
 final:
-  prompt: { en: "Where in the synapse is the toxin acting? Tap it." }
+  prompt: { en: "Where in the synapse is the toxin acting? Tap it.", fr: "Où, dans la synapse, la toxine agit-elle ? Touchez l'endroit.", zh: "毒素作用在突触的哪个部位？点击它。" }
   kind: tap2d
   figure: synapse
   answer: presynaptic-terminal
   explanations:
-    presynaptic-terminal: { en: "Yes. Botulinum toxin enters the nerve terminal and cuts SNARE proteins, so vesicles of acetylcholine can't be released." }
-    vesicle: { en: "Close! The vesicles are full and ready, but they can't fuse. The toxin targets the release machinery in the terminal, not the vesicle's contents." }
-    cleft: { en: "The cleft is just the gap. The problem is that nothing is being released into it." }
-    receptor: { en: "Blocking acetylcholine receptors also causes weakness (as in myasthenia gravis), but this toxin works before release." }
-    postsynaptic: { en: "The muscle responded to direct stimulation, so the receiving cell is working." }
-    reuptake-transporter: { en: "Blocking reuptake would leave more transmitter around, not less." }
+    presynaptic-terminal: { en: "Yes. Botulinum toxin enters the nerve terminal and cuts SNARE proteins, so vesicles of acetylcholine can't be released.", fr: "Oui. La toxine botulique pénètre dans la terminaison nerveuse et coupe les protéines SNARE : les vésicules d'acétylcholine ne peuvent plus être libérées.", zh: "对。肉毒毒素进入神经末梢，切断SNARE蛋白，于是装有乙酰胆碱的囊泡无法释放。" }
+    vesicle: { en: "Close! The vesicles are full and ready, but they can't fuse. The toxin targets the release machinery in the terminal, not the vesicle's contents.", fr: "Presque ! Les vésicules sont pleines et prêtes, mais elles ne peuvent pas fusionner. La toxine vise la machinerie de libération dans la terminaison, pas le contenu des vésicules.", zh: "差一点！囊泡已经装满、准备就绪，但无法融合。毒素针对的是末梢中的释放机制，而不是囊泡的内容物。" }
+    cleft: { en: "The cleft is just the gap. The problem is that nothing is being released into it.", fr: "La fente n'est que l'espace. Le problème, c'est que rien n'y est libéré.", zh: "间隙只是空隙。问题在于没有任何东西被释放进去。" }
+    receptor: { en: "Blocking acetylcholine receptors also causes weakness (as in myasthenia gravis), but this toxin works before release.", fr: "Bloquer les récepteurs de l'acétylcholine cause aussi une faiblesse (comme dans la myasthénie), mais cette toxine agit avant la libération.", zh: "阻断乙酰胆碱受体也会导致无力（比如重症肌无力），但这种毒素作用在释放之前。" }
+    postsynaptic: { en: "The muscle responded to direct stimulation, so the receiving cell is working.", fr: "Le muscle a répondu à la stimulation directe : la cellule réceptrice fonctionne.", zh: "肌肉对直接刺激有反应，所以接收细胞是正常的。" }
+    reuptake-transporter: { en: "Blocking reuptake would leave more transmitter around, not less.", fr: "Bloquer la recapture laisserait plus de transmetteur, pas moins.", zh: "阻断再摄取会留下更多递质，而不是更少。" }
 solved:
   en: >-
     Maria has [[botulinum-toxin|botulism]]: badly canned food can grow Clostridium botulinum. The toxin stops
     [[acetylcholine]] release at muscles and parasympathetic nerves. She needs antitoxin and hospital care,
     sometimes with breathing support, while her nerve terminals slowly recover.
+
+  fr: "Maria a le [[botulinum-toxin|botulisme]] : des conserves mal préparées peuvent laisser pousser Clostridium botulinum. La toxine arrête la libération d'[[acetylcholine]] au niveau des muscles et des nerfs parasympathiques. Elle a besoin d'antitoxine et de soins hospitaliers, parfois avec une assistance respiratoire, pendant que ses terminaisons nerveuses récupèrent lentement."
+  zh: "玛丽亚得了[[botulinum-toxin|肉毒中毒]]：没做好的罐头食品中可能滋生肉毒梭菌。这种毒素阻止肌肉和副交感神经处的[[acetylcholine|乙酰胆碱]]释放。她需要抗毒素和住院治疗，有时还需要呼吸支持，同时等待神经末梢慢慢恢复。"

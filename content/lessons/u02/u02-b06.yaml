@@ -1,6 +1,6 @@
 id: u02-b06
 type: bite
-title: { en: "The gut's brain and the two autonomic branches" }
+title: { en: "The gut's brain and the two autonomic branches", fr: "Le cerveau du ventre et les deux branches autonomes", zh: "肠道的“大脑”与自主神经的两个分支" }
 sources: ["Introduction to Embodied Emotion", "Enteric Nervous System", "Parasympathetics & Sympathetics"]
 cards:
   - id: c1
@@ -11,6 +11,8 @@ cards:
         control. Its [[sympathetic-nervous-system|sympathetic]] branch prepares you for "fight or flight":
         faster heart, wider pupils, slower digestion. It leaves the spinal cord at the thoracic and lumbar
         levels.
+      fr: "Les émotions vivent aussi dans le corps. Le [[autonomic-nervous-system]] fait fonctionner vos organes sans contrôle conscient. Sa branche [[sympathetic-nervous-system|sympathique]] vous prépare à « combattre ou fuir » : cœur plus rapide, pupilles plus larges, digestion ralentie. Elle quitte la moelle épinière aux niveaux thoracique et lombaire."
+      zh: "情绪也存在于身体之中。[[autonomic-nervous-system|自主神经系统]]在没有意识控制的情况下管理你的器官。它的[[sympathetic-nervous-system|交感]]分支让你准备好“战斗或逃跑”：心跳加快、瞳孔放大、消化变慢。它从脊髓的胸段和腰段发出。"
   - id: c2
     verify: true
     body:
@@ -19,42 +21,44 @@ cards:
         heart, narrower pupils, busy gut. It leaves from the brainstem, mostly through the [[vagus-nerve]],
         and from the sacral spinal cord. The gut also has its own network, the [[enteric-nervous-system]]:
         hundreds of millions of neurons that can run digestion by themselves.
+      fr: "La branche [[parasympathetic-nervous-system|parasympathique]] s'occupe du « repos et de la digestion » : cœur plus lent, pupilles plus étroites, intestin actif. Elle part du tronc cérébral, surtout par le [[vagus-nerve]], et de la moelle sacrée. L'intestin a aussi son propre réseau, le [[enteric-nervous-system]] : des centaines de millions de neurones capables de gérer seuls la digestion."
+      zh: "[[parasympathetic-nervous-system|副交感]]分支负责“休息和消化”：心跳变慢、瞳孔缩小、肠道忙碌。它从脑干发出（主要通过[[vagus-nerve|迷走神经]]），也从骶段脊髓发出。肠道还有自己的网络——[[enteric-nervous-system|肠神经系统]]：数亿个神经元，能够自行管理消化。"
 questions:
   - id: q1
     kind: tap2d
-    prompt: { en: "Tap where the [[vagus-nerve]] leaves the CNS." }
+    prompt: { en: "Tap where the [[vagus-nerve]] leaves the CNS.", fr: "Touchez l'endroit où le [[vagus-nerve]] quitte le SNC.", zh: "点击[[vagus-nerve|迷走神经]]离开中枢神经系统的地方。" }
     figure: autonomic
     answer: brainstem-vagus
-    explain: { en: "The vagus is a cranial nerve: it leaves from the brainstem and wanders down to the heart and gut." }
+    explain: { en: "The vagus is a cranial nerve: it leaves from the brainstem and wanders down to the heart and gut.", fr: "Le vague est un nerf crânien : il part du tronc cérébral et descend en vagabondant jusqu'au cœur et à l'intestin.", zh: "迷走神经是一条脑神经：它从脑干发出，一路“游走”到心脏和肠道。" }
   - id: q2
     kind: match
-    prompt: { en: "Match each branch to its job." }
+    prompt: { en: "Match each branch to its job.", fr: "Associez chaque branche à son rôle.", zh: "把每个分支与它的工作配对。" }
     pairs:
-      - { id: p1, left: { en: "Sympathetic" }, right: { en: "Fight or flight" } }
-      - { id: p2, left: { en: "Parasympathetic" }, right: { en: "Rest and digest" } }
-      - { id: p3, left: { en: "Enteric" }, right: { en: "The gut's own network" } }
-    explain: { en: "Two opposing branches plus a local controller in the gut." }
+      - { id: p1, left: { en: "Sympathetic", fr: "Sympathique", zh: "交感" }, right: { en: "Fight or flight", fr: "Combattre ou fuir", zh: "战斗或逃跑" } }
+      - { id: p2, left: { en: "Parasympathetic", fr: "Parasympathique", zh: "副交感" }, right: { en: "Rest and digest", fr: "Repos et digestion", zh: "休息和消化" } }
+      - { id: p3, left: { en: "Enteric", fr: "Entérique", zh: "肠神经" }, right: { en: "The gut's own network", fr: "Le réseau propre à l'intestin", zh: "肠道自己的网络" } }
+    explain: { en: "Two opposing branches plus a local controller in the gut.", fr: "Deux branches opposées, plus un contrôleur local dans l'intestin.", zh: "两个相互对立的分支，加上肠道里的一个本地控制器。" }
   - id: q3
     kind: mc
-    prompt: { en: "During a scare, what does the sympathetic branch do to your pupils?" }
+    prompt: { en: "During a scare, what does the sympathetic branch do to your pupils?", fr: "Lors d'une frayeur, que fait la branche sympathique à vos pupilles ?", zh: "受到惊吓时，交感分支会让你的瞳孔怎样？" }
     options:
-      - { id: a, text: { en: "Widens them" } }
-      - { id: b, text: { en: "Narrows them" } }
-      - { id: c, text: { en: "Nothing" } }
+      - { id: a, text: { en: "Widens them", fr: "Elle les dilate", zh: "放大" } }
+      - { id: b, text: { en: "Narrows them", fr: "Elle les rétrécit", zh: "缩小" } }
+      - { id: c, text: { en: "Nothing", fr: "Rien", zh: "不变" } }
     answer: a
-    explain: { en: "Wider pupils let in more light: useful when danger is near." }
+    explain: { en: "Wider pupils let in more light: useful when danger is near.", fr: "Des pupilles plus larges laissent entrer plus de lumière : utile quand un danger est proche.", zh: "放大的瞳孔让更多光线进入：危险临近时很有用。" }
   - id: q4
     kind: tap2d
-    prompt: { en: "Tap where the sympathetic outflow leaves the spinal cord." }
+    prompt: { en: "Tap where the sympathetic outflow leaves the spinal cord.", fr: "Touchez l'endroit où les fibres sympathiques quittent la moelle épinière.", zh: "点击交感神经纤维离开脊髓的地方。" }
     figure: autonomic
     answer: thoracolumbar-chain
-    explain: { en: "Sympathetic neurons leave from the thoracic and lumbar cord, then form a chain beside the spine." }
+    explain: { en: "Sympathetic neurons leave from the thoracic and lumbar cord, then form a chain beside the spine.", fr: "Les neurones sympathiques partent de la moelle thoracique et lombaire, puis forment une chaîne le long de la colonne.", zh: "交感神经元从胸段和腰段脊髓发出，然后在脊柱旁形成一条链。" }
   - id: q5
     kind: tfwhy
-    statement: { en: "The gut needs the brain to run every step of digestion." }
+    statement: { en: "The gut needs the brain to run every step of digestion.", fr: "L'intestin a besoin du cerveau pour chaque étape de la digestion.", zh: "肠道的每一步消化都需要大脑来指挥。" }
     isTrue: false
     reasons:
-      - { id: r1, text: { en: "The enteric nervous system can run digestion on its own; the brain only adjusts it." } }
-      - { id: r2, text: { en: "The gut has no neurons." } }
+      - { id: r1, text: { en: "The enteric nervous system can run digestion on its own; the brain only adjusts it.", fr: "Le système nerveux entérique peut gérer seul la digestion ; le cerveau ne fait que l'ajuster.", zh: "肠神经系统可以独立管理消化；大脑只是进行调节。" } }
+      - { id: r2, text: { en: "The gut has no neurons.", fr: "L'intestin n'a pas de neurones.", zh: "肠道没有神经元。" } }
     answerReason: r1
-    explain: { en: "That's why the [[enteric-nervous-system]] is nicknamed the 'second brain'." }
+    explain: { en: "That's why the [[enteric-nervous-system]] is nicknamed the 'second brain'.", fr: "C'est pourquoi le [[enteric-nervous-system]] est surnommé le « deuxième cerveau ».", zh: "这就是为什么[[enteric-nervous-system|肠神经系统]]被称为“第二大脑”。" }

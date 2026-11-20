@@ -1,6 +1,6 @@
 id: u02-b02
 type: bite
-title: { en: "The action potential" }
+title: { en: "The action potential", fr: "Le potentiel d'action", zh: "动作电位" }
 sources: ["Action Potential"]
 cards:
   - id: c1
@@ -10,6 +10,8 @@ cards:
         When inputs push the voltage up to the [[threshold]] (about −55 mV), voltage-gated sodium channels
         snap open. Na⁺ rushes in and the inside swings to about +40 mV. This brief spike, lasting about a
         millisecond, is the [[action-potential]].
+      fr: "Quand les entrées font monter la tension jusqu'au [[threshold]] (environ −55 mV), des canaux sodium voltage-dépendants s'ouvrent d'un coup. Le Na⁺ s'engouffre et l'intérieur bascule à environ +40 mV. Ce bref pic, qui dure environ une milliseconde, est le [[action-potential]]."
+      zh: "当输入把电压推高到[[threshold|阈值]]（约−55 mV）时，电压门控钠通道猛然打开。Na⁺涌入，膜内电位跃升到约+40 mV。这个持续约一毫秒的短暂尖峰就是[[action-potential|动作电位]]。"
   - id: c2
     body:
       en: >-
@@ -17,50 +19,52 @@ cards:
         briefly dipping below rest. For a moment the neuron can't fire again: the [[refractory-period]].
         Each spike triggers the next patch of membrane, so the signal travels along the axon without fading.
         And it's [[all-or-none]]: a stronger input gives more spikes, not bigger ones.
+      fr: "Puis les canaux sodium se ferment et les canaux potassium s'ouvrent. Le K⁺ sort et la tension chute, passant brièvement sous le repos. Pendant un instant, le neurone ne peut pas redéclencher : c'est la [[refractory-period]]. Chaque pic déclenche la portion de membrane suivante, si bien que le signal parcourt l'axone sans s'affaiblir. Et c'est du [[all-or-none]] : une entrée plus forte donne plus de pics, pas des pics plus grands."
+      zh: "接着钠通道关闭，钾通道打开。K⁺流出，电压下降，短暂地低于静息水平。在这一瞬间，神经元无法再次放电：这就是[[refractory-period|不应期]]。每个尖峰都会触发下一段膜，所以信号沿轴突传导而不会衰减。而且它是[[all-or-none|全或无]]的：更强的输入带来更多的尖峰，而不是更大的尖峰。"
 questions:
   - id: q1
     kind: order
-    prompt: { en: "Put the steps of an action potential in order." }
+    prompt: { en: "Put the steps of an action potential in order.", fr: "Remettez dans l'ordre les étapes d'un potentiel d'action.", zh: "把动作电位的步骤按顺序排列。" }
     steps:
-      - { id: s1, text: { en: "Inputs push the voltage to threshold" } }
-      - { id: s2, text: { en: "Na⁺ channels open and Na⁺ rushes in" } }
-      - { id: s3, text: { en: "Voltage peaks near +40 mV" } }
-      - { id: s4, text: { en: "K⁺ channels open and K⁺ flows out" } }
-      - { id: s5, text: { en: "Voltage dips below rest, then recovers" } }
-    explain: { en: "Threshold, sodium in, peak, potassium out, undershoot, back to rest." }
+      - { id: s1, text: { en: "Inputs push the voltage to threshold", fr: "Les entrées amènent la tension au seuil", zh: "输入把电压推到阈值" } }
+      - { id: s2, text: { en: "Na⁺ channels open and Na⁺ rushes in", fr: "Les canaux Na⁺ s'ouvrent et le Na⁺ s'engouffre", zh: "Na⁺通道打开，Na⁺涌入" } }
+      - { id: s3, text: { en: "Voltage peaks near +40 mV", fr: "La tension culmine vers +40 mV", zh: "电压在约+40 mV达到峰值" } }
+      - { id: s4, text: { en: "K⁺ channels open and K⁺ flows out", fr: "Les canaux K⁺ s'ouvrent et le K⁺ sort", zh: "K⁺通道打开，K⁺流出" } }
+      - { id: s5, text: { en: "Voltage dips below rest, then recovers", fr: "La tension passe sous le repos, puis récupère", zh: "电压降到静息水平以下，然后恢复" } }
+    explain: { en: "Threshold, sodium in, peak, potassium out, undershoot, back to rest.", fr: "Seuil, entrée du sodium, pic, sortie du potassium, hyperpolarisation, retour au repos.", zh: "阈值、钠内流、峰值、钾外流、超极化、回到静息。" }
   - id: q2
     kind: mc
-    prompt: { en: "A steady input becomes twice as strong as needed. What happens?" }
+    prompt: { en: "A steady input becomes twice as strong as needed. What happens?", fr: "Une entrée constante devient deux fois plus forte que nécessaire. Que se passe-t-il ?", zh: "一个持续的输入变成所需强度的两倍。会发生什么？" }
     options:
-      - { id: a, text: { en: "Spikes come more often, but each is the same size." } }
-      - { id: b, text: { en: "The spike is twice as tall." } }
-      - { id: c, text: { en: "The spike travels backwards." } }
+      - { id: a, text: { en: "Spikes come more often, but each is the same size.", fr: "Les pics arrivent plus souvent, mais chacun a la même taille.", zh: "尖峰出现得更频繁，但每个大小相同。" } }
+      - { id: b, text: { en: "The spike is twice as tall.", fr: "Le pic est deux fois plus haut.", zh: "尖峰变成两倍高。" } }
+      - { id: c, text: { en: "The spike travels backwards.", fr: "Le pic repart en arrière.", zh: "尖峰向后传。" } }
     answer: a
-    explain: { en: "Spikes are [[all-or-none]]. Strength is coded by how often the neuron fires." }
+    explain: { en: "Spikes are [[all-or-none]]. Strength is coded by how often the neuron fires.", fr: "Les pics obéissent au [[all-or-none]]. L'intensité est codée par la fréquence de décharge du neurone.", zh: "尖峰是[[all-or-none|全或无]]的。强度由神经元放电的频率来编码。" }
   - id: q3
     kind: gap
-    prompt: { en: "The voltage at which a neuron fires is called the ___." }
+    prompt: { en: "The voltage at which a neuron fires is called the ___.", fr: "La tension à laquelle un neurone déclenche s'appelle le ___.", zh: "神经元放电时的电压叫做___。" }
     options:
-      - { id: a, text: { en: "threshold" } }
-      - { id: b, text: { en: "peak" } }
-      - { id: c, text: { en: "resting potential" } }
+      - { id: a, text: { en: "threshold", fr: "seuil", zh: "阈值" } }
+      - { id: b, text: { en: "peak", fr: "pic", zh: "峰值" } }
+      - { id: c, text: { en: "resting potential", fr: "potentiel de repos", zh: "静息电位" } }
     answer: a
-    explain: { en: "Around −55 mV for a typical neuron." }
+    explain: { en: "Around −55 mV for a typical neuron.", fr: "Environ −55 mV pour un neurone typique.", zh: "典型神经元约为−55 mV。" }
   - id: q4
     kind: tfwhy
-    statement: { en: "Right after a spike, a neuron can fire again immediately." }
+    statement: { en: "Right after a spike, a neuron can fire again immediately.", fr: "Juste après un pic, un neurone peut redéclencher immédiatement.", zh: "刚放完一个尖峰，神经元就能立即再次放电。" }
     isTrue: false
     reasons:
-      - { id: r1, text: { en: "During the refractory period, the sodium channels need time to reset." } }
-      - { id: r2, text: { en: "Neurons can only fire once per minute." } }
+      - { id: r1, text: { en: "During the refractory period, the sodium channels need time to reset.", fr: "Pendant la période réfractaire, les canaux sodium ont besoin de temps pour se réinitialiser.", zh: "在不应期内，钠通道需要时间复位。" } }
+      - { id: r2, text: { en: "Neurons can only fire once per minute.", fr: "Les neurones ne peuvent déclencher qu'une fois par minute.", zh: "神经元每分钟只能放电一次。" } }
     answerReason: r1
-    explain: { en: "The [[refractory-period]] also keeps the spike moving forward, not backward." }
+    explain: { en: "The [[refractory-period]] also keeps the spike moving forward, not backward.", fr: "La [[refractory-period]] fait aussi avancer le pic vers l'avant, et non vers l'arrière.", zh: "[[refractory-period|不应期]]还让尖峰只向前传，而不往回传。" }
   - id: q5
     kind: mc
-    prompt: { en: "Why doesn't the action potential fade as it travels down the axon?" }
+    prompt: { en: "Why doesn't the action potential fade as it travels down the axon?", fr: "Pourquoi le potentiel d'action ne s'affaiblit-il pas en parcourant l'axone ?", zh: "为什么动作电位沿轴突传导时不会衰减？" }
     options:
-      - { id: a, text: { en: "Each patch of membrane regenerates a full-size spike." } }
-      - { id: b, text: { en: "The terminal amplifies it at the end." } }
-      - { id: c, text: { en: "The axon is a perfect wire with no losses." } }
+      - { id: a, text: { en: "Each patch of membrane regenerates a full-size spike.", fr: "Chaque portion de membrane régénère un pic de taille complète.", zh: "每一段膜都会重新产生一个完整大小的尖峰。" } }
+      - { id: b, text: { en: "The terminal amplifies it at the end.", fr: "La terminaison l'amplifie à l'arrivée.", zh: "末梢在终点把它放大。" } }
+      - { id: c, text: { en: "The axon is a perfect wire with no losses.", fr: "L'axone est un fil parfait, sans perte.", zh: "轴突是一根完美无损耗的导线。" } }
     answer: a
-    explain: { en: "It's re-created at every step, like a row of dominoes." }
+    explain: { en: "It's re-created at every step, like a row of dominoes.", fr: "Il est recréé à chaque étape, comme une rangée de dominos.", zh: "它每一步都被重新产生，就像一排多米诺骨牌。" }

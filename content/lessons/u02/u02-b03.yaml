@@ -1,6 +1,6 @@
 id: u02-b03
 type: bite
-title: { en: "Packing and sending messages" }
+title: { en: "Packing and sending messages", fr: "Emballer et envoyer les messages", zh: "打包和发送信息" }
 sources: ["Neurotransmitter Synthesis", "Neurotransmitter Release"]
 cards:
   - id: c1
@@ -11,49 +11,53 @@ cards:
         are stored in tiny bubbles called [[vesicle|vesicles]]. Small-molecule transmitters, such as
         [[acetylcholine]] and glutamate, are made right in the terminal. Larger [[neuropeptide|neuropeptides]]
         are built in the soma and shipped down the axon.
+      fr: "À la terminaison axonale, le signal électrique devient chimique. Les [[neurotransmitter|neurotransmetteurs]] sont stockés dans de minuscules bulles appelées [[vesicle|vésicules]]. Les transmetteurs de petite taille, comme l'[[acetylcholine]] et le glutamate, sont fabriqués directement dans la terminaison. Les [[neuropeptide|neuropeptides]], plus gros, sont construits dans le soma puis expédiés le long de l'axone."
+      zh: "在轴突末梢，电信号变成了化学信号。[[neurotransmitter|神经递质]]储存在叫做[[vesicle|囊泡]]的微小泡泡里。小分子递质，比如[[acetylcholine|乙酰胆碱]]和谷氨酸，就在末梢内合成。较大的[[neuropeptide|神经肽]]则在胞体中合成，再沿轴突运送过去。"
   - id: c2
     body:
       en: >-
         When a spike reaches the terminal, voltage-gated calcium channels open and Ca²⁺ flows in. Calcium
         triggers vesicles to fuse with the membrane and spill their contents into the [[synaptic-cleft]].
         The transmitter drifts across the gap and binds to [[receptor|receptors]] on the next cell.
+      fr: "Quand un pic atteint la terminaison, des canaux calcium voltage-dépendants s'ouvrent et le Ca²⁺ entre. Le calcium déclenche la fusion des vésicules avec la membrane, qui déversent leur contenu dans la [[synaptic-cleft]]. Le transmetteur traverse l'espace et se fixe sur des [[receptor|récepteurs]] de la cellule suivante."
+      zh: "当尖峰到达末梢时，电压门控钙通道打开，Ca²⁺流入。钙促使囊泡与膜融合，把内容物释放到[[synaptic-cleft|突触间隙]]中。递质扩散穿过间隙，与下一个细胞上的[[receptor|受体]]结合。"
 questions:
   - id: q1
     kind: tap2d
-    prompt: { en: "Tap a [[vesicle]] full of neurotransmitter." }
+    prompt: { en: "Tap a [[vesicle]] full of neurotransmitter.", fr: "Touchez une [[vesicle]] remplie de neurotransmetteur.", zh: "点击一个装满神经递质的[[vesicle|囊泡]]。" }
     figure: synapse
     answer: vesicle
-    explain: { en: "Vesicles are the small round packets inside the terminal." }
+    explain: { en: "Vesicles are the small round packets inside the terminal.", fr: "Les vésicules sont les petits paquets ronds à l'intérieur de la terminaison.", zh: "囊泡是末梢里的小圆包。" }
   - id: q2
     kind: order
-    prompt: { en: "Put the steps of chemical transmission in order." }
+    prompt: { en: "Put the steps of chemical transmission in order.", fr: "Remettez dans l'ordre les étapes de la transmission chimique.", zh: "把化学传递的步骤按顺序排列。" }
     steps:
-      - { id: s1, text: { en: "A spike arrives at the terminal" } }
-      - { id: s2, text: { en: "Ca²⁺ channels open and calcium flows in" } }
-      - { id: s3, text: { en: "Vesicles fuse with the membrane" } }
-      - { id: s4, text: { en: "Transmitter crosses the cleft" } }
-      - { id: s5, text: { en: "Transmitter binds receptors" } }
-    explain: { en: "Electrical → calcium → fusion → diffusion → binding." }
+      - { id: s1, text: { en: "A spike arrives at the terminal", fr: "Un pic arrive à la terminaison", zh: "尖峰到达末梢" } }
+      - { id: s2, text: { en: "Ca²⁺ channels open and calcium flows in", fr: "Les canaux Ca²⁺ s'ouvrent et le calcium entre", zh: "Ca²⁺通道打开，钙流入" } }
+      - { id: s3, text: { en: "Vesicles fuse with the membrane", fr: "Les vésicules fusionnent avec la membrane", zh: "囊泡与膜融合" } }
+      - { id: s4, text: { en: "Transmitter crosses the cleft", fr: "Le transmetteur traverse la fente", zh: "递质穿过间隙" } }
+      - { id: s5, text: { en: "Transmitter binds receptors", fr: "Le transmetteur se fixe aux récepteurs", zh: "递质与受体结合" } }
+    explain: { en: "Electrical → calcium → fusion → diffusion → binding.", fr: "Électrique → calcium → fusion → diffusion → fixation.", zh: "电信号 → 钙 → 融合 → 扩散 → 结合。" }
   - id: q3
     kind: mc
-    prompt: { en: "Which ion triggers vesicles to release their contents?" }
+    prompt: { en: "Which ion triggers vesicles to release their contents?", fr: "Quel ion déclenche la libération du contenu des vésicules ?", zh: "哪种离子触发囊泡释放内容物？" }
     options:
-      - { id: a, text: { en: "Calcium (Ca²⁺)" } }
-      - { id: b, text: { en: "Potassium (K⁺)" } }
-      - { id: c, text: { en: "Chloride (Cl⁻)" } }
+      - { id: a, text: { en: "Calcium (Ca²⁺)", fr: "Le calcium (Ca²⁺)", zh: "钙（Ca²⁺）" } }
+      - { id: b, text: { en: "Potassium (K⁺)", fr: "Le potassium (K⁺)", zh: "钾（K⁺）" } }
+      - { id: c, text: { en: "Chloride (Cl⁻)", fr: "Le chlorure (Cl⁻)", zh: "氯（Cl⁻）" } }
     answer: a
-    explain: { en: "Calcium entering the terminal is the release signal." }
+    explain: { en: "Calcium entering the terminal is the release signal.", fr: "Le calcium qui entre dans la terminaison est le signal de libération.", zh: "钙进入末梢就是释放信号。" }
   - id: q4
     kind: tap2d
-    prompt: { en: "Tap the [[synaptic-cleft]], the gap between the two cells." }
+    prompt: { en: "Tap the [[synaptic-cleft]], the gap between the two cells.", fr: "Touchez la [[synaptic-cleft]], l'espace entre les deux cellules.", zh: "点击[[synaptic-cleft|突触间隙]]，也就是两个细胞之间的空隙。" }
     figure: synapse
     answer: cleft
-    explain: { en: "The cleft is only about 20 nanometres wide." }
+    explain: { en: "The cleft is only about 20 nanometres wide.", fr: "La fente ne mesure qu'environ 20 nanomètres de large.", zh: "这个间隙只有约20纳米宽。" }
   - id: q5
     kind: match
-    prompt: { en: "Match each term to its description." }
+    prompt: { en: "Match each term to its description.", fr: "Associez chaque terme à sa description.", zh: "把每个术语与它的描述配对。" }
     pairs:
-      - { id: p1, left: { en: "Acetylcholine" }, right: { en: "Small transmitter made in the terminal" } }
-      - { id: p2, left: { en: "Neuropeptide" }, right: { en: "Built in the soma, shipped down the axon" } }
-      - { id: p3, left: { en: "Vesicle" }, right: { en: "Bubble that stores transmitter" } }
-    explain: { en: "Small molecules are made locally; peptides come from the cell body's protein factory." }
+      - { id: p1, left: { en: "Acetylcholine", fr: "Acétylcholine", zh: "乙酰胆碱" }, right: { en: "Small transmitter made in the terminal", fr: "Petit transmetteur fabriqué dans la terminaison", zh: "在末梢合成的小分子递质" } }
+      - { id: p2, left: { en: "Neuropeptide", fr: "Neuropeptide", zh: "神经肽" }, right: { en: "Built in the soma, shipped down the axon", fr: "Construit dans le soma, expédié le long de l'axone", zh: "在胞体合成，沿轴突运送" } }
+      - { id: p3, left: { en: "Vesicle", fr: "Vésicule", zh: "囊泡" }, right: { en: "Bubble that stores transmitter", fr: "Bulle qui stocke le transmetteur", zh: "储存递质的小泡" } }
+    explain: { en: "Small molecules are made locally; peptides come from the cell body's protein factory.", fr: "Les petites molécules sont fabriquées sur place ; les peptides viennent de l'usine à protéines du corps cellulaire.", zh: "小分子在本地合成；肽类来自细胞体的蛋白质工厂。" }

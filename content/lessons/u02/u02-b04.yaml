@@ -1,6 +1,6 @@
 id: u02-b04
 type: bite
-title: { en: "Botox and the clostridial toxins" }
+title: { en: "Botox and the clostridial toxins", fr: "Le Botox et les toxines clostridiennes", zh: "肉毒杆菌素与梭菌毒素" }
 sources: ["Clostridial Toxins: Botox"]
 cards:
   - id: c1
@@ -10,6 +10,8 @@ cards:
         membrane. [[botulinum-toxin|Botulinum toxin]], made by the bacterium Clostridium botulinum, cuts these
         proteins. At the [[neuromuscular-junction]], acetylcholine can't be released, so the muscle never gets
         the order to contract: it goes limp.
+      fr: "Les vésicules fusionnent grâce aux [[snare-proteins|protéines SNARE]], qui « zippent » la vésicule sur la membrane de la terminaison. La [[botulinum-toxin|toxine botulique]], fabriquée par la bactérie Clostridium botulinum, coupe ces protéines. À la [[neuromuscular-junction]], l'acétylcholine ne peut pas être libérée : le muscle ne reçoit jamais l'ordre de se contracter et devient flasque."
+      zh: "囊泡依靠[[snare-proteins|SNARE蛋白]]融合，这些蛋白像拉链一样把囊泡“拉”到末梢的膜上。[[botulinum-toxin|肉毒毒素]]由肉毒梭菌产生，它会切断这些蛋白。在[[neuromuscular-junction|神经肌肉接头]]，乙酰胆碱无法释放，肌肉永远收不到收缩的命令：它变得松软无力。"
   - id: c2
     body:
       en: >-
@@ -17,49 +19,51 @@ cards:
         spinal cord, where it silences inhibitory neurons. Without those brakes, muscles lock in spasm. Tiny,
         local doses of botulinum toxin ("Botox") are used to relax wrinkle muscles, eyelid spasms and some
         migraines.
+      fr: "Sa cousine, la [[tetanus-toxin|toxine tétanique]], coupe le même type de machinerie mais voyage jusque dans la moelle épinière, où elle fait taire les neurones inhibiteurs. Sans ces freins, les muscles se bloquent en spasme. De minuscules doses locales de toxine botulique (« Botox ») servent à détendre les muscles des rides, les spasmes des paupières et certaines migraines."
+      zh: "它的“表亲”[[tetanus-toxin|破伤风毒素]]切断的是同一类机制，但它会进入脊髓，让抑制性神经元沉默。没有了这些“刹车”，肌肉就锁死在痉挛中。微小的局部剂量肉毒毒素（“肉毒杆菌素”）被用来放松产生皱纹的肌肉、眼睑痉挛和某些偏头痛。"
 questions:
   - id: q1
     kind: mc
-    prompt: { en: "What does botulinum toxin block?" }
+    prompt: { en: "What does botulinum toxin block?", fr: "Que bloque la toxine botulique ?", zh: "肉毒毒素阻断了什么？" }
     options:
-      - { id: a, text: { en: "The release of acetylcholine from the nerve terminal" } }
-      - { id: b, text: { en: "The acetylcholine receptors on the muscle" } }
-      - { id: c, text: { en: "The action potential in the axon" } }
+      - { id: a, text: { en: "The release of acetylcholine from the nerve terminal", fr: "La libération d'acétylcholine par la terminaison nerveuse", zh: "神经末梢释放乙酰胆碱" } }
+      - { id: b, text: { en: "The acetylcholine receptors on the muscle", fr: "Les récepteurs de l'acétylcholine sur le muscle", zh: "肌肉上的乙酰胆碱受体" } }
+      - { id: c, text: { en: "The action potential in the axon", fr: "Le potentiel d'action dans l'axone", zh: "轴突中的动作电位" } }
     answer: a
-    explain: { en: "It cuts [[snare-proteins|SNARE proteins]], so vesicles can't fuse and nothing is released." }
+    explain: { en: "It cuts [[snare-proteins|SNARE proteins]], so vesicles can't fuse and nothing is released.", fr: "Elle coupe les [[snare-proteins|protéines SNARE]] : les vésicules ne peuvent plus fusionner et rien n'est libéré.", zh: "它切断[[snare-proteins|SNARE蛋白]]，于是囊泡无法融合，什么也释放不出来。" }
   - id: q2
     kind: tfwhy
-    statement: { en: "Botulinum and tetanus toxins cause the same symptoms." }
+    statement: { en: "Botulinum and tetanus toxins cause the same symptoms.", fr: "Les toxines botulique et tétanique provoquent les mêmes symptômes.", zh: "肉毒毒素和破伤风毒素引起相同的症状。" }
     isTrue: false
     reasons:
-      - { id: r1, text: { en: "Botulinum blocks release at muscles (limp); tetanus blocks inhibitory neurons in the cord (spasm)." } }
-      - { id: r2, text: { en: "They are the same toxin with two names." } }
+      - { id: r1, text: { en: "Botulinum blocks release at muscles (limp); tetanus blocks inhibitory neurons in the cord (spasm).", fr: "La botulique bloque la libération au niveau des muscles (flasques) ; la tétanique bloque les neurones inhibiteurs de la moelle (spasmes).", zh: "肉毒毒素阻断肌肉处的释放（松软）；破伤风毒素阻断脊髓中的抑制性神经元（痉挛）。" } }
+      - { id: r2, text: { en: "They are the same toxin with two names.", fr: "C'est la même toxine sous deux noms.", zh: "它们是同一种毒素的两个名字。" } }
     answerReason: r1
-    explain: { en: "Same molecular trick, different targets, opposite effects." }
+    explain: { en: "Same molecular trick, different targets, opposite effects.", fr: "Même astuce moléculaire, cibles différentes, effets opposés.", zh: "同样的分子手段，不同的目标，相反的效果。" }
   - id: q3
     kind: gap
-    prompt: { en: "Vesicles dock and fuse using ___ proteins." }
+    prompt: { en: "Vesicles dock and fuse using ___ proteins.", fr: "Les vésicules s'arriment et fusionnent grâce aux protéines ___.", zh: "囊泡依靠___蛋白停靠和融合。" }
     options:
-      - { id: a, text: { en: "SNARE" } }
-      - { id: b, text: { en: "myelin" } }
-      - { id: c, text: { en: "receptor" } }
+      - { id: a, text: { en: "SNARE", fr: "SNARE", zh: "SNARE" } }
+      - { id: b, text: { en: "myelin", fr: "de myéline", zh: "髓鞘" } }
+      - { id: c, text: { en: "receptor", fr: "réceptrices", zh: "受体" } }
     answer: a
-    explain: { en: "[[snare-proteins|SNAREs]] zip vesicle and membrane together." }
+    explain: { en: "[[snare-proteins|SNAREs]] zip vesicle and membrane together.", fr: "Les [[snare-proteins|SNARE]] « zippent » ensemble la vésicule et la membrane.", zh: "[[snare-proteins|SNARE蛋白]]把囊泡和膜像拉链一样拉在一起。" }
   - id: q4
     kind: match
-    prompt: { en: "Match each toxin use or effect." }
+    prompt: { en: "Match each toxin use or effect.", fr: "Associez chaque toxine à son usage ou à son effet.", zh: "把每种毒素与它的用途或效果配对。" }
     pairs:
-      - { id: p1, left: { en: "Botulinum toxin" }, right: { en: "Floppy (flaccid) paralysis" } }
-      - { id: p2, left: { en: "Tetanus toxin" }, right: { en: "Rigid muscle spasms" } }
-      - { id: p3, left: { en: "Cosmetic Botox" }, right: { en: "A tiny local dose relaxes one muscle" } }
-    explain: { en: "The dose and the place decide whether a toxin is a poison or a medicine." }
+      - { id: p1, left: { en: "Botulinum toxin", fr: "Toxine botulique", zh: "肉毒毒素" }, right: { en: "Floppy (flaccid) paralysis", fr: "Paralysie molle (flasque)", zh: "软瘫（弛缓性麻痹）" } }
+      - { id: p2, left: { en: "Tetanus toxin", fr: "Toxine tétanique", zh: "破伤风毒素" }, right: { en: "Rigid muscle spasms", fr: "Spasmes musculaires rigides", zh: "僵硬的肌肉痉挛" } }
+      - { id: p3, left: { en: "Cosmetic Botox", fr: "Botox esthétique", zh: "美容肉毒杆菌素" }, right: { en: "A tiny local dose relaxes one muscle", fr: "Une infime dose locale détend un seul muscle", zh: "微小的局部剂量放松一块肌肉" } }
+    explain: { en: "The dose and the place decide whether a toxin is a poison or a medicine.", fr: "La dose et l'endroit décident si une toxine est un poison ou un médicament.", zh: "剂量和部位决定一种毒素是毒药还是药物。" }
   - id: q5
     kind: mc
-    prompt: { en: "Why does a Botox injection for wrinkles affect only the treated muscle?" }
+    prompt: { en: "Why does a Botox injection for wrinkles affect only the treated muscle?", fr: "Pourquoi une injection de Botox contre les rides n'agit-elle que sur le muscle traité ?", zh: "为什么用于除皱的肉毒杆菌素注射只影响被治疗的肌肉？" }
     options:
-      - { id: a, text: { en: "A tiny dose is injected into that muscle and acts on its nerve terminals." } }
-      - { id: b, text: { en: "The toxin only works on the face." } }
-      - { id: c, text: { en: "The brain switches the other muscles back on." } }
+      - { id: a, text: { en: "A tiny dose is injected into that muscle and acts on its nerve terminals.", fr: "Une infime dose est injectée dans ce muscle et agit sur ses terminaisons nerveuses.", zh: "只在那块肌肉中注射微小剂量，作用于它的神经末梢。" } }
+      - { id: b, text: { en: "The toxin only works on the face.", fr: "La toxine n'agit que sur le visage.", zh: "这种毒素只对脸起作用。" } }
+      - { id: c, text: { en: "The brain switches the other muscles back on.", fr: "Le cerveau réactive les autres muscles.", zh: "大脑会把其他肌肉重新打开。" } }
     answer: a
-    explain: { en: "Local dose, local effect. The block wears off over a few months as terminals sprout new connections." }
+    explain: { en: "Local dose, local effect. The block wears off over a few months as terminals sprout new connections.", fr: "Dose locale, effet local. Le blocage s'estompe en quelques mois, à mesure que les terminaisons forment de nouvelles connexions.", zh: "局部剂量，局部效果。随着末梢长出新的连接，阻断会在几个月内逐渐消退。" }
     verify: true

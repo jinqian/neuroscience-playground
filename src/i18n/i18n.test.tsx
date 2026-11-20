@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { describe, expect, test } from 'vitest'
 import { pick } from './lang'
 import { t } from './t'
@@ -18,7 +18,7 @@ test('t interpolates variables', () => {
   expect(t('xpGained', 'en', { n: 10 })).toBe('+10 XP')
 })
 
-test('switcher shows EN active and FR/中文 disabled as coming soon', () => {
+test('switcher offers all three languages and switches between them', () => {
   render(
     <LanguageProvider>
       <LanguageSwitcher />
@@ -28,8 +28,9 @@ test('switcher shows EN active and FR/中文 disabled as coming soon', () => {
   const fr = screen.getByRole('button', { name: 'FR' })
   const zh = screen.getByRole('button', { name: '中文' })
   expect(en).toHaveAttribute('aria-pressed', 'true')
-  expect(fr).toBeDisabled()
-  expect(zh).toBeDisabled()
-  expect(fr).toHaveAttribute('title', 'Coming soon')
-  expect(zh).toHaveAttribute('title', 'Coming soon')
+  expect(fr).toBeEnabled()
+  expect(zh).toBeEnabled()
+  fireEvent.click(zh)
+  expect(zh).toHaveAttribute('aria-pressed', 'true')
+  expect(en).toHaveAttribute('aria-pressed', 'false')
 })

@@ -1,6 +1,6 @@
 id: u02-lab-threshold
 type: lab
-title: { en: "Find the threshold" }
+title: { en: "Find the threshold", fr: "Trouver le seuil", zh: "找到阈值" }
 sources: ["Action Potential"]
 intro:
   - id: c1
@@ -9,28 +9,32 @@ intro:
         Time to poke a neuron. It rests at −70 mV. You'll give it one quick push of a few millivolts and watch
         what happens. Small pushes fade away. Somewhere there's a [[threshold]] where the neuron suddenly fires
         a full [[action-potential]]. Your job: find the smallest push that makes it fire.
+      fr: "À vous de stimuler un neurone. Il est au repos à −70 mV. Vous allez lui donner une brève poussée de quelques millivolts et observer ce qui se passe. Les petites poussées s'éteignent. Quelque part se trouve un [[threshold]] à partir duquel le neurone déclenche soudain un [[action-potential]] complet. Votre mission : trouver la plus petite poussée qui le fait déclencher."
+      zh: "来刺激一个神经元吧。它静息在−70 mV。你会给它一个几毫伏的短暂推动，然后观察会发生什么。小的推动会逐渐消失。某处存在一个[[threshold|阈值]]，一旦达到，神经元会突然发出一个完整的[[action-potential|动作电位]]。你的任务：找到能让它放电的最小推动。"
 sim: threshold
-goal: { en: "Find the smallest stimulus that makes the neuron fire." }
+goal: { en: "Find the smallest stimulus that makes the neuron fire.", fr: "Trouvez le plus petit stimulus qui fait déclencher le neurone.", zh: "找到能让神经元放电的最小刺激。" }
 simplified:
   en: >-
     This is not a Hodgkin–Huxley model: the spike is a fixed shape drawn whenever threshold is reached.
     Real thresholds vary between neurons, and real inputs add up over time and across the dendrites.
+  fr: "Ce n'est pas un modèle de Hodgkin-Huxley : le pic a une forme fixe, dessinée dès que le seuil est atteint. Les vrais seuils varient d'un neurone à l'autre, et les vraies entrées s'additionnent dans le temps et sur toutes les dendrites."
+  zh: "这不是霍奇金-赫胥黎模型：只要达到阈值，就画出一个固定形状的尖峰。真实的阈值因神经元而异，真实的输入会随时间、在整个树突上累加。"
 reflection:
   - id: q1
     kind: mc
-    prompt: { en: "In a real neuron, an input above threshold gets stronger and keeps going. What changes?" }
+    prompt: { en: "In a real neuron, an input above threshold gets stronger and keeps going. What changes?", fr: "Dans un vrai neurone, une entrée au-dessus du seuil devient plus forte et se prolonge. Qu'est-ce qui change ?", zh: "在真实的神经元中，一个超过阈值的输入变得更强并持续下去。会有什么变化？" }
     options:
-      - { id: a, text: { en: "Spikes come more often; each one is the same height." } }
-      - { id: b, text: { en: "Each spike becomes twice as tall." } }
-      - { id: c, text: { en: "Nothing at all." } }
+      - { id: a, text: { en: "Spikes come more often; each one is the same height.", fr: "Les pics arrivent plus souvent ; chacun a la même hauteur.", zh: "尖峰出现得更频繁；每个高度相同。" } }
+      - { id: b, text: { en: "Each spike becomes twice as tall.", fr: "Chaque pic devient deux fois plus haut.", zh: "每个尖峰变成两倍高。" } }
+      - { id: c, text: { en: "Nothing at all.", fr: "Rien du tout.", zh: "什么都不变。" } }
     answer: a
-    explain: { en: "[[all-or-none|All-or-none]]: intensity is coded by spike rate, not spike size." }
+    explain: { en: "[[all-or-none|All-or-none]]: intensity is coded by spike rate, not spike size.", fr: "[[all-or-none|Tout ou rien]] : l'intensité est codée par la fréquence des pics, pas par leur taille.", zh: "[[all-or-none|全或无]]：强度由尖峰的频率编码，而不是尖峰的大小。" }
   - id: q2
     kind: tfwhy
-    statement: { en: "The refractory period stops a spike from travelling backwards up the axon." }
+    statement: { en: "The refractory period stops a spike from travelling backwards up the axon.", fr: "La période réfractaire empêche un pic de remonter l'axone en sens inverse.", zh: "不应期阻止尖峰沿轴突往回传。" }
     isTrue: true
     reasons:
-      - { id: r1, text: { en: "The patch it just left can't fire again yet, so the spike only moves forward." } }
-      - { id: r2, text: { en: "Axons have one-way valves." } }
+      - { id: r1, text: { en: "The patch it just left can't fire again yet, so the spike only moves forward.", fr: "La portion qu'il vient de quitter ne peut pas encore redéclencher : le pic ne fait donc qu'avancer.", zh: "它刚离开的那一段膜还不能再次放电，所以尖峰只会向前传。" } }
+      - { id: r2, text: { en: "Axons have one-way valves.", fr: "Les axones ont des valves à sens unique.", zh: "轴突里有单向阀门。" } }
     answerReason: r1
-    explain: { en: "The [[refractory-period]] gives the signal its direction." }
+    explain: { en: "The [[refractory-period]] gives the signal its direction.", fr: "La [[refractory-period]] donne sa direction au signal.", zh: "[[refractory-period|不应期]]决定了信号的方向。" }

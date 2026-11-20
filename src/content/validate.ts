@@ -34,7 +34,8 @@ export function validateContent(bundle: ContentBundle, opts: ValidateOptions): C
     const obj = node as Record<string, unknown>
     if (typeof obj.en === 'string') {
       const missing = opts.enabled.filter((l) => typeof obj[l] !== 'string' || obj[l] === '')
-      if (missing.length) err(file, path, `missing ${missing.map((l) => `"${l}"`).join(', ')}`)
+      // Not every term has a Wikipedia article in every language; the popover falls back to English.
+      if (missing.length && key !== 'wiki') err(file, path, `missing ${missing.map((l) => `"${l}"`).join(', ')}`)
       const rich = isRichField(path, key, parentKey)
       for (const l of ['en', 'fr', 'zh'] as const) {
         const text = obj[l]

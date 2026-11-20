@@ -1,6 +1,6 @@
 id: u02-b08
 type: bite
-title: { en: "Spinal cord injury" }
+title: { en: "Spinal cord injury", fr: "Lésion de la moelle épinière", zh: "脊髓损伤" }
 sources: ["Spinal Cord Injury", "Wrap-Up: Embodied Emotion"]
 cards:
   - id: c1
@@ -11,6 +11,8 @@ cards:
         The [[spinal-cord]] is divided into levels: [[cervical]] (neck), thoracic (chest), lumbar (lower
         back) and sacral. After an injury, everything below the damaged level can lose its link with the brain.
         A neck injury can affect the arms, the legs and breathing; a lower-back injury mainly affects the legs.
+      fr: "La [[spinal-cord]] est divisée en niveaux : [[cervical]] (cou), thoracique (poitrine), lombaire (bas du dos) et sacré. Après une lésion, tout ce qui se trouve sous le niveau atteint peut perdre son lien avec le cerveau. Une lésion du cou peut toucher les bras, les jambes et la respiration ; une lésion du bas du dos touche surtout les jambes."
+      zh: "[[spinal-cord|脊髓]]分为几个节段：[[cervical|颈段]]（颈部）、胸段（胸部）、腰段（下背部）和骶段。受伤之后，损伤节段以下的一切都可能失去与大脑的联系。颈部损伤可能影响手臂、腿和呼吸；下背部损伤主要影响腿。"
   - id: c2
     verify: true
     body:
@@ -19,42 +21,44 @@ cards:
         but their commands travel down the cord. An injury above roughly the sixth thoracic level can
         disconnect much of the sympathetic outflow, so blood pressure and body temperature become hard to
         control.
+      fr: "Le contrôle autonome est coupé lui aussi. L'[[hypothalamus]] et le [[brainstem]] coordonnent le système autonome, mais leurs ordres descendent par la moelle. Une lésion au-dessus du sixième niveau thoracique environ peut déconnecter une grande partie des fibres sympathiques : la tension artérielle et la température du corps deviennent difficiles à contrôler."
+      zh: "自主控制也被切断了。[[hypothalamus|下丘脑]]和[[brainstem|脑干]]协调自主神经系统，但它们的命令要沿脊髓向下传。大约第六胸段以上的损伤可能切断大部分交感神经输出，于是血压和体温变得难以控制。"
 questions:
   - id: q1
     kind: tap2d
-    prompt: { en: "Tap the level where an injury can also affect breathing and the arms." }
+    prompt: { en: "Tap the level where an injury can also affect breathing and the arms.", fr: "Touchez le niveau où une lésion peut aussi toucher la respiration et les bras.", zh: "点击损伤后还会影响呼吸和手臂的节段。" }
     figure: spinal-levels
     answer: cervical
-    explain: { en: "The [[cervical]] cord sends nerves to the arms and to the diaphragm, the main breathing muscle." }
+    explain: { en: "The [[cervical]] cord sends nerves to the arms and to the diaphragm, the main breathing muscle.", fr: "La moelle [[cervical]] envoie des nerfs aux bras et au diaphragme, le principal muscle de la respiration.", zh: "[[cervical|颈段]]脊髓向手臂和膈肌（主要的呼吸肌）发出神经。" }
   - id: q2
     kind: tap3d
-    prompt: { en: "Find the structure that carries the brain's commands down to the body." }
+    prompt: { en: "Find the structure that carries the brain's commands down to the body.", fr: "Trouvez la structure qui transmet les ordres du cerveau jusqu'au corps.", zh: "找到把大脑的命令传到身体的结构。" }
     structure: spinal-cord
-    explain: { en: "The [[spinal-cord]] carries both movement and autonomic commands." }
+    explain: { en: "The [[spinal-cord]] carries both movement and autonomic commands.", fr: "La [[spinal-cord]] transporte à la fois les ordres moteurs et autonomes.", zh: "[[spinal-cord|脊髓]]既传递运动命令，也传递自主神经命令。" }
   - id: q3
     kind: order
-    prompt: { en: "Order the spinal levels from top to bottom." }
+    prompt: { en: "Order the spinal levels from top to bottom.", fr: "Rangez les niveaux de la moelle de haut en bas.", zh: "把脊髓节段从上到下排列。" }
     steps:
-      - { id: s1, text: { en: "Cervical" } }
-      - { id: s2, text: { en: "Thoracic" } }
-      - { id: s3, text: { en: "Lumbar" } }
-      - { id: s4, text: { en: "Sacral" } }
-    explain: { en: "Neck, chest, lower back, base." }
+      - { id: s1, text: { en: "Cervical", fr: "Cervical", zh: "颈段" } }
+      - { id: s2, text: { en: "Thoracic", fr: "Thoracique", zh: "胸段" } }
+      - { id: s3, text: { en: "Lumbar", fr: "Lombaire", zh: "腰段" } }
+      - { id: s4, text: { en: "Sacral", fr: "Sacré", zh: "骶段" } }
+    explain: { en: "Neck, chest, lower back, base.", fr: "Cou, poitrine, bas du dos, base.", zh: "颈、胸、下背、底部。" }
   - id: q4
     kind: mc
-    prompt: { en: "Why can a high spinal injury disturb blood pressure?" }
+    prompt: { en: "Why can a high spinal injury disturb blood pressure?", fr: "Pourquoi une lésion haute de la moelle peut-elle perturber la tension artérielle ?", zh: "为什么高位脊髓损伤会扰乱血压？" }
     options:
-      - { id: a, text: { en: "Commands from the brainstem and hypothalamus can't reach sympathetic neurons below the injury." } }
-      - { id: b, text: { en: "The heart sits inside the spinal cord." } }
-      - { id: c, text: { en: "Blood stops flowing to the spine." } }
+      - { id: a, text: { en: "Commands from the brainstem and hypothalamus can't reach sympathetic neurons below the injury.", fr: "Les ordres du tronc cérébral et de l'hypothalamus ne peuvent plus atteindre les neurones sympathiques sous la lésion.", zh: "来自脑干和下丘脑的命令无法到达损伤以下的交感神经元。" } }
+      - { id: b, text: { en: "The heart sits inside the spinal cord.", fr: "Le cœur se trouve dans la moelle épinière.", zh: "心脏位于脊髓之中。" } }
+      - { id: c, text: { en: "Blood stops flowing to the spine.", fr: "Le sang cesse d'irriguer la colonne.", zh: "血液停止流向脊柱。" } }
     answer: a
-    explain: { en: "The sympathetic neurons still exist, but they've lost their supervisor." }
+    explain: { en: "The sympathetic neurons still exist, but they've lost their supervisor.", fr: "Les neurones sympathiques existent toujours, mais ils ont perdu leur superviseur.", zh: "交感神经元仍然存在，但失去了它们的“上级”。" }
   - id: q5
     kind: tfwhy
-    statement: { en: "After a spinal cord injury, body parts served above the injury usually still work." }
+    statement: { en: "After a spinal cord injury, body parts served above the injury usually still work.", fr: "Après une lésion de la moelle épinière, les parties du corps desservies au-dessus de la lésion fonctionnent en général toujours.", zh: "脊髓损伤后，由损伤以上节段支配的身体部位通常仍能工作。" }
     isTrue: true
     reasons:
-      - { id: r1, text: { en: "Nerves leaving the cord above the injury stay connected to the brain." } }
-      - { id: r2, text: { en: "The brain shuts down every nerve after any injury." } }
+      - { id: r1, text: { en: "Nerves leaving the cord above the injury stay connected to the brain.", fr: "Les nerfs qui quittent la moelle au-dessus de la lésion restent connectés au cerveau.", zh: "从损伤以上离开脊髓的神经仍与大脑相连。" } }
+      - { id: r2, text: { en: "The brain shuts down every nerve after any injury.", fr: "Le cerveau éteint tous les nerfs après n'importe quelle lésion.", zh: "任何损伤之后，大脑都会关闭所有神经。" } }
     answerReason: r1
-    explain: { en: "That's why the injury's level matters so much." }
+    explain: { en: "That's why the injury's level matters so much.", fr: "C'est pourquoi le niveau de la lésion compte tant.", zh: "这就是为什么损伤的节段如此重要。" }

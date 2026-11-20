@@ -1,6 +1,6 @@
 id: u02-b05
 type: bite
-title: { en: "Ending the signal; two kinds of receptor" }
+title: { en: "Ending the signal; two kinds of receptor", fr: "Arrêter le signal ; deux sortes de récepteurs", zh: "终止信号；两类受体" }
 sources: ["Signal Termination", "Receptors", "Metabotropic Receptors", "Wrap-Up: Neurocommunication"]
 cards:
   - id: c1
@@ -10,6 +10,8 @@ cards:
         in three ways: it drifts away (diffusion), an enzyme breaks it down (like [[acetylcholinesterase]] for
         acetylcholine), or the terminal pulls it back in through [[reuptake]] transporters. Antidepressants
         called [[ssri|SSRIs]] slow serotonin reuptake, so it lingers longer.
+      fr: "Un message doit aussi s'arrêter, sinon le suivant ne peut pas être entendu. Le transmetteur quitte la [[synaptic-cleft]] de trois façons : il s'éloigne (diffusion), une enzyme le dégrade (comme l'[[acetylcholinesterase]] pour l'acétylcholine), ou la terminaison le récupère grâce à des transporteurs de [[reuptake]]. Les antidépresseurs appelés [[ssri|ISRS]] ralentissent la recapture de la sérotonine, qui reste donc plus longtemps."
+      zh: "信息也必须停下来，否则下一条就听不见。递质通过三种方式离开[[synaptic-cleft|突触间隙]]：漂走（扩散）、被酶分解（比如[[acetylcholinesterase|乙酰胆碱酯酶]]分解乙酰胆碱），或被末梢通过[[reuptake|再摄取]]转运体收回。叫做[[ssri|SSRI]]的抗抑郁药会减慢血清素的再摄取，让它停留得更久。"
   - id: c2
     illustration: receptors
     body:
@@ -18,45 +20,47 @@ cards:
         opens it and ions flow within a millisecond. A [[metabotropic-receptor]] works through a G-protein
         and a chain of messengers inside the cell. It's slower, but its effects last longer and can reach
         many targets.
+      fr: "Les récepteurs sont de deux sortes. Un [[ionotropic-receptor]] est lui-même un canal ionique : le transmetteur l'ouvre et les ions passent en une milliseconde. Un [[metabotropic-receptor]] agit via une protéine G et une chaîne de messagers dans la cellule. Il est plus lent, mais ses effets durent plus longtemps et peuvent atteindre de nombreuses cibles."
+      zh: "受体分为两类。[[ionotropic-receptor|离子型受体]]本身就是离子通道：递质把它打开，离子在一毫秒内就流过。[[metabotropic-receptor|代谢型受体]]通过G蛋白和细胞内的一连串信使起作用。它更慢，但效果更持久，还能作用于许多目标。"
 questions:
   - id: q1
     kind: match
-    prompt: { en: "Match each way of ending a signal." }
+    prompt: { en: "Match each way of ending a signal.", fr: "Associez chaque façon d'arrêter un signal.", zh: "把每种终止信号的方式配对。" }
     pairs:
-      - { id: p1, left: { en: "Diffusion" }, right: { en: "Transmitter drifts out of the cleft" } }
-      - { id: p2, left: { en: "Enzyme breakdown" }, right: { en: "Acetylcholinesterase splits ACh" } }
-      - { id: p3, left: { en: "Reuptake" }, right: { en: "The terminal recycles the transmitter" } }
-    explain: { en: "Drift away, get destroyed, or get recycled." }
+      - { id: p1, left: { en: "Diffusion", fr: "Diffusion", zh: "扩散" }, right: { en: "Transmitter drifts out of the cleft", fr: "Le transmetteur s'éloigne de la fente", zh: "递质从间隙中漂走" } }
+      - { id: p2, left: { en: "Enzyme breakdown", fr: "Dégradation enzymatique", zh: "酶分解" }, right: { en: "Acetylcholinesterase splits ACh", fr: "L'acétylcholinestérase coupe l'ACh", zh: "乙酰胆碱酯酶分解ACh" } }
+      - { id: p3, left: { en: "Reuptake", fr: "Recapture", zh: "再摄取" }, right: { en: "The terminal recycles the transmitter", fr: "La terminaison recycle le transmetteur", zh: "末梢回收递质" } }
+    explain: { en: "Drift away, get destroyed, or get recycled.", fr: "S'éloigner, être détruit ou être recyclé.", zh: "漂走、被破坏或被回收。" }
   - id: q2
     kind: mc
-    prompt: { en: "How do SSRI antidepressants work?" }
+    prompt: { en: "How do SSRI antidepressants work?", fr: "Comment agissent les antidépresseurs ISRS ?", zh: "SSRI类抗抑郁药是如何起作用的？" }
     options:
-      - { id: a, text: { en: "They slow serotonin reuptake, so it stays longer in the cleft." } }
-      - { id: b, text: { en: "They make terminals produce more vesicles." } }
-      - { id: c, text: { en: "They block serotonin receptors." } }
+      - { id: a, text: { en: "They slow serotonin reuptake, so it stays longer in the cleft.", fr: "Ils ralentissent la recapture de la sérotonine, qui reste plus longtemps dans la fente.", zh: "它们减慢血清素的再摄取，让它在间隙中停留更久。" } }
+      - { id: b, text: { en: "They make terminals produce more vesicles.", fr: "Ils font produire plus de vésicules aux terminaisons.", zh: "它们让末梢产生更多囊泡。" } }
+      - { id: c, text: { en: "They block serotonin receptors.", fr: "Ils bloquent les récepteurs de la sérotonine.", zh: "它们阻断血清素受体。" } }
     answer: a
-    explain: { en: "Selective Serotonin Reuptake Inhibitor: the name says it." }
+    explain: { en: "Selective Serotonin Reuptake Inhibitor: the name says it.", fr: "Inhibiteur Sélectif de la Recapture de la Sérotonine : le nom le dit.", zh: "选择性血清素再摄取抑制剂：名字已经说明了一切。" }
   - id: q3
     kind: tap2d
-    prompt: { en: "Tap the [[reuptake]] transporter." }
+    prompt: { en: "Tap the [[reuptake]] transporter.", fr: "Touchez le transporteur de [[reuptake]].", zh: "点击[[reuptake|再摄取]]转运体。" }
     figure: synapse
     answer: reuptake-transporter
-    explain: { en: "It sits in the terminal's membrane and pulls transmitter back inside." }
+    explain: { en: "It sits in the terminal's membrane and pulls transmitter back inside.", fr: "Il se trouve dans la membrane de la terminaison et ramène le transmetteur à l'intérieur.", zh: "它位于末梢的膜上，把递质拉回细胞内。" }
   - id: q4
     kind: tfwhy
-    statement: { en: "Metabotropic receptors act faster than ionotropic ones." }
+    statement: { en: "Metabotropic receptors act faster than ionotropic ones.", fr: "Les récepteurs métabotropes agissent plus vite que les ionotropes.", zh: "代谢型受体比离子型受体作用更快。" }
     isTrue: false
     reasons:
-      - { id: r1, text: { en: "They work through a chain of messengers, which takes longer than opening a channel." } }
-      - { id: r2, text: { en: "Metabotropic receptors have no effect at all." } }
+      - { id: r1, text: { en: "They work through a chain of messengers, which takes longer than opening a channel.", fr: "Ils passent par une chaîne de messagers, ce qui prend plus de temps que d'ouvrir un canal.", zh: "它们要通过一连串信使起作用，比打开一个通道花的时间更长。" } }
+      - { id: r2, text: { en: "Metabotropic receptors have no effect at all.", fr: "Les récepteurs métabotropes n'ont aucun effet.", zh: "代谢型受体完全没有作用。" } }
     answerReason: r1
-    explain: { en: "Ionotropic: milliseconds. Metabotropic: tens of milliseconds to minutes, but longer-lasting." }
+    explain: { en: "Ionotropic: milliseconds. Metabotropic: tens of milliseconds to minutes, but longer-lasting.", fr: "Ionotrope : des millisecondes. Métabotrope : de quelques dizaines de millisecondes à des minutes, mais plus durable.", zh: "离子型：毫秒级。代谢型：几十毫秒到几分钟，但更持久。" }
   - id: q5
     kind: gap
-    prompt: { en: "A receptor that is itself an ion channel is called ___." }
+    prompt: { en: "A receptor that is itself an ion channel is called ___.", fr: "Un récepteur qui est lui-même un canal ionique est dit ___.", zh: "本身就是离子通道的受体叫做___受体。" }
     options:
-      - { id: a, text: { en: "ionotropic" } }
-      - { id: b, text: { en: "metabotropic" } }
-      - { id: c, text: { en: "presynaptic" } }
+      - { id: a, text: { en: "ionotropic", fr: "ionotrope", zh: "离子型" } }
+      - { id: b, text: { en: "metabotropic", fr: "métabotrope", zh: "代谢型" } }
+      - { id: c, text: { en: "presynaptic", fr: "présynaptique", zh: "突触前" } }
     answer: a
-    explain: { en: "Iono- (ion) + -tropic (acting on)." }
+    explain: { en: "Iono- (ion) + -tropic (acting on).", fr: "Iono- (ion) + -trope (qui agit sur).", zh: "“离子”+“型”：直接作用于离子的受体。" }

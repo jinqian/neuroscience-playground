@@ -225,3 +225,11 @@ describe('neuron parts', () => {
     expect(run((f) => { f[N] = [] })).toEqual([expect.objectContaining({ file: N, path: '', message: 'missing neuron part "soma"' })])
   })
 })
+
+test('a term may lack a Wikipedia article in another language (the English one is used)', () => {
+  const errors = run((f) => {
+    addFr(f)
+    delete f['content/glossary.yaml'][0].wiki.fr
+  }, ['en', 'fr'])
+  expect(errors).toEqual([])
+})
