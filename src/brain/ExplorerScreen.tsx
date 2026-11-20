@@ -9,7 +9,7 @@ import { useProgress } from '../progress/store'
 import { Button } from '../ui/Button'
 import { BrainView, NoWebGL } from './BrainView'
 import { StructureList } from './StructureList'
-import { zoneColor, type Hemisphere } from './visual'
+import type { Hemisphere } from './visual'
 
 export function ExplorerScreen() {
   const { structures, units } = useContent()
@@ -90,17 +90,6 @@ export function ExplorerScreen() {
             fallback={<><NoWebGL /><StructureList selected={selected} onPick={onPick} /></>}
           />
           <p className="explorer__help">{t('brainHelp', lang)}</p>
-          <div className="legend">
-            <ul className="legend__list" aria-label={t('colourKey', lang)}>
-              {structures.filter((x) => !x.twoDOnly && discovered.includes(x.id)).map((x) => (
-                <li key={x.id}>
-                  <span className="legend__swatch" style={{ background: zoneColor(x.id, 'discovered', units.find((u) => u.id === x.units[0])?.color) }} aria-hidden="true" />
-                  {pick(x.name, lang)}
-                </li>
-              ))}
-            </ul>
-            <span className="legend__pale">{t('legendPale', lang)}</span>
-          </div>
         </div>
 
         <section className="panel" aria-label={t('structureDetails', lang)}>
