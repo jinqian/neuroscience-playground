@@ -6,11 +6,10 @@ import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib'
 import type { Structure, Unit } from '../content/schema'
 import { pick, type Lang } from '../i18n/lang'
 import { bakeGeometry } from './geometry'
-import { CORTEX, nodeToStructure, visualState, zoneColor, type Hemisphere } from './visual'
+import { CORTEX, hoverColor, nodeToStructure, visualState, zoneColor, type Hemisphere } from './visual'
 
 export const MODEL_URL = `${import.meta.env.BASE_URL}models/brain.glb`
 
-const HOVER = '#ffe08a'
 
 export type BrainCanvasProps = {
   structures: Structure[]
@@ -109,7 +108,7 @@ function Brain(props: BrainCanvasProps & { controls: React.RefObject<OrbitContro
         if (p.state === 'hidden') return null
         const isCortex = CORTEX.includes(p.structure)
         const see = props.translucentCortex && isCortex
-        const color = hovered === p.structure && props.onPick ? HOVER : zoneColor(p.structure, p.state, unitColorOf(p.structure))
+        const color = hovered === p.structure && props.onPick ? hoverColor(p.structure, unitColorOf(p.structure)) : zoneColor(p.structure, p.state, unitColorOf(p.structure))
         return (
           <mesh
             key={p.node}

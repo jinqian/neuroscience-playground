@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { describe, expect, test } from 'vitest'
 import { bakeGeometry } from './geometry'
-import { BASE, STRUCTURE_COLORS, zoneColor } from './visual'
+import { BASE, STRUCTURE_COLORS, hoverColor, zoneColor } from './visual'
 
 describe('bakeGeometry', () => {
   test('turns quantized local positions into world-space floats', () => {
@@ -27,6 +27,15 @@ describe('zone colours', () => {
   test('every zone not in focus shares one uniform base colour, met or not', () => {
     const base = ids.flatMap((id) => [zoneColor(id, 'discovered'), zoneColor(id, 'undiscovered')])
     expect(new Set(base)).toEqual(new Set([BASE]))
+    expect(BASE).toBe('#d5d9e0')
+  })
+  test('hovering shows a lighter tint of the zone\'s own colour', () => {
+    const lum = (hex: string) => [1, 3, 5].reduce((s, i) => s + parseInt(hex.slice(i, i + 2), 16), 0)
+    for (const id of ids) {
+      const hover = hoverColor(id)
+      expect(hover).not.toBe(STRUCTURE_COLORS[id])
+      expect(lum(hover)).toBeGreaterThan(lum(STRUCTURE_COLORS[id]))
+    }
   })
   test('the highlighted zone lights up in its own colour', () => {
     const lit = ids.map((id) => zoneColor(id, 'highlight'))
