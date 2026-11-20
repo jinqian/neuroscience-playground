@@ -60,6 +60,9 @@ function fixture(): Record<string, Obj | Obj[]> {
     'content/structures.yaml': [
       { id: 'spinal-cord', name: { en: 'Spinal cord' }, note: { en: 'The cable to the body.' }, units: ['u01'], meshNodes: [], twoDOnly: true },
     ],
+    'content/neuron.yaml': [
+      { id: 'soma', name: { en: 'Soma' }, note: { en: 'The cell body.' }, term: 'soma' },
+    ],
   }
 }
 
@@ -68,6 +71,7 @@ const opts = (enabled: Lang[] = ['en']) => ({
   figures: { neuron: ['soma', 'axon'] },
   illustrations: ['neuron-art'],
   sims: ['threshold'],
+  neuronParts: ['soma'],
 })
 
 function toFiles(f: Record<string, Obj | Obj[]>): Record<string, string> {
@@ -205,5 +209,19 @@ describe('parse errors', () => {
     delete (f[B] as Obj).title
     const { errors } = parseContent(toFiles(f))
     expect(errors).toEqual([expect.objectContaining({ file: B, path: 'title' })])
+  })
+})
+
+describe('neuron parts', () => {
+  const N = 'content/neuron.yaml'
+  test('a part must link a known glossary term', () => {
+    expect(run((f) => { f[N][0].term = 'x' })).toEqual([expect.objectContaining({ file: N, path: '[0].term', message: 'unknown term "x"' })])
+  })
+  test('a part must exist in the 3D neuron', () => {
+    const errors = run((f) => { f[N].push({ id: 'x', name: { en: 'X' }, note: { en: 'X.' }, term: 'soma' }) })
+    expect(errors).toEqual([expect.objectContaining({ file: N, path: '[1].id', message: 'unknown neuron part "x"' })])
+  })
+  test('every part of the 3D neuron needs text', () => {
+    expect(run((f) => { f[N] = [] })).toEqual([expect.objectContaining({ file: N, path: '', message: 'missing neuron part "soma"' })])
   })
 })

@@ -1,7 +1,7 @@
 import { load, YAMLException } from 'js-yaml'
 import type { z } from 'zod'
 import {
-  LessonSchema, StructureSchema, TermSchema, UnitSchema,
+  LessonSchema, StructureSchema, NeuronPartSchema, TermSchema, UnitSchema,
   type ContentBundle, type ContentError,
 } from './schema'
 
@@ -19,7 +19,7 @@ function zodErrors(file: string, error: z.ZodError, prefix: PropertyKey[] = []):
 
 export function parseContent(files: Record<string, string>): { bundle?: ContentBundle; errors: ContentError[] } {
   const errors: ContentError[] = []
-  const bundle: ContentBundle = { units: [], lessons: {}, glossary: [], structures: [], sourceFile: {} }
+  const bundle: ContentBundle = { units: [], lessons: {}, glossary: [], structures: [], neuron: [], sourceFile: {} }
 
   for (const [file, raw] of Object.entries(files).sort(([a], [b]) => a.localeCompare(b))) {
     let data: unknown
@@ -48,6 +48,10 @@ export function parseContent(files: Record<string, string>): { bundle?: ContentB
       const r = StructureSchema.array().safeParse(data ?? [])
       if (!r.success) errors.push(...zodErrors(file, r.error))
       else { bundle.structures = r.data; bundle.sourceFile.structures = file }
+    } else if (file === 'content/neuron.yaml') {
+      const r = NeuronPartSchema.array().safeParse(data ?? [])
+      if (!r.success) errors.push(...zodErrors(file, r.error))
+      else { bundle.neuron = r.data; bundle.sourceFile.neuron = file }
     } else {
       errors.push({ file, path: '', message: 'unknown content file location' })
     }

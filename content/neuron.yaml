@@ -1,0 +1,34 @@
+# The parts of the 3D neuron (Neuron screen), from the inputs to the outputs.
+# `term` is the glossary entry each part links to. EN only for now.
+- id: dendrites
+  name: { en: Dendrites }
+  note: { en: "Branching inputs. Dendrites catch signals from other neurons, mostly at synapses on their surface, and pass them toward the cell body. One neuron can receive thousands of inputs this way." }
+  term: dendrite
+- id: soma
+  name: { en: Soma (cell body) }
+  note: { en: "The cell body. It adds up the incoming signals and keeps the cell alive: it holds the nucleus and makes the proteins the neuron needs." }
+  term: soma
+- id: nucleus
+  name: { en: Nucleus }
+  note: { en: "Holds the cell's DNA. It controls which proteins the neuron makes, such as its ion channels, receptors and the enzymes that build neurotransmitters." }
+  term: cell-nucleus
+- id: axon-hillock
+  name: { en: Axon hillock }
+  note: { en: "Where the axon leaves the cell body. It is packed with sodium channels, so this is where an action potential starts if the summed input reaches threshold." }
+  term: axon-hillock
+- id: axon
+  name: { en: Axon }
+  note: { en: "The output cable. It carries the action potential away from the cell body, sometimes over a metre, as in the motor neurons that reach your toes." }
+  term: axon
+- id: myelin
+  name: { en: Myelin sheath }
+  note: { en: "A fatty wrapping made by glial cells: oligodendrocytes in the brain and spinal cord, Schwann cells in nerves. It insulates the axon so the signal travels much faster." }
+  term: myelin
+- id: node-of-ranvier
+  name: { en: Node of Ranvier }
+  note: { en: "A short bare gap between myelin segments, crowded with sodium channels. The action potential is renewed at each node, so it seems to jump from node to node." }
+  term: node-of-ranvier
+- id: axon-terminal
+  name: { en: Axon terminals }
+  note: { en: "The axon's endings. When the signal arrives, they release neurotransmitter into the synapse, passing the message on to the next cell." }
+  term: axon-terminal

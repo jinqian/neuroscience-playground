@@ -8,6 +8,8 @@ export type ValidateOptions = {
   figures: Record<string, string[]>
   illustrations: string[]
   sims: string[]
+  /** Ids of the parts the 3D neuron draws. */
+  neuronParts: string[]
 }
 
 const MAX_CARD_WORDS = 80
@@ -87,6 +89,18 @@ export function validateContent(bundle: ContentBundle, opts: ValidateOptions): C
     walk(structuresFile, s, `[${i}]`, '')
     s.units.forEach((u, j) => { if (!unitIds.has(u)) err(structuresFile, `[${i}].units[${j}]`, `unknown unit "${u}"`) })
   })
+
+  // ---- neuron parts ----
+  const neuronFile = bundle.sourceFile.neuron ?? 'content/neuron.yaml'
+  dupes(neuronFile, bundle.neuron, (i) => `[${i}].id`, 'neuron part')
+  bundle.neuron.forEach((n, i) => {
+    walk(neuronFile, n, `[${i}]`, '')
+    if (!termIds.has(n.term)) err(neuronFile, `[${i}].term`, `unknown term "${n.term}"`)
+    if (!opts.neuronParts.includes(n.id)) err(neuronFile, `[${i}].id`, `unknown neuron part "${n.id}"`)
+  })
+  for (const id of opts.neuronParts) {
+    if (!bundle.neuron.some((n) => n.id === id)) err(neuronFile, '', `missing neuron part "${id}"`)
+  }
 
   // ---- lessons ----
   for (const lesson of Object.values(bundle.lessons)) {

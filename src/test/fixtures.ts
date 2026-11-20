@@ -20,6 +20,7 @@ export function fixtureBundle(): ContentBundle {
     units, lessons,
     glossary: [{ id: 'soma', en: 'soma', roots: 'Greek sōma, body', unit: 'u01', wiki: { en: 'https://en.wikipedia.org/wiki/Soma_(biology)' } }],
     structures: [{ id: 'spinal-cord', name: t('Spinal cord'), note: t('The cable.'), units: ['u01'], meshNodes: [], twoDOnly: true }],
+    neuron: [],
     sourceFile: {},
   }
 }

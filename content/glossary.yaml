@@ -3,6 +3,7 @@
 - { id: neuron, en: neuron, roots: "Greek neuron, sinew or nerve", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Neuron" } }
 - { id: dendrite, en: dendrite, roots: "Greek dendron, tree", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Dendrite" } }
 - { id: soma, en: soma, roots: "Greek sōma, body", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Soma_(biology)" } }
+- { id: cell-nucleus, en: nucleus (of a cell), roots: "Latin nucleus, kernel", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Cell_nucleus" } }
 - { id: axon, en: axon, roots: "Greek axōn, axis", unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Axon" } }
 - { id: axon-hillock, en: axon hillock, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Axon_hillock" } }
 - { id: axon-terminal, en: axon terminal, unit: u01, wiki: { en: "https://en.wikipedia.org/wiki/Axon_terminal" } }

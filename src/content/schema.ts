@@ -88,6 +88,9 @@ export const StructureSchema = z.strictObject({
   id, name: LTextSchema, note: LTextSchema, units: z.array(id), meshNodes: z.array(z.string()), twoDOnly: z.boolean().optional(),
 })
 
+/** One part of the 3D neuron: its name, a short note and the glossary term it links to. */
+export const NeuronPartSchema = z.strictObject({ id, name: LTextSchema, note: LTextSchema, term: id })
+
 export type Option = z.infer<typeof OptionSchema>
 export type Card = z.infer<typeof CardSchema>
 export type Question = z.infer<typeof QuestionSchema>
@@ -100,13 +103,15 @@ export type Lesson = z.infer<typeof LessonSchema>
 export type Unit = z.infer<typeof UnitSchema>
 export type Term = z.infer<typeof TermSchema>
 export type Structure = z.infer<typeof StructureSchema>
+export type NeuronPart = z.infer<typeof NeuronPartSchema>
 
 export type ContentBundle = {
   units: Unit[]
   lessons: Record<string, Lesson>
   glossary: Term[]
   structures: Structure[]
-  /** Where each item came from, for error messages: keys `unit:<id>`, `lesson:<id>`, `glossary`, `structures`. */
+  neuron: NeuronPart[]
+  /** Where each item came from, for error messages: keys `unit:<id>`, `lesson:<id>`, `glossary`, `structures`, `neuron`. */
   sourceFile: Record<string, string>
 }
 
