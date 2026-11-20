@@ -135,3 +135,13 @@ test('without WebGL, the Explore pop-up offers the structures as a list to answe
   fireEvent.click(screen.getByRole('button', { name: 'Cerebellum' }))
   expect(screen.getByText('✓ Cerebellum')).toBeInTheDocument()
 })
+
+test('the Explorer shows a colour key for the zones you have met', () => {
+  progressStore.setState({ discovered: ['cerebellum', 'brainstem'] })
+  renderExplorer()
+  const legend = screen.getByRole('list', { name: 'Colour key' })
+  expect(within(legend).getByText('Cerebellum')).toBeInTheDocument()
+  expect(within(legend).getByText('Brainstem')).toBeInTheDocument()
+  expect(within(legend).queryByText('Frontal lobe')).not.toBeInTheDocument()
+  expect(screen.getByText('Pale = not discovered yet')).toBeInTheDocument()
+})

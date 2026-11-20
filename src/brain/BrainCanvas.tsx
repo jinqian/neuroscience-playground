@@ -6,11 +6,10 @@ import type { OrbitControls as OrbitControlsImpl } from 'three-stdlib'
 import type { Structure, Unit } from '../content/schema'
 import { pick, type Lang } from '../i18n/lang'
 import { bakeGeometry } from './geometry'
-import { CORTEX, HIGHLIGHT, nodeToStructure, STRUCTURE_COLORS, visualState, type Hemisphere } from './visual'
+import { CORTEX, nodeToStructure, visualState, zoneColor, type Hemisphere } from './visual'
 
 export const MODEL_URL = `${import.meta.env.BASE_URL}models/brain.glb`
 
-const UNDISCOVERED = '#d5d9e0'
 const HOVER = '#ffe08a'
 
 export type BrainCanvasProps = {
@@ -68,11 +67,9 @@ function Brain(props: BrainCanvasProps & { controls: React.RefObject<OrbitContro
   }, [scene, map])
 
   const discovered = useMemo(() => new Set(props.discovered), [props.discovered])
-  const colorOf = (structureId: string) => {
-    if (STRUCTURE_COLORS[structureId]) return STRUCTURE_COLORS[structureId]
+  const unitColorOf = (structureId: string) => {
     const s = props.structures.find((x) => x.id === structureId)
-    const unit = props.units.find((u) => u.id === s?.units[0])
-    return unit?.color ?? '#9b82ff'
+    return props.units.find((u) => u.id === s?.units[0])?.color
   }
 
   const visible = parts.map((p) => ({
@@ -112,10 +109,7 @@ function Brain(props: BrainCanvasProps & { controls: React.RefObject<OrbitContro
         if (p.state === 'hidden') return null
         const isCortex = CORTEX.includes(p.structure)
         const see = props.translucentCortex && isCortex
-        const color = hovered === p.structure && props.onPick ? HOVER
-          : p.state === 'highlight' ? HIGHLIGHT
-          : p.state === 'discovered' ? colorOf(p.structure)
-          : UNDISCOVERED
+        const color = hovered === p.structure && props.onPick ? HOVER : zoneColor(p.structure, p.state, unitColorOf(p.structure))
         return (
           <mesh
             key={p.node}

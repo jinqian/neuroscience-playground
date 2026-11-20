@@ -40,4 +40,22 @@ export const STRUCTURE_COLORS: Record<string, string> = {
   hypothalamus: '#7b5cf0',
 }
 
+const FALLBACK = '#9b82ff'
+
+/** Mixes a hex colour toward white by `amount` (0–1). */
+function lighten(hex: string, amount: number): string {
+  const c = [1, 3, 5].map((i) => parseInt(hex.slice(i, i + 2), 16))
+  return '#' + c.map((v) => Math.round(v + (255 - v) * amount).toString(16).padStart(2, '0')).join('')
+}
+
+/**
+ * The colour a zone is drawn in. Every zone has its own colour; zones not met yet are a pale
+ * version of it, so the brain is readable from the start but discoveries still stand out.
+ */
+export function zoneColor(structureId: string, state: Exclude<VisualState, 'hidden'>, unitColor = FALLBACK): string {
+  if (state === 'highlight') return HIGHLIGHT
+  const base = STRUCTURE_COLORS[structureId] ?? unitColor
+  return state === 'discovered' ? base : lighten(base, 0.45)
+}
+
 export const CORTEX = ['frontal-lobe', 'parietal-lobe', 'temporal-lobe', 'occipital-lobe']
