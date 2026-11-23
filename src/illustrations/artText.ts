@@ -108,6 +108,22 @@ export const ART_TEXT: Record<string, { fr: string; zh: string }> = {
   'Synaptic cleft': { fr: 'Fente synaptique', zh: '突触间隙' },
   'Postsynaptic cell': { fr: 'Cellule postsynaptique', zh: '突触后细胞' },
   Receptor: { fr: 'Récepteur', zh: '受体' },
+  'From neural plate to five vesicles': { fr: 'De la plaque neurale aux cinq vésicules', zh: '从神经板到五个脑泡' },
+  'head end': { fr: 'côté tête', zh: '头端' },
+  'tail end': { fr: 'côté queue', zh: '尾端' },
+  'neural plate': { fr: 'plaque neurale', zh: '神经板' },
+  'neural groove': { fr: 'gouttière neurale', zh: '神经沟' },
+  'neural folds': { fr: 'bourrelets neuraux', zh: '神经褶' },
+  'neural tube': { fr: 'tube neural', zh: '神经管' },
+  'cross-section': { fr: 'coupe transversale', zh: '横切面' },
+  'neural crest (orange)': { fr: 'crêtes neurales (orange)', zh: '神经嵴（橙色）' },
+  prosencephalon: { fr: 'prosencéphale', zh: '前脑' },
+  mesencephalon: { fr: 'mésencéphale', zh: '中脑' },
+  rhombencephalon: { fr: 'rhombencéphale', zh: '菱脑' },
+  telencephalon: { fr: 'télencéphale', zh: '端脑' },
+  diencephalon: { fr: 'diencéphale', zh: '间脑' },
+  metencephalon: { fr: 'métencéphale', zh: '后脑' },
+  myelencephalon: { fr: 'myélencéphale', zh: '末脑' },
 }
 
 /** An illustration's text in the given language (English if there is no translation). */

@@ -12,6 +12,7 @@ import { NeuronTypesArt } from './neuronTypes'
 import { ReceptorsArt } from './receptors'
 import { SPINAL_LEVEL_REGIONS, SpinalLevelsArt } from './spinalLevels'
 import { SynapseArt, SYNAPSE_REGIONS } from './synapse'
+import { VesiclesArt } from './vesicles'
 
 export type FigureProps = { onTap(regionId: string): void; highlight?: string; picked?: string }
 
@@ -30,6 +31,7 @@ export const ILLUSTRATIONS: Record<string, FC> = {
   receptors: ReceptorsArt,
   autonomic: () => <AutonomicArt labels />,
   'spinal-levels': () => <SpinalLevelsArt labels />,
+  vesicles: () => <VesiclesArt labels />,
 }
 
 /** Tappable figures by id, with the region ids a learner can tap. */
