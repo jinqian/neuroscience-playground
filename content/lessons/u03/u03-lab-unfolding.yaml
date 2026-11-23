@@ -1,0 +1,52 @@
+id: u03-lab-unfolding
+type: lab
+title: { en: "Unfold the brain", fr: "Déplier le cerveau", zh: "展开大脑" }
+sources: ["Brain Vesicles"]
+intro:
+  - id: c1
+    explore3d: [thalamus, ventricles]
+    body:
+      en: >-
+        Time to watch a brain grow. Drag through the weeks, from a flat [[neural-plate]] to a closed
+        [[neural-tube]], then to three and five vesicles. At the five-vesicle stage, send each vesicle to the adult
+        part it becomes. Then open the 3D brain: the [[diencephalon]] became the thalamus, and the tube's hollow
+        became the [[ventricular-system|ventricles]].
+      fr: "Regardons un cerveau grandir. Faites défiler les semaines, d'une [[neural-plate|plaque neurale]] plate à un [[neural-tube|tube neural]] fermé, puis à trois et cinq vésicules. À l'étape des cinq vésicules, envoyez chaque vésicule vers la partie adulte qu'elle devient. Ouvrez ensuite le cerveau en 3D : le [[diencephalon|diencéphale]] est devenu le thalamus, et le creux du tube est devenu les [[ventricular-system|ventricules]]."
+      zh: "来看看大脑是怎样长出来的。拖动时间轴，从扁平的[[neural-plate|神经板]]到闭合的[[neural-tube|神经管]]，再到三个和五个脑泡。到了五个脑泡的阶段，把每个脑泡送到它将发育成的成体结构上。然后打开3D大脑看看：[[diencephalon|间脑]]变成了丘脑，神经管的空腔变成了[[ventricular-system|脑室]]。"
+sim: unfolding
+goal: { en: "Match all five vesicles to the adult parts they become.", fr: "Associez les cinq vésicules aux parties adultes qu'elles deviennent.", zh: "把五个脑泡都与它们将发育成的成体结构配对。" }
+simplified:
+  en: >-
+    The drawings are flat, schematic views from the back, not to scale. A real neural tube also bends sharply as
+    it grows, the stages overlap rather than following one another neatly, and the weeks are approximate.
+  fr: "Les dessins sont des vues schématiques et plates, vues de dos, sans respect des proportions. Un vrai tube neural se courbe aussi fortement en grandissant, les étapes se chevauchent au lieu de se suivre proprement, et les semaines sont approximatives."
+  zh: "这些图是从背面看的扁平示意图，没有按比例绘制。真实的神经管在生长时还会明显弯曲，各个阶段是相互重叠的，而不是整齐地一个接一个，周数也只是大约的。"
+reflection:
+  - id: q1
+    kind: mc
+    prompt: { en: "Which vesicle's hollow becomes the fourth ventricle?", fr: "Le creux de quelle vésicule devient le quatrième ventricule ?", zh: "哪个脑泡的空腔变成第四脑室？" }
+    options:
+      - { id: a, text: { en: "Rhombencephalon (hindbrain)", fr: "Rhombencéphale", zh: "菱脑" } }
+      - { id: b, text: { en: "Telencephalon", fr: "Télencéphale", zh: "端脑" } }
+      - { id: c, text: { en: "Diencephalon", fr: "Diencéphale", zh: "间脑" } }
+    answer: a
+    explain: { en: "The fourth ventricle sits under the cerebellum, in front of the pons and medulla: all [[rhombencephalon]] territory.", fr: "Le quatrième ventricule se trouve sous le cervelet, devant le pont et le bulbe : tout le territoire du [[rhombencephalon|rhombencéphale]].", zh: "第四脑室位于小脑下方、脑桥和延髓的后方，全部属于[[rhombencephalon|菱脑]]的范围。" }
+  - id: q2
+    kind: tfwhy
+    statement: { en: "If the tube fails to close at the head end, the cerebral hemispheres can't form properly.", fr: "Si le tube ne se ferme pas côté tête, les hémisphères cérébraux ne peuvent pas se former correctement.", zh: "如果神经管的头端没有闭合，大脑半球就无法正常形成。" }
+    isTrue: true
+    reasons:
+      - { id: r1, text: { en: "They grow from the telencephalon, at the very front of the tube.", fr: "Ils se forment à partir du télencéphale, tout à l'avant du tube.", zh: "它们由端脑发育而来，而端脑位于神经管的最前端。" } }
+      - { id: r2, text: { en: "They are built by neural crest cells.", fr: "Ils sont construits par les cellules des crêtes neurales.", zh: "它们是由神经嵴细胞构建的。" } }
+    answerReason: r1
+    explain: { en: "That's [[anencephaly]]: the front of the tube, which should become the [[telencephalon]], stays open.", fr: "C'est l'[[anencephaly|anencéphalie]] : l'avant du tube, qui devrait devenir le [[telencephalon|télencéphale]], reste ouvert.", zh: "这就是[[anencephaly|无脑畸形]]：本应发育成[[telencephalon|端脑]]的神经管前端没有闭合。" }
+  - id: q3
+    kind: order
+    prompt: { en: "Put the stages in order.", fr: "Remettez les étapes dans l'ordre.", zh: "把这些阶段按顺序排列。" }
+    steps:
+      - { id: s1, text: { en: "Neural plate", fr: "Plaque neurale", zh: "神经板" } }
+      - { id: s2, text: { en: "Neural groove and folds", fr: "Gouttière et bourrelets neuraux", zh: "神经沟和神经褶" } }
+      - { id: s3, text: { en: "Closed neural tube", fr: "Tube neural fermé", zh: "闭合的神经管" } }
+      - { id: s4, text: { en: "Three primary vesicles", fr: "Trois vésicules primaires", zh: "三个初级脑泡" } }
+      - { id: s5, text: { en: "Five secondary vesicles", fr: "Cinq vésicules secondaires", zh: "五个次级脑泡" } }
+    explain: { en: "Plate → groove → tube (weeks 3–4) → 3 vesicles (week 4) → 5 vesicles (week 5), roughly.", fr: "Plaque → gouttière → tube (semaines 3–4) → 3 vésicules (semaine 4) → 5 vésicules (semaine 5), approximativement.", zh: "大致为：神经板 → 神经沟 → 神经管（第3–4周）→ 3个脑泡（第4周）→ 5个脑泡（第5周）。" }

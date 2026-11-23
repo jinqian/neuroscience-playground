@@ -76,6 +76,10 @@ describe('discovery', () => {
     expect(lessonStructures(lessons.b2)).toEqual(['cerebellum'])
     expect(lessonStructures(lessons.case)).toEqual(['brainstem'])
   })
+  test('a Lab intro card with explore3d discovers its structures', () => {
+    const lab = { ...lessons.lab1, intro: [{ ...card('c1'), explore3d: ['thalamus', 'ventricles'] }] } as Lesson
+    expect(lessonStructures(lab)).toEqual(['thalamus', 'ventricles'])
+  })
   test('terms come from rich text', () => {
     expect(lessonTerms(lessons.b1)).toEqual(['soma'])
     expect(lessonTerms(lessons.case)).toEqual(['myelin'])

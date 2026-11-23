@@ -19,7 +19,7 @@ const CORD = '#c9cdd4'
 export function VesiclesArt({ stage = 'five', labels }: { stage?: Stage; labels?: boolean }) {
   const early = stage === 'plate' || stage === 'groove' || stage === 'tube'
   return (
-    <ArtSvg viewBox="0 0 440 200" label="From neural plate to five vesicles">
+    <ArtSvg viewBox="0 0 460 200" label="From neural plate to five vesicles">
       {stage === 'plate' && <path d="M30 100C30 50 130 56 150 80L290 84V116L150 120C130 144 30 150 30 100Z" fill={PLATE} stroke={INK} strokeWidth="2.5" />}
       {stage === 'groove' && (
         <g>
