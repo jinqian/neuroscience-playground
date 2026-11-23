@@ -1,0 +1,65 @@
+id: u03-b05
+type: bite
+title: { en: "Two great tracts, and cerebral palsy", fr: "Deux grands faisceaux, et la paralysie cérébrale", zh: "两大纤维束与脑性瘫痪" }
+sources: ["Two Forebrain Tracts", "Cerebral Palsy"]
+cards:
+  - id: c1
+    illustration: forebrain-tracts
+    explore3d: [corpus-callosum, thalamus]
+    body:
+      en: >-
+        As the hemispheres grow, their neurons send out axons, forming [[white-matter]]. Two great tracts stand
+        out. The [[corpus-callosum]] crosses the midline, linking the left and right hemispheres. The
+        [[internal-capsule]] runs down beside the [[thalamus]], carrying axons between the cortex and the
+        thalamus, brainstem and [[spinal-cord]]. Every command for a voluntary movement passes through it.
+      fr: "En grandissant, les neurones des hémisphères envoient des axones, qui forment la [[white-matter|substance blanche]]. Deux grands faisceaux se distinguent. Le [[corpus-callosum|corps calleux]] traverse la ligne médiane et relie les hémisphères gauche et droit. La [[internal-capsule|capsule interne]] descend le long du [[thalamus]] et transporte les axones entre le cortex et le thalamus, le tronc cérébral et la [[spinal-cord|moelle épinière]]. Chaque commande de mouvement volontaire passe par elle."
+      zh: "随着大脑半球的生长，其中的神经元伸出轴突，形成[[white-matter|白质]]。其中有两大纤维束特别突出。[[corpus-callosum|胼胝体]]横跨中线，连接左右两个半球。[[internal-capsule|内囊]]沿着[[thalamus|丘脑]]旁边向下走行，在皮层与丘脑、脑干和[[spinal-cord|脊髓]]之间传递轴突信号。每一个随意运动的指令都要经过它。"
+  - id: c2
+    verify: true
+    body:
+      en: >-
+        [[cerebral-palsy]] is a lasting movement disorder caused by injury to the developing brain, before, during
+        or soon after birth. The injury doesn't get worse. In very premature babies, the white matter next to the
+        lateral ventricles is fragile ([[periventricular-leukomalacia]]). The motor axons for the legs pass
+        closest to the ventricles on their way to the internal capsule, so the legs are often stiffest:
+        [[spastic-diplegia]].
+      fr: "La [[cerebral-palsy|paralysie cérébrale]] est un trouble durable du mouvement dû à une lésion du cerveau en développement, avant, pendant ou peu après la naissance. La lésion ne s'aggrave pas. Chez les très grands prématurés, la substance blanche qui borde les ventricules latéraux est fragile ([[periventricular-leukomalacia|leucomalacie périventriculaire]]). Les axones moteurs des jambes passent au plus près des ventricules pour rejoindre la capsule interne : ce sont donc souvent les jambes qui sont les plus raides, c'est la [[spastic-diplegia|diplégie spastique]]."
+      zh: "[[cerebral-palsy|脑性瘫痪]]是一种持久的运动障碍，由发育中的大脑在出生前、出生时或出生后不久受到损伤所致。损伤本身不会加重。在极早产的婴儿中，侧脑室旁边的白质很脆弱（[[periventricular-leukomalacia|脑室周围白质软化]]）。支配腿部的运动轴突在通往内囊的路上离脑室最近，所以往往是腿最僵硬，这就是[[spastic-diplegia|痉挛性双瘫]]。"
+questions:
+  - id: q1
+    kind: tap2d
+    prompt: { en: "Tap the [[internal-capsule]].", fr: "Touchez la [[internal-capsule|capsule interne]].", zh: "点击[[internal-capsule|内囊]]。" }
+    figure: forebrain-tracts
+    answer: internal-capsule
+    explain: { en: "The internal capsule is the band of axons running down beside the thalamus.", fr: "La capsule interne est la bande d'axones qui descend le long du thalamus.", zh: "内囊是沿着丘脑旁边向下走行的那束轴突。" }
+  - id: q2
+    kind: tap3d
+    prompt: { en: "Find the corpus callosum.", fr: "Trouvez le corps calleux.", zh: "找到胼胝体。" }
+    structure: corpus-callosum
+    explain: { en: "It arches over the ventricles and thalamus, joining the two hemispheres.", fr: "Il forme une arche au-dessus des ventricules et du thalamus, et relie les deux hémisphères.", zh: "它呈拱形横跨在脑室和丘脑上方，连接两个半球。" }
+  - id: q3
+    kind: match
+    prompt: { en: "Match each structure to what it does.", fr: "Associez chaque structure à son rôle.", zh: "把每个结构与它的作用配对。" }
+    pairs:
+      - { id: p1, left: { en: "Corpus callosum", fr: "Corps calleux", zh: "胼胝体" }, right: { en: "Links the left and right hemispheres", fr: "Relie les hémisphères gauche et droit", zh: "连接左右半球" } }
+      - { id: p2, left: { en: "Internal capsule", fr: "Capsule interne", zh: "内囊" }, right: { en: "Links the cortex with the brainstem and spinal cord", fr: "Relie le cortex au tronc cérébral et à la moelle épinière", zh: "连接皮层与脑干和脊髓" } }
+      - { id: p3, left: { en: "Lateral ventricle", fr: "Ventricule latéral", zh: "侧脑室" }, right: { en: "Fluid-filled space inside each hemisphere", fr: "Cavité remplie de liquide dans chaque hémisphère", zh: "每个半球内充满液体的空腔" } }
+    explain: { en: "One tract crosses, one runs up and down; the ventricles sit between them.", fr: "Un faisceau traverse, l'autre monte et descend ; les ventricules se trouvent entre les deux.", zh: "一条纤维束横向跨越，另一条上下走行；脑室位于它们之间。" }
+  - id: q4
+    kind: mc
+    prompt: { en: "After a very premature birth, why are the legs often the most affected in cerebral palsy?", fr: "Après une naissance très prématurée, pourquoi les jambes sont-elles souvent les plus touchées dans la paralysie cérébrale ?", zh: "极早产出生后，为什么脑性瘫痪往往对腿的影响最大？" }
+    options:
+      - { id: a, text: { en: "Their motor axons pass closest to the ventricles, where the white matter is most fragile", fr: "Leurs axones moteurs passent au plus près des ventricules, là où la substance blanche est la plus fragile", zh: "支配腿的运动轴突离脑室最近，而那里的白质最脆弱" } }
+      - { id: b, text: { en: "The leg muscles are the last to grow", fr: "Les muscles des jambes sont les derniers à se développer", zh: "腿部肌肉是最后发育的" } }
+      - { id: c, text: { en: "The neural tube failed to close at the tail end", fr: "Le tube neural ne s'est pas fermé côté queue", zh: "神经管尾端没有闭合" } }
+    answer: a
+    explain: { en: "That's [[periventricular-leukomalacia]] causing [[spastic-diplegia]]. A tail-end closure failure is spina bifida, a different problem.", fr: "C'est la [[periventricular-leukomalacia|leucomalacie périventriculaire]] qui cause la [[spastic-diplegia|diplégie spastique]]. Un défaut de fermeture côté queue, c'est le spina bifida, un autre problème.", zh: "这是[[periventricular-leukomalacia|脑室周围白质软化]]导致的[[spastic-diplegia|痉挛性双瘫]]。尾端闭合失败是脊柱裂，是另一种问题。" }
+  - id: q5
+    kind: tfwhy
+    statement: { en: "Cerebral palsy is a brain injury that keeps getting worse as the child grows.", fr: "La paralysie cérébrale est une lésion du cerveau qui s'aggrave à mesure que l'enfant grandit.", zh: "脑性瘫痪是一种会随着孩子长大而不断加重的脑损伤。" }
+    isTrue: false
+    reasons:
+      - { id: r1, text: { en: "The injury happened once and doesn't spread, though its effects on movement can change as the body grows.", fr: "La lésion s'est produite une fois et ne s'étend pas, même si ses effets sur le mouvement peuvent évoluer avec la croissance.", zh: "损伤只发生过一次，不会扩散，不过随着身体成长，它对运动的影响可能会变化。" } }
+      - { id: r2, text: { en: "Neurons keep dying throughout life.", fr: "Les neurones continuent de mourir toute la vie.", zh: "神经元一生都在不断死亡。" } }
+    answerReason: r1
+    explain: { en: "[[cerebral-palsy|Cerebral palsy]] is non-progressive: the brain injury is fixed.", fr: "La [[cerebral-palsy|paralysie cérébrale]] n'est pas évolutive : la lésion cérébrale est fixe.", zh: "[[cerebral-palsy|脑性瘫痪]]是非进行性的：脑损伤是固定的。" }

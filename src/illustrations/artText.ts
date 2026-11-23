@@ -144,6 +144,18 @@ export const ART_TEXT: Record<string, { fr: string; zh: string }> = {
   'grows in a C': { fr: 'grandit en forme de C', zh: '呈C形生长' },
   front: { fr: 'avant', zh: '前' },
   'temporal lobe': { fr: 'lobe temporal', zh: '颞叶' },
+  'The two big forebrain tracts (front-on slice)': { fr: 'Les deux grands faisceaux du cerveau antérieur (coupe frontale)', zh: '前脑的两大纤维束（冠状切面）' },
+  Cortex: { fr: 'Cortex', zh: '皮层' },
+  'Internal capsule': { fr: 'Capsule interne', zh: '内囊' },
+  'Lateral ventricle': { fr: 'Ventricule latéral', zh: '侧脑室' },
+  Thalamus: { fr: 'Thalamus', zh: '丘脑' },
+  'Corpus callosum': { fr: 'Corps calleux', zh: '胼胝体' },
+  'corpus callosum': { fr: 'corps calleux', zh: '胼胝体' },
+  'lateral ventricle': { fr: 'ventricule latéral', zh: '侧脑室' },
+  'internal capsule': { fr: 'capsule interne', zh: '内囊' },
+  thalamus: { fr: 'thalamus', zh: '丘脑' },
+  'cortex (grey matter)': { fr: 'cortex (substance grise)', zh: '皮层（灰质）' },
+  'white matter': { fr: 'substance blanche', zh: '白质' },
 }
 
 /** An illustration's text in the given language (English if there is no translation). */
