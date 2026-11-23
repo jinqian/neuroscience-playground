@@ -15,3 +15,9 @@ nodes:
   cerebellum: { files: [FMA67944] }
   brainstem: { files: [FMA61993nsn, FMA62394, FMA73422, FMA73423, FMA73434, FMA73435, FMA67943, FMA62004] }
   hypothalamus: { files: [FMA62008nsn, FMA62327] }
+  thalamus_L: { files: [FMA258716] }
+  thalamus_R: { files: [FMA258714] }
+  corpus-callosum: { files: [FMA86464] }
+  ventricles_L: { files: [FMA78450] }
+  ventricles_R: { files: [FMA78449] }
+  ventricles: { files: [FMA78454, FMA78469] }

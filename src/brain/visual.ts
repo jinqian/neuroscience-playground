@@ -38,6 +38,9 @@ export const STRUCTURE_COLORS: Record<string, string> = {
   cerebellum: '#14b8a6',
   brainstem: '#c04cd9',
   hypothalamus: '#7b5cf0',
+  thalamus: '#f5b700',
+  'corpus-callosum': '#e05a2b',
+  ventricles: '#2f6fde',
 }
 
 const FALLBACK = '#9b82ff'

@@ -88,3 +88,36 @@
     zh: "丘脑下方的一个小区域，负责维持身体的平衡：体温、饥饿、口渴、激素（通过垂体）以及自主神经系统。"
   units: [u02]
   meshNodes: [hypothalamus]
+- id: thalamus
+  name:
+    en: "Thalamus"
+    fr: "Thalamus"
+    zh: "丘脑"
+  note:
+    en: "A pair of egg-shaped hubs deep in the forebrain, one per hemisphere. Almost every sense (except smell) passes through it on the way to the cortex. It grows from the diencephalon."
+    fr: "Une paire de relais en forme d'œuf au fond du cerveau antérieur, un par hémisphère. Presque tous les sens (sauf l'odorat) y passent avant d'atteindre le cortex. Il provient du diencéphale."
+    zh: "前脑深处一对蛋形的中继站，每个半球一个。几乎所有感觉（嗅觉除外）都要经过它才能到达皮层。它由间脑发育而来。"
+  units: [u03]
+  meshNodes: [thalamus_L, thalamus_R]
+- id: corpus-callosum
+  name:
+    en: "Corpus callosum"
+    fr: "Corps calleux"
+    zh: "胼胝体"
+  note:
+    en: "The broad bridge of white matter joining the left and right hemispheres: about 200 million axons that let the two sides share what they know."
+    fr: "Le large pont de substance blanche qui relie les hémisphères gauche et droit : environ 200 millions d'axones qui permettent aux deux côtés de partager ce qu'ils savent."
+    zh: "连接左右大脑半球的宽阔白质桥梁：约两亿条轴突，让两侧共享各自的信息。"
+  units: [u03]
+  meshNodes: [corpus-callosum]
+- id: ventricles
+  name:
+    en: "Ventricles"
+    fr: "Ventricules"
+    zh: "脑室"
+  note:
+    en: "Fluid-filled spaces inside the brain: two lateral ventricles, the third and the fourth. They are what is left of the neural tube's hollow centre, and they make and hold cerebrospinal fluid."
+    fr: "Des cavités remplies de liquide à l'intérieur du cerveau : deux ventricules latéraux, le troisième et le quatrième. Ce sont les restes du centre creux du tube neural ; ils produisent et contiennent le liquide cérébrospinal."
+    zh: "大脑内部充满液体的空腔：两个侧脑室、第三脑室和第四脑室。它们是神经管中空部分留下来的结构，负责产生并容纳脑脊液。"
+  units: [u03]
+  meshNodes: [ventricles_L, ventricles_R, ventricles]

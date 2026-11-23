@@ -9,7 +9,7 @@ Citation: Mitsuhashi N, et al. *BodyParts3D: 3D structure database for anatomica
 
 ## Nodes in brain.glb
 
-All come from `BodyParts3D_3.0_obj_99`, one body, so no alignment was needed. Total after simplification: about 179k triangles, 0.64 MB.
+All come from `BodyParts3D_3.0_obj_99`, one body, so no alignment was needed. Total after simplification: about 227k triangles, 0.81 MB.
 
 | Node | BodyParts3D parts |
 |------|-------------------|
@@ -20,6 +20,10 @@ All come from `BodyParts3D_3.0_obj_99`, one body, so no alignment was needed. To
 | cerebellum | cerebellum (FMA67944) |
 | brainstem | midbrain (FMA61993nsn), cerebral peduncle, superior and inferior colliculi, pons (FMA67943), medulla oblongata (FMA62004) |
 | hypothalamus | hypothalamus (FMA62008nsn), tuber cinereum (FMA62327) |
+| thalamus_L / _R | left / right thalamus (FMA258716 / FMA258714) |
+| corpus-callosum | corpus callosum (FMA86464) |
+| ventricles_L / _R | left / right lateral ventricle (FMA78450 / FMA78449) |
+| ventricles | third ventricle (FMA78454), fourth ventricle (FMA78469) |
 
 ## Known gaps
 

@@ -23,7 +23,7 @@ describe('bakeGeometry', () => {
 })
 
 describe('zone colours', () => {
-  const ids = ['frontal-lobe', 'parietal-lobe', 'temporal-lobe', 'occipital-lobe', 'cerebellum', 'brainstem', 'hypothalamus']
+  const ids = ['frontal-lobe', 'parietal-lobe', 'temporal-lobe', 'occipital-lobe', 'cerebellum', 'brainstem', 'hypothalamus', 'thalamus', 'corpus-callosum', 'ventricles']
   test('every zone not in focus shares one uniform base colour, met or not', () => {
     const base = ids.flatMap((id) => [zoneColor(id, 'discovered'), zoneColor(id, 'undiscovered')])
     expect(new Set(base)).toEqual(new Set([BASE]))
@@ -43,6 +43,6 @@ describe('zone colours', () => {
     expect(new Set([...lit, BASE]).size).toBe(ids.length + 1)
   })
   test('a highlighted zone without its own colour falls back to the given unit colour', () => {
-    expect(zoneColor('thalamus', 'highlight', '#123456')).toBe('#123456')
+    expect(zoneColor('hippocampus', 'highlight', '#123456')).toBe('#123456')
   })
 })
