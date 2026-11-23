@@ -2,6 +2,7 @@ import type { FC } from 'react'
 import { ActionPotentialArt } from './actionPotential'
 import { AUTONOMIC_REGIONS, AutonomicArt } from './autonomic'
 import { CNS_PNS_REGIONS, CnsPnsArt } from './cnsPns'
+import { CortexFoldingArt } from './cortexFolding'
 import { GliaArt } from './glia'
 import { MeningesArt, MENINGES_REGIONS } from './meninges'
 import { MembraneArt } from './membrane'
@@ -36,6 +37,7 @@ export const ILLUSTRATIONS: Record<string, FC> = {
   vesicles: () => <VesiclesArt labels />,
   'neural-tube': NeuralTubeArt,
   'tube-defects': () => <TubeDefectsArt labels />,
+  'cortex-folding': CortexFoldingArt,
 }
 
 /** Tappable figures by id, with the region ids a learner can tap. */

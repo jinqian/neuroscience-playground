@@ -136,6 +136,14 @@ export const ART_TEXT: Record<string, { fr: string; zh: string }> = {
   closes: { fr: 'se ferme', zh: '闭合' },
   'open: anencephaly': { fr: 'ouvert : anencéphalie', zh: '未闭合：无脑畸形' },
   'open: spina bifida': { fr: 'ouvert : spina bifida', zh: '未闭合：脊柱裂' },
+  'How the cortex grows and folds': { fr: 'Comment le cortex grandit et se plisse', zh: '皮层如何生长和折叠' },
+  'smooth (early)': { fr: 'lisse (au début)', zh: '光滑（早期）' },
+  'folded (adult)': { fr: 'plissé (adulte)', zh: '折叠（成年）' },
+  'gyrus = ridge': { fr: 'gyrus = crête', zh: '脑回 = 隆起' },
+  'sulcus = groove': { fr: 'sillon = creux', zh: '脑沟 = 凹槽' },
+  'grows in a C': { fr: 'grandit en forme de C', zh: '呈C形生长' },
+  front: { fr: 'avant', zh: '前' },
+  'temporal lobe': { fr: 'lobe temporal', zh: '颞叶' },
 }
 
 /** An illustration's text in the given language (English if there is no translation). */

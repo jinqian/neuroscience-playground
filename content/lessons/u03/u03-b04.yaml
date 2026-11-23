@@ -1,0 +1,75 @@
+id: u03-b04
+type: bite
+title: { en: "Too big to fit: the folding cortex", fr: "Trop grand pour tenir : le cortex se plisse", zh: "装不下了：折叠的皮层" }
+sources: ["Expansion of the Cerebral Cortex"]
+cards:
+  - id: c1
+    illustration: cortex-folding
+    verify: true
+    body:
+      en: >-
+        The [[telencephalon]] grows far more than any other part of the tube. Its outer layer, the
+        [[cerebral-cortex]], would cover about a quarter of a square metre if spread flat: far too much for the
+        skull. So it folds, into ridges called [[gyrus|gyri]] and grooves called [[sulcus|sulci]]. About two-thirds
+        of the cortex lies hidden inside the folds.
+      fr: "Le [[telencephalon|télencéphale]] grandit bien plus que toutes les autres parties du tube. Sa couche externe, le [[cerebral-cortex|cortex cérébral]], couvrirait environ un quart de mètre carré si on l'étalait à plat : beaucoup trop pour le crâne. Il se plisse donc, en crêtes appelées [[gyrus|gyri]] et en creux appelés [[sulcus|sillons]]. Environ les deux tiers du cortex sont cachés dans les plis."
+      zh: "[[telencephalon|端脑]]的生长远远超过神经管的其他部分。它的外层，即[[cerebral-cortex|大脑皮层]]，如果摊平，大约有四分之一平方米，颅骨根本装不下。所以它折叠起来，形成叫做[[gyrus|脑回]]的隆起和叫做[[sulcus|脑沟]]的凹槽。大约三分之二的皮层藏在褶皱里面。"
+  - id: c2
+    explore3d: [frontal-lobe, temporal-lobe]
+    body:
+      en: >-
+        The hemispheres don't just swell; they grow in a C. They push forward, up and back, then curl down and
+        forward again. That's why the temporal lobe ends up below and in front, tucked under the frontal lobe.
+        Structures deep inside the hemisphere, such as the lateral ventricle, follow the same C-shaped path.
+      fr: "Les hémisphères ne font pas que gonfler : ils grandissent en forme de C. Ils poussent vers l'avant, vers le haut et vers l'arrière, puis s'enroulent vers le bas et de nouveau vers l'avant. C'est pourquoi le lobe temporal se retrouve en bas et en avant, glissé sous le lobe frontal. Les structures profondes de l'hémisphère, comme le ventricule latéral, suivent le même trajet en C."
+      zh: "大脑半球不只是膨胀，而是呈C形生长。它们先向前、向上、向后推进，然后再向下、向前弯回来。这就是为什么颞叶最终位于下方和前方，藏在额叶的下面。半球深处的结构，比如侧脑室，也沿着同样的C形路径生长。"
+  - id: c3
+    body:
+      en: >-
+        To build the cortex, young neurons are born deep near the ventricles and then travel outward to their
+        place. If that journey fails, the cortex can stay smooth: [[lissencephaly]], 'smooth brain'. It causes
+        severe developmental disability and seizures.
+      fr: "Pour construire le cortex, les jeunes neurones naissent en profondeur, près des ventricules, puis voyagent vers l'extérieur jusqu'à leur place. Si ce voyage échoue, le cortex peut rester lisse : c'est la [[lissencephaly|lissencéphalie]], le « cerveau lisse ». Elle entraîne un handicap grave du développement et des crises d'épilepsie."
+      zh: "为了构建皮层，年轻的神经元在靠近脑室的深处产生，然后向外迁移到它们的位置。如果这段迁移失败，皮层就可能保持光滑，这就是[[lissencephaly|无脑回畸形]]，意为“光滑的脑”。它会导致严重的发育障碍和癫痫发作。"
+questions:
+  - id: q1
+    kind: tfwhy
+    statement: { en: "Folding lets a much larger cortex fit inside the skull.", fr: "Le plissement permet à un cortex beaucoup plus grand de tenir dans le crâne.", zh: "折叠让更大的皮层能装进颅骨。" }
+    isTrue: true
+    reasons:
+      - { id: r1, text: { en: "A folded sheet packs more surface into the same space.", fr: "Une feuille plissée fait tenir plus de surface dans le même espace.", zh: "折叠的薄层能在同样的空间里容纳更多的面积。" } }
+      - { id: r2, text: { en: "Folds make signals travel faster.", fr: "Les plis font voyager les signaux plus vite.", zh: "褶皱能让信号传得更快。" } }
+    answerReason: r1
+    explain: { en: "Spread flat, the [[cerebral-cortex]] is far larger than the inside of the skull.", fr: "Étalé à plat, le [[cerebral-cortex|cortex cérébral]] est bien plus grand que l'intérieur du crâne.", zh: "摊平后，[[cerebral-cortex|大脑皮层]]远远大于颅腔。" }
+  - id: q2
+    kind: gap
+    prompt: { en: "A ridge on the brain's surface is a ___; a groove is a sulcus.", fr: "Une crête à la surface du cerveau est un ___ ; un creux est un sillon.", zh: "大脑表面的隆起叫___；凹槽叫脑沟。" }
+    options:
+      - { id: a, text: { en: "gyrus", fr: "gyrus", zh: "脑回" } }
+      - { id: b, text: { en: "ventricle", fr: "ventricule", zh: "脑室" } }
+      - { id: c, text: { en: "vesicle", fr: "vésicule", zh: "脑泡" } }
+    answer: a
+    explain: { en: "[[gyrus|Gyri]] are the ridges, [[sulcus|sulci]] the grooves between them.", fr: "Les [[gyrus|gyri]] sont les crêtes, les [[sulcus|sillons]] les creux entre elles.", zh: "[[gyrus|脑回]]是隆起，[[sulcus|脑沟]]是它们之间的凹槽。" }
+  - id: q3
+    kind: mc
+    prompt: { en: "Why does the temporal lobe sit below and in front of the rest of the hemisphere?", fr: "Pourquoi le lobe temporal se trouve-t-il en bas et en avant du reste de l'hémisphère ?", zh: "为什么颞叶位于半球其余部分的下方和前方？" }
+    options:
+      - { id: a, text: { en: "The hemisphere grows in a C, curling back and then down and forward", fr: "L'hémisphère grandit en C, en s'enroulant vers l'arrière puis vers le bas et l'avant", zh: "半球呈C形生长，先向后，再向下、向前弯曲" } }
+      - { id: b, text: { en: "It grows from a different vesicle", fr: "Il provient d'une autre vésicule", zh: "它来自另一个脑泡" } }
+      - { id: c, text: { en: "The cerebellum pushes it down", fr: "Le cervelet le pousse vers le bas", zh: "小脑把它往下推" } }
+    answer: a
+    explain: { en: "All lobes come from the [[telencephalon]]; the C-shaped growth carries the temporal lobe round to the front.", fr: "Tous les lobes viennent du [[telencephalon|télencéphale]] ; la croissance en C amène le lobe temporal vers l'avant.", zh: "所有脑叶都来自[[telencephalon|端脑]]；C形生长把颞叶带到了前方。" }
+  - id: q4
+    kind: mc
+    prompt: { en: "In [[lissencephaly]], the cortex stays smooth. What went wrong?", fr: "Dans la [[lissencephaly|lissencéphalie]], le cortex reste lisse. Qu'est-ce qui n'a pas fonctionné ?", zh: "在[[lissencephaly|无脑回畸形]]中，皮层保持光滑。出了什么问题？" }
+    options:
+      - { id: a, text: { en: "Young neurons failed to travel out to their place in the cortex", fr: "Les jeunes neurones ne sont pas parvenus à rejoindre leur place dans le cortex", zh: "年轻的神经元没能迁移到皮层中的位置" } }
+      - { id: b, text: { en: "The neural tube failed to close", fr: "Le tube neural ne s'est pas fermé", zh: "神经管没有闭合" } }
+      - { id: c, text: { en: "The skull grew too large", fr: "Le crâne est devenu trop grand", zh: "颅骨长得太大了" } }
+    answer: a
+    explain: { en: "Folding depends on neurons reaching the cortex in the right numbers and layers.", fr: "Le plissement dépend de l'arrivée des neurones dans le cortex, en bon nombre et dans les bonnes couches.", zh: "皮层能否折叠，取决于神经元是否以正确的数量到达皮层的正确层次。" }
+  - id: q5
+    kind: termmatch
+    terms: [gyrus, sulcus, cerebral-cortex, telencephalon]
+    from: fr
+    to: zh
