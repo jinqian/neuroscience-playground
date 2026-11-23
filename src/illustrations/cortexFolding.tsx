@@ -6,7 +6,7 @@ const WHITE = '#f3eee6'
 /** Left: a smooth vs a folded cortex, in section. Right: a hemisphere from the side, growing in a C. */
 export function CortexFoldingArt() {
   return (
-    <ArtSvg viewBox="0 0 470 210" label="How the cortex grows and folds">
+    <ArtSvg viewBox="0 0 470 232" label="How the cortex grows and folds">
       {/* smooth */}
       <rect x="20" y="40" width="180" height="40" fill={WHITE} />
       <rect x="20" y="40" width="180" height="12" fill={CORTEX} stroke={INK} strokeWidth="1.5" />
@@ -31,11 +31,11 @@ export function CortexFoldingArt() {
       <g>
         <Label x={110} y={28}>smooth (early)</Label>
         <Label x={110} y={110}>folded (adult)</Label>
-        <Label x={35} y={204} anchor="start">gyrus = ridge</Label>
-        <Label x={200} y={204} anchor="end">sulcus = groove</Label>
+        <Label x={110} y={206}>gyrus = ridge</Label>
+        <Label x={110} y={226}>sulcus = groove</Label>
         <Label x={360} y={22}>grows in a C</Label>
-        <Label x={262} y={196} anchor="start">front</Label>
-        <Label x={340} y={204}>temporal lobe</Label>
+        <Label x={256} y={206} anchor="start">front</Label>
+        <Label x={372} y={206}>temporal lobe</Label>
       </g>
     </ArtSvg>
   )
