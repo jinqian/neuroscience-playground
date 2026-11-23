@@ -10,4 +10,4 @@ nickname:
   zh: "大脑地图"
 color: "#FF8A3D"
 module: "Neuroanatomy"
-lessons: [u03-b01, u03-b02]
+lessons: [u03-b01, u03-b02, u03-b03]

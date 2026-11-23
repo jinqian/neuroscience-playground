@@ -1,0 +1,68 @@
+id: u03-b03
+type: bite
+title: { en: "Three bulges, then five", fr: "Trois renflements, puis cinq", zh: "三个膨大，然后五个" }
+sources: ["Brain Vesicles"]
+cards:
+  - id: c1
+    illustration: vesicles
+    body:
+      en: >-
+        By about week 4, the front of the tube swells into three bulges, the primary vesicles: the
+        [[prosencephalon]], the [[mesencephalon]] and the [[rhombencephalon]]. About a week later, the first and
+        last split in two, giving five. The [[telencephalon]] becomes the cerebral hemispheres; the
+        [[diencephalon]], the thalamus and [[hypothalamus]]; the mesencephalon stays the midbrain; the
+        [[metencephalon]] becomes the pons and cerebellum; the [[myelencephalon]], the medulla.
+      fr: "Vers la 4ᵉ semaine, l'avant du tube se renfle en trois vésicules primaires : le [[prosencephalon|prosencéphale]], le [[mesencephalon|mésencéphale]] et le [[rhombencephalon|rhombencéphale]]. Environ une semaine plus tard, la première et la dernière se divisent en deux, ce qui en donne cinq. Le [[telencephalon|télencéphale]] devient les hémisphères cérébraux ; le [[diencephalon|diencéphale]], le thalamus et l'[[hypothalamus]] ; le mésencéphale reste le mésencéphale (cerveau moyen) ; le [[metencephalon|métencéphale]] devient le pont et le cervelet ; le [[myelencephalon|myélencéphale]], le bulbe rachidien."
+      zh: "大约在第4周，神经管的前部膨大成三个初级脑泡：[[prosencephalon|前脑]]、[[mesencephalon|中脑]]和[[rhombencephalon|菱脑]]。大约一周后，第一个和最后一个各自一分为二，变成五个。[[telencephalon|端脑]]发育成大脑半球；[[diencephalon|间脑]]发育成丘脑和[[hypothalamus|下丘脑]]；中脑仍然是中脑；[[metencephalon|后脑]]发育成脑桥和小脑；[[myelencephalon|末脑]]发育成延髓。"
+  - id: c2
+    explore3d: [ventricles]
+    body:
+      en: >-
+        The tube was hollow, and it stays hollow. Its cavity becomes the [[ventricular-system|ventricles]], filled
+        with [[csf|cerebrospinal fluid]]: a lateral ventricle inside each hemisphere (from the telencephalon), the
+        third ventricle (diencephalon), a narrow aqueduct through the midbrain, and the fourth ventricle
+        (hindbrain). Further down, it narrows into the spinal cord's thin central canal.
+      fr: "Le tube était creux, et il le reste. Sa cavité devient les [[ventricular-system|ventricules]], remplis de [[csf|liquide cérébrospinal]] : un ventricule latéral dans chaque hémisphère (issu du télencéphale), le troisième ventricule (diencéphale), un étroit aqueduc à travers le mésencéphale, et le quatrième ventricule (rhombencéphale). Plus bas, la cavité se rétrécit en un fin canal central dans la moelle épinière."
+      zh: "神经管原本是中空的，而且一直保持中空。它的空腔变成了[[ventricular-system|脑室]]，里面充满[[csf|脑脊液]]：每个大脑半球里各有一个侧脑室（来自端脑），第三脑室（来自间脑），一条穿过中脑的狭窄导水管，以及第四脑室（来自菱脑）。再往下，空腔变窄，成为脊髓中细细的中央管。"
+questions:
+  - id: q1
+    kind: mc
+    prompt: { en: "Which primary vesicle splits into the telencephalon and the diencephalon?", fr: "Quelle vésicule primaire se divise en télencéphale et diencéphale ?", zh: "哪个初级脑泡分裂成端脑和间脑？" }
+    options:
+      - { id: a, text: { en: "Prosencephalon", fr: "Prosencéphale", zh: "前脑" } }
+      - { id: b, text: { en: "Mesencephalon", fr: "Mésencéphale", zh: "中脑" } }
+      - { id: c, text: { en: "Rhombencephalon", fr: "Rhombencéphale", zh: "菱脑" } }
+    answer: a
+    explain: { en: "The [[prosencephalon]] (forebrain) gives the telencephalon and diencephalon; the [[rhombencephalon]] gives the metencephalon and myelencephalon.", fr: "Le [[prosencephalon|prosencéphale]] donne le télencéphale et le diencéphale ; le [[rhombencephalon|rhombencéphale]] donne le métencéphale et le myélencéphale.", zh: "[[prosencephalon|前脑]]分出端脑和间脑；[[rhombencephalon|菱脑]]分出后脑和末脑。" }
+  - id: q2
+    kind: mc
+    prompt: { en: "The thalamus and hypothalamus grow from which vesicle?", fr: "Le thalamus et l'hypothalamus se forment à partir de quelle vésicule ?", zh: "丘脑和下丘脑由哪个脑泡发育而来？" }
+    options:
+      - { id: a, text: { en: "Telencephalon", fr: "Télencéphale", zh: "端脑" } }
+      - { id: b, text: { en: "Diencephalon", fr: "Diencéphale", zh: "间脑" } }
+      - { id: c, text: { en: "Mesencephalon", fr: "Mésencéphale", zh: "中脑" } }
+    answer: b
+    explain: { en: "The [[diencephalon]], the 'in-between brain', sits between the hemispheres and the midbrain.", fr: "Le [[diencephalon|diencéphale]], le « cerveau intermédiaire », se trouve entre les hémisphères et le mésencéphale.", zh: "[[diencephalon|间脑]]，意为“中间的脑”，位于大脑半球和中脑之间。" }
+  - id: q3
+    kind: gap
+    prompt: { en: "The pons and the cerebellum grow from the ___.", fr: "Le pont et le cervelet se forment à partir du ___.", zh: "脑桥和小脑由___发育而来。" }
+    options:
+      - { id: a, text: { en: "metencephalon", fr: "métencéphale", zh: "后脑" } }
+      - { id: b, text: { en: "myelencephalon", fr: "myélencéphale", zh: "末脑" } }
+      - { id: c, text: { en: "diencephalon", fr: "diencéphale", zh: "间脑" } }
+    answer: a
+    explain: { en: "The [[metencephalon]] gives the pons and cerebellum; the [[myelencephalon]] just behind it gives the medulla.", fr: "Le [[metencephalon|métencéphale]] donne le pont et le cervelet ; le [[myelencephalon|myélencéphale]], juste derrière, donne le bulbe rachidien.", zh: "[[metencephalon|后脑]]发育成脑桥和小脑；紧随其后的[[myelencephalon|末脑]]发育成延髓。" }
+  - id: q4
+    kind: match
+    prompt: { en: "Match each part of the ventricles to the vesicle it comes from.", fr: "Associez chaque partie des ventricules à la vésicule dont elle provient.", zh: "把脑室的各个部分与它所来自的脑泡配对。" }
+    pairs:
+      - { id: p1, left: { en: "Lateral ventricles", fr: "Ventricules latéraux", zh: "侧脑室" }, right: { en: "Telencephalon", fr: "Télencéphale", zh: "端脑" } }
+      - { id: p2, left: { en: "Third ventricle", fr: "Troisième ventricule", zh: "第三脑室" }, right: { en: "Diencephalon", fr: "Diencéphale", zh: "间脑" } }
+      - { id: p3, left: { en: "Cerebral aqueduct", fr: "Aqueduc cérébral", zh: "中脑导水管" }, right: { en: "Mesencephalon", fr: "Mésencéphale", zh: "中脑" } }
+      - { id: p4, left: { en: "Fourth ventricle", fr: "Quatrième ventricule", zh: "第四脑室" }, right: { en: "Rhombencephalon", fr: "Rhombencéphale", zh: "菱脑" } }
+    explain: { en: "Each part of the brain keeps its own piece of the tube's hollow.", fr: "Chaque partie du cerveau garde son propre morceau du creux du tube.", zh: "脑的每个部分都保留了神经管空腔的一段。" }
+  - id: q5
+    kind: tap3d
+    prompt: { en: "Find the ventricles.", fr: "Trouvez les ventricules.", zh: "找到脑室。" }
+    structure: ventricles
+    explain: { en: "Deep in the middle of the brain: the two lateral ventricles curve through the hemispheres above the thalamus.", fr: "Au fond, au milieu du cerveau : les deux ventricules latéraux s'incurvent dans les hémisphères, au-dessus du thalamus.", zh: "位于大脑深处的中央：两个侧脑室在丘脑上方弯曲穿过两个半球。" }
