@@ -26,11 +26,11 @@ reflection:
     kind: mc
     prompt: { en: "Which vesicle's hollow becomes the fourth ventricle?", fr: "Le creux de quelle vésicule devient le quatrième ventricule ?", zh: "哪个脑泡的空腔变成第四脑室？" }
     options:
-      - { id: a, text: { en: "Rhombencephalon (hindbrain)", fr: "Rhombencéphale", zh: "菱脑" } }
+      - { id: a, text: { en: "Rhombencephalon", fr: "Rhombencéphale", zh: "菱脑" } }
       - { id: b, text: { en: "Telencephalon", fr: "Télencéphale", zh: "端脑" } }
       - { id: c, text: { en: "Diencephalon", fr: "Diencéphale", zh: "间脑" } }
     answer: a
-    explain: { en: "The fourth ventricle sits under the cerebellum, in front of the pons and medulla: all [[rhombencephalon]] territory.", fr: "Le quatrième ventricule se trouve sous le cervelet, devant le pont et le bulbe : tout le territoire du [[rhombencephalon|rhombencéphale]].", zh: "第四脑室位于小脑下方、脑桥和延髓的后方，全部属于[[rhombencephalon|菱脑]]的范围。" }
+    explain: { en: "The fourth ventricle lies behind the pons and upper medulla, with the cerebellum behind it: all [[rhombencephalon]] territory.", fr: "Le quatrième ventricule se trouve en arrière du pont et du haut du bulbe, avec le cervelet en arrière de lui : tout le territoire du [[rhombencephalon|rhombencéphale]].", zh: "第四脑室位于脑桥和延髓上部的后方、小脑的前方，全部属于[[rhombencephalon|菱脑]]的范围。" }
   - id: q2
     kind: tfwhy
     statement: { en: "If the tube fails to close at the head end, the cerebral hemispheres can't form properly.", fr: "Si le tube ne se ferme pas côté tête, les hémisphères cérébraux ne peuvent pas se former correctement.", zh: "如果神经管的头端没有闭合，大脑半球就无法正常形成。" }

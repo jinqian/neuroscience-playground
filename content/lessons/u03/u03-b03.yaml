@@ -66,3 +66,13 @@ questions:
     prompt: { en: "Find the ventricles.", fr: "Trouvez les ventricules.", zh: "找到脑室。" }
     structure: ventricles
     explain: { en: "Deep in the middle of the brain: the two lateral ventricles curve through the hemispheres above the thalamus.", fr: "Au fond, au milieu du cerveau : les deux ventricules latéraux s'incurvent dans les hémisphères, au-dessus du thalamus.", zh: "位于大脑深处的中央：两个侧脑室在丘脑上方弯曲穿过两个半球。" }
+  - id: q6
+    kind: match
+    prompt: { en: "Match each vesicle to the adult part it becomes.", fr: "Associez chaque vésicule à la partie adulte qu'elle devient.", zh: "把每个脑泡与它将发育成的成体结构配对。" }
+    pairs:
+      - { id: p1, left: { en: "Telencephalon", fr: "Télencéphale", zh: "端脑" }, right: { en: "Cerebral hemispheres", fr: "Hémisphères cérébraux", zh: "大脑半球" } }
+      - { id: p2, left: { en: "Diencephalon", fr: "Diencéphale", zh: "间脑" }, right: { en: "Thalamus and hypothalamus", fr: "Thalamus et hypothalamus", zh: "丘脑和下丘脑" } }
+      - { id: p3, left: { en: "Mesencephalon", fr: "Mésencéphale", zh: "中脑泡" }, right: { en: "Midbrain", fr: "Mésencéphale adulte (cerveau moyen)", zh: "中脑（成体）" } }
+      - { id: p4, left: { en: "Metencephalon", fr: "Métencéphale", zh: "后脑" }, right: { en: "Pons and cerebellum", fr: "Pont et cervelet", zh: "脑桥和小脑" } }
+      - { id: p5, left: { en: "Myelencephalon", fr: "Myélencéphale", zh: "末脑" }, right: { en: "Medulla", fr: "Bulbe rachidien", zh: "延髓" } }
+    explain: { en: "Front to back: hemispheres, thalamus, midbrain, pons and cerebellum, medulla.", fr: "De l'avant vers l'arrière : hémisphères, thalamus, mésencéphale, pont et cervelet, bulbe.", zh: "从前到后：大脑半球、丘脑、中脑、脑桥和小脑、延髓。" }

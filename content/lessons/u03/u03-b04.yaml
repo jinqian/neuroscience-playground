@@ -19,10 +19,10 @@ cards:
     body:
       en: >-
         The hemispheres don't just swell; they grow in a C. They push forward, up and back, then curl down and
-        forward again. That's why the temporal lobe ends up below and in front, tucked under the frontal lobe.
+        forward again. That's why the temporal lobe ends up low on the side, its tip pointing forward, below the frontal and parietal lobes.
         Structures deep inside the hemisphere, such as the lateral ventricle, follow the same C-shaped path.
-      fr: "Les hémisphères ne font pas que gonfler : ils grandissent en forme de C. Ils poussent vers l'avant, vers le haut et vers l'arrière, puis s'enroulent vers le bas et de nouveau vers l'avant. C'est pourquoi le lobe temporal se retrouve en bas et en avant, glissé sous le lobe frontal. Les structures profondes de l'hémisphère, comme le ventricule latéral, suivent le même trajet en C."
-      zh: "大脑半球不只是膨胀，而是呈C形生长。它们先向前、向上、向后推进，然后再向下、向前弯回来。这就是为什么颞叶最终位于下方和前方，藏在额叶的下面。半球深处的结构，比如侧脑室，也沿着同样的C形路径生长。"
+      fr: "Les hémisphères ne font pas que gonfler : ils grandissent en forme de C. Ils poussent vers l'avant, vers le haut et vers l'arrière, puis s'enroulent vers le bas et de nouveau vers l'avant. C'est pourquoi le lobe temporal se retrouve en bas, sur le côté, la pointe tournée vers l'avant, sous les lobes frontal et pariétal. Les structures profondes de l'hémisphère, comme le ventricule latéral, suivent le même trajet en C."
+      zh: "大脑半球不只是膨胀，而是呈C形生长。它们先向前、向上、向后推进，然后再向下、向前弯回来。这就是为什么颞叶最终位于半球的下外侧，尖端朝前，位于额叶和顶叶的下方。半球深处的结构，比如侧脑室，也沿着同样的C形路径生长。"
   - id: c3
     body:
       en: >-
@@ -52,13 +52,13 @@ questions:
     explain: { en: "[[gyrus|Gyri]] are the ridges, [[sulcus|sulci]] the grooves between them.", fr: "Les [[gyrus|gyri]] sont les crêtes, les [[sulcus|sillons]] les creux entre elles.", zh: "[[gyrus|脑回]]是隆起，[[sulcus|脑沟]]是它们之间的凹槽。" }
   - id: q3
     kind: mc
-    prompt: { en: "Why does the temporal lobe sit below and in front of the rest of the hemisphere?", fr: "Pourquoi le lobe temporal se trouve-t-il en bas et en avant du reste de l'hémisphère ?", zh: "为什么颞叶位于半球其余部分的下方和前方？" }
+    prompt: { en: "Why does the temporal lobe sit low on the side, with its tip pointing forward?", fr: "Pourquoi le lobe temporal se trouve-t-il en bas, sur le côté, la pointe tournée vers l'avant ?", zh: "为什么颞叶位于下外侧，而且尖端朝前？" }
     options:
       - { id: a, text: { en: "The hemisphere grows in a C, curling back and then down and forward", fr: "L'hémisphère grandit en C, en s'enroulant vers l'arrière puis vers le bas et l'avant", zh: "半球呈C形生长，先向后，再向下、向前弯曲" } }
       - { id: b, text: { en: "It grows from a different vesicle", fr: "Il provient d'une autre vésicule", zh: "它来自另一个脑泡" } }
       - { id: c, text: { en: "The cerebellum pushes it down", fr: "Le cervelet le pousse vers le bas", zh: "小脑把它往下推" } }
     answer: a
-    explain: { en: "All lobes come from the [[telencephalon]]; the C-shaped growth carries the temporal lobe round to the front.", fr: "Tous les lobes viennent du [[telencephalon|télencéphale]] ; la croissance en C amène le lobe temporal vers l'avant.", zh: "所有脑叶都来自[[telencephalon|端脑]]；C形生长把颞叶带到了前方。" }
+    explain: { en: "All lobes come from the [[telencephalon]]; the C-shaped growth carries the temporal lobe down and round, so its tip points forward.", fr: "Tous les lobes viennent du [[telencephalon|télencéphale]] ; la croissance en C entraîne le lobe temporal vers le bas puis vers l'avant, si bien que sa pointe est tournée vers l'avant.", zh: "所有脑叶都来自[[telencephalon|端脑]]；C形生长把颞叶带向下方再向前弯，所以它的尖端朝前。" }
   - id: q4
     kind: mc
     prompt: { en: "In [[lissencephaly]], the cortex stays smooth. What went wrong?", fr: "Dans la [[lissencephaly|lissencéphalie]], le cortex reste lisse. Qu'est-ce qui n'a pas fonctionné ?", zh: "在[[lissencephaly|无脑回畸形]]中，皮层保持光滑。出了什么问题？" }

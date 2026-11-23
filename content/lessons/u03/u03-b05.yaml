@@ -11,9 +11,9 @@ cards:
         As the hemispheres grow, their neurons send out axons, forming [[white-matter]]. Two great tracts stand
         out. The [[corpus-callosum]] crosses the midline, linking the left and right hemispheres. The
         [[internal-capsule]] runs down beside the [[thalamus]], carrying axons between the cortex and the
-        thalamus, brainstem and [[spinal-cord]]. Every command for a voluntary movement passes through it.
-      fr: "En grandissant, les neurones des hémisphères envoient des axones, qui forment la [[white-matter|substance blanche]]. Deux grands faisceaux se distinguent. Le [[corpus-callosum|corps calleux]] traverse la ligne médiane et relie les hémisphères gauche et droit. La [[internal-capsule|capsule interne]] descend le long du [[thalamus]] et transporte les axones entre le cortex et le thalamus, le tronc cérébral et la [[spinal-cord|moelle épinière]]. Chaque commande de mouvement volontaire passe par elle."
-      zh: "随着大脑半球的生长，其中的神经元伸出轴突，形成[[white-matter|白质]]。其中有两大纤维束特别突出。[[corpus-callosum|胼胝体]]横跨中线，连接左右两个半球。[[internal-capsule|内囊]]沿着[[thalamus|丘脑]]旁边向下走行，在皮层与丘脑、脑干和[[spinal-cord|脊髓]]之间传递轴突信号。每一个随意运动的指令都要经过它。"
+        thalamus, brainstem and [[spinal-cord]]. Commands for voluntary movement from the cortex pass through it.
+      fr: "En grandissant, les neurones des hémisphères envoient des axones, qui forment la [[white-matter|substance blanche]]. Deux grands faisceaux se distinguent. Le [[corpus-callosum|corps calleux]] traverse la ligne médiane et relie les hémisphères gauche et droit. La [[internal-capsule|capsule interne]] descend le long du [[thalamus]] et transporte les axones entre le cortex et le thalamus, le tronc cérébral et la [[spinal-cord|moelle épinière]]. Les commandes de mouvement volontaire venues du cortex passent par elle."
+      zh: "随着大脑半球的生长，其中的神经元伸出轴突，形成[[white-matter|白质]]。其中有两大纤维束特别突出。[[corpus-callosum|胼胝体]]横跨中线，连接左右两个半球。[[internal-capsule|内囊]]沿着[[thalamus|丘脑]]旁边向下走行，在皮层与丘脑、脑干和[[spinal-cord|脊髓]]之间传递轴突信号。来自皮层的随意运动指令都要经过它。"
   - id: c2
     verify: true
     body:
