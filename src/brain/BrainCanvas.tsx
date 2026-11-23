@@ -22,6 +22,8 @@ export type BrainCanvasProps = {
   focus?: string[]
   labels: boolean
   translucentCortex: boolean
+  /** When false, a see-through cortex ignores taps so the parts inside it can be picked. Default true. */
+  cortexPickable?: boolean
   hemisphere: Hemisphere
   /** Bump to re-frame the camera. */
   resetKey?: number
@@ -35,6 +37,9 @@ class LoadBoundary extends Component<{ onError?(): void; children: ReactNode }, 
   componentDidCatch() { this.props.onError?.() }
   render() { return this.state.failed ? null : this.props.children }
 }
+
+/** A mesh that never reports a hit, so pointer events reach what lies behind it. */
+const noRaycast = () => {}
 
 type Part = { node: string; structure: string; geometry: THREE.BufferGeometry; box: THREE.Box3 }
 
@@ -101,10 +106,12 @@ function Brain(props: BrainCanvasProps & { controls: React.RefObject<OrbitContro
         if (p.state === 'hidden') return null
         const isCortex = CORTEX.includes(p.structure)
         const see = props.translucentCortex && isCortex
+        const passThrough = see && props.cortexPickable === false
         const color = hovered === p.structure && props.onPick ? hoverColor(p.structure, unitColorOf(p.structure)) : zoneColor(p.structure, p.state, unitColorOf(p.structure))
         return (
           <mesh
-            key={p.node}
+            key={passThrough ? `${p.node}:through` : p.node}
+            {...(passThrough ? { raycast: noRaycast } : {})}
             geometry={p.geometry}
             renderOrder={see ? 2 : 1}
             onPointerOver={(e: ThreeEvent<PointerEvent>) => { e.stopPropagation(); setHovered(p.structure); document.body.style.cursor = props.onPick ? 'pointer' : '' }}
