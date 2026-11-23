@@ -7,6 +7,7 @@ import { MeningesArt, MENINGES_REGIONS } from './meninges'
 import { MembraneArt } from './membrane'
 import { MyelinArt } from './myelin'
 import { NerveArt } from './nerve'
+import { NeuralTubeArt } from './neuralTube'
 import { NEURON_REGIONS, NeuronArt } from './neuron'
 import { NeuronTypesArt } from './neuronTypes'
 import { ReceptorsArt } from './receptors'
@@ -32,6 +33,7 @@ export const ILLUSTRATIONS: Record<string, FC> = {
   autonomic: () => <AutonomicArt labels />,
   'spinal-levels': () => <SpinalLevelsArt labels />,
   vesicles: () => <VesiclesArt labels />,
+  'neural-tube': NeuralTubeArt,
 }
 
 /** Tappable figures by id, with the region ids a learner can tap. */

@@ -124,6 +124,12 @@ export const ART_TEXT: Record<string, { fr: string; zh: string }> = {
   diencephalon: { fr: 'diencéphale', zh: '间脑' },
   metencephalon: { fr: 'métencéphale', zh: '后脑' },
   myelencephalon: { fr: 'myélencéphale', zh: '末脑' },
+  'Folding the neural tube (cross-sections)': { fr: 'Le repliement du tube neural (coupes transversales)', zh: '神经管的折叠（横切面）' },
+  '1': { fr: '1', zh: '1' },
+  '2': { fr: '2', zh: '2' },
+  '3': { fr: '3', zh: '3' },
+  'skin (ectoderm)': { fr: 'peau (ectoderme)', zh: '皮肤（外胚层）' },
+  'orange = neural crest': { fr: 'orange = crêtes neurales', zh: '橙色 = 神经嵴' },
 }
 
 /** An illustration's text in the given language (English if there is no translation). */

@@ -1,0 +1,71 @@
+id: u03-b01
+type: bite
+title: { en: "A sheet that rolls into a tube", fr: "Une feuille qui s'enroule en tube", zh: "卷成管子的一层细胞" }
+sources: ["Intro", "Neural Tube Formation"]
+cards:
+  - id: c1
+    illustration: neural-tube
+    body:
+      en: >-
+        About three weeks after conception, the embryo is a flat disc. Along its back, a strip of [[ectoderm]]
+        thickens into the [[neural-plate]]. Its edges rise into folds with a groove between them. The folds meet
+        and fuse into a hollow [[neural-tube]], closed by about week 4. This folding is called [[neurulation]].
+        The front of the tube becomes the brain; the rest becomes the [[spinal-cord]].
+      fr: "Environ trois semaines après la conception, l'embryon est un disque plat. Le long de son dos, une bande d'[[ectoderm|ectoderme]] s'épaissit pour former la [[neural-plate|plaque neurale]]. Ses bords se soulèvent en bourrelets, avec une gouttière entre eux. Les bourrelets se rejoignent et fusionnent en un [[neural-tube|tube neural]] creux, fermé vers la 4ᵉ semaine. Ce repliement s'appelle la [[neurulation]]. L'avant du tube devient le cerveau ; le reste devient la [[spinal-cord|moelle épinière]]."
+      zh: "受孕后大约三周，胚胎还是一个扁平的圆盘。沿着它的背部，一条[[ectoderm|外胚层]]增厚形成[[neural-plate|神经板]]。神经板的边缘隆起成褶，中间形成一条沟。两侧的褶相遇并融合，形成中空的[[neural-tube|神经管]]，大约在第4周闭合。这个折叠过程叫做[[neurulation|神经胚形成]]。神经管的前部发育成脑，其余部分发育成[[spinal-cord|脊髓]]。"
+  - id: c2
+    body:
+      en: >-
+        As the folds close, cells at their edges break away: the [[neural-crest]]. They travel through the body
+        and build much of the [[pns|peripheral nervous system]]: the sensory neurons of the
+        [[dorsal-root-ganglion|dorsal root ganglia]], the [[autonomic-nervous-system|autonomic]] ganglia, and the
+        [[schwann-cell|Schwann cells]] that wrap peripheral axons. So the CNS comes from the tube itself, and much
+        of the PNS from its edges.
+      fr: "Pendant que les bourrelets se ferment, des cellules de leurs bords s'en détachent : ce sont les [[neural-crest|crêtes neurales]]. Elles voyagent dans tout le corps et construisent une grande partie du [[pns|système nerveux périphérique]] : les neurones sensitifs des [[dorsal-root-ganglion|ganglions rachidiens]], les ganglions [[autonomic-nervous-system|autonomes]] et les [[schwann-cell|cellules de Schwann]] qui entourent les axones périphériques. Le SNC vient donc du tube lui-même, et une grande partie du SNP de ses bords."
+      zh: "在神经褶闭合时，其边缘的一些细胞脱离出来，这就是[[neural-crest|神经嵴]]。它们在全身迁移，构建了[[pns|周围神经系统]]的大部分：[[dorsal-root-ganglion|背根神经节]]中的感觉神经元、[[autonomic-nervous-system|自主神经]]节，以及包裹周围轴突的[[schwann-cell|施万细胞]]。所以中枢神经系统来自神经管本身，而周围神经系统的大部分来自它的边缘。"
+questions:
+  - id: q1
+    kind: order
+    prompt: { en: "Put the steps of neurulation in order.", fr: "Remettez dans l'ordre les étapes de la neurulation.", zh: "把神经胚形成的步骤按顺序排列。" }
+    steps:
+      - { id: s1, text: { en: "A strip of ectoderm thickens into the neural plate", fr: "Une bande d'ectoderme s'épaissit en plaque neurale", zh: "一条外胚层增厚成神经板" } }
+      - { id: s2, text: { en: "The plate's edges rise into folds around a groove", fr: "Les bords de la plaque se soulèvent en bourrelets autour d'une gouttière", zh: "神经板边缘隆起成褶，围出一条沟" } }
+      - { id: s3, text: { en: "The folds meet and fuse", fr: "Les bourrelets se rejoignent et fusionnent", zh: "两侧的褶相遇并融合" } }
+      - { id: s4, text: { en: "A closed, hollow neural tube lies under the skin", fr: "Un tube neural creux et fermé se trouve sous la peau", zh: "一条闭合的中空神经管位于皮肤下方" } }
+    explain: { en: "Plate → folds and groove → fusion → tube.", fr: "Plaque → bourrelets et gouttière → fusion → tube.", zh: "神经板 → 神经褶和神经沟 → 融合 → 神经管。" }
+  - id: q2
+    kind: mc
+    prompt: { en: "What does the front (head end) of the neural tube become?", fr: "Que devient l'avant (le côté tête) du tube neural ?", zh: "神经管的前部（头端）会发育成什么？" }
+    options:
+      - { id: a, text: { en: "The brain", fr: "Le cerveau", zh: "脑" } }
+      - { id: b, text: { en: "The spinal cord", fr: "La moelle épinière", zh: "脊髓" } }
+      - { id: c, text: { en: "The peripheral nerves", fr: "Les nerfs périphériques", zh: "周围神经" } }
+    answer: a
+    explain: { en: "The front swells into the brain; the long back part becomes the [[spinal-cord]].", fr: "L'avant se renfle pour former le cerveau ; la longue partie arrière devient la [[spinal-cord|moelle épinière]].", zh: "前部膨大形成脑；后面的长段发育成[[spinal-cord|脊髓]]。" }
+  - id: q3
+    kind: mc
+    prompt: { en: "Which of these cells comes from the [[neural-crest]]?", fr: "Laquelle de ces cellules provient des [[neural-crest|crêtes neurales]] ?", zh: "下面哪种细胞来自[[neural-crest|神经嵴]]？" }
+    options:
+      - { id: a, text: { en: "A Schwann cell wrapping a nerve in the arm", fr: "Une cellule de Schwann qui entoure un nerf du bras", zh: "包裹手臂神经的施万细胞" } }
+      - { id: b, text: { en: "An oligodendrocyte in the brain", fr: "Un oligodendrocyte du cerveau", zh: "脑中的少突胶质细胞" } }
+      - { id: c, text: { en: "A neuron of the cerebral cortex", fr: "Un neurone du cortex cérébral", zh: "大脑皮层的神经元" } }
+    answer: a
+    explain: { en: "[[schwann-cell|Schwann cells]] serve the PNS, which comes largely from the crest. Oligodendrocytes and cortical neurons belong to the CNS, built from the tube itself.", fr: "Les [[schwann-cell|cellules de Schwann]] servent le SNP, qui vient en grande partie des crêtes. Les oligodendrocytes et les neurones du cortex appartiennent au SNC, construit à partir du tube lui-même.", zh: "[[schwann-cell|施万细胞]]服务于周围神经系统，而周围神经系统大部分来自神经嵴。少突胶质细胞和皮层神经元属于中枢神经系统，由神经管本身发育而来。" }
+  - id: q4
+    kind: gap
+    prompt: { en: "The folding of the neural plate into a tube is called ___.", fr: "Le repliement de la plaque neurale en tube s'appelle la ___.", zh: "神经板折叠成管的过程叫做___。" }
+    options:
+      - { id: a, text: { en: "neurulation", fr: "neurulation", zh: "神经胚形成" } }
+      - { id: b, text: { en: "myelination", fr: "myélinisation", zh: "髓鞘形成" } }
+      - { id: c, text: { en: "migration", fr: "migration", zh: "迁移" } }
+    answer: a
+    explain: { en: "[[neurulation|Neurulation]]: making the neural tube.", fr: "La [[neurulation]] : la formation du tube neural.", zh: "[[neurulation|神经胚形成]]：形成神经管的过程。" }
+  - id: q5
+    kind: tfwhy
+    statement: { en: "The hollow space inside the neural tube disappears as the brain grows.", fr: "L'espace creux à l'intérieur du tube neural disparaît à mesure que le cerveau grandit.", zh: "随着脑的发育，神经管内部的空腔会消失。" }
+    isTrue: false
+    reasons:
+      - { id: r1, text: { en: "It stays, as the fluid-filled spaces inside the brain and a thin canal in the spinal cord.", fr: "Il reste, sous forme de cavités remplies de liquide dans le cerveau et d'un fin canal dans la moelle épinière.", zh: "它保留了下来，成为脑内充满液体的空腔和脊髓中的一条细管。" } }
+      - { id: r2, text: { en: "It fills up completely with neurons.", fr: "Il se remplit entièrement de neurones.", zh: "它被神经元完全填满。" } }
+    answerReason: r1
+    explain: { en: "The tube's hollow becomes the brain's ventricles, filled with [[csf|cerebrospinal fluid]]. More on that soon.", fr: "Le creux du tube devient les ventricules du cerveau, remplis de [[csf|liquide cérébrospinal]]. Nous y reviendrons bientôt.", zh: "神经管的空腔变成了脑室，里面充满[[csf|脑脊液]]。我们很快会讲到。" }
