@@ -130,6 +130,12 @@ export const ART_TEXT: Record<string, { fr: string; zh: string }> = {
   '3': { fr: '3', zh: '3' },
   'skin (ectoderm)': { fr: 'peau (ectoderme)', zh: '皮肤（外胚层）' },
   'orange = neural crest': { fr: 'orange = crêtes neurales', zh: '橙色 = 神经嵴' },
+  'Where the neural tube can stay open': { fr: 'Où le tube neural peut rester ouvert', zh: '神经管可能保持开放的位置' },
+  'Head end': { fr: 'Côté tête', zh: '头端' },
+  'Tail end': { fr: 'Côté queue', zh: '尾端' },
+  closes: { fr: 'se ferme', zh: '闭合' },
+  'open: anencephaly': { fr: 'ouvert : anencéphalie', zh: '未闭合：无脑畸形' },
+  'open: spina bifida': { fr: 'ouvert : spina bifida', zh: '未闭合：脊柱裂' },
 }
 
 /** An illustration's text in the given language (English if there is no translation). */

@@ -1,0 +1,58 @@
+id: u03-b02
+type: bite
+title: { en: "When the tube stays open", fr: "Quand le tube reste ouvert", zh: "当神经管没有闭合" }
+sources: ["Neural Tube Defects"]
+cards:
+  - id: c1
+    illustration: tube-defects
+    verify: true
+    body:
+      en: >-
+        The tube doesn't close all at once. It zips shut from near the middle towards both ends, and the ends close
+        last: the head end around day 25, the tail end around day 28. When part of it stays open, the result is a
+        [[neural-tube-defect]]. Open at the head end, the brain can't form: [[anencephaly]], which is fatal. Open at
+        the tail end: [[spina-bifida]].
+      fr: "Le tube ne se ferme pas d'un seul coup. Il se referme comme une fermeture éclair, du milieu vers les deux bouts, et les bouts se ferment en dernier : le côté tête vers le 25ᵉ jour, le côté queue vers le 28ᵉ jour. Quand une partie reste ouverte, c'est une [[neural-tube-defect|anomalie de fermeture du tube neural]]. Ouvert côté tête, le cerveau ne peut pas se former : c'est l'[[anencephaly|anencéphalie]], qui est mortelle. Ouvert côté queue : c'est le [[spina-bifida]]."
+      zh: "神经管不是一下子闭合的。它像拉链一样从中间附近向两端拉上，两端最后闭合：头端约在第25天，尾端约在第28天。如果某一段没有闭合，就会出现[[neural-tube-defect|神经管缺陷]]。头端未闭合，脑无法形成：这就是[[anencephaly|无脑畸形]]，是致命的。尾端未闭合：这就是[[spina-bifida|脊柱裂]]。"
+  - id: c2
+    body:
+      en: >-
+        In spina bifida, the lower spinal cord and its coverings can bulge out through a gap in the back. The cord
+        there holds the neurons for the legs and bladder, so these are often weakened. Taking [[folic-acid]] before
+        conception and in the first weeks of pregnancy greatly lowers the risk. Timing matters: the tube has closed
+        before many people even know they are pregnant.
+      fr: "Dans le spina bifida, la partie basse de la moelle épinière et ses enveloppes peuvent faire saillie à travers une ouverture dans le dos. La moelle contient à cet endroit les neurones des jambes et de la vessie, qui sont donc souvent affaiblies. Prendre de l'[[folic-acid|acide folique]] avant la conception et pendant les premières semaines de grossesse réduit fortement le risque. Le moment compte : le tube est déjà fermé avant que beaucoup de personnes sachent qu'elles sont enceintes."
+      zh: "在脊柱裂中，下段脊髓及其被膜可能从背部的缺口向外膨出。那里的脊髓含有控制腿和膀胱的神经元，所以这些功能常常受到削弱。在受孕前和怀孕最初几周服用[[folic-acid|叶酸]]，可以大大降低风险。时机很重要：很多人还不知道自己怀孕时，神经管就已经闭合了。"
+questions:
+  - id: q1
+    kind: tap2d
+    prompt: { en: "Tap the end of the tube that stays open in [[spina-bifida]].", fr: "Touchez le bout du tube qui reste ouvert dans le [[spina-bifida]].", zh: "点击[[spina-bifida|脊柱裂]]中没有闭合的那一端。" }
+    figure: tube-defects
+    answer: tail-end
+    explain: { en: "The tail end becomes the lower spinal cord; left open, it gives spina bifida.", fr: "Le côté queue devient la partie basse de la moelle épinière ; s'il reste ouvert, c'est le spina bifida.", zh: "尾端发育成下段脊髓；如果它没有闭合，就会形成脊柱裂。" }
+  - id: q2
+    kind: match
+    prompt: { en: "Match each term to what it means.", fr: "Associez chaque terme à sa signification.", zh: "把每个术语与它的含义配对。" }
+    pairs:
+      - { id: p1, left: { en: "Anencephaly", fr: "Anencéphalie", zh: "无脑畸形" }, right: { en: "The head end of the tube stays open", fr: "Le côté tête du tube reste ouvert", zh: "神经管头端没有闭合" } }
+      - { id: p2, left: { en: "Spina bifida", fr: "Spina bifida", zh: "脊柱裂" }, right: { en: "The tail end of the tube stays open", fr: "Le côté queue du tube reste ouvert", zh: "神经管尾端没有闭合" } }
+      - { id: p3, left: { en: "Folic acid", fr: "Acide folique", zh: "叶酸" }, right: { en: "A vitamin that lowers the risk of both", fr: "Une vitamine qui réduit le risque des deux", zh: "能降低两者风险的维生素" } }
+    explain: { en: "Which end stays open decides which defect it is.", fr: "Le bout qui reste ouvert détermine l'anomalie.", zh: "哪一端没有闭合，决定了是哪一种缺陷。" }
+  - id: q3
+    kind: tfwhy
+    statement: { en: "Starting folic acid once a pregnancy is confirmed is early enough to prevent most neural tube defects.", fr: "Commencer l'acide folique une fois la grossesse confirmée suffit pour éviter la plupart des anomalies du tube neural.", zh: "确认怀孕后再开始服用叶酸，就足以预防大多数神经管缺陷。" }
+    isTrue: false
+    reasons:
+      - { id: r1, text: { en: "The tube closes by about week 4, often before a pregnancy is noticed.", fr: "Le tube se ferme vers la 4ᵉ semaine, souvent avant qu'on remarque la grossesse.", zh: "神经管大约在第4周闭合，往往早于发现怀孕的时间。" } }
+      - { id: r2, text: { en: "Folic acid only works after the baby is born.", fr: "L'acide folique n'agit qu'après la naissance.", zh: "叶酸只在婴儿出生后才起作用。" } }
+    answerReason: r1
+    explain: { en: "The vitamin has to be there already when the tube is closing, so it's advised before conception.", fr: "La vitamine doit déjà être là quand le tube se ferme : on la conseille donc avant la conception.", zh: "神经管闭合时，体内必须已经有足够的叶酸，所以建议在受孕前就开始补充。" }
+  - id: q4
+    kind: mc
+    prompt: { en: "Why does spina bifida often weaken the legs and bladder?", fr: "Pourquoi le spina bifida affaiblit-il souvent les jambes et la vessie ?", zh: "为什么脊柱裂常常会削弱腿和膀胱的功能？" }
+    options:
+      - { id: a, text: { en: "The lower spinal cord holds the neurons that control them", fr: "La partie basse de la moelle contient les neurones qui les commandent", zh: "下段脊髓含有控制它们的神经元" } }
+      - { id: b, text: { en: "The legs and bladder grow from the neural tube", fr: "Les jambes et la vessie se forment à partir du tube neural", zh: "腿和膀胱是由神经管发育而来的" } }
+      - { id: c, text: { en: "The brain is missing", fr: "Le cerveau est absent", zh: "脑缺失了" } }
+    answer: a
+    explain: { en: "The [[spinal-cord]] is organised by level; its lowest part serves the legs, bladder and bowel.", fr: "La [[spinal-cord|moelle épinière]] est organisée par étages ; sa partie la plus basse sert les jambes, la vessie et l'intestin.", zh: "[[spinal-cord|脊髓]]按节段分工；最下段负责腿、膀胱和肠道。" }

@@ -13,6 +13,7 @@ import { NeuronTypesArt } from './neuronTypes'
 import { ReceptorsArt } from './receptors'
 import { SPINAL_LEVEL_REGIONS, SpinalLevelsArt } from './spinalLevels'
 import { SynapseArt, SYNAPSE_REGIONS } from './synapse'
+import { TUBE_DEFECT_REGIONS, TubeDefectsArt } from './tubeDefects'
 import { VesiclesArt } from './vesicles'
 
 export type FigureProps = { onTap(regionId: string): void; highlight?: string; picked?: string }
@@ -34,6 +35,7 @@ export const ILLUSTRATIONS: Record<string, FC> = {
   'spinal-levels': () => <SpinalLevelsArt labels />,
   vesicles: () => <VesiclesArt labels />,
   'neural-tube': NeuralTubeArt,
+  'tube-defects': () => <TubeDefectsArt labels />,
 }
 
 /** Tappable figures by id, with the region ids a learner can tap. */
@@ -41,6 +43,7 @@ export const FIGURES: Record<string, { Component: FC<FigureProps>; regions: stri
   neuron: { Component: (p) => <NeuronArt onTap={p.onTap} picked={p.picked} />, regions: NEURON_REGIONS },
   'cns-pns': { Component: (p) => <CnsPnsArt onTap={p.onTap} picked={p.picked} />, regions: CNS_PNS_REGIONS },
   meninges: { Component: (p) => <MeningesArt onTap={p.onTap} picked={p.picked} />, regions: MENINGES_REGIONS },
+  'tube-defects': { Component: (p) => <TubeDefectsArt onTap={p.onTap} picked={p.picked} />, regions: TUBE_DEFECT_REGIONS },
   synapse: { Component: (p) => <SynapseArt onTap={p.onTap} picked={p.picked} />, regions: SYNAPSE_REGIONS },
   autonomic: { Component: (p) => <AutonomicArt onTap={p.onTap} picked={p.picked} />, regions: AUTONOMIC_REGIONS },
   'spinal-levels': { Component: (p) => <SpinalLevelsArt onTap={p.onTap} picked={p.picked} />, regions: SPINAL_LEVEL_REGIONS },
