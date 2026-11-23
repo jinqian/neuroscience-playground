@@ -381,9 +381,12 @@ button { font: inherit; color: inherit; }
 .unfold__prompt { font-weight: 800; color: #fff; }
 .unfold__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .unfold__col { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
-.unfold__ves, .unfold__tgt { width: 100%; min-height: 44px; border-radius: 12px; font: inherit; font-weight: 800; cursor: pointer; padding: 8px 12px; text-align: left; touch-action: none; }
+.unfold__ves, .unfold__tgt { width: 100%; min-height: 44px; border-radius: 12px; font: inherit; font-weight: 800; cursor: pointer; padding: 8px 12px; text-align: left; }
+.unfold__ves { touch-action: none; }
 .unfold__ves { background: var(--c); color: #1d1a2e; border: 3px solid transparent; box-shadow: 0 3px 0 rgb(0 0 0 / .35); }
 .unfold__ves[aria-pressed='true'] { border-color: #fff; transform: translateY(-2px); }
+.unfold__ves--dragging { position: relative; z-index: 2; cursor: grabbing; border-color: #fff; box-shadow: 0 10px 22px rgb(0 0 0 / .45); transition: none; }
+.unfold__tgt--over { border-style: solid; border-color: #fff; background: rgb(255 255 255 / .16); }
 .unfold__ves[data-matched='true'] { opacity: .55; cursor: default; box-shadow: none; }
 .unfold__tgt { background: rgb(255 255 255 / .06); color: var(--bench-ink); border: 2px dashed var(--bench-line); }
 .unfold__tgt:disabled { border-style: solid; border-color: var(--c); background: color-mix(in srgb, var(--c) 25%, transparent); color: #fff; cursor: default; }

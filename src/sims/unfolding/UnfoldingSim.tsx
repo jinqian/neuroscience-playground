@@ -3,7 +3,7 @@ import { VESICLE_COLORS, VesiclesArt } from '../../illustrations/vesicles'
 import { useLang } from '../../i18n/LanguageProvider'
 import { t, type UiKey } from '../../i18n/t'
 import type { SimProps } from '../../lab/types'
-import { allMatched, canMatch, drop, STAGES, TARGETS, VESICLES, type Matches, type Stage, type Target, type Vesicle } from './model'
+import { allMatched, ANSWER, canMatch, drop, STAGES, TARGETS, VESICLES, type Matches, type Stage, type Target, type Vesicle } from './model'
 
 const STAGE_KEY: Record<Stage, UiKey> = { plate: 'stagePlate', groove: 'stageGroove', tube: 'stageTube', three: 'stageThree', five: 'stageFive' }
 const VESICLE_KEY: Record<Vesicle, UiKey> = {
@@ -17,14 +17,18 @@ const TARGET_KEY: Record<Target, UiKey> = {
 /** A press that moves further than this (px) is a drag, not a tap. */
 const DRAG_PX = 8
 
-export function UnfoldingSim({ onGoalMet }: SimProps) {
+export function UnfoldingSim({ onGoalMet, goalMet: reached }: SimProps) {
   const { lang } = useLang()
-  const [i, setI] = useState(0)
-  const [matches, setMatches] = useState<Matches>({})
+  // Coming back after the goal was reached: show the finished board.
+  const [i, setI] = useState(reached ? STAGES.length - 1 : 0)
+  const [matches, setMatches] = useState<Matches>(reached ? { ...ANSWER } : {})
   const [selected, setSelected] = useState<Vesicle | null>(null)
   const [wrong, setWrong] = useState<Vesicle | null>(null)
-  const drag = useRef<{ v: Vesicle; x: number; y: number; moved: boolean } | null>(null)
-  const goalSent = useRef(false)
+  const [drag, setDrag] = useState<{ v: Vesicle; x: number; y: number; dx: number; dy: number; moved: boolean } | null>(null)
+  const [over, setOver] = useState<Target | null>(null)
+  /** The vesicle a drag just ended on: its trailing click must not count as a tap. */
+  const justDragged = useRef<Vesicle | null>(null)
+  const goalSent = useRef(reached)
   const stage = STAGES[i]
 
   const place = (v: Vesicle, target: Target) => {
@@ -38,25 +42,43 @@ export function UnfoldingSim({ onGoalMet }: SimProps) {
     if (allMatched(matches) && !goalSent.current) { goalSent.current = true; onGoalMet() }
   }, [matches, onGoalMet])
 
+  /** The target under the pointer, looking past the dragged vesicle that sits on top of it. */
+  const targetAt = (x: number, y: number): Target | null => {
+    const stack = document.elementsFromPoint?.(x, y) ?? [document.elementFromPoint?.(x, y)]
+    for (const el of stack) {
+      const t = el?.closest<HTMLElement>('[data-target]')?.dataset.target
+      if (t) return t as Target
+    }
+    return null
+  }
+
   const onDown = (e: PointerEvent<HTMLButtonElement>, v: Vesicle) => {
     if (e.button !== 0) return
     e.currentTarget.setPointerCapture?.(e.pointerId)
-    drag.current = { v, x: e.clientX, y: e.clientY, moved: false }
+    justDragged.current = null
+    setDrag({ v, x: e.clientX, y: e.clientY, dx: 0, dy: 0, moved: false })
   }
   const onMove = (e: PointerEvent<HTMLButtonElement>) => {
-    const d = drag.current
-    if (d && Math.hypot(e.clientX - d.x, e.clientY - d.y) > DRAG_PX) d.moved = true
+    if (!drag) return
+    const dx = e.clientX - drag.x
+    const dy = e.clientY - drag.y
+    const moved = drag.moved || Math.hypot(dx, dy) > DRAG_PX
+    setDrag({ ...drag, dx, dy, moved })
+    setOver(moved ? targetAt(e.clientX, e.clientY) : null)
   }
-  const onUp = (e: PointerEvent<HTMLButtonElement>) => {
-    const d = drag.current
+  const endDrag = (e: PointerEvent<HTMLButtonElement>, dropIt: boolean) => {
+    const d = drag
+    setDrag(null)
+    setOver(null)
     if (!d?.moved) return
-    const el = document.elementFromPoint?.(e.clientX, e.clientY)?.closest<HTMLElement>('[data-target]')
-    if (el) place(d.v, el.dataset.target as Target)
+    justDragged.current = d.v
+    const target = dropIt ? targetAt(e.clientX, e.clientY) : null
+    if (target) place(d.v, target)
   }
   const onTapVesicle = (v: Vesicle) => {
-    const d = drag.current
-    drag.current = null
-    if (d?.moved || matches[v]) return
+    const fromDrag = justDragged.current === v
+    justDragged.current = null
+    if (fromDrag || matches[v]) return
     setWrong(null)
     setSelected(selected === v ? null : v)
   }
@@ -82,9 +104,10 @@ export function UnfoldingSim({ onGoalMet }: SimProps) {
             <ul className="unfold__col">
               {VESICLES.map((v) => (
                 <li key={v}>
-                  <button type="button" className="unfold__ves" style={{ '--c': VESICLE_COLORS[v] } as React.CSSProperties}
+                  <button type="button" className={`unfold__ves ${drag?.v === v && drag.moved ? 'unfold__ves--dragging' : ''}`}
+                    style={{ '--c': VESICLE_COLORS[v], ...(drag?.v === v && drag.moved ? { transform: `translate(${drag.dx}px, ${drag.dy}px)` } : {}) } as React.CSSProperties}
                     aria-pressed={selected === v} data-matched={matches[v] ? 'true' : undefined} disabled={!!matches[v]}
-                    onPointerDown={(e) => onDown(e, v)} onPointerMove={onMove} onPointerUp={onUp}
+                    onPointerDown={(e) => onDown(e, v)} onPointerMove={onMove} onPointerUp={(e) => endDrag(e, true)} onPointerCancel={(e) => endDrag(e, false)}
                     onClick={() => onTapVesicle(v)}>
                     {t(VESICLE_KEY[v], lang)}
                   </button>
@@ -96,7 +119,7 @@ export function UnfoldingSim({ onGoalMet }: SimProps) {
                 const v = vesicleFor(target)
                 return (
                   <li key={target}>
-                    <button type="button" className="unfold__tgt" data-target={target} disabled={!!v}
+                    <button type="button" className={`unfold__tgt ${over === target ? 'unfold__tgt--over' : ''}`} data-target={target} disabled={!!v}
                       style={v ? ({ '--c': VESICLE_COLORS[v] } as React.CSSProperties) : undefined}
                       onClick={() => selected && place(selected, target)}>
                       {t(TARGET_KEY[target], lang)}

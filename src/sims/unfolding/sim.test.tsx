@@ -5,9 +5,9 @@ import { LanguageProvider } from '../../i18n/LanguageProvider'
 import { t } from '../../i18n/t'
 import { UnfoldingSim } from './UnfoldingSim'
 
-const setup = (lang: Lang = 'en') => {
+const setup = (lang: Lang = 'en', goalMet = false) => {
   const onGoalMet = vi.fn()
-  const ui = (l: Lang) => <LanguageProvider lang={l} onLangChange={() => {}}><UnfoldingSim onGoalMet={onGoalMet} goalMet={false} /></LanguageProvider>
+  const ui = (l: Lang) => <LanguageProvider lang={l} onLangChange={() => {}}><UnfoldingSim onGoalMet={onGoalMet} goalMet={goalMet} /></LanguageProvider>
   const r = render(ui(lang))
   const slider = screen.getByLabelText(t('stageLabel', 'en'))
   const toStage = (i: number) => fireEvent.change(slider, { target: { value: String(i) } })
@@ -69,5 +69,54 @@ describe('unfolding sim', () => {
     switchTo('fr')
     const board = screen.getByRole('group', { name: t('matchPrompt', 'fr') })
     expect(within(board).getByRole('button', { name: 'Télencéphale' })).toHaveAttribute('data-matched', 'true')
+  })
+
+  test('dragging a vesicle moves it with the pointer and lights up the target under it', () => {
+    const { board, toStage } = setup()
+    toStage(4)
+    const ves = within(board()!).getByRole('button', { name: 'Telencephalon' })
+    const target = within(board()!).getByRole('button', { name: 'Cerebral hemispheres' })
+    document.elementFromPoint = () => target
+    fireEvent.pointerDown(ves, { pointerId: 1, clientX: 0, clientY: 0, button: 0 })
+    fireEvent.pointerMove(ves, { pointerId: 1, clientX: 50, clientY: 60 })
+    expect(ves).toHaveClass('unfold__ves--dragging')
+    expect(ves.style.transform).toBe('translate(50px, 60px)')
+    expect(target).toHaveClass('unfold__tgt--over')
+    fireEvent.pointerUp(ves, { pointerId: 1, clientX: 50, clientY: 60 })
+    expect(ves).toHaveAttribute('data-matched', 'true')
+    expect(ves).not.toHaveClass('unfold__ves--dragging')
+  })
+
+  test('after a drag, the next plain tap on another vesicle still selects it', () => {
+    const { board, toStage } = setup()
+    toStage(4)
+    const ves = within(board()!).getByRole('button', { name: 'Telencephalon' })
+    document.elementFromPoint = () => within(board()!).getByRole('button', { name: 'Cerebral hemispheres' })
+    fireEvent.pointerDown(ves, { pointerId: 1, clientX: 0, clientY: 0, button: 0 })
+    fireEvent.pointerMove(ves, { pointerId: 1, clientX: 50, clientY: 60 })
+    fireEvent.pointerUp(ves, { pointerId: 1, clientX: 50, clientY: 60 })
+    const next = within(board()!).getByRole('button', { name: 'Diencephalon' })
+    fireEvent.click(next)
+    expect(next).toHaveAttribute('aria-pressed', 'true')
+  })
+
+  test('coming back after the goal was reached shows the finished board', () => {
+    const { board } = setup('en', true)
+    const vesicles = within(board()!).getAllByRole('button').filter((b) => b.classList.contains('unfold__ves'))
+    expect(vesicles).toHaveLength(5)
+    for (const v of vesicles) expect(v).toHaveAttribute('data-matched', 'true')
+  })
+
+  test('a drop counts even though the dragged vesicle sits on top of the target', () => {
+    const { board, toStage } = setup()
+    toStage(4)
+    const ves = within(board()!).getByRole('button', { name: 'Diencephalon' })
+    const target = within(board()!).getByRole('button', { name: 'Thalamus and hypothalamus' })
+    document.elementFromPoint = () => ves
+    document.elementsFromPoint = () => [ves, target, document.body]
+    fireEvent.pointerDown(ves, { pointerId: 1, clientX: 0, clientY: 0, button: 0 })
+    fireEvent.pointerMove(ves, { pointerId: 1, clientX: 300, clientY: 0 })
+    fireEvent.pointerUp(ves, { pointerId: 1, clientX: 300, clientY: 0 })
+    expect(ves).toHaveAttribute('data-matched', 'true')
   })
 })
