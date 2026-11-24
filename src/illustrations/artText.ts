@@ -185,6 +185,14 @@ export const ART_TEXT: Record<string, { fr: string; zh: string }> = {
   auditory: { fr: "auditif", zh: "听觉区" },
   Wernicke: { fr: "Wernicke", zh: "韦尼克区" },
   brainstem: { fr: "tronc cérébral", zh: "脑干" },
+  "Cranial nerves seen from below": { fr: "Les nerfs crâniens vus de dessous", zh: "从下方看脑神经" },
+  "I olfactory: smell": { fr: "I olfactif : odorat", zh: "I 嗅神经：嗅觉" },
+  "II optic: sight": { fr: "II optique : vision", zh: "II 视神经：视觉" },
+  "III oculomotor: eye": { fr: "III oculomoteur : œil", zh: "III 动眼神经：眼球运动" },
+  "V trigeminal: face, jaw": { fr: "V trijumeau : visage, mâchoire", zh: "V 三叉神经：面部感觉、咀嚼" },
+  "VII facial: expression": { fr: "VII facial : mimique", zh: "VII 面神经：面部表情" },
+  "X vagus: heart, gut": { fr: "X vague : cœur, intestin", zh: "X 迷走神经：心脏、肠道" },
+  "XII hypoglossal: tongue": { fr: "XII hypoglosse : langue", zh: "XII 舌下神经：舌" },
 }
 
 /** An illustration's text in the given language (English if there is no translation). */

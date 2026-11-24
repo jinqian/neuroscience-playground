@@ -1,0 +1,68 @@
+id: u03-b06
+type: bite
+title: { en: "Twelve pairs from the brain", fr: "Douze paires venues du cerveau", zh: "从脑发出的十二对神经" }
+sources: ["Nerves"]
+cards:
+  - id: c1
+    illustration: cranial-nerves
+    explore3d: [brainstem]
+    body:
+      en: >-
+        Nerves are bundles of axons outside the CNS. Thirty-one pairs of [[spinal-nerve|spinal nerves]] leave
+        the spinal cord, one pair per segment. Twelve pairs of [[cranial-nerve|cranial nerves]] leave the brain
+        itself, most of them from the [[brainstem]]. They are numbered from front to back with Roman numerals,
+        I to XII.
+      fr: "Les nerfs sont des faisceaux d'axones situés hors du SNC. Trente et une paires de [[spinal-nerve|nerfs spinaux]] quittent la moelle épinière, une paire par segment. Douze paires de [[cranial-nerve|nerfs crâniens]] quittent directement l'encéphale, la plupart depuis le [[brainstem|tronc cérébral]]. On les numérote d'avant en arrière en chiffres romains, de I à XII."
+      zh: "神经是中枢神经系统之外的轴突束。三十一对[[spinal-nerve|脊神经]]从脊髓发出，每个节段一对。十二对[[cranial-nerve|脑神经]]直接从脑发出，其中大多数来自[[brainstem|脑干]]。它们按从前到后的顺序，用罗马数字I到XII编号。"
+  - id: c2
+    body:
+      en: >-
+        A few to know. The [[olfactory-nerve|olfactory (I)]] carries smell and the [[optic-nerve|optic (II)]]
+        carries sight. The [[oculomotor-nerve|oculomotor (III)]] moves the eye. The
+        [[trigeminal-nerve|trigeminal (V)]] feels the face and works the jaw. The [[facial-nerve|facial (VII)]]
+        moves the face. The [[vagus-nerve|vagus (X)]] wanders down to the heart and gut. The
+        [[hypoglossal-nerve|hypoglossal (XII)]] moves the tongue.
+      fr: "Quelques-uns à connaître. Le [[olfactory-nerve|nerf olfactif (I)]] transmet l'odorat et le [[optic-nerve|nerf optique (II)]] la vision. Le [[oculomotor-nerve|nerf oculomoteur (III)]] fait bouger l'œil. Le [[trigeminal-nerve|nerf trijumeau (V)]] donne la sensibilité du visage et actionne la mâchoire. Le [[facial-nerve|nerf facial (VII)]] fait bouger le visage. Le [[vagus-nerve|nerf vague (X)]] descend jusqu'au cœur et à l'intestin. Le [[hypoglossal-nerve|nerf hypoglosse (XII)]] fait bouger la langue."
+      zh: "有几对值得记住。[[olfactory-nerve|嗅神经（I）]]传递嗅觉，[[optic-nerve|视神经（II）]]传递视觉。[[oculomotor-nerve|动眼神经（III）]]使眼球运动。[[trigeminal-nerve|三叉神经（V）]]负责面部感觉并控制咀嚼。[[facial-nerve|面神经（VII）]]控制面部表情。[[vagus-nerve|迷走神经（X）]]一路延伸到心脏和肠道。[[hypoglossal-nerve|舌下神经（XII）]]控制舌的运动。"
+questions:
+  - id: q1
+    kind: match
+    prompt: { en: "Match each cranial nerve to its job.", fr: "Associez chaque nerf crânien à son rôle.", zh: "把每对脑神经与它的工作配对。" }
+    pairs:
+      - { id: p1, left: { en: "Optic (II)", fr: "Optique (II)", zh: "视神经（II）" }, right: { en: "Sight", fr: "Vision", zh: "视觉" } }
+      - { id: p2, left: { en: "Trigeminal (V)", fr: "Trijumeau (V)", zh: "三叉神经（V）" }, right: { en: "Feeling in the face, chewing", fr: "Sensibilité du visage, mastication", zh: "面部感觉、咀嚼" } }
+      - { id: p3, left: { en: "Facial (VII)", fr: "Facial (VII)", zh: "面神经（VII）" }, right: { en: "Facial expression", fr: "Mimique du visage", zh: "面部表情" } }
+      - { id: p4, left: { en: "Hypoglossal (XII)", fr: "Hypoglosse (XII)", zh: "舌下神经（XII）" }, right: { en: "Moving the tongue", fr: "Mouvements de la langue", zh: "舌的运动" } }
+    explain: { en: "Feeling the face is V; moving it is VII.", fr: "Sentir le visage, c'est le V ; le faire bouger, c'est le VII.", zh: "感觉面部靠V，活动面部靠VII。" }
+  - id: q2
+    kind: mc
+    prompt: { en: "Where do most cranial nerves leave the brain?", fr: "D'où sortent la plupart des nerfs crâniens ?", zh: "大多数脑神经从脑的哪里发出？" }
+    options:
+      - { id: a, text: { en: "The brainstem", fr: "Le tronc cérébral", zh: "脑干" } }
+      - { id: b, text: { en: "The frontal lobe", fr: "Le lobe frontal", zh: "额叶" } }
+      - { id: c, text: { en: "The cerebellum", fr: "Le cervelet", zh: "小脑" } }
+    answer: a
+    explain: { en: "Ten of the twelve pairs attach to the [[brainstem]]; only I and II attach higher up.", fr: "Dix des douze paires s'attachent au [[brainstem|tronc cérébral]] ; seuls le I et le II s'attachent plus haut.", zh: "十二对中有十对连在[[brainstem|脑干]]上，只有I和II连接在更高的位置。" }
+  - id: q3
+    kind: gap
+    prompt: { en: "There are ___ pairs of cranial nerves.", fr: "Il y a ___ paires de nerfs crâniens.", zh: "脑神经共有___对。" }
+    options:
+      - { id: a, text: { en: "12", fr: "12", zh: "12" } }
+      - { id: b, text: { en: "31", fr: "31", zh: "31" } }
+      - { id: c, text: { en: "8", fr: "8", zh: "8" } }
+    answer: a
+    explain: { en: "12 cranial pairs; 31 spinal pairs.", fr: "12 paires crâniennes ; 31 paires spinales.", zh: "脑神经12对；脊神经31对。" }
+  - id: q4
+    kind: tfwhy
+    statement: { en: "A cranial nerve reaches all the way to the gut.", fr: "Un nerf crânien va jusqu'à l'intestin.", zh: "有一对脑神经一直延伸到肠道。" }
+    isTrue: true
+    reasons:
+      - { id: r1, text: { en: "The vagus nerve (X) wanders down to the heart, lungs and gut.", fr: "Le nerf vague (X) descend jusqu'au cœur, aux poumons et à l'intestin.", zh: "迷走神经（X）一路延伸到心脏、肺和肠道。" } }
+      - { id: r2, text: { en: "The hypoglossal nerve continues down from the tongue to the stomach.", fr: "Le nerf hypoglosse continue de la langue jusqu'à l'estomac.", zh: "舌下神经从舌一直延伸到胃。" } }
+    answerReason: r1
+    explain: { en: "'Vagus' means wandering. It is the main nerve of the [[parasympathetic-nervous-system|parasympathetic]] system.", fr: "« Vague » veut dire errant. C'est le principal nerf du système [[parasympathetic-nervous-system|parasympathique]].", zh: "“迷走”就是游走的意思。它是[[parasympathetic-nervous-system|副交感]]神经系统的主要神经。" }
+  - id: q5
+    kind: tap3d
+    prompt: { en: "Find the part of the brain where most cranial nerves leave.", fr: "Trouvez la partie du cerveau d'où sortent la plupart des nerfs crâniens.", zh: "找到大多数脑神经发出的那部分脑。" }
+    structure: brainstem
+    explain: { en: "The brainstem: midbrain, pons and medulla.", fr: "Le tronc cérébral : mésencéphale, pont et bulbe.", zh: "脑干：中脑、脑桥和延髓。" }

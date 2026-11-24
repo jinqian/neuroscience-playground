@@ -3,6 +3,7 @@ import { ActionPotentialArt } from './actionPotential'
 import { AUTONOMIC_REGIONS, AutonomicArt } from './autonomic'
 import { CNS_PNS_REGIONS, CnsPnsArt } from './cnsPns'
 import { CortexFoldingArt } from './cortexFolding'
+import { CranialNervesArt } from './cranialNerves'
 import { FlatMapArt } from './flatMap'
 import { FOREBRAIN_TRACT_REGIONS, ForebrainTractsArt } from './forebrainTracts'
 import { GliaArt } from './glia'
@@ -43,6 +44,7 @@ export const ILLUSTRATIONS: Record<string, FC> = {
   'cortex-folding': CortexFoldingArt,
   'forebrain-tracts': () => <ForebrainTractsArt labels />,
   'flat-map': FlatMapArt,
+  'cranial-nerves': CranialNervesArt,
   'lateral-brain': () => <LateralBrainArt labels />,
 }
 
