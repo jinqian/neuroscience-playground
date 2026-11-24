@@ -7,7 +7,7 @@ import type { Structure, Unit } from '../content/schema'
 import { pick, type Lang } from '../i18n/lang'
 import { bakeGeometry } from './geometry'
 import { toonGradient } from './toon'
-import { CORTEX, hoverColor, nodeToStructure, visualState, zoneColor, type Hemisphere } from './visual'
+import { hoverColor, isCortical, nodeToStructure, visualState, withParts, zoneColor, type Hemisphere } from './visual'
 
 export const MODEL_URL = `${import.meta.env.BASE_URL}models/brain.glb`
 
@@ -24,6 +24,8 @@ export type BrainCanvasProps = {
   translucentCortex: boolean
   /** When false, a see-through cortex ignores taps so the parts inside it can be picked. Default true. */
   cortexPickable?: boolean
+  /** Structures that stay solid even when the cortex is see-through (e.g. the part a question asks for). */
+  keepSolid?: string[]
   hemisphere: Hemisphere
   /** Bump to re-frame the camera. */
   resetKey?: number
@@ -69,9 +71,12 @@ function Brain(props: BrainCanvasProps & { controls: React.RefObject<OrbitContro
     return props.units.find((u) => u.id === s?.units[0])?.color
   }
 
+  // A lobe shown or lit up brings its parts (motor strip, Wernicke's area…) along.
+  const highlight = useMemo(() => withParts(props.highlight ?? [], props.structures), [props.highlight, props.structures])
+  const only = useMemo(() => (props.only ? withParts(props.only, props.structures) : undefined), [props.only, props.structures])
   const visible = parts.map((p) => ({
     ...p,
-    state: visualState(p.structure, { discovered, highlight: props.highlight ?? [], only: props.only, hemisphere: props.hemisphere, node: p.node }),
+    state: visualState(p.structure, { discovered, highlight, only, hemisphere: props.hemisphere, node: p.node }),
   }))
 
   // Frame the camera on the focus parts (or everything).
@@ -104,7 +109,7 @@ function Brain(props: BrainCanvasProps & { controls: React.RefObject<OrbitContro
     <group>
       {visible.map((p) => {
         if (p.state === 'hidden') return null
-        const isCortex = CORTEX.includes(p.structure)
+        const isCortex = isCortical(p.structure, props.structures) && !props.keepSolid?.includes(p.structure)
         const see = props.translucentCortex && isCortex
         const passThrough = see && props.cortexPickable === false
         const color = hovered === p.structure && props.onPick ? hoverColor(p.structure, unitColorOf(p.structure)) : zoneColor(p.structure, p.state, unitColorOf(p.structure))

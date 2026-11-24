@@ -4,7 +4,7 @@ import { useLang } from '../i18n/LanguageProvider'
 import { t } from '../i18n/t'
 import { StructureChoice } from '../lesson/questions/StructureChoice'
 import { BrainView } from './BrainView'
-import { CORTEX, resolvePick } from './visual'
+import { isSurface, resolvePick } from './visual'
 
 type Props = { answer: string; seed: string; picked?: string; onPick(id: string): void; disabled: boolean; candidates?: string[] }
 
@@ -16,9 +16,7 @@ export function StructurePicker(props: Props) {
   const list = <StructureChoice {...props} />
   if (!target || target.twoDOnly) return list
   // A deep target sits inside the cortex: show the cortex see-through and let taps pass through it.
-  // Parts of a lobe (e.g. the motor strip) are on the surface too.
-  const onSurface = (id?: string) => !!id && CORTEX.includes(id)
-  const deep = !onSurface(props.answer) && !onSurface(target.partOf)
+  const deep = !isSurface(props.answer, structures)
   const pickedName = props.picked ? structures.find((s) => s.id === props.picked)?.name : undefined
   return (
     <div className="picker">
@@ -26,6 +24,7 @@ export function StructurePicker(props: Props) {
         labels={false}
         translucentCortex={deep}
         cortexPickable={!deep}
+        keepSolid={[props.answer]}
         hemisphere="both"
         only={props.candidates}
         highlight={props.picked ? [props.picked] : []}

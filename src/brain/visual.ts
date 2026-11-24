@@ -79,3 +79,22 @@ export function resolvePick(structures: Structure[], tapped: string, target: str
   if (tapped === target) return target
   return structures.find((s) => s.id === tapped)?.partOf === target ? target : tapped
 }
+
+const partOf = (id: string, structures: Structure[]) => structures.find((s) => s.id === id)?.partOf
+
+/** On the outer surface: a lobe, or a part of a lobe (e.g. the motor strip). */
+export function isSurface(id: string, structures: Structure[]): boolean {
+  const parent = partOf(id, structures)
+  return CORTEX.includes(id) || (!!parent && CORTEX.includes(parent))
+}
+
+/** The cortical sheet that goes see-through together: the lobes, their parts, and the insula folded inside them. */
+export function isCortical(id: string, structures: Structure[]): boolean {
+  return isSurface(id, structures) || id === 'insula'
+}
+
+/** `ids` plus every part of them: showing or lighting up a lobe includes its strips and areas. */
+export function withParts(ids: string[], structures: Structure[]): string[] {
+  const parts = structures.filter((s) => s.partOf && ids.includes(s.partOf) && !ids.includes(s.id)).map((s) => s.id)
+  return [...ids, ...parts]
+}

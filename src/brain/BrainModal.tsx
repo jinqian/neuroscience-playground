@@ -6,7 +6,7 @@ import { t } from '../i18n/t'
 import { Button } from '../ui/Button'
 import { BrainView, NoWebGL } from './BrainView'
 import { StructureList } from './StructureList'
-import { CORTEX, resolvePick } from './visual'
+import { isSurface, resolvePick } from './visual'
 
 /** Full-screen 3D view focused on a lesson's structures, with "find it" prompts. */
 export function BrainModal({ structures: ids, onClose }: { structures: string[]; onClose(): void }) {
@@ -51,7 +51,8 @@ export function BrainModal({ structures: ids, onClose }: { structures: string[];
         )}
         <BrainView
           labels={result === 'found'}
-          translucentCortex={meshed.some((id) => !CORTEX.includes(id))}
+          translucentCortex={meshed.some((id) => !isSurface(id, all))}
+          keepSolid={meshed}
           hemisphere="both"
           highlight={result === 'found' ? [target] : []}
           focus={meshed}

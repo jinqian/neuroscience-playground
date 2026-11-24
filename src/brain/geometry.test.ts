@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import { describe, expect, test } from 'vitest'
 import { bakeGeometry } from './geometry'
-import { BASE, STRUCTURE_COLORS, hoverColor, zoneColor } from './visual'
+import { BASE, STRUCTURE_COLORS, hoverColor, isCortical, isSurface, withParts, zoneColor } from './visual'
 
 describe('bakeGeometry', () => {
   test('turns quantized local positions into world-space floats', () => {
@@ -44,5 +44,26 @@ describe('zone colours', () => {
   })
   test('a highlighted zone without its own colour falls back to the given unit colour', () => {
     expect(zoneColor('hippocampus', 'highlight', '#123456')).toBe('#123456')
+  })
+})
+
+describe('lobe parts in 3D', () => {
+  const t = (en: string) => ({ en })
+  const s = (id: string, partOf?: string) => ({ id, name: t(id), note: t('n'), units: [], meshNodes: [id], ...(partOf ? { partOf } : {}) })
+  const structures = [s('frontal-lobe'), s('temporal-lobe'), s('motor-strip', 'frontal-lobe'), s('wernicke-area', 'temporal-lobe'), s('insula'), s('ventricles')]
+
+  test('lobes, their parts and the insula form the cortical sheet that goes see-through', () => {
+    expect(['frontal-lobe', 'motor-strip', 'wernicke-area', 'insula'].every((id) => isCortical(id, structures))).toBe(true)
+    expect(isCortical('ventricles', structures)).toBe(false)
+  })
+  test('only lobes and their parts count as on the surface; the insula is hidden inside', () => {
+    expect(isSurface('motor-strip', structures)).toBe(true)
+    expect(isSurface('frontal-lobe', structures)).toBe(true)
+    expect(isSurface('insula', structures)).toBe(false)
+    expect(isSurface('ventricles', structures)).toBe(false)
+  })
+  test('showing or lighting up a lobe includes its parts', () => {
+    expect(withParts(['frontal-lobe', 'ventricles'], structures).sort()).toEqual(['frontal-lobe', 'motor-strip', 'ventricles'])
+    expect(withParts(['motor-strip'], structures)).toEqual(['motor-strip'])
   })
 })

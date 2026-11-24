@@ -15,6 +15,7 @@ const structures: Structure[] = [
   { id: 'frontal-lobe', name: t('Frontal lobe'), note: t('n'), units: [], meshNodes: ['frontal-lobe_L'] },
   { id: 'corpus-callosum', name: t('Corpus callosum'), note: t('n'), units: [], meshNodes: ['corpus-callosum'] },
   { id: 'motor-strip', name: t('Motor strip'), note: t('n'), units: [], meshNodes: ['motor-strip_L'], partOf: 'frontal-lobe' },
+  { id: 'insula', name: t('Insula'), note: t('n'), units: [], meshNodes: ['insula_L'] },
 ]
 
 function pickerProps(answer: string, onPick: (id: string) => void = () => {}) {
@@ -39,6 +40,11 @@ describe('3D structure picker', () => {
     const p = pickerProps('frontal-lobe')
     expect(p.translucentCortex).toBe(false)
     expect(p.cortexPickable).toBe(true)
+  })
+  test('the insula, hidden inside, shows a see-through cortex but stays solid itself', () => {
+    const p = pickerProps('insula')
+    expect(p.translucentCortex).toBe(true)
+    expect(p.keepSolid).toEqual(['insula'])
   })
   test('a surface part of a lobe keeps the cortex solid and tappable', () => {
     const p = pickerProps('motor-strip')
