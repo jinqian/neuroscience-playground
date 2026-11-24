@@ -1,0 +1,60 @@
+id: u03-b09
+type: bite
+title: { en: "When words fail", fr: "Quand les mots manquent", zh: "当语言失灵" }
+sources: ["Aphasia"]
+cards:
+  - id: c1
+    illustration: lateral-brain
+    body:
+      en: >-
+        [[aphasia|Aphasia]] is a loss of language after brain damage, usually in the left hemisphere. In
+        [[brocas-aphasia|Broca's aphasia]], damage to [[broca-area|Broca's area]] in the left frontal lobe makes
+        speech slow, effortful and telegraphic: 'Walk… dog… park.' Understanding is mostly kept, and people know
+        their words are failing. The right arm and face are often weak, since the motor strip is next door.
+      fr: "L'[[aphasia|aphasie]] est une perte du langage après une lésion cérébrale, le plus souvent dans l'hémisphère gauche. Dans l'[[brocas-aphasia|aphasie de Broca]], une lésion de l'[[broca-area|aire de Broca]], dans le lobe frontal gauche, rend la parole lente, laborieuse et télégraphique : « Promener… chien… parc. » La compréhension est en grande partie conservée, et la personne sait que ses mots lui échappent. Le bras droit et le visage sont souvent faibles, car la bande motrice est juste à côté."
+      zh: "[[aphasia|失语症]]是脑损伤后语言能力的丧失，损伤通常在左半球。在[[brocas-aphasia|布罗卡失语]]中，左侧额叶的[[broca-area|布罗卡区]]受损，使说话变得缓慢、费力，像电报一样：“遛……狗……公园。”理解能力大多保留，患者也知道自己说不出话来。右臂和面部常常无力，因为运动带就在旁边。"
+  - id: c2
+    explore3d: [wernicke-area]
+    body:
+      en: >-
+        In [[wernickes-aphasia|Wernicke's aphasia]], damage to [[wernicke-area|Wernicke's area]], at the back of
+        the left temporal lobe beside the hearing cortex, has the opposite effect. Speech flows easily, with a
+        normal rhythm, but makes little sense: 'I went to the thing with the, you know, the green spoon of it.'
+        Understanding is poor, and people often don't notice their own errors.
+      fr: "Dans l'[[wernickes-aphasia|aphasie de Wernicke]], une lésion de l'[[wernicke-area|aire de Wernicke]], à l'arrière du lobe temporal gauche, près du cortex auditif, a l'effet inverse. La parole coule facilement, avec un rythme normal, mais n'a guère de sens : « Je suis allé au truc avec le, vous savez, la cuillère verte de ça. » La compréhension est faible, et la personne ne remarque souvent pas ses propres erreurs."
+      zh: "在[[wernickes-aphasia|韦尼克失语]]中，[[wernicke-area|韦尼克区]]受损，它位于左侧颞叶后部、紧挨着听觉皮层，效果正好相反。说话流畅自如，节奏正常，却几乎没有意义：“我去了那个东西，你知道的，那个绿色的勺子。”理解能力很差，患者常常注意不到自己的错误。"
+questions:
+  - id: q1
+    kind: tap2d
+    prompt: { en: "Tap [[broca-area|Broca's area]].", fr: "Touchez l'[[broca-area|aire de Broca]].", zh: "点击[[broca-area|布罗卡区]]。" }
+    figure: lateral-brain
+    answer: broca
+    explain: { en: "Low in the left frontal lobe, just in front of the motor strip's face area.", fr: "En bas du lobe frontal gauche, juste devant la zone de la bande motrice qui commande le visage.", zh: "位于左侧额叶下部，紧挨在运动带控制面部的区域前方。" }
+  - id: q2
+    kind: tap2d
+    prompt: { en: "Tap [[wernicke-area|Wernicke's area]].", fr: "Touchez l'[[wernicke-area|aire de Wernicke]].", zh: "点击[[wernicke-area|韦尼克区]]。" }
+    figure: lateral-brain
+    answer: wernicke
+    explain: { en: "At the back of the left superior temporal gyrus, right behind the auditory cortex.", fr: "À l'arrière du gyrus temporal supérieur gauche, juste derrière le cortex auditif.", zh: "位于左侧颞上回后部，就在听觉皮层后面。" }
+  - id: q3
+    kind: match
+    prompt: { en: "Match each way of speaking to what it suggests.", fr: "Associez chaque façon de parler à ce qu'elle suggère.", zh: "把每种说话方式与它所提示的情况配对。" }
+    pairs:
+      - { id: p1, left: { en: "'Walk… dog… park.'", fr: "« Promener… chien… parc. »", zh: "“遛……狗……公园。”" }, right: { en: "Broca's aphasia", fr: "Aphasie de Broca", zh: "布罗卡失语" } }
+      - { id: p2, left: { en: "'The Tuesday went to the cheerful fork, you know.'", fr: "« Le mardi est allé à la fourchette joyeuse, vous savez. »", zh: "“星期二去了那把快乐的叉子，你知道的。”" }, right: { en: "Wernicke's aphasia", fr: "Aphasie de Wernicke", zh: "韦尼克失语" } }
+      - { id: p3, left: { en: "'I'd like a glass of water, please.'", fr: "« Je voudrais un verre d'eau, s'il vous plaît. »", zh: "“请给我一杯水。”" }, right: { en: "No aphasia", fr: "Pas d'aphasie", zh: "没有失语" } }
+    explain: { en: "Broca's: few words, hard work. Wernicke's: many words, little meaning.", fr: "Broca : peu de mots, beaucoup d'effort. Wernicke : beaucoup de mots, peu de sens.", zh: "布罗卡失语：话少而费力。韦尼克失语：话多而无意义。" }
+  - id: q4
+    kind: mc
+    prompt: { en: "Why is the right arm often weak in Broca's aphasia?", fr: "Pourquoi le bras droit est-il souvent faible dans l'aphasie de Broca ?", zh: "为什么布罗卡失语常伴有右臂无力？" }
+    options:
+      - { id: a, text: { en: "The damage often reaches the left motor strip just behind Broca's area", fr: "La lésion atteint souvent la bande motrice gauche, juste derrière l'aire de Broca", zh: "损伤常常波及布罗卡区后方的左侧运动带" } }
+      - { id: b, text: { en: "Broca's area itself moves the arm", fr: "L'aire de Broca fait elle-même bouger le bras", zh: "布罗卡区本身控制手臂运动" } }
+      - { id: c, text: { en: "People with aphasia stop using their arms", fr: "Les personnes aphasiques cessent d'utiliser leurs bras", zh: "失语症患者不再使用手臂" } }
+    answer: a
+    explain: { en: "Neighbours get hit together, and the left motor strip moves the right side.", fr: "Les voisines sont touchées ensemble, et la bande motrice gauche fait bouger le côté droit.", zh: "相邻区域往往一起受损，而左侧运动带控制身体右侧。" }
+  - id: q5
+    kind: tap3d
+    prompt: { en: "Find Wernicke's area.", fr: "Trouvez l'aire de Wernicke.", zh: "找到韦尼克区。" }
+    structure: wernicke-area
+    explain: { en: "The back of the left superior temporal gyrus. (Broca's area isn't in this 3D model.)", fr: "L'arrière du gyrus temporal supérieur gauche. (L'aire de Broca n'est pas dans ce modèle 3D.)", zh: "左侧颞上回的后部。（这个3D模型里没有布罗卡区。）" }
