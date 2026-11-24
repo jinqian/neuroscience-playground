@@ -6,6 +6,7 @@ import { CortexFoldingArt } from './cortexFolding'
 import { FlatMapArt } from './flatMap'
 import { FOREBRAIN_TRACT_REGIONS, ForebrainTractsArt } from './forebrainTracts'
 import { GliaArt } from './glia'
+import { LATERAL_REGIONS, LateralBrainArt } from './lateralBrain'
 import { MeningesArt, MENINGES_REGIONS } from './meninges'
 import { MembraneArt } from './membrane'
 import { MyelinArt } from './myelin'
@@ -42,6 +43,7 @@ export const ILLUSTRATIONS: Record<string, FC> = {
   'cortex-folding': CortexFoldingArt,
   'forebrain-tracts': () => <ForebrainTractsArt labels />,
   'flat-map': FlatMapArt,
+  'lateral-brain': () => <LateralBrainArt labels />,
 }
 
 /** Tappable figures by id, with the region ids a learner can tap. */
@@ -50,6 +52,7 @@ export const FIGURES: Record<string, { Component: FC<FigureProps>; regions: stri
   'cns-pns': { Component: (p) => <CnsPnsArt onTap={p.onTap} picked={p.picked} />, regions: CNS_PNS_REGIONS },
   meninges: { Component: (p) => <MeningesArt onTap={p.onTap} picked={p.picked} />, regions: MENINGES_REGIONS },
   'forebrain-tracts': { Component: (p) => <ForebrainTractsArt onTap={p.onTap} picked={p.picked} />, regions: FOREBRAIN_TRACT_REGIONS },
+  'lateral-brain': { Component: (p) => <LateralBrainArt onTap={p.onTap} picked={p.picked} />, regions: LATERAL_REGIONS },
   'tube-defects': { Component: (p) => <TubeDefectsArt onTap={p.onTap} picked={p.picked} />, regions: TUBE_DEFECT_REGIONS },
   synapse: { Component: (p) => <SynapseArt onTap={p.onTap} picked={p.picked} />, regions: SYNAPSE_REGIONS },
   autonomic: { Component: (p) => <AutonomicArt onTap={p.onTap} picked={p.picked} />, regions: AUTONOMIC_REGIONS },

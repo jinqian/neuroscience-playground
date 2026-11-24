@@ -397,3 +397,10 @@ button { font: inherit; color: inherit; }
 .flatmap__slot { cursor: pointer; outline: none; }
 .flatmap__slot:focus-visible rect, .flatmap__slot--over rect { stroke: #ff5fa8; stroke-width: 4; stroke-dasharray: none; }
 .flatmap__slot--done { cursor: default; }
+
+/* Lesion localizer lab */
+.lesion__case { display: flex; flex-direction: column; gap: 6px; font-weight: 700; color: #fff; }
+.lesion__case p { font-size: 17px; line-height: 1.45; }
+.lesion__case--done { font-size: 18px; }
+.lesion__side { font-size: 14px; color: #a49dc2; }
+.lesion__ok { color: #9ff0b6; font-size: 14px; }

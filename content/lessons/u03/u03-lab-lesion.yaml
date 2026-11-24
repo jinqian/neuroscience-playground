@@ -1,0 +1,50 @@
+id: u03-lab-lesion
+type: lab
+title: { en: "Find the damage", fr: "Trouver la lésion", zh: "找出损伤部位" }
+sources: ["Aphasia", "Language Circuits", "CNS Regional Functions"]
+intro:
+  - id: c1
+    body:
+      en: >-
+        Neurologists work backwards: from what a patient can't do to where the damage must be. Two rules help.
+        The motor and sensory strips serve the [[contralateral]] side of the body. The cerebellum serves the
+        [[ipsilateral]] side. And for most people, language lives in the left hemisphere. Six patients are waiting.
+        Read each one, then tap the spot.
+      fr: "Les neurologues raisonnent à rebours : de ce qu'un patient ne peut plus faire jusqu'à l'endroit de la lésion. Deux règles aident. Les bandes motrice et sensitive servent le côté [[contralateral|controlatéral]] du corps. Le cervelet sert le côté [[ipsilateral|homolatéral]]. Et chez la plupart des gens, le langage se trouve dans l'hémisphère gauche. Six patients attendent. Lisez chaque cas, puis touchez l'endroit."
+      zh: "神经科医生是倒推的：从患者做不到什么，推出损伤一定在哪里。有两条规则可以帮忙。运动带和感觉带服务于身体的[[contralateral|对侧]]。小脑服务于[[ipsilateral|同侧]]。而对大多数人来说，语言位于左半球。六位患者在等你。读完每个病例，然后点击相应的位置。"
+sim: lesion
+goal: { en: "Locate the damage for all six patients.", fr: "Localisez la lésion des six patients.", zh: "为六位患者都找出损伤部位。" }
+simplified:
+  en: >-
+    Real damage is rarely so neat: a stroke or tumour often hits several neighbouring areas at once, the borders
+    of each area vary from person to person, and in some people (especially some left-handers) language sits on the right.
+  fr: "Les vraies lésions sont rarement si nettes : un AVC ou une tumeur touche souvent plusieurs zones voisines à la fois, les limites de chaque zone varient d'une personne à l'autre, et chez certaines personnes (surtout certains gauchers) le langage se trouve à droite."
+  zh: "真实的损伤很少这么整齐：中风或肿瘤常常同时波及几个相邻区域，每个区域的边界因人而异，而且有些人（尤其是部分左撇子）的语言区在右半球。"
+reflection:
+  - id: q1
+    kind: tfwhy
+    statement: { en: "Damage to the left motor strip weakens the left hand.", fr: "Une lésion de la bande motrice gauche affaiblit la main gauche.", zh: "左侧运动带受损会让左手无力。" }
+    isTrue: false
+    reasons:
+      - { id: r1, text: { en: "Motor control crosses: the left motor strip moves the right side of the body.", fr: "La commande motrice est croisée : la bande motrice gauche fait bouger le côté droit du corps.", zh: "运动控制是交叉的：左侧运动带控制身体右侧。" } }
+      - { id: r2, text: { en: "The motor strip only moves the face.", fr: "La bande motrice ne fait bouger que le visage.", zh: "运动带只控制面部。" } }
+    answerReason: r1
+    explain: { en: "The motor strip serves the [[contralateral]] side.", fr: "La bande motrice sert le côté [[contralateral|controlatéral]].", zh: "运动带服务于[[contralateral|对侧]]。" }
+  - id: q2
+    kind: mc
+    prompt: { en: "A clumsy, shaky left arm with normal strength points to damage in the…", fr: "Un bras gauche maladroit et tremblant, avec une force normale, oriente vers une lésion du…", zh: "左臂笨拙、颤抖但力量正常，提示损伤位于……" }
+    options:
+      - { id: a, text: { en: "Left cerebellum", fr: "Cervelet gauche", zh: "左侧小脑" } }
+      - { id: b, text: { en: "Right cerebellum", fr: "Cervelet droit", zh: "右侧小脑" } }
+      - { id: c, text: { en: "Right motor strip", fr: "Bande motrice droite", zh: "右侧运动带" } }
+    answer: a
+    explain: { en: "The cerebellum works on the [[ipsilateral]] side, and strength is kept, so it's not the motor strip.", fr: "Le cervelet agit du côté [[ipsilateral|homolatéral]], et la force est conservée : ce n'est donc pas la bande motrice.", zh: "小脑作用于[[ipsilateral|同侧]]，而且力量保留，所以不是运动带。" }
+  - id: q3
+    kind: mc
+    prompt: { en: "Ignoring the left side of space usually follows damage to the…", fr: "Ignorer le côté gauche de l'espace fait généralement suite à une lésion du…", zh: "忽略左侧空间通常是哪里受损所致？" }
+    options:
+      - { id: a, text: { en: "Right parietal cortex", fr: "Cortex pariétal droit", zh: "右侧顶叶皮层" } }
+      - { id: b, text: { en: "Left parietal cortex", fr: "Cortex pariétal gauche", zh: "左侧顶叶皮层" } }
+      - { id: c, text: { en: "Left visual cortex", fr: "Cortex visuel gauche", zh: "左侧视觉皮层" } }
+    answer: a
+    explain: { en: "[[hemispatial-neglect|Neglect]] is far more common and severe after right parietal damage.", fr: "La [[hemispatial-neglect|négligence]] est bien plus fréquente et sévère après une lésion pariétale droite.", zh: "右侧顶叶受损后，[[hemispatial-neglect|空间忽略]]要常见和严重得多。" }
