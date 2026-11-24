@@ -4,13 +4,13 @@ import { VESICLE_COLORS } from './vesicles'
 
 /** Where each part sits on the flat map: x, y, width, height (spinal cord at the bottom, lobes in a fan at the top). */
 export const SLOT_BOX: Record<Slot, [number, number, number, number]> = {
-  'spinal-cord': [180, 318, 80, 36],
-  medulla: [180, 270, 80, 40],
-  pons: [180, 222, 80, 40],
-  cerebellum: [276, 222, 104, 40],
-  midbrain: [180, 174, 80, 40],
-  thalamus: [180, 126, 80, 40],
-  hypothalamus: [60, 126, 104, 40],
+  'spinal-cord': [160, 318, 120, 36],
+  medulla: [160, 270, 120, 40],
+  pons: [160, 222, 120, 40],
+  cerebellum: [296, 222, 116, 40],
+  midbrain: [160, 174, 120, 40],
+  thalamus: [160, 126, 120, 40],
+  hypothalamus: [28, 126, 116, 40],
   frontal: [14, 30, 96, 52],
   parietal: [120, 22, 96, 52],
   temporal: [226, 22, 96, 52],
@@ -37,7 +37,7 @@ export function FlatMapAxis() {
   return (
     <g stroke="#c9cdd4" strokeWidth="6" strokeLinecap="round" fill="none">
       <path d="M220 336V146" />
-      <path d="M260 242H276M180 146H164" />
+      <path d="M280 242H296M160 146H144" />
       <path d="M220 126C220 100 62 104 62 82M220 126C220 96 168 90 168 74M220 126C220 96 274 90 274 74M220 126C220 100 380 104 380 82" />
     </g>
   )
@@ -56,14 +56,16 @@ export function FlatMapArt() {
         <Label x={220} y={341}>spinal cord</Label>
         <Label x={220} y={295}>medulla</Label>
         <Label x={220} y={247}>pons</Label>
-        <Label x={328} y={247}>cerebellum</Label>
+        <Label x={354} y={247}>cerebellum</Label>
         <Label x={220} y={199}>midbrain</Label>
         <Label x={220} y={151}>thalamus</Label>
-        <Label x={112} y={151}>hypothalamus</Label>
+        <Label x={86} y={151}>hypothalamus</Label>
         <Label x={62} y={61}>frontal</Label>
         <Label x={168} y={53}>parietal</Label>
         <Label x={274} y={53}>temporal</Label>
         <Label x={380} y={61}>occipital</Label>
+        <Label x={14} y={100} anchor="start">front</Label>
+        <Label x={428} y={100} anchor="end">back</Label>
       </g>
     </ArtSvg>
   )

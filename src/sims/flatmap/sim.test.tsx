@@ -64,4 +64,10 @@ describe('flat map sim', () => {
     switchTo('fr')
     expect(screen.getByRole('button', { name: `${t('fmSlot', 'fr', { n: 3 })}: ${t('fmPons', 'fr')}` })).toBeInTheDocument()
   })
+
+  test("a lobe put on another lobe's spot is told where the lobes go", () => {
+    const { put } = setup()
+    put('frontal', SLOTS.indexOf('occipital'))
+    expect(screen.getByRole('status')).toHaveTextContent(t('flatmapHintLobe', 'en', { label: 'Frontal lobe' }))
+  })
 })

@@ -169,7 +169,7 @@ export const uiFr: Record<keyof typeof uiEn, string> = {
   flatmapBank: "Étiquettes à placer",
   flatmapHintHigher: "{label} se trouve plus haut sur l’axe, plus près de l’avant du cerveau.",
   flatmapHintLower: "{label} se trouve plus bas sur l’axe, plus près de la moelle épinière.",
-  flatmapHintSame: "{label} est à la bonne hauteur, mais à l’autre emplacement.",
+  flatmapHintSame: "{label} est à la bonne hauteur, mais à l’emplacement d’à côté.",
   placedCount: "{n} sur {total} placées",
   fmSlot: "Emplacement {n}",
   fmSpinalCord: "Moelle épinière",
@@ -213,4 +213,7 @@ export const uiFr: Record<keyof typeof uiEn, string> = {
   whyBrainstem: "Tronc cérébral : une lésion touche en général plusieurs choses à la fois, comme les nerfs crâniens, les deux côtés du corps ou la respiration.",
   whyBrocaRight: "Cet endroit correspond à l'aire de Broca, mais à droite. Chez la plupart des gens, il aide à donner le ton et la mélodie de la parole ; une lésion ici ne cause pas d'aphasie.",
   whyWernickeRight: "Cet endroit correspond à l'aire de Wernicke, mais à droite. Chez la plupart des gens, il aide à percevoir l'émotion dans une voix ; une lésion ici ne cause pas d'aphasie.",
+  flatmapHintLobe: "{label} est un lobe, mais à un autre emplacement. Sur cette carte : le frontal à l’avant, puis le pariétal en haut, le temporal sur le côté, l’occipital à l’arrière.",
+  fmFront: "avant",
+  fmBack: "arrière",
 }

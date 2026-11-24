@@ -14,8 +14,12 @@ describe('flat map model', () => {
   test('a label dropped too high is told to go lower', () => {
     expect(place({}, 'medulla', 'thalamus').hint).toBe('lower')
   })
-  test('a label on the wrong slot at its own level gets a same-level hint', () => {
-    expect(place({}, 'cerebellum', 'pons').hint).toBe('same-level')
+  test('a part next to its partner at the same level is told to use the spot beside it', () => {
+    expect(place({}, 'cerebellum', 'pons').hint).toBe('beside')
+    expect(place({}, 'hypothalamus', 'thalamus').hint).toBe('beside')
+  })
+  test("a lobe in another lobe's spot gets a hint about where each lobe goes", () => {
+    expect(place({}, 'frontal', 'occipital').hint).toBe('lobe')
   })
   test('the goal needs all 11 slots', () => {
     const all = Object.fromEntries(SLOTS.map((s) => [s, s])) as Placed

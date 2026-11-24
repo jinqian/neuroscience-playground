@@ -209,6 +209,7 @@ export const ART_TEXT: Record<string, { fr: string; zh: string }> = {
   "6 speak": { fr: "6 parler", zh: "6 说出" },
   "Right-side match of Broca's area": { fr: "Équivalent droit de l'aire de Broca", zh: "右侧与布罗卡区对应的位置" },
   "Right-side match of Wernicke's area": { fr: "Équivalent droit de l'aire de Wernicke", zh: "右侧与韦尼克区对应的位置" },
+  back: { fr: 'arrière', zh: '后' },
 }
 
 /** An illustration's text in the given language (English if there is no translation). */

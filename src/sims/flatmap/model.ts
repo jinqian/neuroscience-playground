@@ -15,13 +15,15 @@ export const LEVEL: Record<Slot, number> = {
 
 /** Slot → the label placed on it. Labels share the slot ids. */
 export type Placed = Partial<Record<Slot, Slot>>
-export type Hint = 'higher' | 'lower' | 'same-level'
+export type Hint = 'higher' | 'lower' | 'beside' | 'lobe'
+
+const LOBES: Slot[] = ['frontal', 'parietal', 'temporal', 'occipital']
 
 /** Try to put `label` on `slot`. Only a right placement is kept; a wrong one says which way to go. */
 export function place(p: Placed, label: Slot, slot: Slot): { placed: Placed; correct: boolean; hint: Hint | null } {
   if (label === slot) return { placed: { ...p, [slot]: label }, correct: true, hint: null }
   const d = LEVEL[label] - LEVEL[slot]
-  return { placed: { ...p }, correct: false, hint: d > 0 ? 'higher' : d < 0 ? 'lower' : 'same-level' }
+  return { placed: { ...p }, correct: false, hint: d > 0 ? 'higher' : d < 0 ? 'lower' : LOBES.includes(slot) ? 'lobe' : 'beside' }
 }
 
 export function allPlaced(p: Placed): boolean {

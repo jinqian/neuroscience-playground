@@ -169,7 +169,7 @@ export const uiZh: Record<keyof typeof uiEn, string> = {
   flatmapBank: "待放置的标签",
   flatmapHintHigher: "{label}在轴上的位置更高，更靠近脑的前端。",
   flatmapHintLower: "{label}在轴上的位置更低，更靠近脊髓。",
-  flatmapHintSame: "{label}的高度对了，但应该在另一个位置。",
+  flatmapHintSame: "{label}的高度对了，但应该放在旁边那个位置。",
   placedCount: "已放置 {n}/{total}",
   fmSlot: "位置 {n}",
   fmSpinalCord: "脊髓",
@@ -213,4 +213,7 @@ export const uiZh: Record<keyof typeof uiEn, string> = {
   whyBrainstem: "脑干：受损通常同时影响多方面，比如脑神经、身体两侧或呼吸。",
   whyBrocaRight: "这个位置对应布罗卡区，但在右侧。对大多数人来说，它帮助控制说话的语调和旋律；这里受损不会导致失语。",
   whyWernickeRight: "这个位置对应韦尼克区，但在右侧。对大多数人来说，它帮助听出语音中的情绪；这里受损不会导致失语。",
+  flatmapHintLobe: "{label}是一个脑叶，但应该在另一个位置。在这张图上：额叶在前，然后是顶部的顶叶、侧面的颞叶，枕叶在后。",
+  fmFront: "前",
+  fmBack: "后",
 }

@@ -11,7 +11,7 @@ const NAME_KEY: Record<Slot, UiKey> = {
   'spinal-cord': 'fmSpinalCord', medulla: 'fmMedulla', pons: 'fmPons', cerebellum: 'fmCerebellum', midbrain: 'fmMidbrain',
   thalamus: 'fmThalamus', hypothalamus: 'fmHypothalamus', frontal: 'fmFrontal', parietal: 'fmParietal', temporal: 'fmTemporal', occipital: 'fmOccipital',
 }
-const HINT_KEY: Record<Hint, UiKey> = { higher: 'flatmapHintHigher', lower: 'flatmapHintLower', 'same-level': 'flatmapHintSame' }
+const HINT_KEY: Record<Hint, UiKey> = { higher: 'flatmapHintHigher', lower: 'flatmapHintLower', beside: 'flatmapHintSame', lobe: 'flatmapHintLobe' }
 /** The labels start in a fixed mixed-up order, so the bank doesn't give the answer away. */
 const BANK_ORDER: Slot[] = ['thalamus', 'cerebellum', 'frontal', 'medulla', 'occipital', 'midbrain', 'spinal-cord', 'temporal', 'hypothalamus', 'parietal', 'pons']
 const ALL_PLACED = Object.fromEntries(SLOTS.map((s) => [s, s])) as Placed
@@ -49,6 +49,8 @@ export function FlatMapSim({ onGoalMet, goalMet: reached }: SimProps) {
       <div className="unfold__art">
         <svg viewBox="0 0 442 364" role="group" aria-label={t('flatmapPrompt', lang)}>
           <FlatMapAxis />
+          <text x={14} y={100} className="art-label">{t('fmFront', lang)}</text>
+          <text x={428} y={100} textAnchor="end" className="art-label">{t('fmBack', lang)}</text>
           {SLOTS.map((s, i) => {
             const [x, y, w, h] = SLOT_BOX[s]
             const label = placed[s]
@@ -59,7 +61,7 @@ export function FlatMapSim({ onGoalMet, goalMet: reached }: SimProps) {
                 onClick={() => tapSlot(s)} onKeyDown={(e) => onKey(e, s)}>
                 <rect x={x} y={y} width={w} height={h} rx="10" fill={label ? SLOT_COLOR[s] : '#fff'} stroke={label ? INK : SLOT_COLOR[s]}
                   strokeWidth={label ? 2 : 3} strokeDasharray={label ? undefined : '6 4'} />
-                <text x={x + w / 2} y={y + h / 2 + 5} textAnchor="middle" className="art-label">{label ? name(label) : i + 1}</text>
+                <text x={x + w / 2} y={y + h / 2 + 5} textAnchor="middle" className="art-label" style={{ fontSize: 12 }}>{label ? name(label) : i + 1}</text>
               </g>
             )
           })}

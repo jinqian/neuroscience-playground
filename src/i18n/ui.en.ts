@@ -167,7 +167,7 @@ export const uiEn = {
   flatmapBank: "Labels to place",
   flatmapHintHigher: "{label} sits higher up the axis, nearer the front of the brain.",
   flatmapHintLower: "{label} sits lower down the axis, nearer the spinal cord.",
-  flatmapHintSame: "{label} is at the right height, but in the other spot.",
+  flatmapHintSame: "{label} is at the right height, but in the spot beside it.",
   placedCount: "{n} of {total} placed",
   fmSlot: "Spot {n}",
   fmSpinalCord: "Spinal cord",
@@ -211,4 +211,7 @@ export const uiEn = {
   whyBrainstem: "Brainstem: damage usually affects several things at once, such as cranial nerves, both sides of the body, or breathing.",
   whyBrocaRight: "This spot matches Broca's area, but on the right. For most people it helps with the tone and melody of speech; damage here doesn't cause aphasia.",
   whyWernickeRight: "This spot matches Wernicke's area, but on the right. For most people it helps read the emotion in a voice; damage here doesn't cause aphasia.",
+  flatmapHintLobe: "{label} is a lobe, but in another spot. On this map: frontal at the front, then parietal on top, temporal at the side, occipital at the back.",
+  fmFront: "front",
+  fmBack: "back",
 } as const
