@@ -89,6 +89,7 @@ export function validateContent(bundle: ContentBundle, opts: ValidateOptions): C
   bundle.structures.forEach((s, i) => {
     walk(structuresFile, s, `[${i}]`, '')
     s.units.forEach((u, j) => { if (!unitIds.has(u)) err(structuresFile, `[${i}].units[${j}]`, `unknown unit "${u}"`) })
+    if (s.partOf && !structureIds.has(s.partOf)) err(structuresFile, `[${i}].partOf`, `unknown structure "${s.partOf}"`)
   })
 
   // ---- neuron parts ----

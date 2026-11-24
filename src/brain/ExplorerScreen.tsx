@@ -9,7 +9,7 @@ import { useProgress } from '../progress/store'
 import { Button } from '../ui/Button'
 import { BrainView, NoWebGL } from './BrainView'
 import { StructureList } from './StructureList'
-import type { Hemisphere } from './visual'
+import { resolvePick, type Hemisphere } from './visual'
 
 export function ExplorerScreen() {
   const { structures, units } = useContent()
@@ -31,9 +31,10 @@ export function ExplorerScreen() {
 
   const onPick = (id: string) => {
     if (quiz && !quiz.result) {
-      const correct = id === quiz.target
+      const picked = resolvePick(structures, id, quiz.target)
+      const correct = picked === quiz.target
       recordStructureQuiz(quiz.target, correct, new Date())
-      setQuiz({ ...quiz, result: correct ? 'found' : id })
+      setQuiz({ ...quiz, result: correct ? 'found' : picked })
       return
     }
     setSelected(id)

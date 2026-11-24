@@ -4,11 +4,11 @@
 dataset: BodyParts3D_3.0_obj_99
 simplify: { ratio: 0.6, error: 0.001 }
 nodes:
-  frontal-lobe_L: { files: [FMA72654, FMA72656, FMA72662, BP51], split: left }
-  frontal-lobe_R: { files: [FMA72653, FMA72655, FMA72661, BP51], split: right }
-  parietal-lobe_L: { files: [BP49, FMA72666, FMA72668, FMA72670] }
-  parietal-lobe_R: { files: [BP50, FMA72665, FMA72667, FMA72669] }
-  temporal-lobe_L: { files: [FMA72686, FMA72688, FMA72690, FMA72706, FMA72801, FMA72805] }
+  frontal-lobe_L: { files: [FMA72654, FMA72656, BP51], split: left }
+  frontal-lobe_R: { files: [FMA72653, FMA72655, BP51], split: right }
+  parietal-lobe_L: { files: [BP49, FMA72668, FMA72670] }
+  parietal-lobe_R: { files: [BP50, FMA72667, FMA72669] }
+  temporal-lobe_L: { files: [FMA72686, FMA72688, FMA72690, FMA72706, FMA72801] }
   temporal-lobe_R: { files: [FMA72685, FMA72687, FMA72689, FMA72705, FMA72800, FMA72804] }
   occipital-lobe_L: { files: [FMA72976] }
   occipital-lobe_R: { files: [FMA72975] }
@@ -21,3 +21,10 @@ nodes:
   ventricles_L: { files: [FMA78450] }
   ventricles_R: { files: [FMA78449] }
   ventricles: { files: [FMA78454, FMA78469] }
+  motor-strip_L: { files: [FMA72662] }
+  motor-strip_R: { files: [FMA72661] }
+  sensory-strip_L: { files: [FMA72666] }
+  sensory-strip_R: { files: [FMA72665] }
+  insula_L: { files: [FMA72978] }
+  insula_R: { files: [FMA72977] }
+  wernicke-area_L: { files: [FMA72805] }

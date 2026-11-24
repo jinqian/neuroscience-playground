@@ -41,6 +41,10 @@ export const STRUCTURE_COLORS: Record<string, string> = {
   thalamus: '#f5b700',
   'corpus-callosum': '#e05a2b',
   ventricles: '#2f6fde',
+  'motor-strip': '#e8384f',
+  'sensory-strip': '#00a8a8',
+  insula: '#b5c400',
+  'wernicke-area': '#8b3fd9',
 }
 
 const FALLBACK = '#9b82ff'
@@ -66,3 +70,12 @@ export function hoverColor(structureId: string, unitColor = FALLBACK): string {
 }
 
 export const CORTEX = ['frontal-lobe', 'parietal-lobe', 'temporal-lobe', 'occipital-lobe']
+
+/**
+ * What a tap on `tapped` counts as when the learner is looking for `target`:
+ * a part of the target (e.g. the motor strip, part of the frontal lobe) counts as the target.
+ */
+export function resolvePick(structures: Structure[], tapped: string, target: string): string {
+  if (tapped === target) return target
+  return structures.find((s) => s.id === tapped)?.partOf === target ? target : tapped
+}

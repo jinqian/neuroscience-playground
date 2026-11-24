@@ -4,7 +4,7 @@ import { useLang } from '../i18n/LanguageProvider'
 import { t } from '../i18n/t'
 import { StructureChoice } from '../lesson/questions/StructureChoice'
 import { BrainView } from './BrainView'
-import { CORTEX } from './visual'
+import { CORTEX, resolvePick } from './visual'
 
 type Props = { answer: string; seed: string; picked?: string; onPick(id: string): void; disabled: boolean; candidates?: string[] }
 
@@ -27,7 +27,7 @@ export function StructurePicker(props: Props) {
         hemisphere="both"
         only={props.candidates}
         highlight={props.picked ? [props.picked] : []}
-        onPick={(id) => { if (!props.disabled) props.onPick(id) }}
+        onPick={(id) => { if (!props.disabled) props.onPick(resolvePick(structures, id, props.answer)) }}
         fallback={list}
       />
       {pickedName && <p className="picker__picked">{t('youPicked', lang, { name: pick(pickedName, lang) })}</p>}

@@ -5,6 +5,7 @@ import type { Structure } from '../content/schema'
 import { LanguageProvider } from '../i18n/LanguageProvider'
 import { fixtureBundle } from '../test/fixtures'
 import { StructurePicker } from './StructurePicker'
+import { resolvePick } from './visual'
 
 const seen: Record<string, unknown>[] = []
 vi.mock('./BrainView', () => ({ BrainView: (p: Record<string, unknown>) => { seen.push(p); return null } }))
@@ -13,14 +14,15 @@ const t = (en: string) => ({ en })
 const structures: Structure[] = [
   { id: 'frontal-lobe', name: t('Frontal lobe'), note: t('n'), units: [], meshNodes: ['frontal-lobe_L'] },
   { id: 'corpus-callosum', name: t('Corpus callosum'), note: t('n'), units: [], meshNodes: ['corpus-callosum'] },
+  { id: 'motor-strip', name: t('Motor strip'), note: t('n'), units: [], meshNodes: ['motor-strip_L'], partOf: 'frontal-lobe' },
 ]
 
-function pickerProps(answer: string) {
+function pickerProps(answer: string, onPick: (id: string) => void = () => {}) {
   seen.length = 0
   render(
     <ContentProvider bundle={{ ...fixtureBundle(), structures }}>
       <LanguageProvider lang="en" onLangChange={() => {}}>
-        <StructurePicker answer={answer} seed="q1" onPick={() => {}} disabled={false} />
+        <StructurePicker answer={answer} seed="q1" onPick={onPick} disabled={false} />
       </LanguageProvider>
     </ContentProvider>,
   )
@@ -37,5 +39,16 @@ describe('3D structure picker', () => {
     const p = pickerProps('frontal-lobe')
     expect(p.translucentCortex).toBe(false)
     expect(p.cortexPickable).toBe(true)
+  })
+  test('tapping a part of the target lobe counts as tapping the lobe', () => {
+    const got: string[] = []
+    const p = pickerProps('frontal-lobe', (id) => got.push(id))
+    ;(p.onPick as (id: string) => void)('motor-strip')
+    expect(got).toEqual(['frontal-lobe'])
+  })
+  test('resolvePick keeps the tapped part unless it belongs to the target', () => {
+    expect(resolvePick(structures, 'motor-strip', 'motor-strip')).toBe('motor-strip')
+    expect(resolvePick(structures, 'motor-strip', 'temporal-lobe')).toBe('motor-strip')
+    expect(resolvePick(structures, 'motor-strip', 'frontal-lobe')).toBe('frontal-lobe')
   })
 })

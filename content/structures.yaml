@@ -121,3 +121,75 @@
     zh: "大脑内部充满液体的空腔：两个侧脑室、第三脑室和第四脑室。它们是神经管中空部分留下来的结构，负责产生并容纳脑脊液。"
   units: [u03]
   meshNodes: [ventricles_L, ventricles_R, ventricles]
+- id: motor-strip
+  name:
+    en: "Motor strip (precentral gyrus)"
+    fr: "Bande motrice (gyrus précentral)"
+    zh: "运动带（中央前回）"
+  note:
+    en: "The primary motor cortex: the ridge just in front of the central sulcus. Each part of it moves a part of the opposite side of the body."
+    fr: "Le cortex moteur primaire : la crête juste devant le sillon central. Chacune de ses parties fait bouger une partie du côté opposé du corps."
+    zh: "初级运动皮层：中央沟正前方的那条脑回。它的每一部分控制对侧身体的一个部位的运动。"
+  units: [u03]
+  meshNodes: [motor-strip_L, motor-strip_R]
+  partOf: frontal-lobe
+- id: sensory-strip
+  name:
+    en: "Sensory strip (postcentral gyrus)"
+    fr: "Bande sensitive (gyrus postcentral)"
+    zh: "感觉带（中央后回）"
+  note:
+    en: "The primary somatosensory cortex: the ridge just behind the central sulcus. It feels touch, pain and position from the opposite side of the body."
+    fr: "Le cortex somatosensoriel primaire : la crête juste derrière le sillon central. Il perçoit le toucher, la douleur et la position du côté opposé du corps."
+    zh: "初级躯体感觉皮层：中央沟正后方的那条脑回。它感受对侧身体的触觉、痛觉和位置觉。"
+  units: [u03]
+  meshNodes: [sensory-strip_L, sensory-strip_R]
+  partOf: parietal-lobe
+- id: insula
+  name:
+    en: "Insula"
+    fr: "Insula"
+    zh: "岛叶"
+  note:
+    en: "A hidden lobe folded deep inside the lateral sulcus, covered by the frontal, parietal and temporal lobes. It handles taste and the feeling of your body's inner state."
+    fr: "Un lobe caché, replié au fond du sillon latéral et recouvert par les lobes frontal, pariétal et temporal. Il traite le goût et la perception de l'état intérieur du corps."
+    zh: "一个藏在外侧沟深处的脑叶，被额叶、顶叶和颞叶覆盖。它负责味觉以及对身体内部状态的感受。"
+  units: [u03]
+  meshNodes: [insula_L, insula_R]
+- id: wernicke-area
+  name:
+    en: "Wernicke's area"
+    fr: "Aire de Wernicke"
+    zh: "韦尼克区"
+  note:
+    en: "The back of the left superior temporal gyrus, next to the hearing cortex. It is key to understanding language; damage leaves speech fluent but empty. Shown here as that part of the gyrus."
+    fr: "L'arrière du gyrus temporal supérieur gauche, à côté du cortex auditif. Elle est essentielle à la compréhension du langage ; une lésion laisse un discours fluide mais vide. Représentée ici par cette partie du gyrus."
+    zh: "左侧颞上回的后部，紧挨着听觉皮层。它对理解语言至关重要；受损后说话流利却空洞无意义。这里用颞上回的这一部分来表示。"
+  units: [u03]
+  meshNodes: [wernicke-area_L]
+  partOf: temporal-lobe
+- id: broca-area
+  name:
+    en: "Broca's area"
+    fr: "Aire de Broca"
+    zh: "布罗卡区"
+  note:
+    en: "Part of the left inferior frontal gyrus, just in front of the motor strip's face and mouth region. It is key to producing speech; damage makes speech slow and effortful."
+    fr: "Une partie du gyrus frontal inférieur gauche, juste devant la région de la bande motrice qui commande le visage et la bouche. Elle est essentielle à la production de la parole ; une lésion rend la parole lente et laborieuse."
+    zh: "左侧额下回的一部分，位于运动带中控制面部和口部区域的正前方。它对说话至关重要；受损后说话缓慢而费力。"
+  units: [u03]
+  meshNodes: []
+  twoDOnly: true
+  partOf: frontal-lobe
+- id: cranial-nerves
+  name:
+    en: "Cranial nerves"
+    fr: "Nerfs crâniens"
+    zh: "脑神经"
+  note:
+    en: "Twelve pairs of nerves that leave the brain directly, most of them from the brainstem. They serve the head and neck, and the vagus nerve reaches the chest and gut."
+    fr: "Douze paires de nerfs qui quittent directement l'encéphale, la plupart depuis le tronc cérébral. Ils innervent la tête et le cou, et le nerf vague atteint le thorax et l'intestin."
+    zh: "直接从脑发出的十二对神经，大多数从脑干发出。它们支配头颈部，而迷走神经一直延伸到胸腔和肠道。"
+  units: [u03]
+  meshNodes: []
+  twoDOnly: true

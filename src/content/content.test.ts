@@ -164,6 +164,8 @@ describe('validator rules (one error each)', () => {
       { file: B, path: 'cards[0].body.en', msg: 'markup' }],
     ['5e markup in an answer option, which is shown as plain text', (f) => { f[B].questions[0].options[0].text.en = 'The [[soma]]' },
       { file: B, path: 'questions[0].options[0].text.en', msg: 'plain text' }],
+    ['14 structure part of an unknown structure', (f) => { f['content/structures.yaml'][0].partOf = 'brian' },
+      { file: 'content/structures.yaml', path: '[0].partOf', msg: '"brian"' }],
     ['13 case is not last', (f) => { f[U].lessons = ['u01-case-x', 'u01-b01', 'u01-lab-x'] },
       { file: U, path: 'lessons[0]', msg: 'last' }],
   ]

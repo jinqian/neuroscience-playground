@@ -86,6 +86,8 @@ export const TermSchema = z.strictObject({
 
 export const StructureSchema = z.strictObject({
   id, name: LTextSchema, note: LTextSchema, units: z.array(id), meshNodes: z.array(z.string()), twoDOnly: z.boolean().optional(),
+  /** A part of a bigger structure, e.g. the motor strip is part of the frontal lobe. */
+  partOf: id.optional(),
 })
 
 /** One part of the 3D neuron: its name, a short note and the glossary term it links to. */
