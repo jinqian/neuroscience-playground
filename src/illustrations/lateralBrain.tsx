@@ -46,8 +46,8 @@ export function LateralBrainArt({ side = 'left', ...art }: ArtProps & { side?: '
           <Label x={lx(126)} y={226}>Broca</Label>
           <Label x={lx(300)} y={110}>parietal</Label>
           <Label x={lx(404)} y={160}>visual</Label>
-          <Label x={lx(214)} y={250}>auditory</Label>
-          <Label x={lx(296)} y={232}>Wernicke</Label>
+          <Label x={lx(215)} y={216}>auditory</Label>
+          <Label x={lx(294)} y={209}>Wernicke</Label>
           <Label x={lx(356)} y={262}>cerebellum</Label>
           <Label x={lx(226)} y={300} anchor={flip('end')}>brainstem</Label>
           <Label x={lx(52)} y={56}>front</Label>

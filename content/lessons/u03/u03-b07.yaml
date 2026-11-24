@@ -1,0 +1,64 @@
+id: u03-b07
+type: bite
+title: { en: "Who does what", fr: "Qui fait quoi", zh: "各司其职" }
+sources: ["CNS Regional Functions"]
+cards:
+  - id: c1
+    illustration: lateral-brain
+    explore3d: [motor-strip, sensory-strip]
+    body:
+      en: >-
+        Each region has its specialities. The [[prefrontal-cortex]] plans and decides. Just in front of the
+        [[central-sulcus]] runs the motor strip, the [[primary-motor-cortex]]; just behind it, the sensory strip,
+        the [[primary-somatosensory-cortex]]. The occipital lobe holds the [[visual-cortex]], the temporal lobe the
+        [[auditory-cortex]]. Folded deep inside lies the [[insular-cortex|insula]], for taste and inner body feelings.
+      fr: "Chaque région a ses spécialités. Le [[prefrontal-cortex|cortex préfrontal]] planifie et décide. Juste devant le [[central-sulcus|sillon central]] court la bande motrice, le [[primary-motor-cortex|cortex moteur primaire]] ; juste derrière, la bande sensitive, le [[primary-somatosensory-cortex|cortex somatosensoriel primaire]]. Le lobe occipital abrite le [[visual-cortex|cortex visuel]], le lobe temporal le [[auditory-cortex|cortex auditif]]. Repliée tout au fond se trouve l'[[insular-cortex|insula]], pour le goût et les sensations internes du corps."
+      zh: "每个区域都有自己的专长。[[prefrontal-cortex|前额叶皮层]]负责计划和决策。紧挨着[[central-sulcus|中央沟]]前方的是运动带，即[[primary-motor-cortex|初级运动皮层]]；紧挨着它后方的是感觉带，即[[primary-somatosensory-cortex|初级躯体感觉皮层]]。枕叶里有[[visual-cortex|视觉皮层]]，颞叶里有[[auditory-cortex|听觉皮层]]。折叠在深处的是[[insular-cortex|岛叶]]，负责味觉和身体内部的感受。"
+  - id: c2
+    body:
+      en: >-
+        Most of these connections cross. The left motor strip moves the right side of the body, and the left
+        sensory strip feels it: control is [[contralateral]]. The cerebellum is the exception: each side coordinates
+        movement on the [[ipsilateral|same side]]. Below them, the [[brainstem]] keeps breathing and heartbeat going and
+        houses most cranial nerves.
+      fr: "La plupart de ces connexions sont croisées. La bande motrice gauche fait bouger le côté droit du corps, et la bande sensitive gauche le perçoit : la commande est [[contralateral|controlatérale]]. Le cervelet fait exception : chaque côté coordonne les mouvements du [[ipsilateral|même côté]]. En dessous, le [[brainstem|tronc cérébral]] entretient la respiration et les battements du cœur, et abrite la plupart des nerfs crâniens."
+      zh: "这些连接大多是交叉的。左侧运动带控制身体右侧的运动，左侧感觉带感受身体右侧：控制是[[contralateral|对侧]]的。小脑是个例外：每一侧协调[[ipsilateral|同侧]]的运动。在它们下方，[[brainstem|脑干]]维持呼吸和心跳，并容纳大多数脑神经。"
+questions:
+  - id: q1
+    kind: tap2d
+    prompt: { en: "Tap the strip that feels touch.", fr: "Touchez la bande qui perçoit le toucher.", zh: "点击负责感受触觉的那条带。" }
+    figure: lateral-brain
+    answer: sensory-strip
+    explain: { en: "The sensory strip sits just behind the central sulcus; the motor strip just in front.", fr: "La bande sensitive est juste derrière le sillon central ; la bande motrice juste devant.", zh: "感觉带紧挨在中央沟后方；运动带紧挨在它前方。" }
+  - id: q2
+    kind: tap3d
+    prompt: { en: "Find the motor strip.", fr: "Trouvez la bande motrice.", zh: "找到运动带。" }
+    structure: motor-strip
+    explain: { en: "The precentral gyrus: the last ridge of the frontal lobe before the central sulcus.", fr: "Le gyrus précentral : la dernière crête du lobe frontal avant le sillon central.", zh: "中央前回：额叶在中央沟之前的最后一条脑回。" }
+  - id: q3
+    kind: match
+    prompt: { en: "Match each lobe to one of its jobs.", fr: "Associez chaque lobe à l'un de ses rôles.", zh: "把每个脑叶与它的一项工作配对。" }
+    pairs:
+      - { id: p1, left: { en: "Occipital lobe", fr: "Lobe occipital", zh: "枕叶" }, right: { en: "Seeing", fr: "Voir", zh: "视觉" } }
+      - { id: p2, left: { en: "Temporal lobe", fr: "Lobe temporal", zh: "颞叶" }, right: { en: "Hearing", fr: "Entendre", zh: "听觉" } }
+      - { id: p3, left: { en: "Frontal lobe", fr: "Lobe frontal", zh: "额叶" }, right: { en: "Planning and moving", fr: "Planifier et bouger", zh: "计划和运动" } }
+      - { id: p4, left: { en: "Parietal lobe", fr: "Lobe pariétal", zh: "顶叶" }, right: { en: "Touch and sense of space", fr: "Toucher et sens de l'espace", zh: "触觉和空间感" } }
+    explain: { en: "Each lobe does more than one thing, but these are good anchors.", fr: "Chaque lobe fait plus d'une chose, mais ce sont de bons repères.", zh: "每个脑叶的功能不止一项，但这些是很好的记忆点。" }
+  - id: q4
+    kind: tfwhy
+    statement: { en: "The left motor strip moves the right hand.", fr: "La bande motrice gauche fait bouger la main droite.", zh: "左侧运动带控制右手的运动。" }
+    isTrue: true
+    reasons:
+      - { id: r1, text: { en: "The motor pathway crosses to the other side on its way down.", fr: "La voie motrice passe de l'autre côté en descendant.", zh: "运动通路在下行途中交叉到对侧。" } }
+      - { id: r2, text: { en: "The right hand has no motor strip of its own.", fr: "La main droite n'a pas de bande motrice propre.", zh: "右手没有自己的运动带。" } }
+    answerReason: r1
+    explain: { en: "Motor control is [[contralateral]]: the pathway crosses low in the brainstem.", fr: "La commande motrice est [[contralateral|controlatérale]] : la voie croise dans le bas du tronc cérébral.", zh: "运动控制是[[contralateral|对侧]]的：通路在脑干下部交叉。" }
+  - id: q5
+    kind: mc
+    prompt: { en: "The left half of the cerebellum coordinates which side of the body?", fr: "La moitié gauche du cervelet coordonne quel côté du corps ?", zh: "小脑的左半部分协调身体的哪一侧？" }
+    options:
+      - { id: a, text: { en: "The left side", fr: "Le côté gauche", zh: "左侧" } }
+      - { id: b, text: { en: "The right side", fr: "Le côté droit", zh: "右侧" } }
+      - { id: c, text: { en: "Both sides equally", fr: "Les deux côtés également", zh: "两侧都一样" } }
+    answer: a
+    explain: { en: "The cerebellum is the [[ipsilateral]] exception.", fr: "Le cervelet est l'exception [[ipsilateral|homolatérale]].", zh: "小脑是[[ipsilateral|同侧]]控制的例外。" }
