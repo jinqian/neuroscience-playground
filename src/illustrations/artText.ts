@@ -193,7 +193,7 @@ export const ART_TEXT: Record<string, { fr: string; zh: string }> = {
   "VII facial: expression": { fr: "VII facial : mimique", zh: "VII 面神经：面部表情" },
   "X vagus: heart, gut": { fr: "X vague : cœur, intestin", zh: "X 迷走神经：心脏、肠道" },
   "XII hypoglossal: tongue": { fr: "XII hypoglosse : langue", zh: "XII 舌下神经：舌" },
-  "A split brain seen from above": { fr: "Un cerveau divisé vu du dessus", zh: "从上方看裂脑" },
+  "A split brain seen from below": { fr: "Un cerveau divisé vu du dessous", zh: "从下方看裂脑" },
   "left hemisphere": { fr: "hémisphère gauche", zh: "左半球" },
   "right hemisphere": { fr: "hémisphère droit", zh: "右半球" },
   "speech": { fr: "parole", zh: "言语" },

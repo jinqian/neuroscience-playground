@@ -6,12 +6,12 @@ intro:
   - id: c1
     body:
       en: >-
-        Neurologists work backwards: from what a patient can't do to where the damage must be. Two rules help.
+        Neurologists work backwards: from what a patient can't do to where the damage must be. Three rules help.
         The motor and sensory strips serve the [[contralateral]] side of the body. The cerebellum serves the
         [[ipsilateral]] side. And for most people, language lives in the left hemisphere. Six patients are waiting.
         Read each one, then tap the spot.
-      fr: "Les neurologues raisonnent à rebours : de ce qu'un patient ne peut plus faire jusqu'à l'endroit de la lésion. Deux règles aident. Les bandes motrice et sensitive servent le côté [[contralateral|controlatéral]] du corps. Le cervelet sert le côté [[ipsilateral|homolatéral]]. Et chez la plupart des gens, le langage se trouve dans l'hémisphère gauche. Six patients attendent. Lisez chaque cas, puis touchez l'endroit."
-      zh: "神经科医生是倒推的：从患者做不到什么，推出损伤一定在哪里。有两条规则可以帮忙。运动带和感觉带服务于身体的[[contralateral|对侧]]。小脑服务于[[ipsilateral|同侧]]。而对大多数人来说，语言位于左半球。六位患者在等你。读完每个病例，然后点击相应的位置。"
+      fr: "Les neurologues raisonnent à rebours : de ce qu'un patient ne peut plus faire jusqu'à l'endroit de la lésion. Trois règles aident. Les bandes motrice et sensitive servent le côté [[contralateral|controlatéral]] du corps. Le cervelet sert le côté [[ipsilateral|homolatéral]]. Et chez la plupart des gens, le langage se trouve dans l'hémisphère gauche. Six patients attendent. Lisez chaque cas, puis touchez l'endroit."
+      zh: "神经科医生是倒推的：从患者做不到什么，推出损伤一定在哪里。有三条规则可以帮忙。运动带和感觉带服务于身体的[[contralateral|对侧]]。小脑服务于[[ipsilateral|同侧]]。而对大多数人来说，语言位于左半球。六位患者在等你。读完每个病例，然后点击相应的位置。"
 sim: lesion
 goal: { en: "Locate the damage for all six patients.", fr: "Localisez la lésion des six patients.", zh: "为六位患者都找出损伤部位。" }
 simplified:

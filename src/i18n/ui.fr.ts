@@ -193,7 +193,7 @@ export const uiFr: Record<keyof typeof uiEn, string> = {
   lesionC2: "Ben parle vite et avec aisance, mais ses phrases n’ont guère de sens et il confond les mots. Il ne suit pas des consignes simples et ne semble pas remarquer que quelque chose ne va pas.",
   lesionC3: "La main gauche de Chloé et le côté gauche de son visage sont soudain faibles. Sa parole et sa compréhension sont normales.",
   lesionC4: "David bouge normalement sa main droite, mais elle est engourdie ; les yeux fermés, il ne sait pas quel doigt on lui touche.",
-  lesionC5: "Eva ne mange que ce qui se trouve du côté droit de son assiette et ne se rase que le côté droit du visage. Ses yeux fonctionnent ; elle ne prête simplement pas attention à la gauche.",
+  lesionC5: "Eva ne mange que ce qui se trouve du côté droit de son assiette et ne se maquille que le côté droit du visage. Ses yeux fonctionnent ; elle ne prête simplement pas attention à la gauche.",
   lesionC6: "Farid a une force normale, mais quand il tend la main droite vers une tasse, sa main tremble et dépasse la cible. Sa parole est un peu pâteuse.",
   solvedC1: "Exact : l’aire de Broca, pour produire la parole. La bande motrice juste derrière commande le visage et le bras, qui sont donc souvent faibles aussi.",
   solvedC2: "Exact : l’aire de Wernicke, pour comprendre le langage. La parole reste fluide mais perd son sens.",

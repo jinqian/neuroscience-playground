@@ -3,10 +3,10 @@ import { ArtSvg, INK, Label } from './Region'
 const LEFT_FIELD = '#ff8a3d'
 const RIGHT_FIELD = '#1cb0f6'
 
-/** The brain seen from above, with the corpus callosum cut. Each visual field reaches the opposite hemisphere only. */
+/** The brain seen from below (face towards the bottom of the page), with the corpus callosum cut. Each visual field reaches the opposite hemisphere only. */
 export function SplitBrainArt() {
   return (
-    <ArtSvg viewBox="0 0 440 320" label="A split brain seen from above">
+    <ArtSvg viewBox="0 0 440 320" label="A split brain seen from below">
       <g fill="#eceff3" stroke={INK} strokeWidth="2">
         <ellipse cx="140" cy="100" rx="62" ry="74" />
         <ellipse cx="300" cy="100" rx="62" ry="74" />
