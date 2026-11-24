@@ -207,6 +207,8 @@ export const ART_TEXT: Record<string, { fr: string; zh: string }> = {
   "4 plan (Broca)": { fr: "4 planifier (Broca)", zh: "4 计划（布罗卡区）" },
   "5 motor strip": { fr: "5 bande motrice", zh: "5 运动带" },
   "6 speak": { fr: "6 parler", zh: "6 说出" },
+  "Right-side match of Broca's area": { fr: "Équivalent droit de l'aire de Broca", zh: "右侧与布罗卡区对应的位置" },
+  "Right-side match of Wernicke's area": { fr: "Équivalent droit de l'aire de Wernicke", zh: "右侧与韦尼克区对应的位置" },
 }
 
 /** An illustration's text in the given language (English if there is no translation). */

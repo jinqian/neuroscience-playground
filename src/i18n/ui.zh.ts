@@ -211,4 +211,6 @@ export const uiZh: Record<keyof typeof uiEn, string> = {
   whyVisual: "视觉皮层：受损会让人看不到视野的一部分，而不影响力量、触觉或语言。",
   whyCerebellum: "小脑：受损让同侧的动作笨拙、颤抖，但力量正常。",
   whyBrainstem: "脑干：受损通常同时影响多方面，比如脑神经、身体两侧或呼吸。",
+  whyBrocaRight: "这个位置对应布罗卡区，但在右侧。对大多数人来说，它帮助控制说话的语调和旋律；这里受损不会导致失语。",
+  whyWernickeRight: "这个位置对应韦尼克区，但在右侧。对大多数人来说，它帮助听出语音中的情绪；这里受损不会导致失语。",
 }

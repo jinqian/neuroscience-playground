@@ -67,4 +67,15 @@ describe('lesion localizer sim', () => {
     switchTo('zh')
     expect(screen.getByText(t('lesionC1', 'zh'))).toBeInTheDocument()
   })
+
+  test('on a right-hemisphere case, the spots matching Broca and Wernicke are not called language areas', () => {
+    const { tap } = setup()
+    tap('broca')
+    tap('wernicke')
+    expect(screen.queryByRole('button', { name: "Broca's area" })).toBeNull()
+    fireEvent.click(screen.getByRole('button', { name: "Right-side match of Broca's area" }))
+    expect(screen.getByRole('status')).toHaveTextContent(t('whyBrocaRight', 'en'))
+    fireEvent.click(screen.getByRole('button', { name: "Right-side match of Wernicke's area" }))
+    expect(screen.getByRole('status')).toHaveTextContent(t('whyWernickeRight', 'en'))
+  })
 })

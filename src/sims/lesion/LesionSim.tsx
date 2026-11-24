@@ -10,6 +10,12 @@ const WHY_KEY: Record<Zone, UiKey> = {
   'parietal-association': 'whyParietalAssociation', wernicke: 'whyWernicke', auditory: 'whyAuditory', visual: 'whyVisual',
   cerebellum: 'whyCerebellum', brainstem: 'whyBrainstem',
 }
+/** On the right hemisphere, the spots matching Broca's and Wernicke's areas are not language areas for most people. */
+function whyKey(zone: Zone, side: 'left' | 'right'): UiKey {
+  if (side === 'right' && zone === 'broca') return 'whyBrocaRight'
+  if (side === 'right' && zone === 'wernicke') return 'whyWernickeRight'
+  return WHY_KEY[zone]
+}
 const CASE_KEY = { c1: 'lesionC1', c2: 'lesionC2', c3: 'lesionC3', c4: 'lesionC4', c5: 'lesionC5', c6: 'lesionC6' } as const satisfies Record<string, UiKey>
 const SOLVED_KEY = { c1: 'solvedC1', c2: 'solvedC2', c3: 'solvedC3', c4: 'solvedC4', c5: 'solvedC5', c6: 'solvedC6' } as const satisfies Record<string, UiKey>
 const ALL_SOLVED: LesionState = { index: CASES.length - 1, solved: CASES.map((c) => c.id) }
@@ -36,7 +42,7 @@ export function LesionSim({ onGoalMet, goalMet: reached }: SimProps) {
     setFeedback(r.correct ? { kind: 'solved', caseId: current.id } : { kind: 'wrong', zone })
   }
 
-  const message = feedback?.kind === 'wrong' ? t(WHY_KEY[feedback.zone], lang) : feedback ? t(SOLVED_KEY[feedback.caseId], lang) : ''
+  const message = feedback?.kind === 'wrong' ? t(whyKey(feedback.zone, current.side), lang) : feedback ? t(SOLVED_KEY[feedback.caseId], lang) : ''
 
   return (
     <div className="sim lesion">

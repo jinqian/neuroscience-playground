@@ -28,13 +28,13 @@ export function LateralBrainArt({ side = 'left', ...art }: ArtProps & { side?: '
       <g transform={mirror ? `translate(${W},0) scale(-1,1)` : undefined}>
         <path d="M50 170C40 90 120 34 220 32C320 30 410 70 428 140C440 190 410 222 370 222L330 222C310 248 250 256 200 238C160 226 130 214 110 206C70 200 54 190 50 170Z" fill="#eef0f4" stroke={INK} strokeWidth="2.5" />
         {zone('prefrontal', 'Prefrontal cortex', 'M52 168C42 92 112 40 172 35L150 150L106 160L110 205C70 200 54 190 52 168Z')}
-        {zone('broca', "Broca's area", 'M106 160L150 150L146 192L112 204Z')}
+        {zone('broca', mirror ? "Right-side match of Broca's area" : "Broca's area", 'M106 160L150 150L146 192L112 204Z')}
         {zone('motor-strip', 'Motor strip', 'M172 35L204 33L176 198L146 192Z')}
         {zone('sensory-strip', 'Sensory strip', 'M204 33L236 34L208 204L176 198Z')}
         {zone('parietal-association', 'Parietal association cortex', 'M236 34C300 32 360 52 392 92L340 180L300 186L212 178Z')}
         {zone('visual', 'Visual cortex', 'M392 92C420 118 438 170 412 210L370 222L340 180Z')}
         {zone('auditory', 'Auditory cortex', 'M178 204L250 198L252 216L184 224Z')}
-        {zone('wernicke', "Wernicke's area", 'M252 198L330 190L336 212L254 218Z')}
+        {zone('wernicke', mirror ? "Right-side match of Wernicke's area" : "Wernicke's area", 'M252 198L330 190L336 212L254 218Z')}
         {zone('cerebellum', 'Cerebellum', 'M300 236C330 222 390 226 404 248C410 276 370 292 330 284C304 278 292 254 300 236Z')}
         {zone('brainstem', 'Brainstem', 'M236 236L272 240L268 318L244 318Z')}
       </g>

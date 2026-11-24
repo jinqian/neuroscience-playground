@@ -209,4 +209,6 @@ export const uiEn = {
   whyVisual: "Visual cortex: damage removes part of what you see, not strength, touch or language.",
   whyCerebellum: "Cerebellum: damage makes movement clumsy and shaky on the same side, with normal strength.",
   whyBrainstem: "Brainstem: damage usually affects several things at once, such as cranial nerves, both sides of the body, or breathing.",
+  whyBrocaRight: "This spot matches Broca's area, but on the right. For most people it helps with the tone and melody of speech; damage here doesn't cause aphasia.",
+  whyWernickeRight: "This spot matches Wernicke's area, but on the right. For most people it helps read the emotion in a voice; damage here doesn't cause aphasia.",
 } as const

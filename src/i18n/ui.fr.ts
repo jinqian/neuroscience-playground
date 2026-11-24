@@ -211,4 +211,6 @@ export const uiFr: Record<keyof typeof uiEn, string> = {
   whyVisual: "Cortex visuel : une lésion fait perdre une partie de ce que l’on voit, pas la force, le toucher ni le langage.",
   whyCerebellum: "Cervelet : une lésion rend les mouvements maladroits et tremblants du même côté, avec une force normale.",
   whyBrainstem: "Tronc cérébral : une lésion touche en général plusieurs choses à la fois, comme les nerfs crâniens, les deux côtés du corps ou la respiration.",
+  whyBrocaRight: "Cet endroit correspond à l'aire de Broca, mais à droite. Chez la plupart des gens, il aide à donner le ton et la mélodie de la parole ; une lésion ici ne cause pas d'aphasie.",
+  whyWernickeRight: "Cet endroit correspond à l'aire de Wernicke, mais à droite. Chez la plupart des gens, il aide à percevoir l'émotion dans une voix ; une lésion ici ne cause pas d'aphasie.",
 }
