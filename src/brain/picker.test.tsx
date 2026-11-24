@@ -40,6 +40,11 @@ describe('3D structure picker', () => {
     expect(p.translucentCortex).toBe(false)
     expect(p.cortexPickable).toBe(true)
   })
+  test('a surface part of a lobe keeps the cortex solid and tappable', () => {
+    const p = pickerProps('motor-strip')
+    expect(p.translucentCortex).toBe(false)
+    expect(p.cortexPickable).toBe(true)
+  })
   test('tapping a part of the target lobe counts as tapping the lobe', () => {
     const got: string[] = []
     const p = pickerProps('frontal-lobe', (id) => got.push(id))

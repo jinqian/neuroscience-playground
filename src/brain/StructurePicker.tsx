@@ -16,7 +16,9 @@ export function StructurePicker(props: Props) {
   const list = <StructureChoice {...props} />
   if (!target || target.twoDOnly) return list
   // A deep target sits inside the cortex: show the cortex see-through and let taps pass through it.
-  const deep = !CORTEX.includes(props.answer)
+  // Parts of a lobe (e.g. the motor strip) are on the surface too.
+  const onSurface = (id?: string) => !!id && CORTEX.includes(id)
+  const deep = !onSurface(props.answer) && !onSurface(target.partOf)
   const pickedName = props.picked ? structures.find((s) => s.id === props.picked)?.name : undefined
   return (
     <div className="picker">

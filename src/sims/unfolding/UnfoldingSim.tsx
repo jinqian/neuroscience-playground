@@ -22,7 +22,6 @@ export function UnfoldingSim({ onGoalMet, goalMet: reached }: SimProps) {
   const [matches, setMatches] = useState<Matches>(reached ? { ...ANSWER } : {})
   const [selected, setSelected] = useState<Vesicle | null>(null)
   const [wrong, setWrong] = useState<Vesicle | null>(null)
-  const { drag, over, handlers, swallowClick } = useDragToTarget<Vesicle, Target>((v, target) => place(v, target))
   const goalSent = useRef(reached)
   const stage = STAGES[i]
 
@@ -32,6 +31,8 @@ export function UnfoldingSim({ onGoalMet, goalMet: reached }: SimProps) {
     setSelected(null)
     setWrong(r.correct ? null : v)
   }
+
+  const { drag, over, handlers, swallowClick } = useDragToTarget<Vesicle, Target>(place)
 
   useEffect(() => {
     if (allMatched(matches) && !goalSent.current) { goalSent.current = true; onGoalMet() }
