@@ -3,6 +3,7 @@ import { ActionPotentialArt } from './actionPotential'
 import { AUTONOMIC_REGIONS, AutonomicArt } from './autonomic'
 import { CNS_PNS_REGIONS, CnsPnsArt } from './cnsPns'
 import { CortexFoldingArt } from './cortexFolding'
+import { FlatMapArt } from './flatMap'
 import { FOREBRAIN_TRACT_REGIONS, ForebrainTractsArt } from './forebrainTracts'
 import { GliaArt } from './glia'
 import { MeningesArt, MENINGES_REGIONS } from './meninges'
@@ -40,6 +41,7 @@ export const ILLUSTRATIONS: Record<string, FC> = {
   'tube-defects': () => <TubeDefectsArt labels />,
   'cortex-folding': CortexFoldingArt,
   'forebrain-tracts': () => <ForebrainTractsArt labels />,
+  'flat-map': FlatMapArt,
 }
 
 /** Tappable figures by id, with the region ids a learner can tap. */

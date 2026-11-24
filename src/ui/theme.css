@@ -390,3 +390,10 @@ button { font: inherit; color: inherit; }
 .unfold__ves[data-matched='true'] { opacity: .55; cursor: default; box-shadow: none; }
 .unfold__tgt { background: rgb(255 255 255 / .06); color: var(--bench-ink); border: 2px dashed var(--bench-line); }
 .unfold__tgt:disabled { border-style: solid; border-color: var(--c); background: color-mix(in srgb, var(--c) 25%, transparent); color: #fff; cursor: default; }
+
+/* Flat map lab */
+.flatmap__bank { display: flex; flex-wrap: wrap; gap: 8px; }
+.flatmap__bank .unfold__ves { width: auto; }
+.flatmap__slot { cursor: pointer; outline: none; }
+.flatmap__slot:focus-visible rect, .flatmap__slot--over rect { stroke: #ff5fa8; stroke-width: 4; stroke-dasharray: none; }
+.flatmap__slot--done { cursor: default; }

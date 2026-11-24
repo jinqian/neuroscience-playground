@@ -1,0 +1,53 @@
+id: u03-lab-flatmap
+type: lab
+title: { en: "Lay the brain out flat", fr: "Mettre le cerveau à plat", zh: "把大脑摊平" }
+sources: ["Making a Flat Schematic of the Brain"]
+intro:
+  - id: c1
+    verify: true
+    explore3d: [brainstem, cerebellum, thalamus]
+    body:
+      en: >-
+        The real brain is bent and folded, which makes it hard to see how the parts connect. So let's lay it out
+        flat, like the neural tube it grew from: one line from the [[spinal-cord]] at the bottom up to the
+        cerebral hemispheres at the top. Each spot is coloured by the vesicle it came from. Put every part in its place.
+      fr: "Le vrai cerveau est courbé et plissé, ce qui rend difficile de voir comment ses parties se relient. Mettons-le donc à plat, comme le tube neural dont il provient : une seule ligne, de la [[spinal-cord|moelle épinière]] en bas jusqu'aux hémisphères cérébraux en haut. Chaque emplacement a la couleur de la vésicule dont il provient. Placez chaque partie au bon endroit."
+      zh: "真实的大脑是弯曲折叠的，很难看清各部分是怎样连接的。所以我们把它摊平，就像它所来自的神经管一样：从底部的[[spinal-cord|脊髓]]一直到顶部的大脑半球，连成一条线。每个位置的颜色代表它来自哪个脑泡。把每个部分放到正确的位置上。"
+sim: flatmap
+goal: { en: "Place all eleven parts on the flat map.", fr: "Placez les onze parties sur la carte à plat.", zh: "把全部十一个部分放到平面图上。" }
+simplified:
+  en: >-
+    This is a flat diagram, not a real shape or size. The layout here is drawn for this app: the course's own
+    flat schematic may arrange the parts differently. Real parts overlap, fold and wrap around each other.
+  fr: "Il s'agit d'un schéma à plat, sans forme ni taille réelles. Cette disposition a été dessinée pour cette application : le schéma du cours peut placer les parties autrement. Les vraies structures se chevauchent, se replient et s'enroulent les unes autour des autres."
+  zh: "这是一张平面示意图，不代表真实的形状或大小。这里的布局是为本应用绘制的，课程中的平面示意图可能有不同的排列。真实的各部分会相互重叠、折叠和环绕。"
+reflection:
+  - id: q1
+    kind: mc
+    prompt: { en: "Which part sits beside the cerebellum, at the same level of the axis?", fr: "Quelle partie se trouve à côté du cervelet, au même niveau de l'axe ?", zh: "哪个部分和小脑处在轴的同一层面、紧挨着它？" }
+    options:
+      - { id: a, text: { en: "Pons", fr: "Pont", zh: "脑桥" } }
+      - { id: b, text: { en: "Thalamus", fr: "Thalamus", zh: "丘脑" } }
+      - { id: c, text: { en: "Medulla", fr: "Bulbe rachidien", zh: "延髓" } }
+    answer: a
+    explain: { en: "Both grow from the [[metencephalon]], so they share a level.", fr: "Les deux proviennent du [[metencephalon|métencéphale]] : ils partagent donc un niveau.", zh: "两者都来自[[metencephalon|后脑]]，所以处在同一层面。" }
+  - id: q2
+    kind: mc
+    prompt: { en: "What sits just above the midbrain on the axis?", fr: "Qu'est-ce qui se trouve juste au-dessus du mésencéphale sur l'axe ?", zh: "在轴上紧挨着中脑上方的是什么？" }
+    options:
+      - { id: a, text: { en: "The thalamus and hypothalamus", fr: "Le thalamus et l'hypothalamus", zh: "丘脑和下丘脑" } }
+      - { id: b, text: { en: "The pons", fr: "Le pont", zh: "脑桥" } }
+      - { id: c, text: { en: "The occipital lobe", fr: "Le lobe occipital", zh: "枕叶" } }
+    answer: a
+    explain: { en: "Above the midbrain comes the [[diencephalon]]: [[thalamus]] and [[hypothalamus]]. The hemispheres sit on top of that.", fr: "Au-dessus du mésencéphale vient le [[diencephalon|diencéphale]] : le [[thalamus]] et l'[[hypothalamus]]. Les hémisphères se trouvent au-dessus.", zh: "中脑上方是[[diencephalon|间脑]]：[[thalamus|丘脑]]和[[hypothalamus|下丘脑]]。再往上才是大脑半球。" }
+  - id: q3
+    kind: order
+    prompt: { en: "From the spinal cord up, put these in order.", fr: "En partant de la moelle épinière, remettez-les dans l'ordre.", zh: "从脊髓往上，把它们按顺序排列。" }
+    steps:
+      - { id: s1, text: { en: "Spinal cord", fr: "Moelle épinière", zh: "脊髓" } }
+      - { id: s2, text: { en: "Medulla", fr: "Bulbe rachidien", zh: "延髓" } }
+      - { id: s3, text: { en: "Pons", fr: "Pont", zh: "脑桥" } }
+      - { id: s4, text: { en: "Midbrain", fr: "Mésencéphale", zh: "中脑" } }
+      - { id: s5, text: { en: "Thalamus", fr: "Thalamus", zh: "丘脑" } }
+      - { id: s6, text: { en: "Cerebral hemispheres", fr: "Hémisphères cérébraux", zh: "大脑半球" } }
+    explain: { en: "Cord → medulla → pons → midbrain → thalamus → hemispheres: the same order as the vesicles, back to front.", fr: "Moelle → bulbe → pont → mésencéphale → thalamus → hémisphères : le même ordre que les vésicules, de l'arrière vers l'avant.", zh: "脊髓 → 延髓 → 脑桥 → 中脑 → 丘脑 → 大脑半球：和脑泡的顺序一样，从后到前。" }

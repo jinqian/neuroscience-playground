@@ -156,6 +156,16 @@ export const ART_TEXT: Record<string, { fr: string; zh: string }> = {
   thalamus: { fr: 'thalamus', zh: '丘脑' },
   'cortex (grey matter)': { fr: 'cortex (substance grise)', zh: '皮层（灰质）' },
   'white matter': { fr: 'substance blanche', zh: '白质' },
+  'The brain laid out flat': { fr: 'Le cerveau mis à plat', zh: '摊平的大脑' },
+  medulla: { fr: 'bulbe', zh: '延髓' },
+  pons: { fr: 'pont', zh: '脑桥' },
+  cerebellum: { fr: 'cervelet', zh: '小脑' },
+  midbrain: { fr: 'mésencéphale', zh: '中脑' },
+  hypothalamus: { fr: 'hypothalamus', zh: '下丘脑' },
+  frontal: { fr: 'frontal', zh: '额叶' },
+  parietal: { fr: 'pariétal', zh: '顶叶' },
+  occipital: { fr: 'occipital', zh: '枕叶' },
+  temporal: { fr: 'temporal', zh: '颞叶' },
 }
 
 /** An illustration's text in the given language (English if there is no translation). */
