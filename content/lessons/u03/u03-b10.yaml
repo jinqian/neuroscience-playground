@@ -1,0 +1,57 @@
+id: u03-b10
+type: bite
+title: { en: "The language circuit", fr: "Le circuit du langage", zh: "语言环路" }
+sources: ["Language Circuits"]
+cards:
+  - id: c1
+    illustration: language-circuit
+    body:
+      en: >-
+        Repeating a word you hear follows a classic route. Sound reaches the [[auditory-cortex]]. [[wernicke-area|Wernicke's area]]
+        recognises the word. A bundle of axons, the [[arcuate-fasciculus]], carries it forward to
+        [[broca-area|Broca's area]], which plans the speech. Then the motor strip moves the lips, tongue and larynx.
+      fr: "Répéter un mot entendu suit un trajet classique. Le son atteint le [[auditory-cortex|cortex auditif]]. L'[[wernicke-area|aire de Wernicke]] reconnaît le mot. Un faisceau d'axones, le [[arcuate-fasciculus|faisceau arqué]], le transporte vers l'avant jusqu'à l'[[broca-area|aire de Broca]], qui planifie la parole. Puis la bande motrice fait bouger les lèvres, la langue et le larynx."
+      zh: "复述一个听到的词，走的是一条经典路线。声音到达[[auditory-cortex|听觉皮层]]。[[wernicke-area|韦尼克区]]识别出这个词。一束叫做[[arcuate-fasciculus|弓状束]]的轴突把它向前传到[[broca-area|布罗卡区]]，由布罗卡区计划如何说出来。然后运动带让嘴唇、舌头和喉部动起来。"
+  - id: c2
+    verify: true
+    body:
+      en: >-
+        Damage that link and you get [[conduction-aphasia]]: speech is fluent and understanding good, yet the
+        person can't repeat a sentence they just heard. This wiring diagram is a simplified model from the 1800s.
+        Language really uses a wider network, including the right hemisphere for the tone of a voice.
+      fr: "Lésez ce lien et vous obtenez une [[conduction-aphasia|aphasie de conduction]] : la parole est fluide et la compréhension bonne, mais la personne ne parvient pas à répéter une phrase qu'elle vient d'entendre. Ce schéma de câblage est un modèle simplifié datant du XIXᵉ siècle. Le langage utilise en réalité un réseau plus large, dont l'hémisphère droit pour le ton de la voix."
+      zh: "如果这条通路受损，就会出现[[conduction-aphasia|传导性失语]]：说话流利，理解也好，可就是无法复述刚刚听到的句子。这张“线路图”是19世纪提出的简化模型。实际上，语言依赖一个更广泛的网络，其中右半球负责语调。"
+questions:
+  - id: q1
+    kind: order
+    prompt: { en: "Put the steps of repeating a heard word in order.", fr: "Remettez dans l'ordre les étapes pour répéter un mot entendu.", zh: "把复述一个听到的词的步骤按顺序排列。" }
+    steps:
+      - { id: s1, text: { en: "Sound reaches the auditory cortex", fr: "Le son atteint le cortex auditif", zh: "声音到达听觉皮层" } }
+      - { id: s2, text: { en: "Wernicke's area recognises the word", fr: "L'aire de Wernicke reconnaît le mot", zh: "韦尼克区识别出这个词" } }
+      - { id: s3, text: { en: "The arcuate fasciculus carries it forward", fr: "Le faisceau arqué le transporte vers l'avant", zh: "弓状束把它向前传递" } }
+      - { id: s4, text: { en: "Broca's area plans the speech", fr: "L'aire de Broca planifie la parole", zh: "布罗卡区计划如何说" } }
+      - { id: s5, text: { en: "The motor strip moves the mouth", fr: "La bande motrice fait bouger la bouche", zh: "运动带让嘴动起来" } }
+    explain: { en: "Hear → understand → carry → plan → move.", fr: "Entendre → comprendre → transporter → planifier → bouger.", zh: "听到 → 理解 → 传递 → 计划 → 运动。" }
+  - id: q2
+    kind: mc
+    prompt: { en: "What does conduction aphasia leave mostly intact?", fr: "Qu'est-ce que l'aphasie de conduction laisse en grande partie intact ?", zh: "传导性失语在很大程度上保留了什么？" }
+    options:
+      - { id: a, text: { en: "Fluent speech and understanding", fr: "La parole fluide et la compréhension", zh: "流利的说话和理解能力" } }
+      - { id: b, text: { en: "Repeating what was just heard", fr: "La répétition de ce qu'on vient d'entendre", zh: "复述刚听到的内容" } }
+      - { id: c, text: { en: "Nothing: all language is lost", fr: "Rien : tout le langage est perdu", zh: "什么都没保留：语言能力完全丧失" } }
+    answer: a
+    explain: { en: "Both ends of the circuit work; the link between them doesn't, so repetition fails.", fr: "Les deux extrémités du circuit fonctionnent ; c'est le lien entre elles qui ne marche pas, d'où l'échec de la répétition.", zh: "环路的两端都正常，只是两者之间的连接坏了，所以无法复述。" }
+  - id: q3
+    kind: tfwhy
+    statement: { en: "In conduction aphasia, a person can understand a sentence but can't repeat it.", fr: "Dans l'aphasie de conduction, on comprend une phrase mais on ne peut pas la répéter.", zh: "传导性失语患者能理解一句话，却无法复述它。" }
+    isTrue: true
+    reasons:
+      - { id: r1, text: { en: "The link from understanding to speech planning is damaged.", fr: "Le lien entre la compréhension et la planification de la parole est lésé.", zh: "从理解到计划说话之间的连接受损了。" } }
+      - { id: r2, text: { en: "Their hearing is damaged.", fr: "Leur audition est atteinte.", zh: "他们的听力受损了。" } }
+    answerReason: r1
+    explain: { en: "In the classic model, that link is the [[arcuate-fasciculus]].", fr: "Dans le modèle classique, ce lien est le [[arcuate-fasciculus|faisceau arqué]].", zh: "在经典模型中，这条连接就是[[arcuate-fasciculus|弓状束]]。" }
+  - id: q4
+    kind: termmatch
+    terms: [aphasia, broca-area, wernicke-area, arcuate-fasciculus]
+    from: zh
+    to: fr

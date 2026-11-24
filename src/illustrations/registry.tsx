@@ -7,6 +7,7 @@ import { CranialNervesArt } from './cranialNerves'
 import { FlatMapArt } from './flatMap'
 import { FOREBRAIN_TRACT_REGIONS, ForebrainTractsArt } from './forebrainTracts'
 import { GliaArt } from './glia'
+import { LanguageCircuitArt } from './languageCircuit'
 import { LATERAL_REGIONS, LateralBrainArt } from './lateralBrain'
 import { MeningesArt, MENINGES_REGIONS } from './meninges'
 import { MembraneArt } from './membrane'
@@ -47,6 +48,7 @@ export const ILLUSTRATIONS: Record<string, FC> = {
   'flat-map': FlatMapArt,
   'cranial-nerves': CranialNervesArt,
   'split-brain': SplitBrainArt,
+  'language-circuit': LanguageCircuitArt,
   'lateral-brain': () => <LateralBrainArt labels />,
 }
 

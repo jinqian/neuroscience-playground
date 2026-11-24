@@ -200,6 +200,13 @@ export const ART_TEXT: Record<string, { fr: string; zh: string }> = {
   "corpus callosum cut": { fr: "corps calleux sectionné", zh: "胼胝体被切断" },
   "left visual field": { fr: "champ visuel gauche", zh: "左侧视野" },
   "right visual field": { fr: "champ visuel droit", zh: "右侧视野" },
+  "The classic language circuit": { fr: "Le circuit classique du langage", zh: "经典的语言环路" },
+  "1 hear": { fr: "1 entendre", zh: "1 听到" },
+  "2 understand (Wernicke)": { fr: "2 comprendre (Wernicke)", zh: "2 理解（韦尼克区）" },
+  "3 arcuate fasciculus": { fr: "3 faisceau arqué", zh: "3 弓状束" },
+  "4 plan (Broca)": { fr: "4 planifier (Broca)", zh: "4 计划（布罗卡区）" },
+  "5 motor strip": { fr: "5 bande motrice", zh: "5 运动带" },
+  "6 speak": { fr: "6 parler", zh: "6 说出" },
 }
 
 /** An illustration's text in the given language (English if there is no translation). */
