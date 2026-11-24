@@ -10,4 +10,4 @@ nickname:
   zh: "大脑地图"
 color: "#FF8A3D"
 module: "Neuroanatomy"
-lessons: [u03-b01, u03-b02, u03-b03, u03-lab-unfolding, u03-b04, u03-b05, u03-b06, u03-b07, u03-lab-flatmap, u03-lab-lesion]
+lessons: [u03-b01, u03-b02, u03-b03, u03-lab-unfolding, u03-b04, u03-b05, u03-b06, u03-b07, u03-b08, u03-lab-flatmap, u03-lab-lesion]

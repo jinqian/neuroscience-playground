@@ -1,0 +1,69 @@
+id: u03-b08
+type: bite
+title: { en: "Two hemispheres, one brain", fr: "Deux hémisphères, un seul cerveau", zh: "两个半球，一个大脑" }
+sources: ["Hemisphere Functions"]
+cards:
+  - id: c1
+    verify: true
+    explore3d: [corpus-callosum]
+    body:
+      en: >-
+        The two [[cerebral-hemisphere|hemispheres]] look alike but are not identical twins: some skills lean to
+        one side. This is called [[lateralization]]. Language leans left in about 95% of right-handers and in most
+        left-handers. The right side leads in attending to the space around you and in hearing the emotion in a
+        voice. The [[corpus-callosum]] keeps both sides in constant contact.
+      fr: "Les deux [[cerebral-hemisphere|hémisphères]] se ressemblent mais ne sont pas de vrais jumeaux : certaines aptitudes penchent d'un côté. C'est la [[lateralization|latéralisation]]. Le langage penche à gauche chez environ 95 % des droitiers et chez la plupart des gauchers. Le côté droit mène l'attention à l'espace qui nous entoure et la perception de l'émotion dans une voix. Le [[corpus-callosum|corps calleux]] maintient les deux côtés en contact permanent."
+      zh: "两个[[cerebral-hemisphere|大脑半球]]看起来相似，但并不是一模一样的双胞胎：有些能力偏向一侧。这叫做[[lateralization|偏侧化]]。大约95%的右撇子和大多数左撇子的语言偏向左半球。右半球则主导对周围空间的注意，以及从语音中听出情绪。[[corpus-callosum|胼胝体]]让两侧始终保持联系。"
+  - id: c2
+    body:
+      en: >-
+        You may have heard that the left brain is logical and the right brain creative, and that people are one
+        type or the other. That is a myth. Both hemispheres work together on almost everything. The differences
+        are about particular skills, not personality types.
+      fr: "Vous avez peut-être entendu dire que le cerveau gauche est logique et le droit créatif, et que chacun serait d'un type ou de l'autre. C'est un mythe. Les deux hémisphères travaillent ensemble sur presque tout. Les différences portent sur des aptitudes précises, pas sur des types de personnalité."
+      zh: "你也许听说过：左脑负责逻辑，右脑负责创造，人要么是“左脑型”要么是“右脑型”。这是一个误解。两个半球几乎在所有事情上都协同工作。它们的差别在于某些具体能力，而不是性格类型。"
+  - id: c3
+    illustration: split-brain
+    body:
+      en: >-
+        In rare surgery for severe epilepsy, the corpus callosum is cut. Show such a [[split-brain]] patient a key
+        in the left visual field only: the picture reaches the right hemisphere alone. Asked what they saw, they
+        say 'nothing', because speech sits on the left. Yet their left hand, run by the right hemisphere, picks out the key.
+      fr: "Dans de rares opérations contre une épilepsie sévère, on sectionne le corps calleux. Montrez à un tel patient au [[split-brain|cerveau divisé]] une clé dans son seul champ visuel gauche : l'image n'atteint que l'hémisphère droit. Quand on lui demande ce qu'il a vu, il répond « rien », car la parole se trouve à gauche. Pourtant, sa main gauche, commandée par l'hémisphère droit, retrouve la clé."
+      zh: "在治疗严重癫痫的罕见手术中，医生会切断胼胝体。给这样的[[split-brain|裂脑]]患者只在左侧视野里看一把钥匙：图像只到达右半球。问他看到了什么，他会说“什么也没有”，因为言语在左半球。可是由右半球控制的左手，却能把钥匙挑出来。"
+questions:
+  - id: q1
+    kind: tfwhy
+    statement: { en: "Some people are 'left-brained' (logical) and others 'right-brained' (creative).", fr: "Certaines personnes sont « cerveau gauche » (logiques) et d'autres « cerveau droit » (créatives).", zh: "有些人是“左脑型”（擅长逻辑），有些人是“右脑型”（富有创造力）。" }
+    isTrue: false
+    reasons:
+      - { id: r1, text: { en: "Both hemispheres work together; they differ only in particular skills.", fr: "Les deux hémisphères travaillent ensemble ; ils ne diffèrent que pour certaines aptitudes.", zh: "两个半球协同工作；它们只在某些具体能力上有差别。" } }
+      - { id: r2, text: { en: "Each person only uses one hemisphere.", fr: "Chaque personne n'utilise qu'un seul hémisphère.", zh: "每个人只用一个半球。" } }
+    answerReason: r1
+    explain: { en: "[[lateralization|Lateralization]] is real for some skills, but personality 'sides' are a myth.", fr: "La [[lateralization|latéralisation]] existe pour certaines aptitudes, mais les « côtés » de personnalité sont un mythe.", zh: "[[lateralization|偏侧化]]对某些能力是真实存在的，但所谓性格上的“左右脑”是一种误解。" }
+  - id: q2
+    kind: mc
+    prompt: { en: "A split-brain patient sees the word 'cup' in the right visual field only. What happens?", fr: "Un patient au cerveau divisé voit le mot « tasse » dans son seul champ visuel droit. Que se passe-t-il ?", zh: "一位裂脑患者只在右侧视野里看到“杯子”这个词。会发生什么？" }
+    options:
+      - { id: a, text: { en: "They read it aloud easily", fr: "Il le lit facilement à voix haute", zh: "他能轻松地读出来" } }
+      - { id: b, text: { en: "They can't say it, but can point to a cup with the left hand", fr: "Il ne peut pas le dire, mais peut montrer une tasse de la main gauche", zh: "他说不出来，但能用左手指出杯子" } }
+      - { id: c, text: { en: "They see nothing at all", fr: "Il ne voit rien du tout", zh: "他什么也看不见" } }
+    answer: a
+    explain: { en: "The right visual field reaches the left hemisphere, where speech is: no crossing needed.", fr: "Le champ visuel droit atteint l'hémisphère gauche, là où se trouve la parole : pas besoin de traverser.", zh: "右侧视野到达左半球，而言语就在左半球，所以不需要跨越胼胝体。" }
+  - id: q3
+    kind: mc
+    prompt: { en: "Ignoring the left side of space usually follows damage to which hemisphere?", fr: "Ignorer le côté gauche de l'espace fait généralement suite à une lésion de quel hémisphère ?", zh: "忽略左侧空间通常是哪个半球受损所致？" }
+    options:
+      - { id: a, text: { en: "The right", fr: "Le droit", zh: "右半球" } }
+      - { id: b, text: { en: "The left", fr: "Le gauche", zh: "左半球" } }
+    answer: a
+    explain: { en: "The right hemisphere leads spatial attention, so its damage causes [[hemispatial-neglect]].", fr: "L'hémisphère droit mène l'attention spatiale : sa lésion provoque une [[hemispatial-neglect|négligence spatiale unilatérale]].", zh: "右半球主导空间注意，所以右半球受损会导致[[hemispatial-neglect|半侧空间忽略]]。" }
+  - id: q4
+    kind: gap
+    verify: true
+    prompt: { en: "In most people, language depends mainly on the ___ hemisphere.", fr: "Chez la plupart des gens, le langage dépend surtout de l'hémisphère ___.", zh: "大多数人的语言主要依赖___半球。" }
+    options:
+      - { id: a, text: { en: "left", fr: "gauche", zh: "左" } }
+      - { id: b, text: { en: "right", fr: "droit", zh: "右" } }
+    answer: a
+    explain: { en: "Left in about 95% of right-handers and most left-handers.", fr: "À gauche chez environ 95 % des droitiers et la plupart des gauchers.", zh: "约95%的右撇子和大多数左撇子是左半球。" }

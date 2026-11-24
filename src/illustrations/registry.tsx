@@ -16,6 +16,7 @@ import { NeuralTubeArt } from './neuralTube'
 import { NEURON_REGIONS, NeuronArt } from './neuron'
 import { NeuronTypesArt } from './neuronTypes'
 import { ReceptorsArt } from './receptors'
+import { SplitBrainArt } from './splitBrain'
 import { SPINAL_LEVEL_REGIONS, SpinalLevelsArt } from './spinalLevels'
 import { SynapseArt, SYNAPSE_REGIONS } from './synapse'
 import { TUBE_DEFECT_REGIONS, TubeDefectsArt } from './tubeDefects'
@@ -45,6 +46,7 @@ export const ILLUSTRATIONS: Record<string, FC> = {
   'forebrain-tracts': () => <ForebrainTractsArt labels />,
   'flat-map': FlatMapArt,
   'cranial-nerves': CranialNervesArt,
+  'split-brain': SplitBrainArt,
   'lateral-brain': () => <LateralBrainArt labels />,
 }
 

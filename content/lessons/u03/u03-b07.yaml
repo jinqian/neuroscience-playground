@@ -62,3 +62,8 @@ questions:
       - { id: c, text: { en: "Both sides equally", fr: "Les deux côtés également", zh: "两侧都一样" } }
     answer: a
     explain: { en: "The cerebellum is the [[ipsilateral]] exception.", fr: "Le cervelet est l'exception [[ipsilateral|homolatérale]].", zh: "小脑是[[ipsilateral|同侧]]控制的例外。" }
+  - id: q6
+    kind: tap3d
+    prompt: { en: "Find the insula.", fr: "Trouvez l'insula.", zh: "找到岛叶。" }
+    structure: insula
+    explain: { en: "It lies deep in the lateral sulcus, hidden under the frontal, parietal and temporal lobes.", fr: "Elle se trouve au fond du sillon latéral, cachée sous les lobes frontal, pariétal et temporal.", zh: "它位于外侧沟深处，藏在额叶、顶叶和颞叶下面。" }
