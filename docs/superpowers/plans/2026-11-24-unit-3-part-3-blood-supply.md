@@ -319,5 +319,5 @@ Look up the fr and zh titles with `wiki.mjs` in one batch.
 ### Task 9: Final checks
 
 - [ ] **Step 1:** Run `npm test && npm run typecheck && npm run lint && npm run build`. Expected: all clean.
-- [ ] **Step 2:** Run `grep -rniE "coursera|edx|harvard|hms|futurelearn|udemy" content src docs`. Expected: no hits.
+- [ ] **Step 2:** Grep `content`, `src` and `docs` for the course platform, course title and university names. Expected: no hits.
 - [ ] **Step 3:** Replay a finished Bite from the path, using Back during the replay. XP must not change.
