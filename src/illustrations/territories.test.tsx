@@ -25,4 +25,12 @@ describe('artery territories', () => {
     const { container } = wrap(<TerritoryViewsArt />)
     for (const a of container.querySelectorAll('[data-artery]')) expect(a.getAttribute('data-lit')).toBe('true')
   })
+
+  test('a middle view faces the other way from its side view, as seen from the midline', () => {
+    const { container, rerender } = wrap(<TerritoryViewsArt />)
+    const front = (v: string) => container.querySelector(`[data-view="${v}"]`)?.getAttribute('data-front')
+    expect([front('side'), front('middle')]).toEqual(['left', 'right'])
+    rerender(<LanguageProvider lang="en" onLangChange={() => {}}><TerritoryViewsArt side="right" /></LanguageProvider>)
+    expect([front('side'), front('middle')]).toEqual(['right', 'left'])
+  })
 })

@@ -24,14 +24,15 @@ const MIDDLE_AREAS: Record<Artery, string> = {
   pca: 'M340 0H470V330H0V210H120L170 150H250L320 120Z',
 }
 
-type ViewProps = { lit?: Artery; side: 'left' | 'right' }
+/** `front`: which way the front of the brain points in this drawing. */
+type ViewProps = { lit?: Artery; front: 'left' | 'right' }
 
-function View({ areas, extra, lit, side, x, title }: ViewProps & { areas: Record<Artery, string>; extra?: React.ReactNode; x: number; title: string }) {
+function View({ areas, extra, lit, front, x, title, view }: ViewProps & { areas: Record<Artery, string>; extra?: React.ReactNode; x: number; title: string; view: 'side' | 'middle' }) {
   const clip = useId()
-  const mirror = side === 'right'
+  const mirror = front === 'right'
   const lx = (v: number) => (mirror ? W - v : v)
   return (
-    <g transform={`translate(${x},10)`}>
+    <g transform={`translate(${x},10)`} data-view={view} data-front={front}>
       <defs><clipPath id={clip}><path d={CEREBRUM} /></clipPath></defs>
       <g transform={mirror ? `translate(${W},0) scale(-1,1)` : undefined}>
         <path d={CEREBRUM} fill="#eef0f4" />
@@ -54,6 +55,7 @@ function View({ areas, extra, lit, side, x, title }: ViewProps & { areas: Record
 
 /**
  * One hemisphere seen from the side and from the middle (cut down the midline), each artery's territory in its colour.
+ * Seen from the midline, a hemisphere's front points the other way from its side view, as in anatomy books.
  * `lit` brings one territory forward and fades the others. `side="right"` shows the right hemisphere.
  */
 export function TerritoryViewsArt({ lit, side = 'left' }: { lit?: Artery; side?: 'left' | 'right' }) {
@@ -62,12 +64,12 @@ export function TerritoryViewsArt({ lit, side = 'left' }: { lit?: Artery; side?:
     <ArtSvg viewBox="0 0 960 360" label="Artery territories, from the side and from the middle" data-side={side}>
       {side === 'left'
         ? <>
-            <View areas={SIDE_AREAS} lit={lit} side={side} x={0} title="side view" />
-            <View areas={MIDDLE_AREAS} extra={callosum} lit={lit} side={side} x={490} title="middle view" />
+            <View view="side" areas={SIDE_AREAS} lit={lit} front="left" x={0} title="side view" />
+            <View view="middle" areas={MIDDLE_AREAS} extra={callosum} lit={lit} front="right" x={490} title="middle view" />
           </>
         : <>
-            <View areas={MIDDLE_AREAS} extra={callosum} lit={lit} side={side} x={0} title="middle view" />
-            <View areas={SIDE_AREAS} lit={lit} side={side} x={490} title="side view" />
+            <View view="middle" areas={MIDDLE_AREAS} extra={callosum} lit={lit} front="left" x={0} title="middle view" />
+            <View view="side" areas={SIDE_AREAS} lit={lit} front="right" x={490} title="side view" />
           </>}
     </ArtSvg>
   )
