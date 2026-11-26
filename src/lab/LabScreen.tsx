@@ -30,6 +30,8 @@ export function LabScreen({ lesson }: { lesson: Lab }) {
   const [phase, setPhase] = useState<Phase>(saved?.phase ?? 'intro')
   const [goalMet, setGoalMet] = useState(saved?.goalMet ?? false)
   const [earned, setEarned] = useState(saved?.earned ?? 0)
+  /** Coming back from the sim opens the intro on its last card. */
+  const [introAtEnd, setIntroAtEnd] = useState(false)
 
   useEffect(() => {
     if (phase !== 'done') saveLessonState(`${lesson.id}:lab`, { phase, goalMet, earned } satisfies LabSnapshot)
@@ -43,6 +45,7 @@ export function LabScreen({ lesson }: { lesson: Lab }) {
         steps={lesson.intro.map((c) => ({ kind: 'card' as const, id: c.id }))}
         cards={lesson.intro}
         questions={[]}
+        startAtEnd={introAtEnd}
         onDone={() => setPhase('sim')}
       />
     )
@@ -56,7 +59,7 @@ export function LabScreen({ lesson }: { lesson: Lab }) {
       setEarned((e) => e + XP.labGoal)
     }
     return (
-      <LessonFrame value={goalMet ? 1 : 0} max={1} variant="bench"
+      <LessonFrame value={goalMet ? 1 : 0} max={1} variant="bench" onBack={() => { setIntroAtEnd(true); setPhase('intro') }}
         footer={
           <div className={`feedback ${goalMet ? 'feedback--correct' : ''}`}>
             <div className="feedback__inner">
@@ -89,6 +92,7 @@ export function LabScreen({ lesson }: { lesson: Lab }) {
         steps={labReflectionPlan(lesson)}
         cards={[]}
         questions={lesson.reflection}
+        onBackFromStart={() => setPhase('sim')}
         onDone={(run) => {
           completeLesson(lesson, run.missed, new Date())
           setEarned((e) => e + run.xp)
