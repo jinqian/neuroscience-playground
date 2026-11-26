@@ -1,5 +1,7 @@
 import type { FC } from 'react'
 import { ActionPotentialArt } from './actionPotential'
+import { ArteriesArt } from './arteries'
+import { BLEED_REGIONS, BleedsArt } from './bleeds'
 import { AUTONOMIC_REGIONS, AutonomicArt } from './autonomic'
 import { CNS_PNS_REGIONS, CnsPnsArt } from './cnsPns'
 import { CortexFoldingArt } from './cortexFolding'
@@ -20,6 +22,7 @@ import { ReceptorsArt } from './receptors'
 import { SplitBrainArt } from './splitBrain'
 import { SPINAL_LEVEL_REGIONS, SpinalLevelsArt } from './spinalLevels'
 import { SynapseArt, SYNAPSE_REGIONS } from './synapse'
+import { TERRITORY_REGIONS, TerritoriesTopArt, TerritoryViewsArt } from './territories'
 import { TUBE_DEFECT_REGIONS, TubeDefectsArt } from './tubeDefects'
 import { VesiclesArt } from './vesicles'
 
@@ -50,6 +53,10 @@ export const ILLUSTRATIONS: Record<string, FC> = {
   'split-brain': SplitBrainArt,
   'language-circuit': LanguageCircuitArt,
   'lateral-brain': () => <LateralBrainArt labels />,
+  arteries: ArteriesArt,
+  territories: () => <TerritoryViewsArt />,
+  'territories-top': () => <TerritoriesTopArt labels />,
+  bleeds: () => <BleedsArt labels />,
 }
 
 /** Tappable figures by id, with the region ids a learner can tap. */
@@ -63,4 +70,6 @@ export const FIGURES: Record<string, { Component: FC<FigureProps>; regions: stri
   synapse: { Component: (p) => <SynapseArt onTap={p.onTap} picked={p.picked} />, regions: SYNAPSE_REGIONS },
   autonomic: { Component: (p) => <AutonomicArt onTap={p.onTap} picked={p.picked} />, regions: AUTONOMIC_REGIONS },
   'spinal-levels': { Component: (p) => <SpinalLevelsArt onTap={p.onTap} picked={p.picked} />, regions: SPINAL_LEVEL_REGIONS },
+  'territories-top': { Component: (p) => <TerritoriesTopArt onTap={p.onTap} picked={p.picked} />, regions: TERRITORY_REGIONS },
+  bleeds: { Component: (p) => <BleedsArt onTap={p.onTap} picked={p.picked} />, regions: BLEED_REGIONS },
 }

@@ -26,8 +26,8 @@ export function Region({ id, label, art, children }: { id: string; label: string
 }
 
 /** Label text in the house style. */
-export function Label({ x, y, children, anchor = 'middle' }: { x: number; y: number; children: ReactNode; anchor?: 'start' | 'middle' | 'end' }) {
-  return <text x={x} y={y} textAnchor={anchor} className="art-label">{typeof children === 'string' ? <ArtWord>{children}</ArtWord> : children}</text>
+export function Label({ x, y, children, anchor = 'middle', size }: { x: number; y: number; children: ReactNode; anchor?: 'start' | 'middle' | 'end'; size?: number }) {
+  return <text x={x} y={y} textAnchor={anchor} className="art-label" style={size ? { fontSize: size } : undefined}>{typeof children === 'string' ? <ArtWord>{children}</ArtWord> : children}</text>
 }
 
 /** A piece of illustration text, shown in the current language. */
