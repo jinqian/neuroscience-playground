@@ -1,0 +1,81 @@
+id: u03-b12
+type: bite
+title: { en: "Where the blood comes in", fr: "Par où arrive le sang", zh: "血液从哪里进来" }
+sources: ["Blood Supply"]
+cards:
+  - id: c1
+    illustration: arteries
+    body:
+      en: >-
+        Blood reaches the brain through four arteries in the neck. The two [[internal-carotid-artery|internal carotid arteries]]
+        come up at the front. The two [[vertebral-artery|vertebral arteries]] come up at the back and join into one
+        [[basilar-artery|basilar artery]] along the brainstem. Under the brain, they all connect in a ring: the [[circle-of-willis]].
+      fr: "Le sang arrive au cerveau par quatre artères du cou. Les deux [[internal-carotid-artery|artères carotides internes]] montent à l'avant. Les deux [[vertebral-artery|artères vertébrales]] montent à l'arrière et s'unissent en une seule [[basilar-artery|artère basilaire]] le long du tronc cérébral. Sous le cerveau, toutes se rejoignent en un anneau : le [[circle-of-willis|polygone de Willis]]."
+      zh: "血液经由颈部的四条动脉到达大脑。两条[[internal-carotid-artery|颈内动脉]]从前面上来。两条[[vertebral-artery|椎动脉]]从后面上来，沿着脑干汇合成一条[[basilar-artery|基底动脉]]。在大脑底部，它们全部连成一个环：[[circle-of-willis|大脑动脉环（Willis环）]]。"
+  - id: c2
+    verify: true
+    body:
+      en: >-
+        The ring links front and back, left and right. If one artery narrows slowly, blood can come round another way.
+        It is a backup, but not a perfect one: in many people the ring has thin or missing links, and a sudden blockage
+        further along, past the ring, has no detour at all.
+      fr: "L'anneau relie l'avant et l'arrière, la gauche et la droite. Si une artère se rétrécit lentement, le sang peut passer par un autre chemin. C'est une solution de secours, mais imparfaite : chez beaucoup de gens, l'anneau a des liens fins ou manquants, et un blocage soudain plus loin, au-delà de l'anneau, n'a aucun détour."
+      zh: "这个环把前与后、左与右连接起来。如果某条动脉慢慢变窄，血液可以从另一条路绕过来。它是一种备用通路，但并不完美：很多人的环上有些连接很细甚至缺失；而在环之后更远处突然发生的堵塞，则完全没有绕行的路。"
+  - id: c3
+    illustration: territories
+    body:
+      en: >-
+        From the ring, three arteries feed each hemisphere. The [[anterior-cerebral-artery|anterior cerebral artery]] feeds
+        the inner side and a strip along the top, where the leg is mapped. The [[middle-cerebral-artery|middle cerebral artery]]
+        feeds most of the outer side: face, arm, and on the left, language. The [[posterior-cerebral-artery|posterior cerebral artery]]
+        feeds the back, where vision is.
+      fr: "À partir de l'anneau, trois artères irriguent chaque hémisphère. L'[[anterior-cerebral-artery|artère cérébrale antérieure]] irrigue la face interne et une bande le long du dessus, là où la jambe est représentée. L'[[middle-cerebral-artery|artère cérébrale moyenne]] irrigue la plus grande partie de la face externe : le visage, le bras et, à gauche, le langage. L'[[posterior-cerebral-artery|artère cérébrale postérieure]] irrigue l'arrière, où se trouve la vision."
+      zh: "从这个环出发，有三条动脉供应每个半球。[[anterior-cerebral-artery|大脑前动脉]]供应内侧面和沿顶部的一条带，那里对应腿部。[[middle-cerebral-artery|大脑中动脉]]供应外侧面的大部分：面部、手臂，在左侧还有语言区。[[posterior-cerebral-artery|大脑后动脉]]供应后部，也就是视觉所在的地方。"
+questions:
+  - id: q1
+    kind: match
+    prompt: { en: "Match each artery to what it mainly feeds.", fr: "Associez chaque artère à ce qu'elle irrigue surtout.", zh: "把每条动脉与它主要供应的区域配对。" }
+    pairs:
+      - { id: p1, left: { en: "Anterior cerebral artery", fr: "Artère cérébrale antérieure", zh: "大脑前动脉" }, right: { en: "Leg area, inner side", fr: "Zone de la jambe, face interne", zh: "腿部区域、内侧面" } }
+      - { id: p2, left: { en: "Middle cerebral artery", fr: "Artère cérébrale moyenne", zh: "大脑中动脉" }, right: { en: "Face, arm, language", fr: "Visage, bras, langage", zh: "面部、手臂、语言" } }
+      - { id: p3, left: { en: "Posterior cerebral artery", fr: "Artère cérébrale postérieure", zh: "大脑后动脉" }, right: { en: "Vision, at the back", fr: "La vision, à l'arrière", zh: "后部的视觉" } }
+    explain: { en: "Front-and-inner, outer side, back.", fr: "Avant et intérieur, face externe, arrière.", zh: "前方和内侧、外侧面、后部。" }
+  - id: q2
+    kind: tap2d
+    prompt: { en: "Seen from above: tap the territory of the left [[middle-cerebral-artery|middle cerebral artery]].", fr: "Vu d'en haut : touchez le territoire de l'[[middle-cerebral-artery|artère cérébrale moyenne]] gauche.", zh: "从上方看：点击左侧[[middle-cerebral-artery|大脑中动脉]]的供血区。" }
+    figure: territories-top
+    answer: mca-left
+    explain: { en: "The outer side of the left hemisphere. The strip along the midline belongs to the anterior cerebral artery.", fr: "La face externe de l'hémisphère gauche. La bande le long de la ligne médiane appartient à l'artère cérébrale antérieure.", zh: "左半球的外侧面。沿中线的那条带属于大脑前动脉。" }
+  - id: q3
+    kind: mc
+    prompt: { en: "Which arteries join to form the basilar artery?", fr: "Quelles artères s'unissent pour former l'artère basilaire ?", zh: "哪两条动脉汇合成基底动脉？" }
+    options:
+      - { id: a, text: { en: "The two vertebral arteries", fr: "Les deux artères vertébrales", zh: "两条椎动脉" } }
+      - { id: b, text: { en: "The two internal carotid arteries", fr: "Les deux artères carotides internes", zh: "两条颈内动脉" } }
+      - { id: c, text: { en: "The two middle cerebral arteries", fr: "Les deux artères cérébrales moyennes", zh: "两条大脑中动脉" } }
+    answer: a
+    explain: { en: "The vertebrals come up at the back and merge along the brainstem.", fr: "Les vertébrales montent à l'arrière et fusionnent le long du tronc cérébral.", zh: "椎动脉从后面上来，沿着脑干汇合。" }
+  - id: q4
+    kind: mc
+    prompt: { en: "Why is the circle of Willis useful?", fr: "À quoi sert le polygone de Willis ?", zh: "大脑动脉环有什么用？" }
+    options:
+      - { id: a, text: { en: "It lets blood come round another way if one artery slowly narrows", fr: "Il permet au sang de passer par un autre chemin si une artère se rétrécit lentement", zh: "如果某条动脉慢慢变窄，血液可以从别的路绕过来" } }
+      - { id: b, text: { en: "It stores blood for when the heart stops", fr: "Il stocke du sang pour quand le cœur s'arrête", zh: "它储存血液，以备心脏停跳时使用" } }
+      - { id: c, text: { en: "It filters the blood before it enters the brain", fr: "Il filtre le sang avant qu'il n'entre dans le cerveau", zh: "它在血液进入大脑前过滤血液" } }
+    answer: a
+    explain: { en: "A ring gives detours. It can't help with a sudden block further along, past the ring.", fr: "Un anneau offre des détours. Il ne peut rien contre un blocage soudain plus loin, au-delà de l'anneau.", zh: "环提供了绕行的路，但对环之后更远处突然发生的堵塞无能为力。" }
+  - id: q5
+    kind: order
+    prompt: { en: "Follow blood from the heart to the language areas.", fr: "Suivez le sang du cœur jusqu'aux aires du langage.", zh: "追踪血液从心脏到语言区的路线。" }
+    steps:
+      - { id: s1, text: { en: "Heart", fr: "Cœur", zh: "心脏" } }
+      - { id: s2, text: { en: "Internal carotid artery", fr: "Artère carotide interne", zh: "颈内动脉" } }
+      - { id: s3, text: { en: "Circle of Willis", fr: "Polygone de Willis", zh: "大脑动脉环" } }
+      - { id: s4, text: { en: "Left middle cerebral artery", fr: "Artère cérébrale moyenne gauche", zh: "左侧大脑中动脉" } }
+      - { id: s5, text: { en: "Broca's and Wernicke's areas", fr: "Aires de Broca et de Wernicke", zh: "布罗卡区和韦尼克区" } }
+    explain: { en: "Up the neck at the front, into the ring, then out along the outer side.", fr: "On monte par l'avant du cou, on entre dans l'anneau, puis on repart le long de la face externe.", zh: "从颈部前方上行，进入环，然后沿外侧面出去。" }
+  - id: q6
+    kind: termmatch
+    terms: [circle-of-willis, anterior-cerebral-artery, middle-cerebral-artery, posterior-cerebral-artery]
+    from: en
+    to: zh

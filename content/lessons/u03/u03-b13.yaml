@@ -1,0 +1,77 @@
+id: u03-b13
+type: bite
+title: { en: "Strokes and tumours", fr: "AVC et tumeurs", zh: "中风与肿瘤" }
+sources: ["Strokes and Tumors"]
+cards:
+  - id: c1
+    verify: true
+    body:
+      en: >-
+        A [[stroke]] is a sudden loss of brain function because blood supply failed. Most strokes are
+        [[ischemic-stroke|ischaemic]]: a clot blocks an artery, and the area it feeds starves. The rest are
+        [[hemorrhagic-stroke|haemorrhagic]]: a vessel bursts, and the escaping blood presses on and damages the tissue.
+        Either way, what the person loses depends on which territory was hit.
+      fr: "Un [[stroke|AVC]] est une perte soudaine d'une fonction cérébrale parce que l'apport de sang a fait défaut. La plupart des AVC sont [[ischemic-stroke|ischémiques]] : un caillot bouche une artère, et la zone qu'elle irrigue manque de tout. Les autres sont [[hemorrhagic-stroke|hémorragiques]] : un vaisseau éclate, et le sang qui s'échappe comprime et abîme le tissu. Dans les deux cas, ce que la personne perd dépend du territoire touché."
+      zh: "[[stroke|中风]]是因为供血出问题而突然丧失脑功能。大多数中风是[[ischemic-stroke|缺血性]]的：血块堵住动脉，它供应的区域就“挨饿”。其余的是[[hemorrhagic-stroke|出血性]]的：血管破裂，流出的血液压迫并损伤组织。无论哪种，患者失去什么功能，都取决于受影响的是哪个供血区。"
+  - id: c2
+    verify: true
+    body:
+      en: >-
+        In a stroke, time matters: each minute without blood costs a great many neurons, and hospital treatments to
+        reopen a blocked artery only work within hours. That is why a face that suddenly droops, an arm that
+        suddenly goes weak, or speech that suddenly fails is an emergency.
+      fr: "Lors d'un AVC, le temps compte : chaque minute sans sang coûte un très grand nombre de neurones, et les traitements hospitaliers qui rouvrent une artère bouchée ne fonctionnent que dans les premières heures. C'est pourquoi un visage qui s'affaisse soudain, un bras qui faiblit soudain ou une parole qui flanche soudain sont une urgence."
+      zh: "中风时，时间就是一切：缺血的每一分钟都会损失大量神经元，而医院里重新打通堵塞动脉的治疗只在几小时内有效。所以，突然面部下垂、突然手臂无力、突然说不出话，都是急症。"
+  - id: c3
+    body:
+      en: >-
+        A brain tumour is different: it grows over weeks or months, so symptoms creep in. It presses on its
+        neighbours and raises the pressure inside the skull. A [[glioma]] grows from [[glia]] and spreads into the
+        brain. A [[meningioma]] grows from the [[meninges]] and presses from outside.
+      fr: "Une tumeur cérébrale, c'est différent : elle grandit sur des semaines ou des mois, si bien que les symptômes s'installent peu à peu. Elle comprime ses voisines et fait monter la pression dans le crâne. Un [[glioma|gliome]] naît de la [[glia|glie]] et s'étend dans le cerveau. Un [[meningioma|méningiome]] naît des [[meninges|méninges]] et appuie de l'extérieur."
+      zh: "脑肿瘤则不同：它在几周或几个月里慢慢长大，所以症状是逐渐出现的。它会压迫周围组织，并让颅内压力升高。[[glioma|胶质瘤]]由[[glia|胶质细胞]]长成，并向脑内扩散。[[meningioma|脑膜瘤]]由[[meninges|脑膜]]长成，从外面压迫大脑。"
+questions:
+  - id: q1
+    kind: tfwhy
+    statement: { en: "Most strokes are caused by a burst blood vessel.", fr: "La plupart des AVC sont dus à un vaisseau qui éclate.", zh: "大多数中风是由血管破裂引起的。" }
+    isTrue: false
+    reasons:
+      - { id: r1, text: { en: "Most strokes are blockages: a clot cuts off an artery's territory.", fr: "La plupart des AVC sont des blocages : un caillot coupe le territoire d'une artère.", zh: "大多数中风是堵塞：血块切断了某条动脉的供血区。" } }
+      - { id: r2, text: { en: "Strokes are caused by tumours.", fr: "Les AVC sont causés par des tumeurs.", zh: "中风是由肿瘤引起的。" } }
+    answerReason: r1
+    explain: { en: "Ischaemic strokes are the large majority.", fr: "Les AVC ischémiques sont la grande majorité.", zh: "缺血性中风占了绝大多数。" }
+  - id: q2
+    kind: match
+    prompt: { en: "Match each problem to what happens.", fr: "Associez chaque problème à ce qui se passe.", zh: "把每种问题与它的发生过程配对。" }
+    pairs:
+      - { id: p1, left: { en: "Ischaemic stroke", fr: "AVC ischémique", zh: "缺血性中风" }, right: { en: "A clot blocks an artery", fr: "Un caillot bouche une artère", zh: "血块堵住动脉" } }
+      - { id: p2, left: { en: "Haemorrhagic stroke", fr: "AVC hémorragique", zh: "出血性中风" }, right: { en: "A vessel bursts", fr: "Un vaisseau éclate", zh: "血管破裂" } }
+      - { id: p3, left: { en: "Tumour", fr: "Tumeur", zh: "肿瘤" }, right: { en: "A growth slowly presses on the brain", fr: "Une masse comprime lentement le cerveau", zh: "肿块慢慢压迫大脑" } }
+    explain: { en: "Blocked, burst, or slowly growing.", fr: "Bouché, éclaté, ou en lente croissance.", zh: "堵塞、破裂，或者慢慢长大。" }
+  - id: q3
+    kind: mc
+    prompt: { en: "One person's arm went weak in a minute. Another's weakened over three months. Which is more likely a tumour?", fr: "Chez une personne, le bras a faibli en une minute. Chez une autre, en trois mois. Laquelle a plus probablement une tumeur ?", zh: "一个人的手臂在一分钟内变得无力，另一个人则是在三个月里逐渐无力。哪一个更可能是肿瘤？" }
+    options:
+      - { id: a, text: { en: "The one that weakened over three months", fr: "Celle dont le bras a faibli en trois mois", zh: "三个月里逐渐无力的那个" } }
+      - { id: b, text: { en: "The one that weakened in a minute", fr: "Celle dont le bras a faibli en une minute", zh: "一分钟内变得无力的那个" } }
+      - { id: c, text: { en: "Neither: tumours never cause weakness", fr: "Aucune : les tumeurs ne causent jamais de faiblesse", zh: "都不是：肿瘤从不引起无力" } }
+    answer: a
+    explain: { en: "Sudden points to a stroke. Slow and creeping points to something growing.", fr: "Soudain évoque un AVC. Lent et progressif évoque quelque chose qui grandit.", zh: "突然发生提示中风；缓慢渐进提示有东西在生长。" }
+  - id: q4
+    kind: mc
+    prompt: { en: "Why does speed matter so much in a stroke?", fr: "Pourquoi la rapidité compte-t-elle autant lors d'un AVC ?", zh: "为什么中风时速度如此重要？" }
+    options:
+      - { id: a, text: { en: "Neurons store no fuel, so they die quickly without blood", fr: "Les neurones ne stockent pas de carburant : sans sang, ils meurent vite", zh: "神经元不储存燃料，没有血液很快就会死亡" } }
+      - { id: b, text: { en: "The clot always dissolves after an hour", fr: "Le caillot se dissout toujours au bout d'une heure", zh: "血块一小时后总会自行溶解" } }
+      - { id: c, text: { en: "Strokes only affect sleep", fr: "Les AVC n'affectent que le sommeil", zh: "中风只影响睡眠" } }
+    answer: a
+    explain: { en: "The brain lives from heartbeat to heartbeat, so every minute counts.", fr: "Le cerveau vit d'un battement de cœur à l'autre : chaque minute compte.", zh: "大脑靠一次次心跳活着，所以每一分钟都很重要。" }
+  - id: q5
+    kind: gap
+    prompt: { en: "A meningioma grows from the ___.", fr: "Un méningiome naît des ___.", zh: "脑膜瘤由___长成。" }
+    options:
+      - { id: a, text: { en: "meninges", fr: "méninges", zh: "脑膜" } }
+      - { id: b, text: { en: "neurons", fr: "neurones", zh: "神经元" } }
+      - { id: c, text: { en: "arteries", fr: "artères", zh: "动脉" } }
+    answer: a
+    explain: { en: "It grows from the coverings and presses on the brain from outside.", fr: "Il naît des enveloppes et appuie sur le cerveau de l'extérieur.", zh: "它由包膜长成，从外面压迫大脑。" }

@@ -5,7 +5,7 @@ const ART = '#d8343f'
 /** The brain from below, front at the top: carotid and vertebral arteries feeding the circle of Willis and the three cerebral arteries. */
 export function ArteriesArt() {
   return (
-    <ArtSvg viewBox="0 0 640 420" label="The brain's arteries seen from below">
+    <ArtSvg viewBox="0 0 800 420" label="The brain's arteries seen from below">
       <g fill="#eef0f4" stroke={INK} strokeWidth="2">
         <path d="M228 24C130 20 60 90 56 200C52 300 120 390 228 390Z" />
         <path d="M232 24C330 20 400 90 404 200C408 300 340 390 232 390Z" />
@@ -33,14 +33,14 @@ export function ArteriesArt() {
         <path d="M246 80H452" /><path d="M370 180H452" /><path d="M285 196Q360 214 452 214" />
         <path d="M292 160H452" /><path d="M336 286H452" /><path d="M232 320H452" /><path d="M252 390H452" />
       </g>
-      <Label x={458} y={84} anchor="start">anterior cerebral artery</Label>
-      <Label x={458} y={164} anchor="start">circle of Willis</Label>
-      <Label x={458} y={184} anchor="start">middle cerebral artery</Label>
-      <Label x={458} y={218} anchor="start">internal carotid artery</Label>
-      <Label x={458} y={290} anchor="start">posterior cerebral artery</Label>
-      <Label x={458} y={324} anchor="start">basilar artery</Label>
-      <Label x={458} y={394} anchor="start">vertebral artery</Label>
-      <Label x={230} y={16}>front</Label>
+      <Label x={458} y={86} anchor="start" size={21}>anterior cerebral artery</Label>
+      <Label x={458} y={160} anchor="start" size={21}>circle of Willis</Label>
+      <Label x={458} y={186} anchor="start" size={21}>middle cerebral artery</Label>
+      <Label x={458} y={220} anchor="start" size={21}>internal carotid artery</Label>
+      <Label x={458} y={292} anchor="start" size={21}>posterior cerebral artery</Label>
+      <Label x={458} y={326} anchor="start" size={21}>basilar artery</Label>
+      <Label x={458} y={396} anchor="start" size={21}>vertebral artery</Label>
+      <Label x={230} y={16} size={20}>front</Label>
     </ArtSvg>
   )
 }

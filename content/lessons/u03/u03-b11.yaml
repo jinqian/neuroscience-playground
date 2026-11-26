@@ -1,0 +1,70 @@
+id: u03-b11
+type: bite
+title: { en: "The hungry brain", fr: "Un cerveau affamé", zh: "饥饿的大脑" }
+sources: ["Oxygen and Cerebral Blood Flow"]
+cards:
+  - id: c1
+    verify: true
+    body:
+      en: >-
+        Your brain is about 2% of your body weight, yet it uses about 20% of the oxygen you breathe and a big share
+        of your glucose. [[neuron|Neurons]] burn that fuel nonstop to keep their ion pumps running, and they store
+        almost none of it. So the brain lives from one heartbeat to the next: it needs a steady flow of blood every second.
+      fr: "Votre cerveau représente environ 2 % du poids du corps, mais il consomme environ 20 % de l'oxygène que vous respirez et une grande part de votre glucose. Les [[neuron|neurones]] brûlent ce carburant sans arrêt pour faire tourner leurs pompes à ions, et ils n'en stockent presque pas. Le cerveau vit donc d'un battement de cœur à l'autre : il lui faut un flux de sang régulier à chaque seconde."
+      zh: "大脑大约只占体重的2%，却消耗你吸入氧气的约20%，还要用掉很大一部分葡萄糖。[[neuron|神经元]]不停地燃烧这些燃料，维持离子泵的运转，而且几乎不储存。所以大脑是靠一次次心跳活着的：它每一秒都需要稳定的血流。"
+  - id: c2
+    verify: true
+    body:
+      en: >-
+        If blood flow stops, consciousness fades within about ten seconds, and neurons start to die within minutes.
+        To prevent that, the brain holds its blood flow steady even when blood pressure rises or falls. It also
+        sends more blood to whichever areas are busiest. Some brain scans use that extra flow to see which areas are at work.
+      fr: "Si le flux sanguin s'arrête, la conscience s'éteint en une dizaine de secondes, et les neurones commencent à mourir en quelques minutes. Pour l'éviter, le cerveau maintient son débit sanguin stable même quand la pression artérielle monte ou descend. Il envoie aussi davantage de sang aux zones les plus actives. Certaines images du cerveau utilisent ce surplus de sang pour voir quelles zones travaillent."
+      zh: "如果血流停止，大约十秒内意识就会消失，几分钟内神经元就开始死亡。为了避免这种情况，即使血压升高或降低，大脑也会让自己的血流保持稳定。它还会把更多血液送到最忙碌的区域。有些脑部扫描就是利用这部分额外的血流，来观察哪些区域正在工作。"
+questions:
+  - id: q1
+    kind: mc
+    prompt: { en: "About what share of the body's oxygen does the brain use?", fr: "Quelle part de l'oxygène du corps le cerveau consomme-t-il environ ?", zh: "大脑大约消耗全身多少比例的氧气？" }
+    options:
+      - { id: a, text: { en: "About 20%", fr: "Environ 20 %", zh: "约20%" } }
+      - { id: b, text: { en: "About 2%", fr: "Environ 2 %", zh: "约2%" } }
+      - { id: c, text: { en: "About 60%", fr: "Environ 60 %", zh: "约60%" } }
+    answer: a
+    explain: { en: "2% of the weight, 20% of the oxygen: a very expensive organ.", fr: "2 % du poids, 20 % de l'oxygène : un organe très coûteux.", zh: "占体重的2%，却用掉20%的氧气：这是个非常“昂贵”的器官。" }
+  - id: q2
+    kind: tfwhy
+    statement: { en: "The brain can run for an hour on its own stored fuel if blood flow stops.", fr: "Le cerveau peut tenir une heure sur ses propres réserves si le sang ne circule plus.", zh: "如果血流停止，大脑可以靠自己储存的燃料坚持一小时。" }
+    isTrue: false
+    reasons:
+      - { id: r1, text: { en: "Neurons store almost no fuel, so they depend on blood every second.", fr: "Les neurones ne stockent presque pas de carburant : ils dépendent du sang à chaque seconde.", zh: "神经元几乎不储存燃料，所以每一秒都依赖血液。" } }
+      - { id: r2, text: { en: "The brain only needs blood while we are awake.", fr: "Le cerveau n'a besoin de sang que lorsque nous sommes éveillés.", zh: "大脑只有在我们清醒时才需要血液。" } }
+    answerReason: r1
+    explain: { en: "Consciousness fades in about ten seconds without blood flow.", fr: "Sans flux sanguin, la conscience s'éteint en une dizaine de secondes.", zh: "没有血流，大约十秒意识就会消失。" }
+  - id: q3
+    kind: gap
+    prompt: { en: "When an area of the brain gets busier, it receives ___ blood.", fr: "Quand une zone du cerveau devient plus active, elle reçoit ___ de sang.", zh: "当大脑某个区域更忙碌时，它会得到___血液。" }
+    options:
+      - { id: a, text: { en: "more", fr: "plus", zh: "更多" } }
+      - { id: b, text: { en: "less", fr: "moins", zh: "更少" } }
+      - { id: c, text: { en: "the same", fr: "autant", zh: "同样多" } }
+    answer: a
+    explain: { en: "Flow follows the work, which is what some brain scans pick up.", fr: "Le débit suit le travail, et c'est ce que captent certaines images du cerveau.", zh: "血流跟着工作量走，有些脑部扫描捕捉的正是这一点。" }
+  - id: q4
+    kind: order
+    prompt: { en: "Blood flow to an area stops. Put what happens next in order.", fr: "Le sang n'arrive plus dans une zone. Remettez la suite dans l'ordre.", zh: "某个区域的血流停止了。把接下来发生的事按顺序排列。" }
+    steps:
+      - { id: s1, text: { en: "Blood stops arriving", fr: "Le sang n'arrive plus", zh: "血液不再到达" } }
+      - { id: s2, text: { en: "Oxygen and glucose run out", fr: "L'oxygène et le glucose s'épuisent", zh: "氧气和葡萄糖耗尽" } }
+      - { id: s3, text: { en: "Neurons can't make energy", fr: "Les neurones ne peuvent plus produire d'énergie", zh: "神经元无法产生能量" } }
+      - { id: s4, text: { en: "Neurons stop firing", fr: "Les neurones cessent de décharger", zh: "神经元停止放电" } }
+      - { id: s5, text: { en: "Neurons begin to die", fr: "Les neurones commencent à mourir", zh: "神经元开始死亡" } }
+    explain: { en: "No flow → no fuel → no energy → silence → damage.", fr: "Pas de flux → pas de carburant → pas d'énergie → silence → lésion.", zh: "没有血流 → 没有燃料 → 没有能量 → 沉默 → 损伤。" }
+  - id: q5
+    kind: mc
+    prompt: { en: "Blood pressure drops a little when you stand up. What happens to blood flow in the brain?", fr: "La pression artérielle baisse un peu quand vous vous levez. Qu'arrive-t-il au débit sanguin du cerveau ?", zh: "站起来时血压会稍微下降。大脑的血流会怎样？" }
+    options:
+      - { id: a, text: { en: "It stays about the same: the brain holds it steady", fr: "Il reste à peu près le même : le cerveau le maintient stable", zh: "基本不变：大脑会让它保持稳定" } }
+      - { id: b, text: { en: "It falls by the same amount", fr: "Il baisse d'autant", zh: "按同样幅度下降" } }
+      - { id: c, text: { en: "It stops until you sit down", fr: "Il s'arrête jusqu'à ce que vous vous asseyiez", zh: "停止，直到你坐下" } }
+    answer: a
+    explain: { en: "Within a normal range, the brain's vessels widen or narrow to keep the flow steady.", fr: "Dans une plage normale, les vaisseaux du cerveau se dilatent ou se resserrent pour garder un débit stable.", zh: "在正常范围内，大脑的血管会扩张或收缩，让血流保持稳定。" }

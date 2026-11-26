@@ -1,0 +1,72 @@
+id: u03-b14
+type: bite
+title: { en: "Bleeds", fr: "Les saignements", zh: "颅内出血" }
+sources: ["Bleeds"]
+cards:
+  - id: c1
+    illustration: bleeds
+    body:
+      en: >-
+        Between the skull and the brain lie the [[meninges]]: the tough [[dura-mater]], the [[arachnoid-mater]], and the
+        thin [[pia-mater]] on the brain itself, with fluid between the last two. A bleed inside the skull is named by
+        which layer the blood collects next to. Each kind behaves differently.
+      fr: "Entre le crâne et le cerveau se trouvent les [[meninges|méninges]] : la solide [[dura-mater|dure-mère]], l'[[arachnoid-mater|arachnoïde]] et la fine [[pia-mater|pie-mère]] posée sur le cerveau, avec du liquide entre ces deux dernières. Un saignement dans le crâne porte le nom de la couche près de laquelle le sang s'accumule. Chaque sorte se comporte différemment."
+      zh: "颅骨和大脑之间是[[meninges|脑膜]]：坚韧的[[dura-mater|硬脑膜]]、[[arachnoid-mater|蛛网膜]]，以及贴在大脑表面的薄薄的[[pia-mater|软脑膜]]，后两层之间有液体。颅内出血按血液积聚在哪一层旁边来命名。每一种的表现都不一样。"
+  - id: c2
+    verify: true
+    body:
+      en: >-
+        An [[epidural-hematoma|epidural haematoma]] sits between the skull and the dura. It usually comes from an artery
+        torn by a skull fracture, often at the temple. Because it is arterial, it grows fast. Some people wake up and seem
+        fine for a while, then quickly get worse.
+      fr: "Un [[epidural-hematoma|hématome extradural]] se loge entre le crâne et la dure-mère. Il vient en général d'une artère déchirée par une fracture du crâne, souvent à la tempe. Comme le sang est artériel, il grossit vite. Certaines personnes se réveillent et semblent aller bien un moment, puis s'aggravent rapidement."
+      zh: "[[epidural-hematoma|硬膜外血肿]]位于颅骨和硬脑膜之间。它通常来自颅骨骨折撕裂的一条动脉，常在太阳穴附近。因为是动脉出血，所以长得很快。有些人醒来后一段时间看起来没事，随后迅速恶化。"
+  - id: c3
+    verify: true
+    body:
+      en: >-
+        A [[subdural-hematoma|subdural haematoma]] lies under the dura. Veins crossing that gap tear, often after a fall
+        in an older person whose brain has shrunk a little, so it can build up over days or weeks. A
+        [[subarachnoid-hemorrhage|subarachnoid haemorrhage]] fills the fluid space, often from a burst [[aneurysm]]. It
+        brings a sudden, explosive headache, sometimes called the worst of a person's life.
+      fr: "Un [[subdural-hematoma|hématome sous-dural]] se trouve sous la dure-mère. Des veines qui traversent cet espace se déchirent, souvent après une chute chez une personne âgée dont le cerveau a un peu rétréci : il peut donc s'accumuler sur des jours ou des semaines. Une [[subarachnoid-hemorrhage|hémorragie sous-arachnoïdienne]] remplit l'espace liquidien, souvent à cause d'un [[aneurysm|anévrisme]] qui se rompt. Elle provoque un mal de tête soudain et explosif, parfois décrit comme le pire de toute une vie."
+      zh: "[[subdural-hematoma|硬膜下血肿]]位于硬脑膜下方。横跨这个间隙的静脉撕裂，常发生在老年人跌倒之后（他们的大脑略有萎缩），所以出血可能在几天或几周内慢慢积聚。[[subarachnoid-hemorrhage|蛛网膜下腔出血]]则充满液体间隙，常由[[aneurysm|动脉瘤]]破裂引起。它会带来突然、爆炸般的头痛，有时被形容为一生中最剧烈的头痛。"
+questions:
+  - id: q1
+    kind: tap2d
+    prompt: { en: "Tap the bleed between the skull and the dura.", fr: "Touchez le saignement entre le crâne et la dure-mère.", zh: "点击位于颅骨和硬脑膜之间的出血。" }
+    figure: bleeds
+    answer: epidural
+    explain: { en: "That's an [[epidural-hematoma|epidural haematoma]]: it pushes the dura away from the skull, making a lens shape.", fr: "C'est un [[epidural-hematoma|hématome extradural]] : il décolle la dure-mère du crâne et prend une forme de lentille.", zh: "这是[[epidural-hematoma|硬膜外血肿]]：它把硬脑膜从颅骨上推开，形成透镜状。" }
+  - id: q2
+    kind: order
+    prompt: { en: "Put the layers in order, from the outside in.", fr: "Remettez les couches dans l'ordre, de l'extérieur vers l'intérieur.", zh: "把这些层按从外到内的顺序排列。" }
+    steps:
+      - { id: s1, text: { en: "Skull", fr: "Crâne", zh: "颅骨" } }
+      - { id: s2, text: { en: "Dura mater", fr: "Dure-mère", zh: "硬脑膜" } }
+      - { id: s3, text: { en: "Arachnoid mater", fr: "Arachnoïde", zh: "蛛网膜" } }
+      - { id: s4, text: { en: "Pia mater", fr: "Pie-mère", zh: "软脑膜" } }
+      - { id: s5, text: { en: "Brain", fr: "Cerveau", zh: "大脑" } }
+    explain: { en: "Epidural, subdural and subarachnoid name the gaps between these layers.", fr: "Extradural, sous-dural et sous-arachnoïdien désignent les espaces entre ces couches.", zh: "硬膜外、硬膜下和蛛网膜下腔，指的就是这些层之间的间隙。" }
+  - id: q3
+    kind: mc
+    prompt: { en: "After a blow to the temple, someone seems fine for an hour, then quickly gets drowsy. Which bleed fits best?", fr: "Après un coup à la tempe, une personne semble aller bien pendant une heure, puis devient vite somnolente. Quel saignement correspond le mieux ?", zh: "太阳穴受到撞击后，一个人一小时内看起来没事，随后很快变得昏昏欲睡。哪种出血最符合？" }
+    options:
+      - { id: a, text: { en: "Epidural haematoma", fr: "Hématome extradural", zh: "硬膜外血肿" } }
+      - { id: b, text: { en: "Subdural haematoma", fr: "Hématome sous-dural", zh: "硬膜下血肿" } }
+      - { id: c, text: { en: "Subarachnoid haemorrhage", fr: "Hémorragie sous-arachnoïdienne", zh: "蛛网膜下腔出血" } }
+    answer: a
+    explain: { en: "A torn artery at the temple, a fast-growing bleed, and a deceptive calm at first.", fr: "Une artère déchirée à la tempe, un saignement qui grossit vite, et un calme trompeur au début.", zh: "太阳穴处动脉撕裂，出血迅速增大，起初有一段具有欺骗性的平静期。" }
+  - id: q4
+    kind: match
+    prompt: { en: "Match each bleed to its usual cause.", fr: "Associez chaque saignement à sa cause habituelle.", zh: "把每种出血与它常见的原因配对。" }
+    pairs:
+      - { id: p1, left: { en: "Epidural", fr: "Extradural", zh: "硬膜外" }, right: { en: "A torn artery after a skull fracture", fr: "Une artère déchirée après une fracture du crâne", zh: "颅骨骨折后动脉撕裂" } }
+      - { id: p2, left: { en: "Subdural", fr: "Sous-dural", zh: "硬膜下" }, right: { en: "Torn veins after a fall", fr: "Des veines déchirées après une chute", zh: "跌倒后静脉撕裂" } }
+      - { id: p3, left: { en: "Subarachnoid", fr: "Sous-arachnoïdien", zh: "蛛网膜下腔" }, right: { en: "A burst aneurysm", fr: "Un anévrisme rompu", zh: "动脉瘤破裂" } }
+    explain: { en: "Artery, vein, aneurysm: fast, slow, explosive.", fr: "Artère, veine, anévrisme : rapide, lent, explosif.", zh: "动脉、静脉、动脉瘤：快速、缓慢、爆发。" }
+  - id: q5
+    kind: termmatch
+    terms: [epidural-hematoma, subdural-hematoma, subarachnoid-hemorrhage, aneurysm]
+    from: en
+    to: fr

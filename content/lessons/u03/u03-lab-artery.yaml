@@ -1,0 +1,49 @@
+id: u03-lab-artery
+type: lab
+title: { en: "Block an artery", fr: "Boucher une artère", zh: "堵住一条动脉" }
+sources: ["Blood Supply", "Strokes and Tumors"]
+intro:
+  - id: c1
+    body:
+      en: >-
+        Each artery feeds its own territory, so a blocked artery gives a pattern of symptoms you can recognise. Choose
+        an artery and a side to see the area it feeds, from the side and from the middle, and what a block would cause.
+        Then read each patient and say which artery is blocked. Remember: each hemisphere serves the [[contralateral]] side.
+      fr: "Chaque artère irrigue son propre territoire : une artère bouchée donne donc un ensemble de symptômes reconnaissable. Choisissez une artère et un côté pour voir la zone qu'elle irrigue, de côté et par le milieu, et ce qu'un blocage provoquerait. Lisez ensuite chaque patient et dites quelle artère est bouchée. Rappel : chaque hémisphère sert le côté [[contralateral|controlatéral]]."
+      zh: "每条动脉供应自己的区域，所以一条动脉堵塞会产生一组可以辨认的症状。选择一条动脉和一侧，从侧面和正中面看看它供应的区域，以及堵塞会造成什么。然后读每位患者的情况，指出是哪条动脉堵了。记住：每个半球负责[[contralateral|对侧]]。"
+sim: artery
+goal: { en: "Find the blocked artery for all three patients.", fr: "Trouvez l'artère bouchée pour les trois patients.", zh: "为三位患者都找出堵塞的动脉。" }
+simplified:
+  en: >-
+    Territories vary from person to person and overlap at their borders, and a real stroke often hits only part of
+    a territory, so real patients rarely show the full textbook pattern.
+  fr: "Les territoires varient d'une personne à l'autre et se chevauchent à leurs limites, et un vrai AVC ne touche souvent qu'une partie d'un territoire : les vrais patients montrent donc rarement le tableau complet des manuels."
+  zh: "供血区因人而异，边界处相互重叠；而真实的中风常常只影响一个供血区的一部分，所以真实患者很少表现出教科书上的完整症状。"
+reflection:
+  - id: q1
+    kind: mc
+    prompt: { en: "Why does a left MCA stroke often affect language?", fr: "Pourquoi un AVC de l'ACM gauche touche-t-il souvent le langage ?", zh: "为什么左侧大脑中动脉中风常常影响语言？" }
+    options:
+      - { id: a, text: { en: "The left MCA feeds Broca's and Wernicke's areas", fr: "L'ACM gauche irrigue les aires de Broca et de Wernicke", zh: "左侧大脑中动脉供应布罗卡区和韦尼克区" } }
+      - { id: b, text: { en: "The left MCA feeds the visual cortex", fr: "L'ACM gauche irrigue le cortex visuel", zh: "左侧大脑中动脉供应视觉皮层" } }
+      - { id: c, text: { en: "The MCA carries words to the mouth", fr: "L'ACM transporte les mots jusqu'à la bouche", zh: "大脑中动脉把词语送到嘴里" } }
+    answer: a
+    explain: { en: "For most people, language lives on the left outer side, in MCA territory.", fr: "Chez la plupart des gens, le langage se trouve sur la face externe gauche, dans le territoire de l'ACM.", zh: "对大多数人来说，语言区位于左侧外侧面，属于大脑中动脉的供血区。" }
+  - id: q2
+    kind: tfwhy
+    statement: { en: "A blocked left posterior cerebral artery makes the right half of the world disappear, in both eyes.", fr: "Une artère cérébrale postérieure gauche bouchée fait disparaître la moitié droite du monde, pour les deux yeux.", zh: "左侧大脑后动脉堵塞，会让双眼都看不到世界的右半边。" }
+    isTrue: true
+    reasons:
+      - { id: r1, text: { en: "The left visual cortex sees the right half of the visual field.", fr: "Le cortex visuel gauche voit la moitié droite du champ visuel.", zh: "左侧视觉皮层负责右半边视野。" } }
+      - { id: r2, text: { en: "The left visual cortex only sees with the left eye.", fr: "Le cortex visuel gauche ne voit qu'avec l'œil gauche.", zh: "左侧视觉皮层只用左眼看东西。" } }
+    answerReason: r1
+    explain: { en: "This loss of half the field is called [[hemianopia]].", fr: "Cette perte d'une moitié du champ s'appelle une [[hemianopia|hémianopsie]].", zh: "这种丧失一半视野的情况叫做[[hemianopia|偏盲]]。" }
+  - id: q3
+    kind: mc
+    prompt: { en: "A patient's right leg is weak, but the arm and face are fine. Which artery is most likely blocked?", fr: "La jambe droite d'un patient est faible, mais le bras et le visage vont bien. Quelle artère est le plus probablement bouchée ?", zh: "一位患者右腿无力，但手臂和面部正常。最可能是哪条动脉堵了？" }
+    options:
+      - { id: a, text: { en: "Left anterior cerebral artery", fr: "Artère cérébrale antérieure gauche", zh: "左侧大脑前动脉" } }
+      - { id: b, text: { en: "Right anterior cerebral artery", fr: "Artère cérébrale antérieure droite", zh: "右侧大脑前动脉" } }
+      - { id: c, text: { en: "Left middle cerebral artery", fr: "Artère cérébrale moyenne gauche", zh: "左侧大脑中动脉" } }
+    answer: a
+    explain: { en: "Leg means ACA, and the right side of the body means the left hemisphere.", fr: "La jambe, c'est l'ACA ; le côté droit du corps, c'est l'hémisphère gauche.", zh: "腿对应大脑前动脉；身体右侧对应左半球。" }

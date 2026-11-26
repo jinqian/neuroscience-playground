@@ -13,6 +13,7 @@ export function BleedsArt(art: ArtProps) {
       <rect x="20" y="132" width="480" height="12" fill="#ffd0e0" stroke={INK} strokeWidth="2" />
       <rect x="20" y="144" width="480" height="40" fill="#cfefff" opacity=".7" />
       <path d="M20 184Q70 172 120 184T220 184T320 184T420 184T500 184V280H20Z" fill="#c9b8ff" stroke={INK} strokeWidth="3" />
+      <path d="M20 180Q70 168 120 180T220 180T320 180T420 180T500 180" fill="none" stroke="#2f80ed" strokeWidth="4" />
       <Region id="epidural" label="Bleed between the skull and the dura" art={art}>
         <path d="M60 84Q115 118 170 84Q115 76 60 84Z" fill={BLOOD} stroke={INK} strokeWidth="1.5" />
       </Region>
@@ -30,6 +31,7 @@ export function BleedsArt(art: ArtProps) {
           <Label x={420} y={104}>dura mater</Label>
           <Label x={120} y={162}>arachnoid mater</Label>
           <Label x={260} y={240}>brain</Label>
+          <Label x={150} y={206}>pia mater</Label>
           <Label x={115} y={28}>epidural</Label>
           <Label x={270} y={28}>subdural</Label>
           <Label x={430} y={28}>subarachnoid</Label>
