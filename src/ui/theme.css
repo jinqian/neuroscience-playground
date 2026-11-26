@@ -153,8 +153,9 @@ button { font: inherit; color: inherit; }
   width: 100%; max-width: 980px; margin: 0 auto; display: flex; align-items: center; gap: 16px;
   padding: 18px max(16px, env(safe-area-inset-right, 0px)) 8px max(16px, env(safe-area-inset-left, 0px));
 }
-.lesson__quit { border: 0; background: none; font-size: 22px; font-weight: 900; color: var(--locked-ink); cursor: pointer; padding: 4px 8px; border-radius: 10px; }
-.lesson__quit:hover { color: var(--ink-soft); background: var(--surface-soft); }
+.lesson__quit, .lesson__back { border: 0; background: none; font-size: 22px; font-weight: 900; color: var(--locked-ink); cursor: pointer; padding: 4px 8px; border-radius: 10px; }
+.lesson__quit:hover, .lesson__back:hover { color: var(--ink-soft); background: var(--surface-soft); }
+.lesson__back { margin-right: -12px; }
 .bar { flex: 1; height: 16px; background: var(--locked); border-radius: 99px; overflow: hidden; }
 .bar i { display: block; height: 100%; background: var(--green); border-radius: 99px; box-shadow: inset 0 -4px 0 #2fa64b; transition: width .3s ease; min-width: 0; }
 .lesson__body {
