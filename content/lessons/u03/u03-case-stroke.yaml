@@ -1,0 +1,81 @@
+id: u03-case-stroke
+type: case
+title: { en: "The dropped cup", fr: "La tasse tombée", zh: "掉落的杯子" }
+sources: ["Oxygen and Cerebral Blood Flow", "Blood Supply", "Strokes and Tumors", "Bleeds"]
+story:
+  en: >-
+    Daniel, 64, is having breakfast when his right hand suddenly lets go of his coffee cup. He tries to say
+    something, but the words come out slow and broken. His daughter sees the right side of his mouth droop
+    and calls for help at once.
+  fr: "Daniel, 64 ans, prend son petit-déjeuner quand sa main droite lâche soudain sa tasse de café. Il essaie de dire quelque chose, mais les mots sortent lentement, hachés. Sa fille voit le côté droit de sa bouche s'affaisser et appelle aussitôt les secours."
+  zh: "64岁的丹尼尔正在吃早餐，右手突然松开了咖啡杯。他想说点什么，可话说得又慢又断断续续。他的女儿看到他右侧嘴角下垂，立刻打电话求助。"
+clues:
+  - id: k1
+    text: { en: "His right face and arm are weak. His right leg is only slightly affected.", fr: "Son visage et son bras droits sont faibles. Sa jambe droite n'est que légèrement touchée.", zh: "他的右侧面部和手臂无力，右腿只受到轻微影响。" }
+    unlock:
+      id: q1
+      kind: mc
+      prompt: { en: "On the motor strip, where are the face and arm mapped?", fr: "Sur la bande motrice, où le visage et le bras sont-ils représentés ?", zh: "在运动带上，面部和手臂对应在哪里？" }
+      options:
+        - { id: a, text: { en: "On the outer side, low down", fr: "Sur la face externe, vers le bas", zh: "在外侧面的下部" } }
+        - { id: b, text: { en: "At the top, near the midline", fr: "En haut, près de la ligne médiane", zh: "在顶部，靠近中线" } }
+        - { id: c, text: { en: "At the back of the brain", fr: "À l'arrière du cerveau", zh: "在大脑后部" } }
+      answer: a
+      explain: { en: "Face and arm sit on the outer side; the leg is up at the top and over the midline.", fr: "Le visage et le bras sont sur la face externe ; la jambe est en haut et passe sur la ligne médiane.", zh: "面部和手臂在外侧面；腿部在顶部，并延伸到中线内侧。" }
+  - id: k2
+    text: { en: "His speech is effortful and halting, but he follows what his daughter says and nods correctly.", fr: "Sa parole est laborieuse et hachée, mais il comprend ce que dit sa fille et acquiesce à bon escient.", zh: "他说话费力、断断续续，但能听懂女儿的话，点头也点得对。" }
+    unlock:
+      id: q2
+      kind: mc
+      prompt: { en: "Slow, effortful speech with good understanding points to damage near…", fr: "Une parole lente et laborieuse avec une bonne compréhension oriente vers une lésion près de…", zh: "说话缓慢费力、但理解良好，提示损伤位于……附近" }
+      options:
+        - { id: a, text: { en: "Broca's area, in the left frontal lobe", fr: "L'aire de Broca, dans le lobe frontal gauche", zh: "左侧额叶的布罗卡区" } }
+        - { id: b, text: { en: "Wernicke's area, in the left temporal lobe", fr: "L'aire de Wernicke, dans le lobe temporal gauche", zh: "左侧颞叶的韦尼克区" } }
+        - { id: c, text: { en: "The cerebellum", fr: "Le cervelet", zh: "小脑" } }
+      answer: a
+      explain: { en: "Broca's aphasia: few words, hard work, understanding mostly kept.", fr: "Aphasie de Broca : peu de mots, beaucoup d'effort, compréhension en grande partie conservée.", zh: "布罗卡失语：话少、费力，理解大多保留。" }
+  - id: k3
+    verify: true
+    text: { en: "A brain scan in hospital shows no bleeding.", fr: "Un scanner du cerveau à l'hôpital ne montre aucun saignement.", zh: "医院的脑部扫描显示没有出血。" }
+    unlock:
+      id: q3
+      kind: tfwhy
+      statement: { en: "A sudden stroke with no bleeding on the scan is most likely caused by a blocked artery.", fr: "Un AVC soudain sans saignement au scanner est le plus probablement dû à une artère bouchée.", zh: "突然发生、扫描又没有出血的中风，最可能是动脉堵塞引起的。" }
+      isTrue: true
+      reasons:
+        - { id: r1, text: { en: "Strokes are either blocked or burst vessels; no blood rules out a burst one.", fr: "Un AVC vient d'un vaisseau bouché ou éclaté ; l'absence de sang écarte le vaisseau éclaté.", zh: "中风要么是血管堵塞，要么是血管破裂；没有出血就排除了破裂。" } }
+        - { id: r2, text: { en: "Scans can't show blood.", fr: "Les scanners ne peuvent pas montrer le sang.", zh: "扫描看不到血液。" } }
+      answerReason: r1
+      explain: { en: "No bleed points to an [[ischemic-stroke|ischaemic stroke]]: a clot.", fr: "L'absence de saignement oriente vers un [[ischemic-stroke|AVC ischémique]] : un caillot.", zh: "没有出血提示是[[ischemic-stroke|缺血性中风]]：一个血块。" }
+  - id: k4
+    verify: true
+    text: { en: "It all began less than an hour ago, so doctors may still be able to reopen the artery.", fr: "Tout a commencé il y a moins d'une heure : les médecins peuvent peut-être encore rouvrir l'artère.", zh: "这一切发生在不到一小时前，所以医生也许还能重新打通动脉。" }
+    unlock:
+      id: q4
+      kind: mc
+      prompt: { en: "Why does every minute count here?", fr: "Pourquoi chaque minute compte-t-elle ici ?", zh: "为什么这里每一分钟都很重要？" }
+      options:
+        - { id: a, text: { en: "Neurons store no fuel, so the starved area dies quickly", fr: "Les neurones ne stockent pas de carburant : la zone privée de sang meurt vite", zh: "神经元不储存燃料，缺血区域会很快死亡" } }
+        - { id: b, text: { en: "The circle of Willis closes after an hour", fr: "Le polygone de Willis se ferme au bout d'une heure", zh: "大脑动脉环一小时后会关闭" } }
+        - { id: c, text: { en: "Speech always comes back by itself within an hour", fr: "La parole revient toujours d'elle-même en moins d'une heure", zh: "语言能力总会在一小时内自行恢复" } }
+      answer: a
+      explain: { en: "The brain lives from heartbeat to heartbeat: the sooner flow returns, the more is saved.", fr: "Le cerveau vit d'un battement de cœur à l'autre : plus le sang revient tôt, plus on sauve de tissu.", zh: "大脑靠一次次心跳活着：血流恢复得越早，保住的就越多。" }
+final:
+  prompt: { en: "Which artery's territory has lost its blood? Tap it.", fr: "Quel territoire artériel a perdu son sang ? Touchez-le.", zh: "哪条动脉的供血区失去了血液？点击它。" }
+  kind: tap2d
+  figure: territories-top
+  answer: mca-left
+  explanations:
+    mca-left: { en: "Yes. The left middle cerebral artery feeds the face and arm areas of the left motor strip and Broca's area: right face and arm, and halting speech.", fr: "Oui. L'artère cérébrale moyenne gauche irrigue les zones du visage et du bras de la bande motrice gauche, ainsi que l'aire de Broca : visage et bras droits, et parole hachée.", zh: "对。左侧大脑中动脉供应左侧运动带的面部和手臂区域，以及布罗卡区：于是右侧面部和手臂无力，说话断断续续。" }
+    aca-left: { en: "The left anterior cerebral artery feeds the leg area. A block there would weaken the right leg more than the arm, and speech would be spared.", fr: "L'artère cérébrale antérieure gauche irrigue la zone de la jambe. La boucher affaiblirait la jambe droite plus que le bras, et la parole serait épargnée.", zh: "左侧大脑前动脉供应腿部区域。它堵塞会让右腿比手臂更无力，而语言不受影响。" }
+    pca-left: { en: "The left posterior cerebral artery feeds the visual cortex. A block there would cost the right half of the visual field, not the arm or speech.", fr: "L'artère cérébrale postérieure gauche irrigue le cortex visuel. La boucher ferait perdre la moitié droite du champ visuel, pas le bras ni la parole.", zh: "左侧大脑后动脉供应视觉皮层。它堵塞会失去右半边视野，而不是手臂或语言。" }
+    mca-right: { en: "Right artery, wrong side. A right middle cerebral artery block would weaken the left face and arm, and language would mostly be spared.", fr: "Bonne artère, mauvais côté. Un blocage de l'artère cérébrale moyenne droite affaiblirait le visage et le bras gauches, et le langage serait en grande partie épargné.", zh: "动脉对了，侧别错了。右侧大脑中动脉堵塞会让左侧面部和手臂无力，语言则大多不受影响。" }
+    aca-right: { en: "Wrong side and wrong body part: a right anterior cerebral artery block would weaken the left leg.", fr: "Mauvais côté et mauvaise partie du corps : un blocage de l'artère cérébrale antérieure droite affaiblirait la jambe gauche.", zh: "侧别和身体部位都不对：右侧大脑前动脉堵塞会让左腿无力。" }
+    pca-right: { en: "A right posterior cerebral artery block would cost the left half of the visual field. Daniel's problems are his right arm and his speech.", fr: "Un blocage de l'artère cérébrale postérieure droite ferait perdre la moitié gauche du champ visuel. Les problèmes de Daniel sont son bras droit et sa parole.", zh: "右侧大脑后动脉堵塞会失去左半边视野。丹尼尔的问题是右臂和语言。" }
+solved:
+  en: >-
+    Daniel had an [[ischemic-stroke|ischaemic stroke]] in the territory of the left [[middle-cerebral-artery|middle cerebral artery]].
+    A clot cut off the outer side of his left hemisphere, where the face and arm areas and [[broca-area|Broca's area]] lie.
+    Sudden onset and no bleed on the scan pointed to a clot. Because his daughter called at once, doctors had time to try to reopen the artery.
+  fr: "Daniel a fait un [[ischemic-stroke|AVC ischémique]] dans le territoire de l'[[middle-cerebral-artery|artère cérébrale moyenne]] gauche. Un caillot a privé de sang la face externe de son hémisphère gauche, où se trouvent les zones du visage et du bras et l'[[broca-area|aire de Broca]]. Le début soudain et l'absence de saignement au scanner orientaient vers un caillot. Comme sa fille a appelé aussitôt, les médecins ont eu le temps de tenter de rouvrir l'artère."
+  zh: "丹尼尔发生了左侧[[middle-cerebral-artery|大脑中动脉]]供血区的[[ischemic-stroke|缺血性中风]]。一个血块切断了他左半球外侧面的供血，那里有面部和手臂区域以及[[broca-area|布罗卡区]]。突然发病、扫描又没有出血，都指向血块。因为女儿立刻打了电话，医生才有时间尝试重新打通动脉。"
